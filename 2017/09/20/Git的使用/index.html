@@ -283,16 +283,16 @@
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  设计模式
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
                 <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
                   jQuery
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  设计模式
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
                 </a>
               
             </div>
@@ -307,28 +307,28 @@
             </div>
             <div class="mdui-collapse-item-body mdui-list">
               
-                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  建站技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
                 <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
                   开发技巧
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
                 </a>
               
-                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  方法总结
+                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  建站技巧
                   <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
                 </a>
               
                 <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
                   黑科技
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法总结
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
                 <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
@@ -497,7 +497,7 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_14.png"/>
+            <img src="/img/random/picHD_1.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -588,8 +588,8 @@ a/*.js--&gt;a目录下面的所有js文件
 </ul>
 </li>
 </ol>
-<h2 id="6-删除服务器中的文件"><a href="#6-删除服务器中的文件" class="headerlink" title="6.删除服务器中的文件"></a>6.删除服务器中的文件</h2><h3 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">右击删除/rm 文件名                   --&gt;物理删除</div><div class="line">git add 文件名                     --&gt;把删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把删除操作告诉服务器仓库</div></pre></td></tr></table></figure>
-<h3 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm 文件名                     --&gt;删除文件，同时把该删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把该删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把该删除操作告诉服务器仓库</div></pre></td></tr></table></figure>
+<h2 id="6-删除服务器中的文件"><a href="#6-删除服务器中的文件" class="headerlink" title="6.删除服务器中的文件"></a>6.删除服务器中的文件</h2><h3 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h3><figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">右击删除/rm 文件名                   --&gt;物理删除</div><div class="line">git add 文件名                     --&gt;把删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把删除操作告诉服务器仓库</div></pre></td></tr></table></div></figure>
+<h3 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h3><figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm 文件名                     --&gt;删除文件，同时把该删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把该删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把该删除操作告诉服务器仓库</div></pre></td></tr></table></div></figure>
 <ul>
 <li><p>如果一个文件从没进入过暂存区，要想删除：rm</p>
 </li>
@@ -598,7 +598,7 @@ a/*.js--&gt;a目录下面的所有js文件
 <li><p>一个细节：如果某个文件没有进入到本地仓库，也没有进入服务器仓库<br>git rm 无法正常删除文件<br>git rm xxx -f 可以实现把文件删除</p>
 </li>
 </ul>
-<h3 id="对一个文件的重命名操作，"><a href="#对一个文件的重命名操作，" class="headerlink" title="对一个文件的重命名操作，"></a>对一个文件的重命名操作，</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+ 1.txt--&gt;2.txt</div><div class="line">    - git status查看状态的的时候，发现1.txt被删除，2.txt新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为2.txt</div><div class="line"></div><div class="line">+ 删除了1.txt，新建了1.html</div><div class="line">    + git status查看状态的的时候，发现1.txt被删除，1.html新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为1.html</div></pre></td></tr></table></figure>
+<h3 id="对一个文件的重命名操作，"><a href="#对一个文件的重命名操作，" class="headerlink" title="对一个文件的重命名操作，"></a>对一个文件的重命名操作，</h3><figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+ 1.txt--&gt;2.txt</div><div class="line">    - git status查看状态的的时候，发现1.txt被删除，2.txt新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为2.txt</div><div class="line"></div><div class="line">+ 删除了1.txt，新建了1.html</div><div class="line">    + git status查看状态的的时候，发现1.txt被删除，1.html新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为1.html</div></pre></td></tr></table></div></figure>
 <h2 id="7-git-add-把在工作区对文件的操作告诉暂存区"><a href="#7-git-add-把在工作区对文件的操作告诉暂存区" class="headerlink" title="7.git add(把在工作区对文件的操作告诉暂存区)"></a>7.git add(把在工作区对文件的操作告诉暂存区)</h2><h3 id="git-add"><a href="#git-add" class="headerlink" title="git add *"></a>git add *</h3><ul>
 <li><p>默认为将修改的文件和新添加的文件添加到git系统的暂存区<br>☆注意☆：不包括删除</p>
 </li>
@@ -627,9 +627,9 @@ a/*.js--&gt;a目录下面的所有js文件
 </ul>
 </li>
 </ul>
-<h2 id="8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚"><a href="#8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚" class="headerlink" title="8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)"></a>8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)</h2><h3 id="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"><a href="#将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件" class="headerlink" title="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"></a>将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git reset --hard 提交的版本号(每一次提交都会有一个黄色的唯一标识，该标识就是版本号)</div><div class="line">    - git <span class="built_in">log</span> 获取到很长的版本号，也可以通过git <span class="built_in">log</span> --oneline获取到短的版本号</div><div class="line">    - 绝大多数情况下，还可以使用git reflog也会提示版本号</div></pre></td></tr></table></figure>
-<h3 id="git-log-–oneline：每一次提交的-短-版本号，以及备注信息"><a href="#git-log-–oneline：每一次提交的-短-版本号，以及备注信息" class="headerlink" title="git log –oneline：每一次提交的(短)版本号，以及备注信息"></a>git log –oneline：每一次提交的(短)版本号，以及备注信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span>的简便方法</div></pre></td></tr></table></figure>
-<h3 id="git-reflog-查看历史记录"><a href="#git-reflog-查看历史记录" class="headerlink" title="git reflog 查看历史记录"></a>git reflog 查看历史记录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些历史记录包括：每一次提交的信息；以及每一次版本回滚的操作；分支切换操作</div></pre></td></tr></table></figure>
+<h2 id="8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚"><a href="#8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚" class="headerlink" title="8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)"></a>8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)</h2><h3 id="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"><a href="#将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件" class="headerlink" title="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"></a>将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件</h3><figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git reset --hard 提交的版本号(每一次提交都会有一个黄色的唯一标识，该标识就是版本号)</div><div class="line">    - git <span class="built_in">log</span> 获取到很长的版本号，也可以通过git <span class="built_in">log</span> --oneline获取到短的版本号</div><div class="line">    - 绝大多数情况下，还可以使用git reflog也会提示版本号</div></pre></td></tr></table></div></figure>
+<h3 id="git-log-–oneline：每一次提交的-短-版本号，以及备注信息"><a href="#git-log-–oneline：每一次提交的-短-版本号，以及备注信息" class="headerlink" title="git log –oneline：每一次提交的(短)版本号，以及备注信息"></a>git log –oneline：每一次提交的(短)版本号，以及备注信息</h3><figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span>的简便方法</div></pre></td></tr></table></div></figure>
+<h3 id="git-reflog-查看历史记录"><a href="#git-reflog-查看历史记录" class="headerlink" title="git reflog 查看历史记录"></a>git reflog 查看历史记录</h3><figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些历史记录包括：每一次提交的信息；以及每一次版本回滚的操作；分支切换操作</div></pre></td></tr></table></div></figure>
 <h3 id="（了解）单文件特殊操作-☆☆☆不可逆☆☆☆"><a href="#（了解）单文件特殊操作-☆☆☆不可逆☆☆☆" class="headerlink" title="（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)"></a>（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)</h3><h3 id="git-checkout-–-1-txt：-替换文件内容"><a href="#git-checkout-–-1-txt：-替换文件内容" class="headerlink" title="git checkout – 1.txt：(替换文件内容)"></a>git checkout – 1.txt：(替换文件内容)</h3><ul>
 <li>将暂存区中的文件取出并替换工作目录的文件<ul>
 <li>误删了一个文件，通过该命令，从仓库中把文件恢复(ps：前提是之前该文件已经进入过仓库了)</li>

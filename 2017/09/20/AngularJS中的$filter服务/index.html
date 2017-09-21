@@ -283,16 +283,16 @@
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  设计模式
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
                 <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
                   jQuery
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  设计模式
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
                 </a>
               
             </div>
@@ -307,28 +307,28 @@
             </div>
             <div class="mdui-collapse-item-body mdui-list">
               
-                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  建站技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
                 <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
                   开发技巧
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
                 </a>
               
-                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  方法总结
+                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  建站技巧
                   <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
                 </a>
               
                 <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
                   黑科技
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法总结
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
                 <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
@@ -493,7 +493,7 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_23.png"/>
+            <img src="/img/random/picHD_25.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -503,18 +503,18 @@
 <li><p>出现filter的地方</p>
 <ul>
 <li><p>过滤器filter从数组中筛选符合条件的元素</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;stus|filter:&#123;name:"jack",age:"18"&#125;&#125;&#125;</div></pre></td></tr></table></figure>
+  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;stus|filter:&#123;name:"jack",age:"18"&#125;&#125;&#125;</div></pre></td></tr></table></div></figure>
 </li>
 <li><p>自定义过滤器.</p>
 <ul>
-<li>模块对象有一个方法叫：filter,这个方法允许我们自定义过滤器  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;data|自定义过滤器名&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- ---------- --&gt;</span></div><div class="line">app.filter("自定义过滤器名"，function(data)&#123;</div><div class="line">    return xxx;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<li>模块对象有一个方法叫：filter,这个方法允许我们自定义过滤器  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;data|自定义过滤器名&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- ---------- --&gt;</span></div><div class="line">app.filter("自定义过滤器名"，function(data)&#123;</div><div class="line">    return xxx;</div><div class="line">&#125;)</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
 <li><p>filter服务(是一个用在控制器中的过滤器)</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = $filter(<span class="string">"date"</span>);</div><div class="line"><span class="comment">//date就是一个函数，这个函数就具备了date过滤器的功能</span></div></pre></td></tr></table></figure>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = $filter(<span class="string">"date"</span>);</div><div class="line"><span class="comment">//date就是一个函数，这个函数就具备了date过滤器的功能</span></div></pre></td></tr></table></div></figure>
 <ul>
-<li>具体例子：  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</div><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$filter"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$filter</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> pirce = <span class="number">12.151</span>;</div><div class="line">    <span class="keyword">var</span> date = $filter(<span class="string">"过滤器的名字"</span>)(过滤的参数)</div><div class="line">&#125;])</div></pre></td></tr></table></figure>
+<li>具体例子：  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</div><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$filter"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$filter</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> pirce = <span class="number">12.151</span>;</div><div class="line">    <span class="keyword">var</span> date = $filter(<span class="string">"过滤器的名字"</span>)(过滤的参数)</div><div class="line">&#125;])</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>

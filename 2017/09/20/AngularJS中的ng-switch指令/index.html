@@ -283,16 +283,16 @@
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  设计模式
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
                 <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
                   jQuery
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  设计模式
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
                 </a>
               
             </div>
@@ -307,28 +307,28 @@
             </div>
             <div class="mdui-collapse-item-body mdui-list">
               
-                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  建站技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
                 <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
                   开发技巧
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
                 </a>
               
-                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  方法总结
+                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  建站技巧
                   <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
                 </a>
               
                 <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
                   黑科技
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法总结
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
                 <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
@@ -493,14 +493,14 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_21.png"/>
+            <img src="/img/random/picHD_42.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
           <blockquote>
 <h2 id="ng-switch指令"><a href="#ng-switch指令" class="headerlink" title="ng-switch指令"></a>ng-switch指令</h2></blockquote>
 <ul>
-<li>功能: 对某1个变量的值进行匹配.匹配成功的元素将会被创建.<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//js</span></div><div class="line"> <span class="keyword">switch</span>(num)&#123;</div><div class="line">     <span class="keyword">case</span> <span class="number">10</span>:</div><div class="line">         xxx</div><div class="line">         <span class="keyword">break</span>;</div><div class="line">     <span class="keyword">case</span> <span class="number">20</span>:</div><div class="line">         xxx</div><div class="line">         <span class="keyword">break</span>;</div><div class="line">     <span class="keyword">default</span>:</div><div class="line">         xxx</div><div class="line">         <span class="keyword">break</span>;</div><div class="line"> &#125;</div><div class="line"></div><div class="line"> &lt;!-- ------------ --&gt;</div><div class="line"> <span class="comment">//AngularJS</span></div><div class="line"></div><div class="line"> &lt;body ng-app=<span class="string">"hmApp"</span>&gt;</div><div class="line">     &lt;div ng-controller=<span class="string">"hmCtrl"</span>&gt;</div><div class="line">         &lt;ul ng-<span class="keyword">switch</span>=<span class="string">"lesson"</span>&gt;</div><div class="line">             &lt;li ng-<span class="keyword">switch</span>-when=<span class="string">"python"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">             &lt;li ng-<span class="keyword">switch</span>-when=<span class="string">"python"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">             &lt;li ng-<span class="keyword">switch</span>-<span class="keyword">default</span>=<span class="string">"python"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">         &lt;<span class="regexp">/ul&gt;</span></div><div class="line"><span class="regexp">     &lt;/</span>div&gt;</div><div class="line"> &lt;<span class="regexp">/bod&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp"> &lt;script&gt;</span></div><div class="line"><span class="regexp">     var spp = angular.module("hmApp",[]);</span></div><div class="line"><span class="regexp">     app.controller("hmCtrl",["$scope",function($scope)&#123;</span></div><div class="line"><span class="regexp">         $scope.leson = "python"</span></div><div class="line"><span class="regexp">     &#125;])</span></div><div class="line"><span class="regexp"> &lt;/</span>script&gt;</div></pre></td></tr></table></figure></li>
+<li>功能: 对某1个变量的值进行匹配.匹配成功的元素将会被创建.<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//js</span></div><div class="line"> <span class="keyword">switch</span>(num)&#123;</div><div class="line">     <span class="keyword">case</span> <span class="number">10</span>:</div><div class="line">         xxx</div><div class="line">         <span class="keyword">break</span>;</div><div class="line">     <span class="keyword">case</span> <span class="number">20</span>:</div><div class="line">         xxx</div><div class="line">         <span class="keyword">break</span>;</div><div class="line">     <span class="keyword">default</span>:</div><div class="line">         xxx</div><div class="line">         <span class="keyword">break</span>;</div><div class="line"> &#125;</div><div class="line"></div><div class="line"> &lt;!-- ------------ --&gt;</div><div class="line"> <span class="comment">//AngularJS</span></div><div class="line"></div><div class="line"> &lt;body ng-app=<span class="string">"hmApp"</span>&gt;</div><div class="line">     &lt;div ng-controller=<span class="string">"hmCtrl"</span>&gt;</div><div class="line">         &lt;ul ng-<span class="keyword">switch</span>=<span class="string">"lesson"</span>&gt;</div><div class="line">             &lt;li ng-<span class="keyword">switch</span>-when=<span class="string">"python"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">             &lt;li ng-<span class="keyword">switch</span>-when=<span class="string">"python"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">             &lt;li ng-<span class="keyword">switch</span>-<span class="keyword">default</span>=<span class="string">"python"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">         &lt;<span class="regexp">/ul&gt;</span></div><div class="line"><span class="regexp">     &lt;/</span>div&gt;</div><div class="line"> &lt;<span class="regexp">/bod&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp"> &lt;script&gt;</span></div><div class="line"><span class="regexp">     var spp = angular.module("hmApp",[]);</span></div><div class="line"><span class="regexp">     app.controller("hmCtrl",["$scope",function($scope)&#123;</span></div><div class="line"><span class="regexp">         $scope.leson = "python"</span></div><div class="line"><span class="regexp">     &#125;])</span></div><div class="line"><span class="regexp"> &lt;/</span>script&gt;</div></pre></td></tr></table></div></figure></li>
 </ul>
 
         </div>
