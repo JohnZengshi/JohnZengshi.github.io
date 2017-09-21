@@ -102,10 +102,6 @@
     
 
     
-        
-            <link rel="stylesheet" href="/css/fontawesome.min.css">
-        
-    
 
     <!-- Config CSS -->
 
@@ -131,13 +127,13 @@
   #scheme-Paradox .sidebar_archives-count,
   #scheme-Paradox .sidebar-colored .sidebar-header,
   #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
+    background-color: #FF834C !important;
   }
 
   /* Sidebar User Drop Down Menu Text Color */
   #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
   #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
+    color: #FF834C !important;
   }
 
   #post_entry-right-info,
@@ -150,7 +146,7 @@
   .sidebar-colored .sidebar-nav > .open > a:hover,
   .sidebar-colored .sidebar-nav > .open > a:focus,
   #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
+    color: #FF834C !important;
   }
 
   .toTop {
@@ -277,7 +273,7 @@
             "@type": "ImageObject",
             "url": "/img/avatar.png"
         },
-        "description": "Hi, nice to meet you"
+        "description": "我脾气很爆..很爆"
     },
     "publisher": {
         "@type": "Organization",
@@ -307,109 +303,8 @@
 
 
     
-        <body id="scheme-Isolation" class="lazy">
+        <body id="scheme-Paradox" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-                    <!-- Isolation Header -->
-                    <header class="header">
-    <div class="header-wrapper">
-        <!-- Header Copyright -->
-        <div class="header-copyright">
-            <div class="header-site">
-                ©&nbsp;
-                <script type="text/javascript">
-                    var fd = new Date();
-                    document.write(fd.getFullYear());
-                </script>
-                &nbsp;John Zeng的个人播客
-            </div>
-            <!--
-            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-            It will not impact the appearance and can give developers a lot of support :)
-
-            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-            它不会影响美观并可以给开发者很大的支持。 :)
-            -->
-            <div>
-                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
-                <br>
-                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
-            </div>
-        </div>
-
-        <!-- Header Title -->
-        <span class="header-title header-item">
-            <a href="/" title="John Zeng的个人播客">
-                John Zeng的个人播客
-            </a>
-        </span>
-
-        <p class="header-slogan header-item">
-        
-            
-                Hi, nice to meet you
-            
-        
-        </p>
-
-        <!-- Header Nav -->
-        <nav class="header-nav header-item">
-            <span class="header-nav-item">
-                <a href="/" title="Home">
-                    <span>رئيسية</span>
-                </a>
-            </span>
-
-            <!-- Pages  -->
-            
-            
-        </nav>
-
-        <!-- Header SNS -->
-        <div class="header-item header-sns_list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/twitter" target="_blank">
-            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
-        </a>
-    
-
-    <!-- Facebook -->
-    
-        <a href="https://www.facebook.com/facebook" target="_blank">
-            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
-        </a>
-    
-
-    <!-- Google + -->
-    
-        <a href="https://www.google.com/" target="_blank">
-            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
-        </a>
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Telegram -->
-    
-</div>
-
-    </div>
-</header>
-
                 
 
                 <!-- Main Container -->
@@ -419,10 +314,45 @@
                     <div id="top"></div>
 
                     
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
 
                     <!-- Post TOC -->
 
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-创建github个人网站（静态网站）"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.创建github个人网站（静态网站）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-移除全局用户名"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.移除全局用户名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-git-remote：保存服务器地址"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.git remote：保存服务器地址</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-设置文件不让git管理：隔离文件–-gt-项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中"><span class="post-toc-number">5.</span> <span class="post-toc-text">5.设置文件不让git管理：隔离文件–>项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-删除服务器中的文件"><span class="post-toc-number">6.</span> <span class="post-toc-text">6.删除服务器中的文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一种方式："><span class="post-toc-number">6.1.</span> <span class="post-toc-text">第一种方式：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二种方式："><span class="post-toc-number">6.2.</span> <span class="post-toc-text">第二种方式：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对一个文件的重命名操作，"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">对一个文件的重命名操作，</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-git-add-把在工作区对文件的操作告诉暂存区"><span class="post-toc-number">7.</span> <span class="post-toc-text">7.git add(把在工作区对文件的操作告诉暂存区)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-add"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">git add *</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-add-u-或者-git-add-–update"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">git add -u 或者 git add –update</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-add-A-或者-git-add-–all"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">git add -A  或者 git add –all</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-add-文件夹名称-可以把指定目录下面的所有子目录中的文件操作放到暂存区"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">git add 文件夹名称   可以把指定目录下面的所有子目录中的文件操作放到暂存区</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚"><span class="post-toc-number">8.</span> <span class="post-toc-text">8.多文件特殊操作(版本回滚)(可逆–>版本来回滚、随意滚)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-log-–oneline：每一次提交的-短-版本号，以及备注信息"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">git log –oneline：每一次提交的(短)版本号，以及备注信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-reflog-查看历史记录"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">git reflog 查看历史记录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#（了解）单文件特殊操作-☆☆☆不可逆☆☆☆"><span class="post-toc-number">8.4.</span> <span class="post-toc-text">（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-checkout-–-1-txt：-替换文件内容"><span class="post-toc-number">8.5.</span> <span class="post-toc-text">git checkout – 1.txt：(替换文件内容)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-reset-HEAD-–-1-txt：-不会替换文件内容"><span class="post-toc-number">8.6.</span> <span class="post-toc-text">git reset HEAD – 1.txt：(不会替换文件内容)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-tortoiseGit比较文件差异-单文件"><span class="post-toc-number">9.</span> <span class="post-toc-text">9.tortoiseGit比较文件差异(单文件)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分支操作相关指令"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">分支操作相关指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-branch"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">git branch</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-branch-分支名"><span class="post-toc-number">9.3.</span> <span class="post-toc-text">git branch 分支名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-checkout-分支名"><span class="post-toc-number">9.4.</span> <span class="post-toc-text">git checkout 分支名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-merge-m-备注信息"><span class="post-toc-number">9.5.</span> <span class="post-toc-text">git merge -m 备注信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-branch-d-分支名"><span class="post-toc-number">9.6.</span> <span class="post-toc-text">git branch -d 分支名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#无论是创建分支还是合并分支时刻警醒当前位于哪个位置"><span class="post-toc-number">9.7.</span> <span class="post-toc-text">无论是创建分支还是合并分支时刻警醒当前位于哪个位置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对于一个仓库，如果没有任何本地提交，git-branch-没有结果"><span class="post-toc-number">9.8.</span> <span class="post-toc-text">对于一个仓库，如果没有任何本地提交，git branch 没有结果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#不要在本地分支上push代码"><span class="post-toc-number">9.9.</span> <span class="post-toc-text">不要在本地分支上push代码</span></a></li></ol></li></ol>
+    </ul>
+    
+
 
 
 
@@ -436,37 +366,132 @@
 
                 <!-- Post Header(Thumbnail & Title) -->
                 
-
-
-    <!-- Isolation Post Header -->
-    <!-- Post thumbnail -->
+    <!-- Paradox Post Header -->
     
-        <!-- Post Header Info -->
-        <div class="post-header_info without-thumbnail">
-            <!-- Author Avatar & Name -->
-            <img src="/img/avatar.png" class="avatar-img" width="44px" height="44px" alt="John Zeng's avatar">
-            <span class="name-span">John Zeng</span>
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Git的使用
+            </p>
         </div>
 
-        <!-- Null Thumbnail -->
-        <div class="post_thumbnail-null">
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>John Zeng</strong>
+        <span>Sep 20, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
     
-        </div>
 
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/建站技巧/">建站技巧</a>
+    </ul>
+    
 
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Git的使用&url=http://yoursite.com/2017/09/20/Git的使用/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                شارك على Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Git的使用&url=http://yoursite.com/2017/09/20/Git的使用/index.html&via=John Zeng" target="_blank">
+            <li class="mdl-menu__item">
+                شارك على Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/09/20/Git的使用/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                شارك على Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/09/20/Git的使用/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                شارك على Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
 
                 
 
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-
-    
-        <div class="post-content_wrapper">
-            <p class="post-title">
-                Git的使用
-            </p>
-            <h2 id="1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下"><a href="#1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下" class="headerlink" title="1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下"></a>1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下</h2><ul>
+        <h2 id="1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下"><a href="#1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下" class="headerlink" title="1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下"></a>1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下</h2><ul>
 <li><p>1.刚进入公司，领导让你对某个项目进行二次开发（服务器仓库并不是空的）</p>
 <ul>
 <li>第一种方式：<ul>
@@ -626,15 +651,13 @@ a/*.js--&gt;a目录下面的所有js文件
 <h3 id="git-merge-m-备注信息"><a href="#git-merge-m-备注信息" class="headerlink" title="git merge -m 备注信息"></a>git merge -m 备注信息</h3><p>将指定分支合并到当前分支下</p>
 <h3 id="git-branch-d-分支名"><a href="#git-branch-d-分支名" class="headerlink" title="git branch -d 分支名"></a>git branch -d 分支名</h3><p>删除指定的分支</p>
 <h3 id="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"><a href="#无论是创建分支还是合并分支时刻警醒当前位于哪个位置" class="headerlink" title="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"></a>无论是创建分支还是合并分支时刻警醒当前位于哪个位置</h3><h3 id="对于一个仓库，如果没有任何本地提交，git-branch-没有结果"><a href="#对于一个仓库，如果没有任何本地提交，git-branch-没有结果" class="headerlink" title="对于一个仓库，如果没有任何本地提交，git branch 没有结果"></a>对于一个仓库，如果没有任何本地提交，git branch 没有结果</h3><h3 id="不要在本地分支上push代码"><a href="#不要在本地分支上push代码" class="headerlink" title="不要在本地分支上push代码"></a>不要在本地分支上push代码</h3>
-            
-        </div>
+        
+    
+
     
 </div>
 
 
-                
-                    <!-- Paradox Post Info -->
-                    
                 
 
                 <!-- Post Comments -->
@@ -677,11 +700,242 @@ a/*.js--&gt;a目录下面的所有js文件
 
 
                     
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="John Zeng's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                الرئيسية
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    أرشيف
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/09/">September 2017<span class="sidebar_archives-count">58</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            سمة - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>John Zeng的个人播客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
     
 </footer>
 
