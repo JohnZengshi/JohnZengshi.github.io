@@ -102,6 +102,10 @@
     
 
     
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
 
     <!-- Config CSS -->
 
@@ -303,8 +307,109 @@
 
 
     
-        <body id="scheme-Nexus" class="lazy">
+        <body id="scheme-Isolation" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;John Zeng的个人播客
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="John Zeng的个人播客">
+                John Zeng的个人播客
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                Hi, nice to meet you
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>رئيسية</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+    </div>
+</header>
+
                 
 
                 <!-- Main Container -->
@@ -333,6 +438,21 @@
                 
 
 
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/avatar.png" class="avatar-img" width="44px" height="44px" alt="John Zeng's avatar">
+            <span class="name-span">John Zeng</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
 
 
                 
@@ -342,9 +462,60 @@
     
 
     
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                AngularJS中的自定义服务
+            </p>
+            <blockquote>
+<h2 id="常见的Angular内置服务："><a href="#常见的Angular内置服务：" class="headerlink" title="常见的Angular内置服务："></a>常见的Angular内置服务：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$log</div><div class="line">$timeout</div><div class="line">$interval</div><div class="line">$http</div><div class="line">$filter</div></pre></td></tr></table></figure>
+<h2 id="factory方法"><a href="#factory方法" class="headerlink" title="factory方法"></a>factory方法</h2></blockquote>
+<ul>
+<li><p>模块对象提供了一个factory方法. 这个方法允许我们自定义服务.</p>
+<ul>
+<li>第1个参数: 自定义服务的名称.</li>
+<li>第2个参数: 是1个数组.前面写上这个服务要依赖的别的服务,最后是1个回调函数.将需要依赖的服务通过形参注入.</li>
+<li>回到函数的返回值: 我们定义的服务是提供功能的嘛,所以要求返回1个函数或者1个对象.</li>
+</ul>
+</li>
+<li><p>具体实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">app.factory(<span class="string">"highven"</span>,[<span class="string">"$filter"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$filter</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        now:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> $filter(<span class="string">"data"</span>)(<span class="keyword">new</span> <span class="built_in">Date</span>(),<span class="string">"yyyy-MM-dd HH:mm:ss"</span>)</div><div class="line">        &#125;,</div><div class="line">        format:<span class="function"><span class="keyword">function</span>(<span class="params">format</span>)</span>&#123;</div><div class="line">             <span class="keyword">return</span> $filter(<span class="string">"date"</span>)(<span class="keyword">new</span> <span class="built_in">Date</span>(),format)   </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<h2 id="serive方法："><a href="#serive方法：" class="headerlink" title="serive方法："></a>serive方法：</h2></blockquote>
+<ul>
+<li><p>使用模块对象的service方法也可以创建服务.</p>
+<ul>
+<li>与factory方法不同的是:<ul>
+<li>该方法不需要明确返回对象或者函数.使用this的方式为返回的对象添加属性和方法.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>具体实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.service(<span class="string">"highven"</span>,[<span class="string">"filter"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$filter</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.now = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> $filter(<span class="string">"data"</span>)(<span class="keyword">new</span> <span class="built_in">Date</span>(),<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</div><div class="line">    &#125;,</div><div class="line">    <span class="keyword">this</span>.format = <span class="function"><span class="keyword">function</span>(<span class="params">format</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> $filter(<span class="string">"data"</span>)(<span class="keyword">new</span> <span class="built_in">Date</span>(),format)</div><div class="line">    &#125;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<h2 id="调用："><a href="#调用：" class="headerlink" title="调用："></a>调用：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"demoCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"serive"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,serive</span>)</span>&#123;</div><div class="line">    $scope.now = serive.now();</div><div class="line">&#125;])</div></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li>注意：<ul>
+<li>service方法只能返回对象.</li>
+<li>factory可以返回对象也可以返回函数.</li>
+</ul>
+</li>
+</ul>
+
+            
+        </div>
+    
 </div>
 
 
+                
+                    <!-- Paradox Post Info -->
+                    
                 
 
                 <!-- Post Comments -->
@@ -362,7 +533,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -372,7 +543,7 @@
     <!-- Next Nav -->
     
         <a href="/2017/09/20/关于跨域请求/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>

@@ -102,6 +102,10 @@
     
 
     
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
 
     <!-- Config CSS -->
 
@@ -303,8 +307,109 @@
 
 
     
-        <body id="scheme-Nexus" class="lazy">
+        <body id="scheme-Isolation" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;John Zeng的个人播客
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="John Zeng的个人播客">
+                John Zeng的个人播客
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                Hi, nice to meet you
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>رئيسية</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+    </div>
+</header>
+
                 
 
                 <!-- Main Container -->
@@ -333,6 +438,21 @@
                 
 
 
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/avatar.png" class="avatar-img" width="44px" height="44px" alt="John Zeng's avatar">
+            <span class="name-span">John Zeng</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
 
 
                 
@@ -342,9 +462,41 @@
     
 
     
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                关于javascript的数据类型
+            </p>
+            <h2 id="关于javascript的数据类型"><a href="#关于javascript的数据类型" class="headerlink" title="关于javascript的数据类型"></a>关于javascript的数据类型</h2><blockquote>
+<h3 id="1-返回数据类型"><a href="#1-返回数据类型" class="headerlink" title="1.返回数据类型"></a>1.返回数据类型</h3></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. <span class="string">"undefined"</span> ---未定义</div><div class="line">2. <span class="string">"boolean"</span> ---布尔值</div><div class="line">3. <span class="string">"string"</span> ---字符串</div><div class="line">4. <span class="string">"number"</span> ---数值</div><div class="line">5. <span class="string">"object"</span> ---对象或者null</div><div class="line">6. <span class="string">"function"</span> ---函数</div></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="2-强制类型转换"><a href="#2-强制类型转换" class="headerlink" title="2.强制类型转换"></a>2.强制类型转换</h3></blockquote>
+<p>1.常见五个例子</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. Number(参数)强制把数据类型转换成数值类型</div><div class="line">2. parseInt(参数1，参数2)将字符串转换成整数</div><div class="line">3. parseFloat()将字符串转成浮点数</div><div class="line">4. string(参数)：将任何数据类型转换成字符串</div><div class="line">5. Boolean()可以将任何数据类型转化成布尔类型的值</div></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="3-隐式类型转换"><a href="#3-隐式类型转换" class="headerlink" title="3.隐式类型转换"></a>3.隐式类型转换</h3></blockquote>
+<ol>
+<li>四则运算</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.加法运算符+是双目运算符，只要其中一个是string类型，表达式的值便是一个String。</div><div class="line"></div><div class="line">2.对于其他的四则运算，只有其中一个是Number类型，表达式的便是一个Number。(列如 <span class="string">"-"</span> 运算符)</div><div class="line"></div><div class="line">3.对于非法字符的情况通常会返回NaN:<span class="string">'1'</span>*<span class="string">'a'</span>    // =&gt; NaN,这是因为parseInt(a)值为NaN，1*NaN还是NaN</div></pre></td></tr></table></figure>
+<ol>
+<li>判断语句</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> 判断语句中的判断条件需要是 Boolean类型，所以条件表达式会被隐式转换为Boolean。其转换规则则同Boolean的构造函数。比如:</div><div class="line"></div><div class="line">var obj = &#123;&#125;;</div><div class="line"></div><div class="line"><span class="keyword">if</span>(obj)&#123;</div><div class="line">　　　<span class="keyword">while</span>(obj);</div><div class="line">　　　　&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>Native代码调用</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">JavaScript宿主环境都会提供大量的对象，它们往往不少通过JavaScript来实现的。JavaScript给这些函数传入的参数也会进行隐式转换。例如BOM提供的alert方法接受String类型的参数：</div><div class="line"></div><div class="line">alert(&#123;a:1&#125;);  //=&gt;[object Object]</div></pre></td></tr></table></figure>
+
+            
+        </div>
+    
 </div>
 
 
+                
+                    <!-- Paradox Post Info -->
+                    
                 
 
                 <!-- Post Comments -->
@@ -362,7 +514,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -372,7 +524,7 @@
     <!-- Next Nav -->
     
         <a href="/2017/09/20/Git的使用/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>

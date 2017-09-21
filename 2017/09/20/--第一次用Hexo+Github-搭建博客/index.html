@@ -102,6 +102,10 @@
     
 
     
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
 
     <!-- Config CSS -->
 
@@ -303,8 +307,109 @@
 
 
     
-        <body id="scheme-Nexus" class="lazy">
+        <body id="scheme-Isolation" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;John Zeng的个人播客
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="John Zeng的个人播客">
+                John Zeng的个人播客
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                Hi, nice to meet you
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>رئيسية</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+    </div>
+</header>
+
                 
 
                 <!-- Main Container -->
@@ -333,6 +438,21 @@
                 
 
 
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/avatar.png" class="avatar-img" width="44px" height="44px" alt="John Zeng's avatar">
+            <span class="name-span">John Zeng</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
 
 
                 
@@ -342,9 +462,44 @@
     
 
     
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                第一次用Hexo+Github 搭建博客
+            </p>
+            <h2 id="大概可以分为以下几个步骤："><a href="#大概可以分为以下几个步骤：" class="headerlink" title="大概可以分为以下几个步骤："></a>大概可以分为以下几个步骤：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.搭建环境准备（包括node.js和git环境，gitHub账户的配置）</div><div class="line">2.安装Hexo</div><div class="line">3.配置Hexo</div><div class="line">4.怎样将Hexo与github page 联系起来</div><div class="line">5.怎样发布文章</div></pre></td></tr></table></figure>
+<blockquote>
+<h1 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h1><ul>
+<li>Node.js 的安装和准备 (本文略过)</li>
+<li>Git的安装和准备 (本文略过)</li>
+<li>gitHub账户的配置(本文略过)</li>
+</ul>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><h3 id="创建一个文件夹Hexo-并在命令行的窗口进入到该目录"><a href="#创建一个文件夹Hexo-并在命令行的窗口进入到该目录" class="headerlink" title="创建一个文件夹Hexo,并在命令行的窗口进入到该目录"></a>创建一个文件夹Hexo,并在命令行的窗口进入到该目录</h3><h4 id="1-命令行中输入："><a href="#1-命令行中输入：" class="headerlink" title="1.命令行中输入："></a>1.命令行中输入：</h4><pre><code>npm install hexo-cli -g
+npm install hexo --save
+</code></pre><h4 id="2查看hexo版本："><a href="#2查看hexo版本：" class="headerlink" title="2查看hexo版本："></a>2查看hexo版本：</h4><pre><code>hexo -v
+</code></pre><h1 id="hexo的相关配置"><a href="#hexo的相关配置" class="headerlink" title="hexo的相关配置"></a>hexo的相关配置</h1><h4 id="1-初始化Hexo："><a href="#1-初始化Hexo：" class="headerlink" title="1.初始化Hexo："></a>1.初始化Hexo：</h4><pre><code>hexo init
+npm install（之后npm将会自动安装你需要的组件）
+</code></pre><h4 id="2-在命令行中，输入："><a href="#2-在命令行中，输入：" class="headerlink" title="2.在命令行中，输入："></a>2.在命令行中，输入：</h4><pre><code>hexo g
+hexo s
+</code></pre><h3 id="在浏览器中打开-http-localhost-4000-访问本地的博客"><a href="#在浏览器中打开-http-localhost-4000-访问本地的博客" class="headerlink" title="在浏览器中打开 http://localhost:4000 访问本地的博客"></a>在浏览器中打开 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 访问本地的博客</h3><h1 id="将Hexo与github-page-联系起来"><a href="#将Hexo与github-page-联系起来" class="headerlink" title="将Hexo与github page 联系起来"></a>将Hexo与github page 联系起来</h1><h4 id="1-设置Git的user-name和email：-如果是第一次的话"><a href="#1-设置Git的user-name和email：-如果是第一次的话" class="headerlink" title="1.设置Git的user name和email：(如果是第一次的话)"></a>1.设置Git的user name和email：(如果是第一次的话)</h4><pre><code>git config --global user.name &quot;xujun&quot;
+git config --global user.email &quot;gdutxiaoxu@163.com&quot;
+</code></pre><h4 id="2-生成密钥-可以忽略"><a href="#2-生成密钥-可以忽略" class="headerlink" title="2.生成密钥(可以忽略)"></a>2.生成密钥(可以忽略)</h4><pre><code>ssh-keygen -t rsa -C &quot;gdutxiaoxu@163.com&quot;
+</code></pre><h4 id="3-配置Deployment（在-config-yml文件中，找到Deployment）"><a href="#3-配置Deployment（在-config-yml文件中，找到Deployment）" class="headerlink" title="3.配置Deployment（在_config.yml文件中，找到Deployment）"></a>3.配置Deployment（在_config.yml文件中，找到Deployment）</h4><pre><code>deploy:
+type: git
+repo: git@github.com:yourname/yourname.github.io.git
+branch: master
+</code></pre><h1 id="写博客、发布文章"><a href="#写博客、发布文章" class="headerlink" title="写博客、发布文章"></a>写博客、发布文章</h1><h2 id="博客文章存放在hexo-source-posts下"><a href="#博客文章存放在hexo-source-posts下" class="headerlink" title="博客文章存放在hexo\source\ _posts下"></a>博客文章存放在hexo\source\ _posts下</h2><h4 id="1-MarDown编辑器编辑文章后，执行下面的命令"><a href="#1-MarDown编辑器编辑文章后，执行下面的命令" class="headerlink" title="1.MarDown编辑器编辑文章后，执行下面的命令"></a>1.MarDown编辑器编辑文章后，执行下面的命令</h4><pre><code>hexo d -g （#在部署前先生成）
+</code></pre><h4 id="2-踩坑提醒：（注意需要提前安装一个扩展：）"><a href="#2-踩坑提醒：（注意需要提前安装一个扩展：）" class="headerlink" title="2.踩坑提醒：（注意需要提前安装一个扩展：）"></a>2.踩坑提醒：（注意需要提前安装一个扩展：）</h4><pre><code>npm install hexo-deployer-git --save
+</code></pre></blockquote>
+
+            
+        </div>
+    
 </div>
 
 
+                
+                    <!-- Paradox Post Info -->
+                    
                 
 
                 <!-- Post Comments -->
@@ -362,7 +517,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -372,7 +527,7 @@
     <!-- Next Nav -->
     
         <a href="/2017/09/20/对象的序列化和反序列化/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>

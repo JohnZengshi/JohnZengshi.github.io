@@ -102,6 +102,10 @@
     
 
     
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
 
     <!-- Config CSS -->
 
@@ -303,8 +307,109 @@
 
 
     
-        <body id="scheme-Nexus" class="lazy">
+        <body id="scheme-Isolation" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;John Zeng的个人播客
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="John Zeng的个人播客">
+                John Zeng的个人播客
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                Hi, nice to meet you
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>رئيسية</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+    </div>
+</header>
+
                 
 
                 <!-- Main Container -->
@@ -333,6 +438,21 @@
                 
 
 
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/avatar.png" class="avatar-img" width="44px" height="44px" alt="John Zeng's avatar">
+            <span class="name-span">John Zeng</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
 
 
                 
@@ -342,9 +462,91 @@
     
 
     
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                跨页面传值的方法和使用
+            </p>
+            <blockquote>
+<h2 id="跨页面传值"><a href="#跨页面传值" class="headerlink" title="跨页面传值"></a>跨页面传值</h2></blockquote>
+<ul>
+<li><p>get请求的参数</p>
+<ul>
+<li><p>在页面跳转的时候，把要传递的参数作为url请求路径的一部分</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">location.href = <span class="string">"index.html?id=666&amp;age=18"</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在目标页面，通过location.search得到相关参数</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">laction.search =&gt; <span class="string">"?id=666&amp;age=18"</span>;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>h5本地新增的储存技术:localStorage/sessionStorage</p>
+<ul>
+<li>sessionStorage是会话级储存时间/localStorage永久储存</li>
+<li><p>储存数据：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage.setltem(<span class="string">"健"</span>，<span class="string">"值"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>切记：所有值都是字符串类型的值,如果不是字符串类型的值，方法内部会自动转换成字符串类型储存；</li>
+<li>特殊情况：传入数字也会储存：100 –&gt; “100”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>cookie</p>
+<ul>
+<li>前提：必须在同一个域名下的不同页面；</li>
+<li>cookie的2种类型：<ul>
+<li>会话cookie:cookie会在每一次会话后删除；</li>
+<li>长期cookie:cookie会保存一段时间</li>
+</ul>
+</li>
+<li><p>原生JS:</p>
+<ul>
+<li><p>设置一个会话</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cookie:document.cookie = <span class="string">"?id=888"</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置一个长期</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cookie:document.cookie = <span class="string">"?id=888;expires="</span>+new Date(<span class="string">"2017-9-11 08:05:30"</span>)     //(new Date()里面要加冒号)</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取cookie:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.cookie; //(获取当前域名下的所有cookie值)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>jQuery.cookie.js操作cookie</p>
+<ul>
+<li>jquery.cookie.js依赖于jquery</li>
+<li><p>设置一个会话cookie:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.cookie(<span class="string">"id"</span>,<span class="string">"888"</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>设置一个长期cookie:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.cookie(<span class="string">"id"</span>,<span class="string">"888"</span>,&#123;expires:日期类型或数字类型&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取cookie:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.cookie(<span class="string">"健"</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>移出cookie:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.removeCookie(<span class="string">"健"</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用cookie的实例：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="built_in">JSON</span>.stringify(ajax返回的用户数据,一个对象);</div><div class="line"></div><div class="line"><span class="comment">//设置cookie，时间</span></div><div class="line">$cookie(<span class="string">"userInfo"</span>,str,&#123;</div><div class="line">    expires:<span class="number">1</span>/<span class="number">24</span> <span class="comment">//一小时</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//登陆成功：</span></div><div class="line">location.href = <span class="string">"index.html"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>服务器端:session</p>
+</li>
+</ul>
+
+            
+        </div>
+    
 </div>
 
 
+                
+                    <!-- Paradox Post Info -->
+                    
                 
 
                 <!-- Post Comments -->
@@ -362,7 +564,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -372,7 +574,7 @@
     <!-- Next Nav -->
     
         <a href="/2017/09/20/从提交表单的数据中找到某个属性（一堆编码中）/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>

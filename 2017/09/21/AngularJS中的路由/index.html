@@ -102,6 +102,10 @@
     
 
     
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
 
     <!-- Config CSS -->
 
@@ -303,8 +307,109 @@
 
 
     
-        <body id="scheme-Nexus" class="lazy">
+        <body id="scheme-Isolation" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;John Zeng的个人播客
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="John Zeng的个人播客">
+                John Zeng的个人播客
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                Hi, nice to meet you
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>رئيسية</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+    </div>
+</header>
+
                 
 
                 <!-- Main Container -->
@@ -333,6 +438,21 @@
                 
 
 
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/avatar.png" class="avatar-img" width="44px" height="44px" alt="John Zeng's avatar">
+            <span class="name-span">John Zeng</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
 
 
                 
@@ -342,9 +462,92 @@
     
 
     
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                AngularJS中的路由
+            </p>
+            <blockquote>
+<h2 id="1-单页面应用的原理"><a href="#1-单页面应用的原理" class="headerlink" title="1.单页面应用的原理"></a>1.单页面应用的原理</h2><ul>
+<li>通过haschange事件监听到锚点的变化，进而可以实现为不同的锚点显示不同的视图，单页面应用就是基于这一原理的<ul>
+<li>angularjs中的路由: 就是基于这一原理实现的.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-使用路由的步骤"><a href="#2-使用路由的步骤" class="headerlink" title="2.使用路由的步骤"></a>2.使用路由的步骤</h2><ul>
+<li>1.下载路由插件.</li>
+<li>2.将这个route插件引入</li>
+<li>3.创建模块的时候,要依赖于ngRoute模块.</li>
+<li>4.配置路由<ul>
+<li>设定规则. 当url的锚点值发生变化的时候,要怎么做.</li>
+<li>默认情况下,angularjs路由中的锚链接的值必须是以#!开头.</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-注意的细节"><a href="#3-注意的细节" class="headerlink" title="3.注意的细节:"></a>3.注意的细节:</h2><ul>
+<li>默认情况下,锚链接的锚点值必须要以#!开头.</li>
+<li>在使用when方法匹配的时候,前面的#!不必写.</li>
+<li>temlplateUrl 表示匹配成功的时候 请求指定的资源</li>
+<li>将请求回来的资源放在ng-view下面.</li>
+</ul>
+<h2 id="4-routeProvider"><a href="#4-routeProvider" class="headerlink" title="4.$routeProvider"></a>4.$routeProvider</h2><ul>
+<li>使用$routeProvider进行路由规则的配置</li>
+<li>when方法： 设定当路由匹配成功以后,要做的事情.  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">when(<span class="string">"路由"</span>，&#123;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>但成功匹配后，要做的事情通过第二个参数对象来指定。<ul>
+<li>第二个参数：对象<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">templateUrl:<span class="string">""</span></div><div class="line"><span class="comment">//资源路径，匹配成功后请求这个资源，将请求回来的资源放在ng-view</span></div><div class="line"></div><div class="line">otherwise方法</div><div class="line"><span class="comment">//当所有的路由规矩都不匹配的时候，做的事情</span></div><div class="line"></div><div class="line"><span class="string">"/"</span>代表空路由</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="5-when方法的第二个参数的键值对的说明"><a href="#5-when方法的第二个参数的键值对的说明" class="headerlink" title="5.when方法的第二个参数的键值对的说明"></a>5.when方法的第二个参数的键值对的说明</h2><ul>
+<li>templateUrl</li>
+<li>redirectTo 跳转路由  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">redirectTO:<span class="string">"/home"</span></div><div class="line"><span class="comment">//当路由匹配成功以后，修改路由为"/home"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>template:””</li>
+<li>controller:””  值是控制器的名称会将请求回来的视图与这个控制器进行关联.这样的话,就可以在控制器中制造数据 存储到$scope中.视图中就可以访问.</li>
+</ul>
+<blockquote>
+<h2 id="6-spa的优缺点"><a href="#6-spa的优缺点" class="headerlink" title="6.spa的优缺点"></a>6.spa的优缺点</h2><ul>
+<li>优点：用户体验极致</li>
+<li>对seo不友好</li>
+</ul>
+<h2 id="7-具体代码："><a href="#7-具体代码：" class="headerlink" title="7.具体代码："></a>7.具体代码：</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-contorller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">nav</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/home"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/my"</span>&gt;</span>我的音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/find"</span>&gt;</span>发现音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">ng-view</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> app.angular.module(<span class="string">"hmApp"</span>,[<span class="string">"ngRoute"</span>]);</div><div class="line">    app.config([<span class="string">"$locationProcider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$locationProcider</span>)</span>&#123;</div><div class="line">        $locationProcider.hashPrefix(<span class="string">""</span>); </div><div class="line">    &#125;])</div><div class="line"></div><div class="line">    <span class="comment">//针对 路由规则(锚点值变化) 进行配置</span></div><div class="line">    app.config([<span class="string">"$rotoueProcider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$rotoueProcider</span>)</span>&#123;</div><div class="line">        $rotoueProcider.when(<span class="string">"/home"</span>,&#123;</div><div class="line">            templateUrl:<span class="string">"./musice/home.html"</span></div><div class="line">        &#125;).when(<span class="string">"/my"</span>,&#123;</div><div class="line">            template:<span class="string">"&lt;h1&gt;哈哈哈哈&lt;/h1&gt;"</span>,</div><div class="line">            controller:<span class="string">"hmCtrl"</span></div><div class="line">            <span class="comment">//将请求回来的视图和名称叫做“myCtrl”的控制器关联起来</span></div><div class="line">        &#125;).when(<span class="string">"/"</span>,&#123;</div><div class="line">            redirectTo:<span class="string">"/home"</span></div><div class="line">            <span class="comment">//如果现在的URL地址上的路由是一个空路由，name就跳转到、home这个路由</span></div><div class="line">        &#125;).otherwise(&#123;</div><div class="line">            templateUrl:<span class="string">"./404.html"</span></div><div class="line">        &#125;)</div><div class="line">    &#125;]);</div><div class="line"></div><div class="line">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</div><div class="line">        $scope.name = <span class="string">"歌曲"</span></div><div class="line">    &#125;])</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<h2 id="路由参数"><a href="#路由参数" class="headerlink" title="路由参数"></a>路由参数</h2></blockquote>
+<ul>
+<li><p>路由的后面可以跟参数.</p>
+<ul>
+<li>可以跟Query String类型的参数.  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/my?name=jack&amp;age=18"</span>&gt;</span>我的音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">//仍然可以成功匹配 /my 这个路由规则.</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>需要特别注意的是:</p>
+<ul>
+<li>当路由匹配成功以后,ng路由机制会去请求my.html资源回来放到ng-view中.</li>
+<li><p>并不会主动的将参数发给服务器.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$routeParams"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$routeParams</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log($routeParams);</div><div class="line">&#125;])</div></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
+            
+        </div>
+    
 </div>
 
 
+                
+                    <!-- Paradox Post Info -->
+                    
                 
 
                 <!-- Post Comments -->
@@ -364,7 +567,7 @@
     <!-- Next Nav -->
     
         <a href="/2017/09/21/云音乐案例(利用锚点值)/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>

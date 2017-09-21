@@ -102,6 +102,10 @@
     
 
     
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
 
     <!-- Config CSS -->
 
@@ -303,8 +307,109 @@
 
 
     
-        <body id="scheme-Nexus" class="lazy">
+        <body id="scheme-Isolation" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;John Zeng的个人播客
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="John Zeng的个人播客">
+                John Zeng的个人播客
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                Hi, nice to meet you
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>رئيسية</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+    </div>
+</header>
+
                 
 
                 <!-- Main Container -->
@@ -333,6 +438,21 @@
                 
 
 
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/avatar.png" class="avatar-img" width="44px" height="44px" alt="John Zeng's avatar">
+            <span class="name-span">John Zeng</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
 
 
                 
@@ -342,9 +462,115 @@
     
 
     
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                RequireJS 是一个基于原生js实现的模块化解决方案
+            </p>
+            <blockquote>
+<h2 id="1-模块化"><a href="#1-模块化" class="headerlink" title="1.模块化"></a>1.模块化</h2></blockquote>
+<ul>
+<li><p>模块化是什么？</p>
+<ul>
+<li>具有实现一个完整功能的整体</li>
+</ul>
+</li>
+<li><p>为什么要使用模块化?</p>
+<ul>
+<li>为了更好地复用</li>
+<li>减少全局变量污染</li>
+<li><p>解决功能之间的依赖关系</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  var KTV=(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    var leastPrice=1000;</div><div class="line">    var total=0;</div><div class="line">    <span class="built_in">return</span> &#123;</div><div class="line">        pay:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            <span class="keyword">if</span>(total&gt;=leastPrice)&#123;</div><div class="line">                alert(<span class="string">"买单成功"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="2-模块化的实现方式"><a href="#2-模块化的实现方式" class="headerlink" title="2.模块化的实现方式"></a>2.模块化的实现方式</h2></blockquote>
+<ul>
+<li><p>使用闭包来实现</p>
+<ul>
+<li>随着功能的增加，暴露的全局变量也会越来越多<ul>
+<li>requireJS几乎没有全局变量</li>
+</ul>
+</li>
+<li>不能很好的解决模块依赖的问题</li>
+</ul>
+</li>
+<li><p>使用主流的一些实现模块化的库来实现</p>
+<ul>
+<li>requireJS–&gt;AMD规范–&gt;Async Module Define–&gt;(异步模块加载规范)</li>
+<li>seaJS–&gt;CMD规范–&gt;Common Module Define–&gt;同步模块加载规范 ：玉伯<ul>
+<li>阿里：朴灵《深入浅出Node.JS》</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>browserify</p>
+</li>
+<li>webpack</li>
+<li>Node.JS–&gt;CommonJS规范</li>
+<li>mv*框架<ul>
+<li>angular vue backbone avalon</li>
+</ul>
+</li>
+<li>组件化<ul>
+<li>react /react native /ionic</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="3-面试的重点-AMD规范和CMD规范比较大的区别："><a href="#3-面试的重点-AMD规范和CMD规范比较大的区别：" class="headerlink" title="3.(面试的重点)AMD规范和CMD规范比较大的区别："></a>3.(面试的重点)AMD规范和CMD规范比较大的区别：</h2></blockquote>
+<ul>
+<li><p>1.AMD规范就是指requireJS</p>
+<ul>
+<li>–&gt;ansnc module define: 异步模块定义（异步加载模块，依赖前置）<ul>
+<li>–&gt;模块定义和导入（使用）：define定义一个模块，define([“导入的模块”])/require([“导入的模块”])</li>
+<li>–&gt;异步加载模块 动态创建script标签</li>
+<li>–&gt;把所有依赖的模块放在文件的头部</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.CMD规范就是指的seajs</p>
+<ul>
+<li>–&gt;common module define：通用模块定义(同步加载模块)</li>
+<li>–&gt;模块定义和导入：exports/module.exports</li>
+<li>–&gt;同步加载模块</li>
+<li>–&gt;依赖就近：50行代码使用商品模块的功能，就在49行依赖商品模块</li>
+</ul>
+</li>
+<li><p>3.CommonJS规范：nodeJS</p>
+</li>
+</ul>
+<blockquote>
+<h2 id="4-requireJS这种模块化解决方案称之为AMD规范"><a href="#4-requireJS这种模块化解决方案称之为AMD规范" class="headerlink" title="4.requireJS这种模块化解决方案称之为AMD规范"></a>4.requireJS这种模块化解决方案称之为AMD规范</h2></blockquote>
+<ul>
+<li><p>AMD:async module define:异步模块定义</p>
+</li>
+<li><p>一直非常现实的有CMD规范–》sea.js(玉伯)</p>
+<ul>
+<li>CMD:common module define(借鉴了node.js中的CommonJS规范)</li>
+</ul>
+</li>
+<li><p>模块化规范：AMD CMD CommonJS</p>
+</li>
+<li><p>模块化解决方案：requireJS seaJS browerify webpack</p>
+</li>
+<li><p>MV*: mvc mvvm mvp</p>
+</li>
+<li><p>组件化开发：react</p>
+</li>
+</ul>
+
+            
+        </div>
+    
 </div>
 
 
+                
+                    <!-- Paradox Post Info -->
+                    
                 
 
                 <!-- Post Comments -->
@@ -362,7 +588,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -372,7 +598,7 @@
     <!-- Next Nav -->
     
         <a href="/2017/09/20/--第一次用Hexo+Github-搭建博客/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>

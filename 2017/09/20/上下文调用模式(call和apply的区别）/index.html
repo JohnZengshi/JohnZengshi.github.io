@@ -102,6 +102,10 @@
     
 
     
+        
+            <link rel="stylesheet" href="/css/fontawesome.min.css">
+        
+    
 
     <!-- Config CSS -->
 
@@ -303,8 +307,109 @@
 
 
     
-        <body id="scheme-Nexus" class="lazy">
+        <body id="scheme-Isolation" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+                    <!-- Isolation Header -->
+                    <header class="header">
+    <div class="header-wrapper">
+        <!-- Header Copyright -->
+        <div class="header-copyright">
+            <div class="header-site">
+                ©&nbsp;
+                <script type="text/javascript">
+                    var fd = new Date();
+                    document.write(fd.getFullYear());
+                </script>
+                &nbsp;John Zeng的个人播客
+            </div>
+            <!--
+            I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+            It will not impact the appearance and can give developers a lot of support :)
+
+            很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+            它不会影响美观并可以给开发者很大的支持。 :)
+            -->
+            <div>
+                Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a>
+                <br>
+                Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a>
+            </div>
+        </div>
+
+        <!-- Header Title -->
+        <span class="header-title header-item">
+            <a href="/" title="John Zeng的个人播客">
+                John Zeng的个人播客
+            </a>
+        </span>
+
+        <p class="header-slogan header-item">
+        
+            
+                Hi, nice to meet you
+            
+        
+        </p>
+
+        <!-- Header Nav -->
+        <nav class="header-nav header-item">
+            <span class="header-nav-item">
+                <a href="/" title="Home">
+                    <span>رئيسية</span>
+                </a>
+            </span>
+
+            <!-- Pages  -->
+            
+            
+        </nav>
+
+        <!-- Header SNS -->
+        <div class="header-item header-sns_list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+    </div>
+</header>
+
                 
 
                 <!-- Main Container -->
@@ -333,6 +438,21 @@
                 
 
 
+    <!-- Isolation Post Header -->
+    <!-- Post thumbnail -->
+    
+        <!-- Post Header Info -->
+        <div class="post-header_info without-thumbnail">
+            <!-- Author Avatar & Name -->
+            <img src="/img/avatar.png" class="avatar-img" width="44px" height="44px" alt="John Zeng's avatar">
+            <span class="name-span">John Zeng</span>
+        </div>
+
+        <!-- Null Thumbnail -->
+        <div class="post_thumbnail-null">
+    
+        </div>
+
 
 
                 
@@ -342,9 +462,47 @@
     
 
     
+        <div class="post-content_wrapper">
+            <p class="post-title">
+                上下文调用模式
+            </p>
+            <blockquote>
+<h2 id="调用方式1-函数调用"><a href="#调用方式1-函数调用" class="headerlink" title="调用方式1 函数调用"></a>调用方式1 函数调用</h2></blockquote>
+<ul>
+<li><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'test 调用了'</span>);</div><div class="line">    <span class="built_in">console</span>.log(argument);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<h2 id="调用方式2-call方法调用"><a href="#调用方式2-call方法调用" class="headerlink" title="调用方式2 call方法调用"></a>调用方式2 call方法调用</h2></blockquote>
+<ul>
+<li>动态改变this  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：...参数n 传递给函数的实参</div><div class="line"></div><div class="line">test.call(&#123;<span class="attr">name</span>:<span class="string">'jack'</span>,<span class="attr">skill</span>:<span class="string">'jump'</span>&#125;,<span class="string">'rose'</span>,<span class="string">'john'</span>)</div><div class="line"><span class="comment">//(调用一个对象的一个方法，以另一个对象替换当前对象,即调用上面test的方法)</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<h2 id="调用方式3-apply方法调用"><a href="#调用方式3-apply方法调用" class="headerlink" title="调用方式3 apply方法调用"></a>调用方式3 apply方法调用</h2></blockquote>
+<ul>
+<li>也可以动态的改变this  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：传入一个数组(或伪数组)传递给函数</div><div class="line"></div><div class="line">test.apply(&#123;<span class="attr">name</span>:<span class="string">'rose'</span>,<span class="attr">skill</span>:<span class="string">'swim'</span>&#125;,&#123;<span class="number">0</span>:<span class="string">'jack'</span>,<span class="number">1</span>:<span class="string">'rose'</span>,<span class="attr">length</span>:<span class="number">1</span>&#125;)</div><div class="line"><span class="comment">//与call差不多</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<h2 id="call和apply的区别："><a href="#call和apply的区别：" class="headerlink" title="call和apply的区别："></a>call和apply的区别：</h2></blockquote>
+<ul>
+<li><p>call方法从第二个参数开始可以接受任意的参数，每个参数会映射到相应位置的func的参数，可以通过参数名调用，但是如果所有参数作为数组传入，他会作为一个整个映射到func对应的第一个参数，之后参数都会为空：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b,c</span>)</span>&#123;&#125;</div><div class="line"></div><div class="line">func.call(obj,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line"><span class="comment">//function接收到的参数为1,2,3</span></div><div class="line"></div><div class="line">func.call(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</div><div class="line"><span class="comment">//funvtion接收到的参数为[1,2,3],untifined,untifined</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>apply方法最多只有两个参数，第二个参数接受的只能是数组或伪数组，并传入到func对应的参数上</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">func.apply(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line"><span class="comment">//function接受到的实际参数是1,2,3</span></div><div class="line"></div><div class="line">func.apply(obj,&#123;<span class="number">0</span>:<span class="number">1</span>,<span class="number">1</span>:<span class="number">2</span>,<span class="number">2</span>:<span class="number">3</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;)</div><div class="line"><span class="comment">//function接收到的参数实际上是1,2,3</span></div></pre></td></tr></table></figure></li>
+</ul>
+
+            
+        </div>
+    
 </div>
 
 
+                
+                    <!-- Paradox Post Info -->
+                    
                 
 
                 <!-- Post Comments -->
@@ -362,7 +520,7 @@
                 <i class="material-icons">arrow_back</i>
             </button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Neuren
+            أحدث
         </a>
     
 
@@ -372,7 +530,7 @@
     <!-- Next Nav -->
     
         <a href="/2017/09/20/js 有哪些内置对象（简单总结）/" id="post_nav-older" class="next-content">
-            Älteren
+            أقدم
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_forward</i>
