@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="AngularJS常见的内部指令 | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="AngularJS常见的内部指令 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": "",
@@ -431,7 +431,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=AngularJS常见的内部指令&url=http://yoursite.com/2017/09/19/Angular常见的内部指令/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=AngularJS常见的内部指令&url=http://yoursite.com/2017/09/19/Angular常见的内部指令/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -486,7 +486,7 @@
 <h2 id="AngularJS常见的内部指令"><a href="#AngularJS常见的内部指令" class="headerlink" title="AngularJS常见的内部指令"></a>AngularJS常见的内部指令</h2></blockquote>
 <ul>
 <li><p>一般情况下都是ng新增的HTML属性</p>
-  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ng-app</div><div class="line">ng-controller</div><div class="line">ng-repeat</div></pre></td></tr></table></div></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ng-app</div><div class="line">ng-controller</div><div class="line">ng-repeat</div></pre></td></tr></table></figure>
 </li>
 <li><p>ng-show指令</p>
 <ul>
@@ -531,7 +531,7 @@
 <ul>
 <li>功能：决定某个类样式是否作用在标签上</li>
 <li>取值: 是1个对象.键: 类样式的名称<pre><code>值: bool  变量 表达式.
-</code></pre>  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tow"</span> <span class="attr">ng-calss</span>=<span class="string">"&#123;red:flase&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></div></figure>
+</code></pre>  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tow"</span> <span class="attr">ng-calss</span>=<span class="string">"&#123;red:flase&#125;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>

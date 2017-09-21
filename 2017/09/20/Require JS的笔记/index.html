@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="RequireJS 是一个基于原生js实现的模块化解决方案 | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="开发用到的新技术"> 
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="RequireJS 是一个基于原生js实现的模块化解决方案 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": ",开发用到的新技术",
@@ -440,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=RequireJS 是一个基于原生js实现的模块化解决方案&url=http://yoursite.com/2017/09/20/Require JS的笔记/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=RequireJS 是一个基于原生js实现的模块化解决方案&url=http://yoursite.com/2017/09/20/Require JS的笔记/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -504,7 +504,7 @@
 <li>为了更好地复用</li>
 <li>减少全局变量污染</li>
 <li><p>解决功能之间的依赖关系</p>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  var KTV=(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    var leastPrice=1000;</div><div class="line">    var total=0;</div><div class="line">    <span class="built_in">return</span> &#123;</div><div class="line">        pay:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            <span class="keyword">if</span>(total&gt;=leastPrice)&#123;</div><div class="line">                alert(<span class="string">"买单成功"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)()</div></pre></td></tr></table></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  var KTV=(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    var leastPrice=1000;</div><div class="line">    var total=0;</div><div class="line">    <span class="built_in">return</span> &#123;</div><div class="line">        pay:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            <span class="keyword">if</span>(total&gt;=leastPrice)&#123;</div><div class="line">                alert(<span class="string">"买单成功"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>

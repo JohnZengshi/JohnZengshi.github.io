@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="AngularJS中的配置块(config) | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="AngularJS中的配置块(config) | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": "",
@@ -431,7 +431,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=AngularJS中的配置块(config)&url=http://yoursite.com/2017/09/21/AngularJS中的配置快(config)/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=AngularJS中的配置块(config)&url=http://yoursite.com/2017/09/21/AngularJS中的配置快(config)/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -489,7 +489,7 @@
 <h2 id="2-如何进行针对服务进行配置"><a href="#2-如何进行针对服务进行配置" class="headerlink" title="2.如何进行针对服务进行配置."></a>2.如何进行针对服务进行配置.</h2><ul>
 <li>模块对象(app)提供了一个方法: config<ul>
 <li>功能: 就是对内置的服务进行修改 对内置的服务进行配置.</li>
-<li>参数: 是1个数组,数组前面写上你要配置的服务对应的Provider  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$log   $logProvider</div><div class="line">$http  $httpProvider</div><div class="line"></div><div class="line"><span class="comment">//每一个服务都有一个对应的Provider</span></div></pre></td></tr></table></div></figure>
+<li>参数: 是1个数组,数组前面写上你要配置的服务对应的Provider  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$log   $logProvider</div><div class="line">$http  $httpProvider</div><div class="line"></div><div class="line"><span class="comment">//每一个服务都有一个对应的Provider</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -497,7 +497,7 @@
 </blockquote>
 <pre><code>- 最后一个元素是一个回调函数，通过形参将这个Provider注入
 </code></pre><blockquote>
-<h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-contorller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;name|firstBig&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</span></div><div class="line"><span class="javascript">    app.config([<span class="string">"$logProvider"</span>,<span class="string">"$filterProvider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$logProvider,$filterProvider</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $logProvider.debugEnabled(<span class="literal">false</span>);</span></div><div class="line"><span class="javascript">        $filterProvider.register(<span class="string">"firstBig"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            retrun <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span></div><div class="line"><span class="javascript">                <span class="keyword">return</span> data[<span class="number">0</span>].toUpperCase() + data.slice(<span class="number">1</span>);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;)</span></div><div class="line"><span class="undefined">    &#125;]);</span></div><div class="line"><span class="javascript">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$log"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$log</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $log.debug(<span class="string">"这是debug信息"</span>);</span></div><div class="line"><span class="javascript">        $log.error(<span class="string">"error!"</span>);</span></div><div class="line"><span class="javascript">        $scope.name = <span class="string">"hahah"</span></span></div><div class="line"><span class="undefined">    &#125;])</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></div></figure></blockquote>
+<h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-contorller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;name|firstBig&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</span></div><div class="line"><span class="javascript">    app.config([<span class="string">"$logProvider"</span>,<span class="string">"$filterProvider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$logProvider,$filterProvider</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $logProvider.debugEnabled(<span class="literal">false</span>);</span></div><div class="line"><span class="javascript">        $filterProvider.register(<span class="string">"firstBig"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            retrun <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span></div><div class="line"><span class="javascript">                <span class="keyword">return</span> data[<span class="number">0</span>].toUpperCase() + data.slice(<span class="number">1</span>);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;)</span></div><div class="line"><span class="undefined">    &#125;]);</span></div><div class="line"><span class="javascript">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$log"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$log</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $log.debug(<span class="string">"这是debug信息"</span>);</span></div><div class="line"><span class="javascript">        $log.error(<span class="string">"error!"</span>);</span></div><div class="line"><span class="javascript">        $scope.name = <span class="string">"hahah"</span></span></div><div class="line"><span class="undefined">    &#125;])</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></blockquote>
 
         
     

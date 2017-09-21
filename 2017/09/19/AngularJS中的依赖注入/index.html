@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="AngularJS中的依赖注入 | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="AngularJS中的依赖注入 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": "",
@@ -431,7 +431,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=AngularJS中的依赖注入&url=http://yoursite.com/2017/09/19/AngularJS中的依赖注入/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=AngularJS中的依赖注入&url=http://yoursite.com/2017/09/19/AngularJS中的依赖注入/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -487,13 +487,13 @@
 <ul>
 <li><p>行内式注入</p>
 <ul>
-<li>创建控制器的时候,第2个参数是1个数组.<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"$Ctrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$log"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$log</span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;])</div></pre></td></tr></table></div></figure>
+<li>创建控制器的时候,第2个参数是1个数组.<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"$Ctrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$log"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$log</span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;])</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>推断式注入.</p>
 <ul>
-<li>第2个参数不需要写数组 不需要指定什么服务要注入只需要将注入的服务写成形参.<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"demoCtrl"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$log</span>)</span>&#123;</div><div class="line">    </div><div class="line">&#125;)</div></pre></td></tr></table></div></figure></li>
+<li>第2个参数不需要写数组 不需要指定什么服务要注入只需要将注入的服务写成形参.<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"demoCtrl"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$log</span>)</span>&#123;</div><div class="line">    </div><div class="line">&#125;)</div></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>

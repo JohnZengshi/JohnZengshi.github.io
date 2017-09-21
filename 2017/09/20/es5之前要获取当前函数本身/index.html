@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="es5之前要获取当前函数本身 | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="掉坑里了"> 
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="es5之前要获取当前函数本身 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": ",掉坑里了",
@@ -440,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=es5之前要获取当前函数本身&url=http://yoursite.com/2017/09/20/es5之前要获取当前函数本身/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=es5之前要获取当前函数本身&url=http://yoursite.com/2017/09/20/es5之前要获取当前函数本身/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -499,7 +499,7 @@
 <li><p>在严格模式下面如何获取当前函数？</p>
 </li>
 </ul>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">function</span> <span class="function"><span class="title">fn</span></span>()&#123;</div><div class="line">    //fn是一个<span class="string">"特殊的名字"</span>,这个名字在外界访问不是一个函数名，在函数体内部访问就指向函数本身</div><div class="line">&#125;)()</div><div class="line">``` </div><div class="line"></div><div class="line">+ 面试题</div><div class="line"></div><div class="line">```bash</div><div class="line">var f1 = funtion <span class="function"><span class="title">f2</span></span>()&#123;</div><div class="line">    console.log(f1 === f2)  //<span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line">console.log(typeof f1) //Function</div><div class="line">console.log(typeof f2) //<span class="string">"untifined"</span></div></pre></td></tr></table></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">function</span> <span class="function"><span class="title">fn</span></span>()&#123;</div><div class="line">    //fn是一个<span class="string">"特殊的名字"</span>,这个名字在外界访问不是一个函数名，在函数体内部访问就指向函数本身</div><div class="line">&#125;)()</div><div class="line">``` </div><div class="line"></div><div class="line">+ 面试题</div><div class="line"></div><div class="line">```bash</div><div class="line">var f1 = funtion <span class="function"><span class="title">f2</span></span>()&#123;</div><div class="line">    console.log(f1 === f2)  //<span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line">console.log(typeof f1) //Function</div><div class="line">console.log(typeof f2) //<span class="string">"untifined"</span></div></pre></td></tr></table></figure>
         
     
 

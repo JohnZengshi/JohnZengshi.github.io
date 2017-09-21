@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="if()括号内的数据类型的转换 | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="javascript基础知识"> 
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="if()括号内的数据类型的转换 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": ",javascript基础知识",
@@ -440,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=if()括号内的数据类型的转换&url=http://yoursite.com/2017/09/20/if()括号内的数据类型的转换/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=if()括号内的数据类型的转换&url=http://yoursite.com/2017/09/20/if()括号内的数据类型的转换/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -493,7 +493,7 @@
     
         <blockquote>
 <h2 id="if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean-转换函数将结果转换为布尔值。转换规则为："><a href="#if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean-转换函数将结果转换为布尔值。转换规则为：" class="headerlink" title="if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为："></a>if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为：</h2></blockquote>
-<div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable ">
+<table>
 <thead>
 <tr>
 <th style="text-align:center">数据类型</th>
@@ -528,10 +528,10 @@
 <td style="text-align:center">undefined</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 <blockquote>
 <h2 id="有关的面试题："><a href="#有关的面试题：" class="headerlink" title="有关的面试题："></a>有关的面试题：</h2></blockquote>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var a=<span class="string">"undefined"</span>, b=<span class="string">"false"</span>, c=<span class="string">"null"</span>, d=<span class="string">""</span>,e=<span class="string">"0"</span>;</div><div class="line">var f=undefined,g=<span class="literal">false</span>,h=null,i=0;</div><div class="line"><span class="keyword">function</span> assert(x) &#123;</div><div class="line">    <span class="keyword">if</span> (x) &#123;</div><div class="line">        console.log(<span class="string">"true"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        console.log(<span class="string">"false"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(assert(a));//<span class="literal">true</span></div><div class="line">console.log(assert(b));//<span class="literal">true</span></div><div class="line">console.log(assert(c));//<span class="literal">true</span></div><div class="line">console.log(assert(d));//<span class="literal">false</span></div><div class="line">console.log(assert(e));//<span class="literal">true</span></div><div class="line">console.log(assert(f));//<span class="literal">false</span></div><div class="line">console.log(assert(g));//<span class="literal">false</span></div><div class="line">console.log(assert(h));//<span class="literal">false</span></div><div class="line">console.log(assert(i));//<span class="literal">false</span></div><div class="line">console.log(assert(j));//<span class="literal">false</span></div></pre></td></tr></table></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var a=<span class="string">"undefined"</span>, b=<span class="string">"false"</span>, c=<span class="string">"null"</span>, d=<span class="string">""</span>,e=<span class="string">"0"</span>;</div><div class="line">var f=undefined,g=<span class="literal">false</span>,h=null,i=0;</div><div class="line"><span class="keyword">function</span> assert(x) &#123;</div><div class="line">    <span class="keyword">if</span> (x) &#123;</div><div class="line">        console.log(<span class="string">"true"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        console.log(<span class="string">"false"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(assert(a));//<span class="literal">true</span></div><div class="line">console.log(assert(b));//<span class="literal">true</span></div><div class="line">console.log(assert(c));//<span class="literal">true</span></div><div class="line">console.log(assert(d));//<span class="literal">false</span></div><div class="line">console.log(assert(e));//<span class="literal">true</span></div><div class="line">console.log(assert(f));//<span class="literal">false</span></div><div class="line">console.log(assert(g));//<span class="literal">false</span></div><div class="line">console.log(assert(h));//<span class="literal">false</span></div><div class="line">console.log(assert(i));//<span class="literal">false</span></div><div class="line">console.log(assert(j));//<span class="literal">false</span></div></pre></td></tr></table></figure>
         
     
 

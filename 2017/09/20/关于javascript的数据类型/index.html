@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="关于javascript的数据类型 | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="javascript基础知识"> 
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="关于javascript的数据类型 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": ",javascript基础知识",
@@ -440,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于javascript的数据类型&url=http://yoursite.com/2017/09/20/关于javascript的数据类型/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于javascript的数据类型&url=http://yoursite.com/2017/09/20/关于javascript的数据类型/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -493,25 +493,25 @@
     
         <h2 id="关于javascript的数据类型"><a href="#关于javascript的数据类型" class="headerlink" title="关于javascript的数据类型"></a>关于javascript的数据类型</h2><blockquote>
 <h3 id="1-返回数据类型"><a href="#1-返回数据类型" class="headerlink" title="1.返回数据类型"></a>1.返回数据类型</h3></blockquote>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. <span class="string">"undefined"</span> ---未定义</div><div class="line">2. <span class="string">"boolean"</span> ---布尔值</div><div class="line">3. <span class="string">"string"</span> ---字符串</div><div class="line">4. <span class="string">"number"</span> ---数值</div><div class="line">5. <span class="string">"object"</span> ---对象或者null</div><div class="line">6. <span class="string">"function"</span> ---函数</div></pre></td></tr></table></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. <span class="string">"undefined"</span> ---未定义</div><div class="line">2. <span class="string">"boolean"</span> ---布尔值</div><div class="line">3. <span class="string">"string"</span> ---字符串</div><div class="line">4. <span class="string">"number"</span> ---数值</div><div class="line">5. <span class="string">"object"</span> ---对象或者null</div><div class="line">6. <span class="string">"function"</span> ---函数</div></pre></td></tr></table></figure>
 <blockquote>
 <h3 id="2-强制类型转换"><a href="#2-强制类型转换" class="headerlink" title="2.强制类型转换"></a>2.强制类型转换</h3></blockquote>
 <p>1.常见五个例子</p>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. Number(参数)强制把数据类型转换成数值类型</div><div class="line">2. parseInt(参数1，参数2)将字符串转换成整数</div><div class="line">3. parseFloat()将字符串转成浮点数</div><div class="line">4. string(参数)：将任何数据类型转换成字符串</div><div class="line">5. Boolean()可以将任何数据类型转化成布尔类型的值</div></pre></td></tr></table></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. Number(参数)强制把数据类型转换成数值类型</div><div class="line">2. parseInt(参数1，参数2)将字符串转换成整数</div><div class="line">3. parseFloat()将字符串转成浮点数</div><div class="line">4. string(参数)：将任何数据类型转换成字符串</div><div class="line">5. Boolean()可以将任何数据类型转化成布尔类型的值</div></pre></td></tr></table></figure>
 <blockquote>
 <h3 id="3-隐式类型转换"><a href="#3-隐式类型转换" class="headerlink" title="3.隐式类型转换"></a>3.隐式类型转换</h3></blockquote>
 <ol>
 <li>四则运算</li>
 </ol>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.加法运算符+是双目运算符，只要其中一个是string类型，表达式的值便是一个String。</div><div class="line"></div><div class="line">2.对于其他的四则运算，只有其中一个是Number类型，表达式的便是一个Number。(列如 <span class="string">"-"</span> 运算符)</div><div class="line"></div><div class="line">3.对于非法字符的情况通常会返回NaN:<span class="string">'1'</span>*<span class="string">'a'</span>    // =&gt; NaN,这是因为parseInt(a)值为NaN，1*NaN还是NaN</div></pre></td></tr></table></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.加法运算符+是双目运算符，只要其中一个是string类型，表达式的值便是一个String。</div><div class="line"></div><div class="line">2.对于其他的四则运算，只有其中一个是Number类型，表达式的便是一个Number。(列如 <span class="string">"-"</span> 运算符)</div><div class="line"></div><div class="line">3.对于非法字符的情况通常会返回NaN:<span class="string">'1'</span>*<span class="string">'a'</span>    // =&gt; NaN,这是因为parseInt(a)值为NaN，1*NaN还是NaN</div></pre></td></tr></table></figure>
 <ol>
 <li>判断语句</li>
 </ol>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> 判断语句中的判断条件需要是 Boolean类型，所以条件表达式会被隐式转换为Boolean。其转换规则则同Boolean的构造函数。比如:</div><div class="line"></div><div class="line">var obj = &#123;&#125;;</div><div class="line"></div><div class="line"><span class="keyword">if</span>(obj)&#123;</div><div class="line">　　　<span class="keyword">while</span>(obj);</div><div class="line">　　　　&#125;</div></pre></td></tr></table></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> 判断语句中的判断条件需要是 Boolean类型，所以条件表达式会被隐式转换为Boolean。其转换规则则同Boolean的构造函数。比如:</div><div class="line"></div><div class="line">var obj = &#123;&#125;;</div><div class="line"></div><div class="line"><span class="keyword">if</span>(obj)&#123;</div><div class="line">　　　<span class="keyword">while</span>(obj);</div><div class="line">　　　　&#125;</div></pre></td></tr></table></figure>
 <ol>
 <li>Native代码调用</li>
 </ol>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">JavaScript宿主环境都会提供大量的对象，它们往往不少通过JavaScript来实现的。JavaScript给这些函数传入的参数也会进行隐式转换。例如BOM提供的alert方法接受String类型的参数：</div><div class="line"></div><div class="line">alert(&#123;a:1&#125;);  //=&gt;[object Object]</div></pre></td></tr></table></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">JavaScript宿主环境都会提供大量的对象，它们往往不少通过JavaScript来实现的。JavaScript给这些函数传入的参数也会进行隐式转换。例如BOM提供的alert方法接受String类型的参数：</div><div class="line"></div><div class="line">alert(&#123;a:1&#125;);  //=&gt;[object Object]</div></pre></td></tr></table></figure>
 
         
     

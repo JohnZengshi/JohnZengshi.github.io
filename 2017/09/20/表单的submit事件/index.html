@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="jQuery中的submit事件 | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="开发技巧"> 
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="jQuery中的submit事件 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": ",开发技巧",
@@ -440,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=jQuery中的submit事件&url=http://yoursite.com/2017/09/20/表单的submit事件/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=jQuery中的submit事件&url=http://yoursite.com/2017/09/20/表单的submit事件/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -498,7 +498,7 @@
 </ul>
 <blockquote>
 <h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2></blockquote>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(selector).on(<span class="string">"submit"</span>,<span class="function"><span class="title">function</span></span>()&#123;&#125;)</div><div class="line">//注意：每个需要提交的表单元素都要有对应的name属性值</div></pre></td></tr></table></div></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(selector).on(<span class="string">"submit"</span>,<span class="function"><span class="title">function</span></span>()&#123;&#125;)</div><div class="line">//注意：每个需要提交的表单元素都要有对应的name属性值</div></pre></td></tr></table></figure>
 <blockquote>
 <h2 id="如果想要阻止某个事件的默认行为：-两种方法-（原因：页面跳转，用户名和密码的校验就是败了）"><a href="#如果想要阻止某个事件的默认行为：-两种方法-（原因：页面跳转，用户名和密码的校验就是败了）" class="headerlink" title="如果想要阻止某个事件的默认行为：(两种方法)（原因：页面跳转，用户名和密码的校验就是败了）"></a>如果想要阻止某个事件的默认行为：(两种方法)（原因：页面跳转，用户名和密码的校验就是败了）</h2></blockquote>
 <ul>

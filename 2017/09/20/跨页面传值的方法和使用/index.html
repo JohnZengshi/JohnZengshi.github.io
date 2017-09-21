@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="跨页面传值的方法和使用 | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="开发技巧"> 
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="跨页面传值的方法和使用 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": ",开发技巧",
@@ -440,7 +440,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=跨页面传值的方法和使用&url=http://yoursite.com/2017/09/20/跨页面传值的方法和使用/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=跨页面传值的方法和使用&url=http://yoursite.com/2017/09/20/跨页面传值的方法和使用/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -497,10 +497,10 @@
 <li><p>get请求的参数</p>
 <ul>
 <li><p>在页面跳转的时候，把要传递的参数作为url请求路径的一部分</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">location.href = <span class="string">"index.html?id=666&amp;age=18"</span>;</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">location.href = <span class="string">"index.html?id=666&amp;age=18"</span>;</div></pre></td></tr></table></figure>
 </li>
 <li><p>在目标页面，通过location.search得到相关参数</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">laction.search =&gt; <span class="string">"?id=666&amp;age=18"</span>;</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">laction.search =&gt; <span class="string">"?id=666&amp;age=18"</span>;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -508,7 +508,7 @@
 <ul>
 <li>sessionStorage是会话级储存时间/localStorage永久储存</li>
 <li><p>储存数据：</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage.setltem(<span class="string">"健"</span>，<span class="string">"值"</span>);</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage.setltem(<span class="string">"健"</span>，<span class="string">"值"</span>);</div></pre></td></tr></table></figure>
 <ul>
 <li>切记：所有值都是字符串类型的值,如果不是字符串类型的值，方法内部会自动转换成字符串类型储存；</li>
 <li>特殊情况：传入数字也会储存：100 –&gt; “100”</li>
@@ -527,13 +527,13 @@
 <li><p>原生JS:</p>
 <ul>
 <li><p>设置一个会话</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cookie:document.cookie = <span class="string">"?id=888"</span>;</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cookie:document.cookie = <span class="string">"?id=888"</span>;</div></pre></td></tr></table></figure>
 </li>
 <li><p>设置一个长期</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cookie:document.cookie = <span class="string">"?id=888;expires="</span>+new Date(<span class="string">"2017-9-11 08:05:30"</span>)     //(new Date()里面要加冒号)</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cookie:document.cookie = <span class="string">"?id=888;expires="</span>+new Date(<span class="string">"2017-9-11 08:05:30"</span>)     //(new Date()里面要加冒号)</div></pre></td></tr></table></figure>
 </li>
 <li><p>获取cookie:</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.cookie; //(获取当前域名下的所有cookie值)</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.cookie; //(获取当前域名下的所有cookie值)</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -541,19 +541,19 @@
 <ul>
 <li>jquery.cookie.js依赖于jquery</li>
 <li><p>设置一个会话cookie:</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.cookie(<span class="string">"id"</span>,<span class="string">"888"</span>);</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.cookie(<span class="string">"id"</span>,<span class="string">"888"</span>);</div></pre></td></tr></table></figure>
 </li>
 <li><p>设置一个长期cookie:</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.cookie(<span class="string">"id"</span>,<span class="string">"888"</span>,&#123;expires:日期类型或数字类型&#125;)</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.cookie(<span class="string">"id"</span>,<span class="string">"888"</span>,&#123;expires:日期类型或数字类型&#125;)</div></pre></td></tr></table></figure>
 </li>
 <li><p>获取cookie:</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.cookie(<span class="string">"健"</span>);</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.cookie(<span class="string">"健"</span>);</div></pre></td></tr></table></figure>
 </li>
 <li><p>移出cookie:</p>
-  <figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.removeCookie(<span class="string">"健"</span>)</div></pre></td></tr></table></div></figure>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.removeCookie(<span class="string">"健"</span>)</div></pre></td></tr></table></figure>
 </li>
 <li><p>使用cookie的实例：</p>
-  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="built_in">JSON</span>.stringify(ajax返回的用户数据,一个对象);</div><div class="line"></div><div class="line"><span class="comment">//设置cookie，时间</span></div><div class="line">$cookie(<span class="string">"userInfo"</span>,str,&#123;</div><div class="line">    expires:<span class="number">1</span>/<span class="number">24</span> <span class="comment">//一小时</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//登陆成功：</span></div><div class="line">location.href = <span class="string">"index.html"</span></div></pre></td></tr></table></div></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="built_in">JSON</span>.stringify(ajax返回的用户数据,一个对象);</div><div class="line"></div><div class="line"><span class="comment">//设置cookie，时间</span></div><div class="line">$cookie(<span class="string">"userInfo"</span>,str,&#123;</div><div class="line">    expires:<span class="number">1</span>/<span class="number">24</span> <span class="comment">//一小时</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//登陆成功：</span></div><div class="line">location.href = <span class="string">"index.html"</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>

@@ -58,8 +58,8 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/smiling face.png">
+    <link rel="icon" sizes="192x192" href="/img/smiling face.png">
     <link rel="apple-touch-icon" href="/img/favicon.png">
 
     <!--iOS -->
@@ -232,7 +232,7 @@
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="关于跨域请求 | John Zeng的个人播客">
-    <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
+    <meta property="og:image" content="http://yoursite.comimg/smiling face.png" />
     <meta property="og:description" content="">
     
 
@@ -244,7 +244,7 @@
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="关于跨域请求 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
+    <meta name="twitter:image" content="http://yoursite.comimg/smiling face.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://yoursite.com" />
 
@@ -280,7 +280,7 @@
         "name": "John Zeng的个人播客",
         "logo": {
             "@type":"ImageObject",
-            "url": "/img/favicon.png"
+            "url": "img/smiling face.png"
         }
     },
     "keywords": "",
@@ -431,7 +431,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于跨域请求&url=http://yoursite.com/2017/09/20/关于跨域请求/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于跨域请求&url=http://yoursite.com/2017/09/20/关于跨域请求/index.html&pic=http://yoursite.comimg/smiling face.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 شارك على Weibo
             </li>
@@ -487,7 +487,7 @@
 <ul>
 <li><p>在A域以ajax请求另外域的资源.是不被允许的.ajax只能请求本域的资源.无法发起跨域请求.</p>
 <ul>
-<li>解决方案：<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">方向代理</div><div class="line">服务器设置</div><div class="line">jsonp</div></pre></td></tr></table></div></figure>
+<li>解决方案：<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">方向代理</div><div class="line">服务器设置</div><div class="line">jsonp</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -508,7 +508,7 @@
 <li>就是利用script标签的src属性来完成的</li>
 <li>先在浏览器端准备一个函数(demo)这个函数有一个参数</li>
 <li><p>利用script标签的src属性.在请求的时候,要把我事先准备的函数的名字发给服务器.</p>
-  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./php/stus.php?callback=demo"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></div></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./php/stus.php?callback=demo"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
 </li>
 <li><p>在服务器端</p>
 <ul>
@@ -535,7 +535,7 @@
 </ul>
 <blockquote>
 <h2 id="将跨域请求封装成一个函数："><a href="#将跨域请求封装成一个函数：" class="headerlink" title="将跨域请求封装成一个函数："></a>将跨域请求封装成一个函数：</h2></blockquote>
-<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> id = <span class="number">1</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">opts</span>)</span>&#123;</div><div class="line">        <span class="comment">//1.拼接url</span></div><div class="line">        <span class="keyword">var</span> url = opts.url + <span class="string">"?"</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> opts.params)&#123;</div><div class="line">            url += (key + <span class="string">"="</span> + opts.parms[key] + <span class="string">"&amp;"</span>)</div><div class="line"></div><div class="line">            <span class="comment">//2.保存匿名函数</span></div><div class="line">            <span class="comment">//https://api.asilu.com/weather/?city=深圳&amp;day=3&amp;sb=4&amp;callback=hmCallback</span></div><div class="line">            <span class="comment">//hmCallback(数据); </span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> callbackName = <span class="string">"hmCallback"</span> + (id++);</div><div class="line">        <span class="comment">//hmCallback1</span></div><div class="line">        <span class="comment">//window[hmCallback1] = opts.callback;</span></div><div class="line"></div><div class="line">        <span class="built_in">window</span>[callbackName] = opts.callback;</div><div class="line">        url += <span class="string">"callback="</span>+callbackName;</div><div class="line">        consol.log(url);</div><div class="line"></div><div class="line">        <span class="comment">//3. 创建script标签.</span></div><div class="line">        <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>)</div><div class="line">        script.src = url;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getW</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">//调用封装好的jsonp函数发起跨域请求</span></div><div class="line">        jsonp(&#123;</div><div class="line">            url:<span class="string">"https://api.asilu.com/weather/"</span>,</div><div class="line">            params:&#123;</div><div class="line">                city:<span class="string">"深圳"</span>,</div><div class="line">                day:<span class="number">3</span>,</div><div class="line">                sb:<span class="number">4</span></div><div class="line">            &#125;,</div><div class="line">            calback:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(data)</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></div></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> id = <span class="number">1</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">opts</span>)</span>&#123;</div><div class="line">        <span class="comment">//1.拼接url</span></div><div class="line">        <span class="keyword">var</span> url = opts.url + <span class="string">"?"</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> opts.params)&#123;</div><div class="line">            url += (key + <span class="string">"="</span> + opts.parms[key] + <span class="string">"&amp;"</span>)</div><div class="line"></div><div class="line">            <span class="comment">//2.保存匿名函数</span></div><div class="line">            <span class="comment">//https://api.asilu.com/weather/?city=深圳&amp;day=3&amp;sb=4&amp;callback=hmCallback</span></div><div class="line">            <span class="comment">//hmCallback(数据); </span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> callbackName = <span class="string">"hmCallback"</span> + (id++);</div><div class="line">        <span class="comment">//hmCallback1</span></div><div class="line">        <span class="comment">//window[hmCallback1] = opts.callback;</span></div><div class="line"></div><div class="line">        <span class="built_in">window</span>[callbackName] = opts.callback;</div><div class="line">        url += <span class="string">"callback="</span>+callbackName;</div><div class="line">        consol.log(url);</div><div class="line"></div><div class="line">        <span class="comment">//3. 创建script标签.</span></div><div class="line">        <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>)</div><div class="line">        script.src = url;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getW</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">//调用封装好的jsonp函数发起跨域请求</span></div><div class="line">        jsonp(&#123;</div><div class="line">            url:<span class="string">"https://api.asilu.com/weather/"</span>,</div><div class="line">            params:&#123;</div><div class="line">                city:<span class="string">"深圳"</span>,</div><div class="line">                day:<span class="number">3</span>,</div><div class="line">                sb:<span class="number">4</span></div><div class="line">            &#125;,</div><div class="line">            calback:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(data)</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
         
     
 
