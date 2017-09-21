@@ -1,894 +1,1350 @@
+
 <!DOCTYPE html>
-<html>
+<html  style="display: none;">
+
+  
 <head>
-  <meta charset="utf-8">
+  <script>
+    window.mduiVersion = "1.5.0"
+    window.oldVersion = [
+     '1.4.7',
+     '1.4.8',
+     '1.4.9',
+     'unknownVersion'
+    ]
+  </script>
+  <!--
+        © HEXO MDUI Theme
+        https://github.com/Halyul/hexo-theme-mdui
+        Version: 1.5.0 -->
+  <meta charset="UTF-8">
+  <title>Index - John Zeng的个人播客</title>
+
+  <!-- Favicons -->
+  <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+  <link rel="icon" sizes="192x192" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/favicon.png">
+
+  <!-- Meta & Info -->
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   
-  <title>John Zeng的个人播客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="John Zeng的个人播客">
-<meta property="og:url" content="http://yoursite.com/page/4/index.html">
-<meta property="og:site_name" content="John Zeng的个人播客">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="John Zeng的个人播客">
+    <meta name="theme-color" content="
   
-    <link rel="alternate" href="/atom.xml" title="John Zeng的个人播客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+  #3F51B5
   
 
+">
+  
+
+  <meta name="author" content="John Zeng">
+  
+  <meta name="keywords" content="blog, hexo, mdui">
+
+  <!--iOS -->
+  <meta name="apple-mobile-web-app-title" content="John Zeng的个人播客">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="480">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://yoursite.com">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Index - John Zeng的个人播客 | John Zeng的个人播客">
+  <meta property="og:image" content="/img/favicon.png" />
+  
+
+    
+
+  <!-- Cache -->
+  <meta http-equiv="Cache-Control" content="max-age=7200" />
+  <meta http-equiv="Expires" content="Fri, 29 Dec 2017 23:00:00 GMT" />
+
+  
+
+  <script>
+    (function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.mduiVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf(c)!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();
+  </script>
+
+  <!-- Import CSS -->
+  
+    <link rel="stylesheet" href="/css/fonts.min.css">
+  
+  
+    
+      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?OeEY1DPEWhXQ5nt08XaZcg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    
+  
+
+  <!-- Custom Head -->
+  
+
+  
+    <style>
+      body {
+        background-color: #eeeeee;
+      }
+    </style>
+  
+
+  
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">John Zeng的个人播客</a>
-      </h1>
+
+
+
+  
+    
+  <body class="mdui-theme-primary-indigo mdui-theme-accent-blue
+   
+  
+  " >
+
+
+  
+
+
+<div id="top"></div>
+
+
+  
+
+  <div class="mdui-appbar animate-appbar mdui-shadow-0" id="blog-appbar">
+    <div class="mdui-toolbar">
+      <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
+        <i class="mdui-icon">
+          <span></span>
+        </i>
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  
+  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
+  " id="drawer" style="z-index: 2001;">
+  <div class="userview" style="background-image: url(/img/bg.png)">
+  <div class="overlay">
+    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
+    <div class="bottom">
+      <div class="info">
+        <div class="author mdui-text-color-white-text">
+          John Zeng
+        </div>
+        <div class="slogan mdui-text-color-white-secondary">
+          I&#39;m your slogan!
+        </div>
+      </div>
+      <div class="flex-spacer"></div>
       
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  </div>
+</div>
+
+  <div class="content">
+  <div class="hexo">
+    
+      <div class="mdui-list no-padding-bottom">
+        <li class="mdui-list-item mdui-ripple mdui-list-item-active">
+          <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-accent">&#xe88a;</i>
+          <div class="mdui-list-item-content mdui-text-color-theme-accent">
+            Index
+          </div>
+        </li>
+      </div>
+    
+    
+      <div class="mdui-list no-padding">
+        <a href="/archives">
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+            <div class="mdui-list-item-content">
+              Archives
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">58</span>
+            </div>
+          </li>
+        </a>
+      </div>
+    
+    
+      <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
+              <div class="mdui-list-item-content">Categories</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站搭建
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Angular
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
+                </a>
+              
+                <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Git
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJS
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
+                </a>
+              
+                <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  AJAX
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  cookie
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  关于ES5规范
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery源码分析
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Requirejs
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  JSON
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  设计模式
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+            </div>
+          </div>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
         
-      </nav>
-      <nav id="sub-nav">
+          <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
+              <div class="mdui-list-item-content">Tags</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  建站技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
+                </a>
+              
+                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法总结
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  黑科技
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  没事研究来玩的
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开大技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发用到的新技术
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  掉坑里了
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript基础知识
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
+                </a>
+              
+                <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法区别
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJs中遇到的坑
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站性能优化方方面面
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+            </div>
+          </div>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <div class="mdui-collapse-item ">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+            <div class="mdui-list-item-content">Years</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+          </div>
+          <div class="mdui-collapse-item-body mdui-list">
+            
+            
+              <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
+                2017
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  
+</div>
+
+  <div class="flex-spacer"></div>
+  <div class="drawer-footer">
+  <div class="mdui-typo mdui-typo-caption-opacity">
+    Powered by <a href="http://hexo.io">Hexo</a>
+    <br />
+    Theme - <a href="//github.com/Halyul/hexo-theme-mdui">Halyul/MDUI</a>
+    <br />
+    <span>
+      Copyright ©
+      <span year></span>
+      John Zeng
+    </span>
+    
+    
+  </div>
+</div>
+<script type="text/javascript">
+  var copyrightNow = new Date().getFullYear();
+  var textContent = document.querySelector('span[year]')
+  
+    textContent.textContent = copyrightNow
+  
+</script>
+
+</div>
+
+
+
+
+
+
+
+<main>
+  
+  <div class="index-warper animate-post">
+  <div id="index">
+    <div class="faviconImg">
+      <img class="mdui-img-fluid" src="/img/favicon.png" />
+    </div>
+    
+  </div>
+  <div id="search-cover" searchResult></div>
+
+  
+
+  <div id="posts">
+    
+    
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
       </div>
     </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/localtion对象常用的属性、方法/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
   </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-localtion对象常用的属性、方法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/localtion对象常用的属性、方法/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.784Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/网站搭建/">网站搭建</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/localtion对象常用的属性、方法/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/localtion对象常用的属性、方法/">localtion对象常用的属性、方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="localtion对象常用的属性、方法"><a href="#localtion对象常用的属性、方法" class="headerlink" title="localtion对象常用的属性、方法"></a>localtion对象常用的属性、方法</h2></blockquote>
-<ul>
-<li>页面跳转</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">location.href = <span class="string">"页面地址"</span></div></pre></td></tr></table></figure>
-<ul>
-<li>页面刷新</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">location.reload();</div></pre></td></tr></table></figure>
-<ul>
-<li>获取get请求的参数</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">loaction.search</div></pre></td></tr></table></figure>
-<ul>
-<li>获取锚点/锚名</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">location.hash</div></pre></td></tr></table></figure>
-<ul>
-<li>获取协议的名称</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">location.protocol</div></pre></td></tr></table></figure>
-<ul>
-<li>获取路径名称</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">location.pathname</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/localtion对象常用的属性、方法/" data-id="cj7ucrjzv002des9mhb4pebly" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发技巧/">开发技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ajax的优缺点" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/ajax的优缺点/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.781Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/AJAX/">AJAX</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+        localtion对象常用的属性、方法
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/ajax的优缺点/">ajax的优缺点</a>
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="ajax的优缺点"><a href="#ajax的优缺点" class="headerlink" title="ajax的优缺点"></a>ajax的优缺点</h2></blockquote>
-<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><ul>
-<li>异步刷新==&gt;实现页面局部刷新==&gt;只刷新一部分内容</li>
-<li>减少了资源的重复加载<ul>
-<li>1.页面的响应速度有一定的提升(提升了用户体验)</li>
-<li>2.降低了服务器的压力(最重要的一点)</li>
-</ul>
-</li>
-</ul>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul>
-<li>不能跨域 ==&gt;现在有了一些跨域的手段：jsonp/方向代理/window.name</li>
-<li>对SEO不友好  (SEO:搜索引擎优化)<ul>
-<li>百度如何收录网站？</li>
-<li>网络爬虫搜索某个网站时，不会执行任何js代码–&gt;自然ajax就不会执行</li>
-</ul>
-</li>
-<li>不能进行页面导航</li>
-</ul>
-<blockquote>
-<h2 id="跨域的解决方案：-参考网站"><a href="#跨域的解决方案：-参考网站" class="headerlink" title="跨域的解决方案：(参考网站)"></a>跨域的解决方案：(参考网站)</h2></blockquote>
-<ul>
-<li>jsonp</li>
-<li>window.name</li>
-<li>iframe</li>
-<li>h5：window.postMessage</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/ajax的优缺点/" data-id="cj7ucrjz1001ces9m39tvxekm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-事件触发的时候，弹出模态框时的处理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/事件触发的时候，弹出模态框时的处理/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.779Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/开发/">开发</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/事件触发的时候，弹出模态框时的处理/">事件触发的时候，弹出模态框</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="事件触发的时候，弹出模态框"><a href="#事件触发的时候，弹出模态框" class="headerlink" title="事件触发的时候，弹出模态框"></a>事件触发的时候，弹出模态框</h2></blockquote>
-<ul>
-<li>先准备一个模态框的模板</li>
-<li>使用text插件获取模板内容</li>
-<li><p>把该内容放到页面中，并且以模态框的形式呈现出来，绑定hidden.bs.modal事件在事件中删除模态框</p>
-<ul>
-<li><p>点击提交，把数据提交到服务器中</p>
-<ul>
-<li>a.把同步的表单作为异步的表单(页面整个刷新–》局部刷新)<ul>
-<li>给表单绑定submit事件，通过事件回调函数的形参e：e.preventDefault();</li>
-</ul>
-</li>
-<li>b.获取数据<ul>
-<li>找到文档中添加对应的接口，看接口请求的参数，找到每一个name值，把该name值一一对应的写在每一个表单元素上</li>
-<li>var formData=$(“form”).serialize();</li>
-</ul>
-</li>
-<li><p>c.发送ajax请求</p>
-<ul>
-<li><p>成功之后：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//关闭模态框</div><div class="line">$(模态框容器).modal(<span class="string">"hide"</span>);</div></pre></td></tr></table></figure>
-</li>
-<li><p>再刷新页面：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a--&gt;调用list.js实现刷新功能</div><div class="line">b--&gt;点击讲师管理按钮</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/事件触发的时候，弹出模态框时的处理/" data-id="cj7ucrk02002nes9m8o2jc975" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发技巧/">开发技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-es5之前要获取当前函数本身" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/es5之前要获取当前函数本身/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.777Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/关于ES5规范/">关于ES5规范</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/es5之前要获取当前函数本身/">es5之前要获取当前函数本身</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="es5之前要获取当前函数本身，可以在函数体内部通过arguments-callee"><a href="#es5之前要获取当前函数本身，可以在函数体内部通过arguments-callee" class="headerlink" title="es5之前要获取当前函数本身，可以在函数体内部通过arguments.callee"></a>es5之前要获取当前函数本身，可以在函数体内部通过arguments.callee</h2></blockquote>
-<ul>
-<li><p>es5规定了严格模式，严格模式中禁止使用callee/caller</p>
-</li>
-<li><p>在严格模式下面如何获取当前函数？</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">(<span class="keyword">function</span> <span class="function"><span class="title">fn</span></span>()&#123;</div><div class="line">    //fn是一个<span class="string">"特殊的名字"</span>,这个名字在外界访问不是一个函数名，在函数体内部访问就指向函数本身</div><div class="line">&#125;)()</div><div class="line">``` </div><div class="line"></div><div class="line">+ 面试题</div><div class="line"></div><div class="line">```bash</div><div class="line">var f1 = funtion <span class="function"><span class="title">f2</span></span>()&#123;</div><div class="line">    console.log(f1 === f2)  //<span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line">console.log(typeof f1) //Function</div><div class="line">console.log(typeof f2) //<span class="string">"untifined"</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/es5之前要获取当前函数本身/" data-id="cj7ucrjz6001ies9m9k4w6i9v" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/掉坑里了/">掉坑里了</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-cookie的用途" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/cookie的用途/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.771Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/cookie/">cookie</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/cookie的用途/">cookie的用途</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="cookie的用途"><a href="#cookie的用途" class="headerlink" title="cookie的用途"></a>cookie的用途</h2></blockquote>
-<ul>
-<li><p>保存一些使用多个页面访问的数据（&gt;=2个页面）</p>
-<ul>
-<li>不能保存一些有效性很高的数据，比如：表格数据</li>
-<li>可以保存当前用户登录的信息：比如用户名，id,用户头像等</li>
-</ul>
-</li>
-<li><p>不能保存安全性较高的数据</p>
-<ul>
-<li>不能保存密码</li>
-<li>甚至在一些安全性做的比较好的网站中，通过http请求发送密码的时候，会浏览器端进行加密，然后加密传输；在服务器中进行加密，加密存储在数据库中</li>
-</ul>
-</li>
-<li><p>保存数据的大小也有限制(不要保存数据太大的数据)</p>
-</li>
-<li><p>后端：session用来保存当前的登录状态</p>
-</li>
-<li><p>用户的id来进行判断用户是谁</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/cookie的用途/" data-id="cj7ucrjz3001ees9mdup6yo3s" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-网站性能优化方方面面之闭包实现模块化的坏处" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/网站性能优化方方面面之闭包实现模块化的坏处/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.764Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/RequireJS/">RequireJS</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/网站性能优化方方面面之闭包实现模块化的坏处/">闭包实现模块化的坏处(网站性能优化)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="闭包实现模块化的坏处？"><a href="#闭包实现模块化的坏处？" class="headerlink" title="闭包实现模块化的坏处？"></a>闭包实现模块化的坏处？</h2></blockquote>
-<ul>
-<li>闭包实现模块化并没有规定一个文件就是一个模块，一个文件会有多个模块，无数个文件要去找某个模块比较麻烦。</li>
-<li>随着功能的增加，编写了无数各模块，就至少会有无数个模块的入口（全局变量），会导致全局变量污染。</li>
-<li>模块依赖：减少了页面对于无数个js文件的引用，引用文件太多，会影响网页性能（首屏加载）<ul>
-<li>使用requireJS之后，会根据你实现的功能，按需加载指定的模块。也就提高了首页的加载性能</li>
-</ul>
-</li>
-<li>网站性能优化方方面面：cdn、服务器集群、nosql</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/网站性能优化方方面面之闭包实现模块化的坏处/" data-id="cj7ucrk10003res9m7bnatopa" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网站性能优化方方面面/">网站性能优化方方面面</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-设计模式：模块模式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/设计模式：模块模式/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.762Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/设计模式/">设计模式</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/设计模式：模块模式/">设计模式：模块模式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="模块化–-gt-设计模式：模块模式"><a href="#模块化–-gt-设计模式：模块模式" class="headerlink" title="模块化–&gt;设计模式：模块模式"></a>模块化–&gt;设计模式：模块模式</h2></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var modal = (<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    var total = XXX</div><div class="line">    <span class="built_in">return</span> &#123;</div><div class="line">        fn1:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line"></div><div class="line">        &#125;,</div><div class="line">        fn2:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/设计模式：模块模式/" data-id="cj7ucrk160042es9mr3wxcsog" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发技巧/">开发技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-if()括号内的数据类型的转换" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/if()括号内的数据类型的转换/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.759Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/if()括号内的数据类型的转换/">if()括号内的数据类型的转换</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean-转换函数将结果转换为布尔值。转换规则为："><a href="#if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean-转换函数将结果转换为布尔值。转换规则为：" class="headerlink" title="if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为："></a>if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为：</h2></blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">数据类型</th>
-<th style="text-align:center">转换为true</th>
-<th style="text-align:center">转换为false</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">boolean</td>
-<td style="text-align:center">true</td>
-<td style="text-align:center">false</td>
-</tr>
-<tr>
-<td style="text-align:center">String</td>
-<td style="text-align:center">任何非空字符串</td>
-<td style="text-align:center">空字符串</td>
-</tr>
-<tr>
-<td style="text-align:center">Number</td>
-<td style="text-align:center">任何非零数字值</td>
-<td style="text-align:center">0和NaN</td>
-</tr>
-<tr>
-<td style="text-align:center">Object</td>
-<td style="text-align:center">任何对象</td>
-<td style="text-align:center">null</td>
-</tr>
-<tr>
-<td style="text-align:center">Undefined</td>
-<td style="text-align:center">n/a</td>
-<td style="text-align:center">undefined</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<h2 id="有关的面试题："><a href="#有关的面试题：" class="headerlink" title="有关的面试题："></a>有关的面试题：</h2></blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var a=<span class="string">"undefined"</span>, b=<span class="string">"false"</span>, c=<span class="string">"null"</span>, d=<span class="string">""</span>,e=<span class="string">"0"</span>;</div><div class="line">var f=undefined,g=<span class="literal">false</span>,h=null,i=0;</div><div class="line"><span class="keyword">function</span> assert(x) &#123;</div><div class="line">    <span class="keyword">if</span> (x) &#123;</div><div class="line">        console.log(<span class="string">"true"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        console.log(<span class="string">"false"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(assert(a));//<span class="literal">true</span></div><div class="line">console.log(assert(b));//<span class="literal">true</span></div><div class="line">console.log(assert(c));//<span class="literal">true</span></div><div class="line">console.log(assert(d));//<span class="literal">false</span></div><div class="line">console.log(assert(e));//<span class="literal">true</span></div><div class="line">console.log(assert(f));//<span class="literal">false</span></div><div class="line">console.log(assert(g));//<span class="literal">false</span></div><div class="line">console.log(assert(h));//<span class="literal">false</span></div><div class="line">console.log(assert(i));//<span class="literal">false</span></div><div class="line">console.log(assert(j));//<span class="literal">false</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/if()括号内的数据类型的转换/" data-id="cj7ucrjzc001oes9mb9fcmq5s" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript基础知识/">javascript基础知识</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-javascript常用内置对象总结" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/javascript常用内置对象总结/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.747Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/javascript常用内置对象总结/">javascript常用内置对象总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="javascript常用内置对象总结-重要"><a href="#javascript常用内置对象总结-重要" class="headerlink" title="javascript常用内置对象总结(重要)"></a>javascript常用内置对象总结(重要)</h2></blockquote>
-<ul>
-<li><p>Date</p>
-<ul>
-<li><p>属性：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">constructor  所建立对象的函数参考</div><div class="line">prototype       能够为对象加入的属性和方法</div></pre></td></tr></table></figure>
-</li>
-<li><p>方法：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">getDay()        返回一周中的第几天(0-6)</div><div class="line">getYear()       返回年份.2000年以前为2位,2000(包含)以后为4位</div><div class="line">getFullYear()     返回完整的4位年份数</div><div class="line">getMonth()      返回月份数(0-11)</div><div class="line">getDate()       返回日(1-31)</div><div class="line">getHours()       返回小时数(0-23)</div><div class="line">getMinutes()      返回分钟(0-59)</div><div class="line">getSeconds()      返回秒数(0-59)</div><div class="line">getMilliseconds() 返回毫秒(0-999)</div><div class="line">getUTCDay()      依据国际时间来得到现在是星期几(0-6)</div><div class="line">getUTCFullYear()    依据国际时间来得到完整的年份</div><div class="line">getUTCMonth()     依据国际时间来得到月份(0-11)</div><div class="line">getUTCDate()      依据国际时间来得到日(1-31)</div><div class="line">getUTCHours()     依据国际时间来得到小时(0-23)</div><div class="line">getUTCMinutes()    依据国际时间来返回分钟(0-59)</div><div class="line">getUTCSeconds()    依据国际时间来返回秒(0-59)</div><div class="line">getUTCMilliseconds()依据国际时间来返回毫秒(0-999)</div><div class="line">getTime()       返回从1970年1月1号0:0:0到现在一共花去的毫秒数</div><div class="line">getTimezoneoffset() 返回时区偏差值,即格林威治平均时间(GMT)与运行脚本的计算机所处时区设置之间相差的分钟数)</div><div class="line">parse(dateString)   返回在Date字符串中自从1970年1月1日00:00:00以来的毫秒数</div><div class="line">setYear(yearInt)    设置年份.2位数或4位数</div><div class="line">setFullYear(yearInt)设置年份.4位数</div><div class="line">setMonth(monthInt) 设置月份(0-11)</div><div class="line">setDate(dateInt)    设置日(1-31)</div><div class="line">setHours(hourInt) 设置小时数(0-23)</div><div class="line">setMinutes(minInt) 设置分钟数(0-59)</div><div class="line">setSeconds(secInt) 设置秒数(0-59)</div><div class="line">setMilliseconds(milliInt) 设置毫秒(0-999)</div><div class="line">setUTCFullYear(yearInt) 依据国际时间来设置年份</div><div class="line">setUTCMonth(monthInt) 依据国际时间来设置月(0-11)</div><div class="line">setUTCDate(dateInt)     依据国际时间来设置日(1-31)</div><div class="line">setUTCHours(hourInt)    依据国际时间来设置小时</div><div class="line">setUTCMinutes(minInt) 依据国际时间来设置分钟</div><div class="line">setUTCSeconds(secInt)    依据国际时间来设置秒</div><div class="line">setUTCMilliseconds(milliInt)依据国际时间来设置毫秒</div><div class="line">setTime(timeInt)    设置从1970年1月1日开始的时间.毫秒数</div><div class="line">toGMTString()     根据格林威治时间将Date对象的日期(一个数值)转变成一个GMT时间字符串,如:Weds,15 June l997 14:02:02 GMT</div><div class="line">toUTCString()     根据通用时间将一个Date对象的日期转换为一个字符串</div><div class="line">toLocaleString()    把Date对象的日期(一个数值)转变成一个字符串,使用所在计算机上配置使用的特定日期格式</div><div class="line">toSource()       显示对象的源代码</div><div class="line">toString()       将日期对象转换为字符串</div><div class="line">UTC(yyyy, mm, dd, hh, mm, ss, msec)返回从格林威治标准时间到指定时间的差距,单位为毫秒</div><div class="line">valueOf()       返回日期对象的原始值</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Math</p>
-<ul>
-<li><p>属性：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">constructor      所建立对象的函数参考 </div><div class="line">prototype       能够为对象加入的属性和方法</div><div class="line">E           欧拉常量,自然对数的底(约等于2.718)</div><div class="line">LN2          2的自然对数(约等于0.693)</div><div class="line">LN10          10的自然对数(约等于2.302)</div><div class="line">LOG2E         以2为底的e的对数.(约等于1.442)</div><div class="line">LOG10E         以10为底的e的对数(约等于0.434)</div><div class="line">PI           ∏的值(约等于3.14159)</div><div class="line">SQRT1_2        1/2(0.5)的平方根(即l除以2的平方根,约等于o.707)</div><div class="line">SQRT2         2的平方根(约等于1.414)</div></pre></td></tr></table></figure>
-</li>
-<li><p>方法：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">abs(x)     返回数字的绝对值</div><div class="line">acos(x)    返回数字的反余弦值</div><div class="line">asin(x)    返回数字的反正弦值</div><div class="line">atan(x)    返回位于-PI/2 和 PI/2 的反正切值</div><div class="line">atan2(y,x) 返回（x,y）位于 -PI 到 PI 之间的角度</div><div class="line">ceil(x)    返回 x 四舍五入后的最大整数</div><div class="line">cos(x)     返回一个数字的余弦值</div><div class="line">exp(x)     返回 E^x 值</div><div class="line">floor(x)    返回 x 四舍五入后的最小整数</div><div class="line"><span class="built_in">log</span>(x)     返回底数为E的自然对数</div><div class="line">max(x,y)    返回 x 和 y 之间较大的数</div><div class="line">min(x,y)    返回 x 和 y 之间较小的数</div><div class="line">pow(x,y)    返回 y^x 的值</div><div class="line">random()    返回位于 0 到 1 之间的随机函数</div><div class="line">round(x)    四舍五入后取整</div><div class="line">sin(x)     返回数字的正弦值</div><div class="line">sqrt(x)    返回数字的平方根</div><div class="line">tan(x)     返回一个角度的正切值</div><div class="line">toSource() 显示对象的源代码</div><div class="line">valueOf() 返回数学对象的原始值</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Number</p>
-<ul>
-<li><p>属性：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">MAX_VALUE       The largest possible value a number <span class="keyword">in</span> JavaScript can have 1.7976931348623157E+308</div><div class="line">MIN_VALUE       The smallest possible value a number <span class="keyword">in</span> JavaScript can have 5E-324</div><div class="line">NaN          Equal to a value that is not a number.</div><div class="line">NEGATIVE_INFINITY A value that is less than MIN_VALUE.</div><div class="line">POSOTIVE_INFINITY A value that is greater than MAX_VALUE.</div><div class="line">prototype       A static property of the Number object</div></pre></td></tr></table></figure>
-</li>
-<li><p>方法：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">toString       Returns a string representing the specified object </div><div class="line">valueOf()      返回数学对象的原始值</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Boolean</p>
-<ul>
-<li><p>属性：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">constructor 所建立对象的函数参考 </div><div class="line">prototype    能够为对象加入的属性和方法</div></pre></td></tr></table></figure>
-</li>
-<li><p>方法：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">toSource()    显示对象的源代码</div><div class="line">toString()    将布尔值转换为字符串,并且返回结果</div><div class="line">valueOf()    返回布尔对象的原始值</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>String</p>
-<ul>
-<li><p>属性：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">constructor 所建立对象的函数参考</div><div class="line">prototype    能够为对象加入的属性和方法</div><div class="line">length      返回字符串的字符长度</div></pre></td></tr></table></figure>
-</li>
-<li><p>方法：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">anchor(<span class="string">"name"</span>)用来把字符串转换为HTML锚点标记内(&lt;A NAME=&gt;)</div><div class="line">big()      把字符串中的文本变成大字体(&lt;BIG&gt;)</div><div class="line">blink()     把字符串中的文本变成闪烁字体(&lt;BLINK&gt;)</div><div class="line">bold()      把字符串中的文本变成黑字体(&lt;B&gt;)</div><div class="line">fixed()     把字符串中的文本变成固定间距字体,即电报形式(&lt;TT&gt;)</div><div class="line">fontcolor(color)设置字符串中文本的颜色(&lt;FONT COLOR=&gt;)</div><div class="line">Fontsize(size) 把字符串中的文本变成指定大小(&lt;FONTSIZE=&gt;)</div><div class="line">italics()    把字符串中的文本变成斜字体(&lt;I&gt;)</div><div class="line">Link(url)用来把字符串转换-HTML链接标记中(&lt;A HREF=&gt;)</div><div class="line">small()     把字符串中的文本变成小字体(&lt;SMALL&gt;)</div><div class="line">strike()     把字符串中的文本变成划掉字体(&lt;STRIKE&gt;)</div><div class="line">sub()      把字符串中的文本变成下标(subscript)字体((SUB&gt;)</div><div class="line">sup()      把字符串中的文本变成上标(superscript)字体(&lt;SUP&gt;)</div><div class="line"></div><div class="line">charAt(index) 返回指定索引处的字符</div><div class="line">charCodeAt(index)返回一个整数,该整数表示String对象中指定位置处的字符的Unicode编码</div><div class="line">concat(string2)连接两条或多条字符串 </div><div class="line">fromCharCode(num1, num2, …, numN)获取指定的Unicode值并返回字符串</div><div class="line">indexOf(searchString, startIndex) 返回字符串中第一个出现指定字符串的位置</div><div class="line">lastlndexOf(searchString, startIndex) 返回字符串中最后一个出现指定字符串的位置</div><div class="line">match(regex) 在字符串中查找指定值</div><div class="line">replace(regex, newString)将字符串中的某些字符替换成其它字符</div><div class="line">search(regex) 针对某执行值对字符串进行查找</div><div class="line">slice(startIndex, endIndex)将部分字符抽出并在新的字符串中返回剩余部分</div><div class="line">split(delimiter)将字符串分配为数组</div><div class="line">substr(startIndex, length) 从startIndex取,取length个字符</div><div class="line">substring(startIndex, endIndex) 从startIndex和endIndex之间的字符,不包括endIndex</div><div class="line"></div><div class="line">toLowerCase() 把字符串中的文本变成小写</div><div class="line">toUpperCase() 把字符串中的文本变成大写</div><div class="line">toSource()    显示对象的源代码</div><div class="line">valueOf()    返回字符串对象的原始值</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Array</p>
-<ul>
-<li><p>属性：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">constructor 所建立对象的函数参考</div><div class="line">prototype    能够为对象加入的属性和方法</div><div class="line">index      For an array created by a regular expression match, the zero-based index of the match <span class="keyword">in</span> the string.</div><div class="line">input      For an array created by a regular expression match, reflects the original string against <span class="built_in">which</span> the regular expression was matched.</div><div class="line">length      获取数组元素的个数,即最大下标加1</div></pre></td></tr></table></figure>
-</li>
-<li><p>方法：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">concat(array1,arrayn)将两个或两个以上的数组值连接起来,合并后返回结果</div><div class="line">join(string) 将数组中元素合并为字符串,string为分隔符.如省略参数则直接合并,不再分隔</div><div class="line">pop()      移除数组中的最后一个元素并返回该元素</div><div class="line">push(value) 在数组的末尾加上一个或多个元素,并且返回新的数组长度值</div><div class="line">reverse()    颠倒数组中元素的顺序,反向排列</div><div class="line"><span class="built_in">shift</span>()     移除数组中的第一个元素并返回该元素</div><div class="line">slice(start, deleteCount, [item1[, item2[,...[,itemN]]]]) 返从一个数组中移除一个或多个元素,如果必要,在所移除元素的位置上插入新元素,返回所移除的元素</div><div class="line">sort(compare Function) 在未指定排序号的情况下,按照元素的字母顺序排列,如果不是字符串类型则转换成字符串再排序,返回排序后的数组</div><div class="line">splice()     为数组删除并添加新的元素</div><div class="line">toSource()    显示对象的源代码</div><div class="line">toString()    将数组所有元素返回一个字符串,其间用逗号分隔</div><div class="line">unshift(value)为数组的开始部分加上一个或多个元素,并且返回该数组的新长度</div><div class="line">valueOf()    返回数组对象的原始值</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>RegExp</p>
-<ul>
-<li><p>属性：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$1</span>, ..., <span class="variable">$9</span> Parenthesized substring matches, <span class="keyword">if</span> any. </div><div class="line"><span class="variable">$_</span>        See input. </div><div class="line">$*        See multiline. </div><div class="line">$&amp;        See lastMatch. </div><div class="line">$+        See lastParen. </div><div class="line">$`        See leftContext. </div><div class="line">$<span class="string">'        See rightContext. </span></div><div class="line"><span class="string">global      Whether or not to test the regular expression against all possible matches in a string, or only against the first. </span></div><div class="line"><span class="string">ignoreCase    Whether or not to ignore case while attempting a match in a string. </span></div><div class="line"><span class="string">input      The string against which a regular expression is matched. </span></div><div class="line"><span class="string">lastIndex    The index at which to start the next match. </span></div><div class="line"><span class="string">lastMatch    The last matched characters. </span></div><div class="line"><span class="string">lastParen    The last parenthesized substring match, if any. </span></div><div class="line"><span class="string">leftContext The substring preceding the most recent match. </span></div><div class="line"><span class="string">multiline    Whether or not to search in strings across multiple lines. </span></div><div class="line"><span class="string">rightContext The substring following the most recent match. </span></div><div class="line"><span class="string">source      The text of the pattern.</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>方法：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">compile     Compiles a regular expression object. </div><div class="line"><span class="built_in">exec</span>       Executes a search <span class="keyword">for</span> a match <span class="keyword">in</span> its string parameter. </div><div class="line"><span class="built_in">test</span>       Tests <span class="keyword">for</span> a match <span class="keyword">in</span> its string parameter</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Function</p>
-<ul>
-<li><p>属性：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">arguments    An array corresponding to the arguments passed to a <span class="keyword">function</span>. </div><div class="line">arity      Indicates the number of arguments expected by the <span class="keyword">function</span>. </div><div class="line"><span class="built_in">caller</span>      Specifies <span class="built_in">which</span> <span class="keyword">function</span> called the current <span class="keyword">function</span>. </div><div class="line">prototype    Allows the addition of properties to a Function object.</div></pre></td></tr></table></figure>
-</li>
-<li><p>方法：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">toString     Returns a string representing the specified object.</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>Object</p>
-<ul>
-<li><p>属性:</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">constructor Specifies the <span class="keyword">function</span> that creates an object<span class="string">'s prototype. </span></div><div class="line"><span class="string">prototype    Allows the addition of properties to all objects.</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>方法:</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">eval</span>       Evaluates a string of JavaScript code <span class="keyword">in</span> the context of the specified object. </div><div class="line">toString     Returns a string representing the specified object. </div><div class="line">unwatch     Removes a watchpoint from a 属性源 the object. </div><div class="line">valueOf     Returns the primitive value of the specified object. </div><div class="line">watch      Adds a watchpoint to a 属性源 the object.</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p>10.全局<br>属性:<br>Infinity     指定一个正负无穷大的数值<br>NaN       指定一个 “非数字” 值<br>undefined    指定一个未被赋值的变量</p>
-<p>方法:<br>decodeURI()       为加密的URI进行解码<br>decodeURIComponent() 为加密的URI组件解码<br>encodeURI()       将字符串加密为URI<br>encodeURIComponent() 将字符串加密为URI组件<br>escape(string)      加密一个字符串<br>unescape()        使用escape()对一个字符串进行解码<br>eval(string)       判断一个字符串并将其以脚本代码的形式执行<br>isFinite(number)     检测一个值是否为一个有限数字,返回True或False<br>isNaN(string)      检测一个值是否不是一个有限数字<br>Number()         将一个对象的值转换为一个数字<br>parseFloat(string)    将一个字符串解析为一个浮点数字<br>parseInt(string)     将一个字符串解析为一个整数,不是四舍五入操作,而是切尾<br>String(object)      将一个对象值转换为一个字符串<br>number(object)</p>
-<p>11.事件<br>属性:<br>a.窗口事件,只在body和frameset元素中才有效<br>onload      页面或图片加载完成时<br>onunload     用户离开页面时</p>
-<p>b.表单元素事件,在表单元素中才有效<br>onchange     框内容改变时<br>onsubmit     点击提交按钮时<br>onreset     重新点击鼠标按键时<br>onselect     文本被选择时<br>onblur      元素失去焦点时<br>onfocus     当元素获取焦点时</p>
-<p>c.键盘事件,在base,bdo,br,frame,frameset,head,html,iframe,meta,param,script,style,title元素里都无效<br>onkeydown    按下键盘按键时<br>onkeypress    按下或按住键盘按键时<br>onkeyup     放开键盘按键时</p>
-<p>d.在base,bdo,br,frame,frameset,head,html,iframe,meta,param,script,style,title元素里都无效<br>onclick     鼠标点击一个对象时<br>ondblclick    鼠标双击一个对象时<br>onmousedown 鼠标被按下时<br>onmousemove 鼠标被移动时<br>onmouseout    鼠标离开元素时<br>onmouseover 鼠标经过元素时<br>onmouseup    释放鼠标按键时</p>
-<p>e.其他<br>onresize     当窗口或框架被重新定义尺寸时<br>onabort     图片下载被打断时<br>onerror     当加载文档或图片时发生错误时</p>
-<p>自定义对象:有初始化对象和定义构造函数的对象两种方法<br>a：初始化对象<br>例如： 对象={属性1:值1;属性2:值2;……属性n:值n} 注意:每个属性/值对之间用分号隔开；</p>
-<p>b： 定义构造函数的对象<br>例如:<br>function 函数名(属性1, 属性2,……属性N){<br>this.属性1=属性值1;<br>this.属性2=属性值2;<br>this.属性n=属性值n;</p>
-<p>this.方法名1=函数名1;<br>this.方法名2=函数名2;<br>}</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/javascript常用内置对象总结/" data-id="cj7ucrjzj001yes9moo9y4kj3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript基础知识/">javascript基础知识</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-上下文调用模式(call和apply的区别）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/上下文调用模式(call和apply的区别）/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.710Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/上下文调用模式(call和apply的区别）/">上下文调用模式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="调用方式1-函数调用"><a href="#调用方式1-函数调用" class="headerlink" title="调用方式1 函数调用"></a>调用方式1 函数调用</h2></blockquote>
-<ul>
-<li><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'test 调用了'</span>);</div><div class="line">    <span class="built_in">console</span>.log(argument);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<h2 id="调用方式2-call方法调用"><a href="#调用方式2-call方法调用" class="headerlink" title="调用方式2 call方法调用"></a>调用方式2 call方法调用</h2></blockquote>
-<ul>
-<li>动态改变this  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：...参数n 传递给函数的实参</div><div class="line"></div><div class="line">test.call(&#123;<span class="attr">name</span>:<span class="string">'jack'</span>,<span class="attr">skill</span>:<span class="string">'jump'</span>&#125;,<span class="string">'rose'</span>,<span class="string">'john'</span>)</div><div class="line"><span class="comment">//(调用一个对象的一个方法，以另一个对象替换当前对象,即调用上面test的方法)</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<h2 id="调用方式3-apply方法调用"><a href="#调用方式3-apply方法调用" class="headerlink" title="调用方式3 apply方法调用"></a>调用方式3 apply方法调用</h2></blockquote>
-<ul>
-<li>也可以动态的改变this  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：传入一个数组(或伪数组)传递给函数</div><div class="line"></div><div class="line">test.apply(&#123;<span class="attr">name</span>:<span class="string">'rose'</span>,<span class="attr">skill</span>:<span class="string">'swim'</span>&#125;,&#123;<span class="number">0</span>:<span class="string">'jack'</span>,<span class="number">1</span>:<span class="string">'rose'</span>,<span class="attr">length</span>:<span class="number">1</span>&#125;)</div><div class="line"><span class="comment">//与call差不多</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<h2 id="call和apply的区别："><a href="#call和apply的区别：" class="headerlink" title="call和apply的区别："></a>call和apply的区别：</h2></blockquote>
-<ul>
-<li><p>call方法从第二个参数开始可以接受任意的参数，每个参数会映射到相应位置的func的参数，可以通过参数名调用，但是如果所有参数作为数组传入，他会作为一个整个映射到func对应的第一个参数，之后参数都会为空：</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b,c</span>)</span>&#123;&#125;</div><div class="line"></div><div class="line">func.call(obj,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line"><span class="comment">//function接收到的参数为1,2,3</span></div><div class="line"></div><div class="line">func.call(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</div><div class="line"><span class="comment">//funvtion接收到的参数为[1,2,3],untifined,untifined</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>apply方法最多只有两个参数，第二个参数接受的只能是数组或伪数组，并传入到func对应的参数上</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">func.apply(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line"><span class="comment">//function接受到的实际参数是1,2,3</span></div><div class="line"></div><div class="line">func.apply(obj,&#123;<span class="number">0</span>:<span class="number">1</span>,<span class="number">1</span>:<span class="number">2</span>,<span class="number">2</span>:<span class="number">3</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;)</div><div class="line"><span class="comment">//function接收到的参数实际上是1,2,3</span></div></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/上下文调用模式(call和apply的区别）/" data-id="cj7ucrk00002kes9mvzwn94e1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/方法区别/">方法区别</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">__('next') &raquo;</a>
-  </nav>
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AJAX/">AJAX</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Angular/">Angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JSON/">JSON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RequireJS/">RequireJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Requirejs/">Requirejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cookie/">cookie</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery源码分析/">jQuery源码分析</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/关于ES5规范/">关于ES5规范</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发技巧/">开发技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/网站搭建/">网站搭建</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequireJs中遇到的坑/">RequireJs中遇到的坑</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript基础知识/">javascript基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/建站技巧/">建站技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发技巧/">开发技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发用到的新技术/">开发用到的新技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开大技巧/">开大技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/掉坑里了/">掉坑里了</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法区别/">方法区别</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法总结/">方法总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/没事研究来玩的/">没事研究来玩的</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网站性能优化方方面面/">网站性能优化方方面面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/RequireJs中遇到的坑/" style="font-size: 10px;">RequireJs中遇到的坑</a> <a href="/tags/javascript基础知识/" style="font-size: 16px;">javascript基础知识</a> <a href="/tags/建站技巧/" style="font-size: 18px;">建站技巧</a> <a href="/tags/开发技巧/" style="font-size: 20px;">开发技巧</a> <a href="/tags/开发用到的新技术/" style="font-size: 12px;">开发用到的新技术</a> <a href="/tags/开大技巧/" style="font-size: 10px;">开大技巧</a> <a href="/tags/掉坑里了/" style="font-size: 10px;">掉坑里了</a> <a href="/tags/方法区别/" style="font-size: 12px;">方法区别</a> <a href="/tags/方法总结/" style="font-size: 10px;">方法总结</a> <a href="/tags/没事研究来玩的/" style="font-size: 14px;">没事研究来玩的</a> <a href="/tags/网站性能优化方方面面/" style="font-size: 10px;">网站性能优化方方面面</a> <a href="/tags/黑科技/" style="font-size: 14px;">黑科技</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的路由/">AngularJS中的路由</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/云音乐案例(利用锚点值)/">云音乐案例业务逻辑(锚点值)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的运行块(run)/">AngularJS中的运行块(run)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的配置快(config)/">AngularJS中的配置块(config)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中配置跨域白名单/">AngularJS中配置跨域白名单</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Zeng<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_10.png)"></div>
+    
   </div>
-</footer>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/网站搭建/">
+              <span>网站搭建</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
     </div>
-    <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+</div>
+
+
+
+    
+        
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/ajax的优缺点/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/ajax的优缺点/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        ajax的优缺点
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_38.png)"></div>
+    
+  </div>
   
-</nav>
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/AJAX/">
+              <span>AJAX</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/事件触发的时候，弹出模态框时的处理/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/事件触发的时候，弹出模态框时的处理/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        事件触发的时候，弹出模态框
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_10.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/开发/">
+              <span>开发</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/es5之前要获取当前函数本身/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/es5之前要获取当前函数本身/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        es5之前要获取当前函数本身
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_24.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/关于ES5规范/">
+              <span>关于ES5规范</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/掉坑里了/">
+              <span>掉坑里了</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/cookie的用途/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/cookie的用途/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        cookie的用途
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_36.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/cookie/">
+              <span>cookie</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/网站性能优化方方面面之闭包实现模块化的坏处/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/网站性能优化方方面面之闭包实现模块化的坏处/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        闭包实现模块化的坏处(网站性能优化)
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_6.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/RequireJS/">
+              <span>RequireJS</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/网站性能优化方方面面/">
+              <span>网站性能优化方方面面</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/设计模式：模块模式/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/设计模式：模块模式/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        设计模式：模块模式
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_17.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/设计模式/">
+              <span>设计模式</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/if()括号内的数据类型的转换/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/if()括号内的数据类型的转换/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        if()括号内的数据类型的转换
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_44.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/javascript/">
+              <span>javascript</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/javascript基础知识/">
+              <span>javascript基础知识</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/javascript常用内置对象总结/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/javascript常用内置对象总结/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        javascript常用内置对象总结
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_31.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/javascript/">
+              <span>javascript</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/javascript基础知识/">
+              <span>javascript基础知识</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/上下文调用模式(call和apply的区别）/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/上下文调用模式(call和apply的区别）/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        上下文调用模式
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_20.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/javascript/">
+              <span>javascript</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/方法区别/">
+              <span>方法区别</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+  </div>
+  
+  <ul class="pagination">
+    
+    <li class="mdui-ripple">
+      
+      <a href="/page/3/" class="mdui-text-color-theme-text">
+      
+        <i class="mdui-icon material-icons">&#xe5cb;</i>
+      </a>
+    </li>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+      
+        <li class="mdui-ripple">
+          <a href="/" class="mdui-text-color-theme-text">
+            1
+          </a>
+        </li>
+      
+    
+
+    
+
+    
+      
+        
+          <li class="mdui-ripple">
+            <a href="/page/2/" class="mdui-text-color-theme-text">
+              2
+            </a>
+          </li>
+        
+      
+    
+      
+        
+          <li class="mdui-ripple">
+            <a href="/page/3/" class="mdui-text-color-theme-text">
+              3
+            </a>
+          </li>
+        
+      
+    
+
+    
+      <li class="mdui-color-theme-accent">
+        <a class="mdui-text-color-theme-text">4</a>
+      </li>
+    
+
+    
+      
+        <li class="mdui-ripple">
+          <a href="/page/5/" class="mdui-text-color-theme-text">
+            5
+          </a>
+        </li>
+      
+    
+      
+    
+
+    
+
+    
+      <li class="mdui-ripple">
+        <a href="/page/6/" class="mdui-text-color-theme-text">
+          6
+        </a>
+      </li>
+    
+
+    
+      
+        <li class="mdui-ripple">
+          <a href="/page/5/" class="mdui-text-color-theme-text">
+            <i class="mdui-icon material-icons">&#xe5cc;</i>
+          </a>
+        </li>
+      
+    
+   </ul>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
+  <i class="mdui-icon material-icons">&#xe5d8;</i>
+</button>
+
+</div>
 
 
-<script src="/js/script.js"></script>
 
-  </div>
+</main>
+
+<div id="outdated" style="z-index: 9999;">
+  <h6>Your browser is out-of-date!</h6>
+  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+
+
+
+
+<!-- Import JS -->
+
+  <script>lsloader.load("outdatedbrowser_js","/js/outdatedbrowser.min.js?e/I5uIbdkHHfJGD4oNpMfA==", true)</script>
+
+
+
+    <script>lsloader.load("main_js","/js/js.min.js?7Tw9Ng5ky7PDfky4qwNovg==", true)</script>
+
+
+
+
+
+  
+    <script type="text/ls-javascript" id="global-script">
+  /* appbar button */
+  (function() {
+    var drawer = document.querySelector('#drawer')
+    var drawerBtn = document.querySelector('.drawer-button')
+
+    drawer.addEventListener('open.mdui.drawer', function (e) {
+      drawerBtn.classList.add('back')
+    })
+    drawer.addEventListener('close.mdui.drawer', function (e) {
+      drawerBtn.classList.remove('back')
+    })
+  })();
+
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/ls-javascript" id="to-top-script">
+  /* fab */
+  (function() {
+    var pageFlag = false;
+    var fab = new mdui.Fab('#toTop');
+    fab.hide();
+    window.addEventListener('scroll', function() {
+      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      var divTop = document.querySelector('div#top').offsetTop
+      var pageLocation = divTop - bodyTop;
+      if (!pageFlag && pageLocation < 0) {
+        fab.show();
+        pageFlag = true;
+      } else if (pageFlag && pageLocation >= 0) {
+        fab.hide();
+        pageFlag = false;
+      }
+    });
+  })();
+</script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<!-- Custom javascript -->
+
+
+<!-- remove diplay:none -->
+<script type="text/ls-javascript" id="html-script">
+  if (document.readyState === 'complete' || document.readyState !== 'loading') {
+    showHTML();
+  } else {
+    document.addEventListener('DOMContentLoaded', showHTML);
+  }
+  function showHTML(){
+    document.querySelector('html').style.display = 'block';
+  }
+</script>
+
+<script>
+  (function(){
+    var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+    for (var i = 0; i < scriptList.length; ++i) {
+      var item = scriptList[i];
+      lsloader.runInlineScript(item.id,item.id);
+    }
+  })()
+  /*! Copyright 2017 Halyul */
+  console.info("%cCopyright © 2017 Halyul\n"+'Theme Version: 1.5.0'+'%c\nhttps://github.com/Halyul/hexo-theme-mdui',"font-size: 14px;color: #3F51B5;","color: #448AFF;text-decoration: none");
+</script>
+
 </body>
+
 </html>

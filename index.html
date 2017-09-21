@@ -1,861 +1,1270 @@
+
 <!DOCTYPE html>
-<html>
+<html  style="display: none;">
+
+  
 <head>
-  <meta charset="utf-8">
+  <script>
+    window.mduiVersion = "1.5.0"
+    window.oldVersion = [
+     '1.4.7',
+     '1.4.8',
+     '1.4.9',
+     'unknownVersion'
+    ]
+  </script>
+  <!--
+        © HEXO MDUI Theme
+        https://github.com/Halyul/hexo-theme-mdui
+        Version: 1.5.0 -->
+  <meta charset="UTF-8">
+  <title>Index - John Zeng的个人播客</title>
+
+  <!-- Favicons -->
+  <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+  <link rel="icon" sizes="192x192" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/favicon.png">
+
+  <!-- Meta & Info -->
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   
-  <title>John Zeng的个人播客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="John Zeng的个人播客">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="John Zeng的个人播客">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="John Zeng的个人播客">
+    <meta name="theme-color" content="
   
-    <link rel="alternate" href="/atom.xml" title="John Zeng的个人播客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+  #3F51B5
   
 
+">
+  
+
+  <meta name="author" content="John Zeng">
+  
+  <meta name="keywords" content="blog, hexo, mdui">
+
+  <!--iOS -->
+  <meta name="apple-mobile-web-app-title" content="John Zeng的个人播客">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="480">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://yoursite.com">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Index - John Zeng的个人播客 | John Zeng的个人播客">
+  <meta property="og:image" content="/img/favicon.png" />
+  
+
+    
+
+  <!-- Cache -->
+  <meta http-equiv="Cache-Control" content="max-age=7200" />
+  <meta http-equiv="Expires" content="Fri, 29 Dec 2017 23:00:00 GMT" />
+
+  
+
+  <script>
+    (function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.mduiVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf(c)!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();
+  </script>
+
+  <!-- Import CSS -->
+  
+    <link rel="stylesheet" href="/css/fonts.min.css">
+  
+  
+    
+      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?OeEY1DPEWhXQ5nt08XaZcg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    
+  
+
+  <!-- Custom Head -->
+  
+
+  
+    <style>
+      body {
+        background-color: #eeeeee;
+      }
+    </style>
+  
+
+  
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">John Zeng的个人播客</a>
-      </h1>
+
+
+
+  
+    
+  <body class="mdui-theme-primary-indigo mdui-theme-accent-blue
+   
+  
+  " >
+
+
+  
+
+
+<div id="top"></div>
+
+
+  
+
+  <div class="mdui-appbar animate-appbar mdui-shadow-0" id="blog-appbar">
+    <div class="mdui-toolbar">
+      <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
+        <i class="mdui-icon">
+          <span></span>
+        </i>
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  
+  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
+  " id="drawer" style="z-index: 2001;">
+  <div class="userview" style="background-image: url(/img/bg.png)">
+  <div class="overlay">
+    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
+    <div class="bottom">
+      <div class="info">
+        <div class="author mdui-text-color-white-text">
+          John Zeng
+        </div>
+        <div class="slogan mdui-text-color-white-secondary">
+          I&#39;m your slogan!
+        </div>
+      </div>
+      <div class="flex-spacer"></div>
       
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  </div>
+</div>
+
+  <div class="content">
+  <div class="hexo">
+    
+      <div class="mdui-list no-padding-bottom">
+        <li class="mdui-list-item mdui-ripple mdui-list-item-active">
+          <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-accent">&#xe88a;</i>
+          <div class="mdui-list-item-content mdui-text-color-theme-accent">
+            Index
+          </div>
+        </li>
+      </div>
+    
+    
+      <div class="mdui-list no-padding">
+        <a href="/archives">
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+            <div class="mdui-list-item-content">
+              Archives
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">58</span>
+            </div>
+          </li>
+        </a>
+      </div>
+    
+    
+      <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
+              <div class="mdui-list-item-content">Categories</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站搭建
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Angular
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
+                </a>
+              
+                <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Git
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJS
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
+                </a>
+              
+                <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  AJAX
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  cookie
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  关于ES5规范
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery源码分析
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Requirejs
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  JSON
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  设计模式
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+            </div>
+          </div>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
         
-      </nav>
-      <nav id="sub-nav">
+          <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
+              <div class="mdui-list-item-content">Tags</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  建站技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
+                </a>
+              
+                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法总结
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  黑科技
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  没事研究来玩的
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开大技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发用到的新技术
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  掉坑里了
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript基础知识
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
+                </a>
+              
+                <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法区别
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJs中遇到的坑
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站性能优化方方面面
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+            </div>
+          </div>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <div class="mdui-collapse-item ">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+            <div class="mdui-list-item-content">Years</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+          </div>
+          <div class="mdui-collapse-item-body mdui-list">
+            
+            
+              <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
+                2017
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  
+</div>
+
+  <div class="flex-spacer"></div>
+  <div class="drawer-footer">
+  <div class="mdui-typo mdui-typo-caption-opacity">
+    Powered by <a href="http://hexo.io">Hexo</a>
+    <br />
+    Theme - <a href="//github.com/Halyul/hexo-theme-mdui">Halyul/MDUI</a>
+    <br />
+    <span>
+      Copyright ©
+      <span year></span>
+      John Zeng
+    </span>
+    
+    
+  </div>
+</div>
+<script type="text/javascript">
+  var copyrightNow = new Date().getFullYear();
+  var textContent = document.querySelector('span[year]')
+  
+    textContent.textContent = copyrightNow
+  
+</script>
+
+</div>
+
+
+
+
+
+
+
+<main>
+  
+  <div class="index-warper animate-post">
+  <div id="index">
+    <div class="faviconImg">
+      <img class="mdui-img-fluid" src="/img/favicon.png" />
+    </div>
+    
+  </div>
+  <div id="search-cover" searchResult></div>
+
+  
+
+  <div id="posts">
+    
+    
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
       </div>
     </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中的路由/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
   </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-AngularJS中的路由" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/21/AngularJS中的路由/" class="article-date">
-  <time datetime="2017-09-21T13:04:46.051Z" itemprop="datePublished">2017-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Angular/">Angular</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中的路由/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/21/AngularJS中的路由/">AngularJS中的路由</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="1-单页面应用的原理"><a href="#1-单页面应用的原理" class="headerlink" title="1.单页面应用的原理"></a>1.单页面应用的原理</h2><ul>
-<li>通过haschange事件监听到锚点的变化，进而可以实现为不同的锚点显示不同的视图，单页面应用就是基于这一原理的<ul>
-<li>angularjs中的路由: 就是基于这一原理实现的.</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-使用路由的步骤"><a href="#2-使用路由的步骤" class="headerlink" title="2.使用路由的步骤"></a>2.使用路由的步骤</h2><ul>
-<li>1.下载路由插件.</li>
-<li>2.将这个route插件引入</li>
-<li>3.创建模块的时候,要依赖于ngRoute模块.</li>
-<li>4.配置路由<ul>
-<li>设定规则. 当url的锚点值发生变化的时候,要怎么做.</li>
-<li>默认情况下,angularjs路由中的锚链接的值必须是以#!开头.</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-注意的细节"><a href="#3-注意的细节" class="headerlink" title="3.注意的细节:"></a>3.注意的细节:</h2><ul>
-<li>默认情况下,锚链接的锚点值必须要以#!开头.</li>
-<li>在使用when方法匹配的时候,前面的#!不必写.</li>
-<li>temlplateUrl 表示匹配成功的时候 请求指定的资源</li>
-<li>将请求回来的资源放在ng-view下面.</li>
-</ul>
-<h2 id="4-routeProvider"><a href="#4-routeProvider" class="headerlink" title="4.$routeProvider"></a>4.$routeProvider</h2><ul>
-<li>使用$routeProvider进行路由规则的配置</li>
-<li>when方法： 设定当路由匹配成功以后,要做的事情.  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">when(<span class="string">"路由"</span>，&#123;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li>但成功匹配后，要做的事情通过第二个参数对象来指定。<ul>
-<li>第二个参数：对象<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">templateUrl:<span class="string">""</span></div><div class="line"><span class="comment">//资源路径，匹配成功后请求这个资源，将请求回来的资源放在ng-view</span></div><div class="line"></div><div class="line">otherwise方法</div><div class="line"><span class="comment">//当所有的路由规矩都不匹配的时候，做的事情</span></div><div class="line"></div><div class="line"><span class="string">"/"</span>代表空路由</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<h2 id="5-when方法的第二个参数的键值对的说明"><a href="#5-when方法的第二个参数的键值对的说明" class="headerlink" title="5.when方法的第二个参数的键值对的说明"></a>5.when方法的第二个参数的键值对的说明</h2><ul>
-<li>templateUrl</li>
-<li>redirectTo 跳转路由  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">redirectTO:<span class="string">"/home"</span></div><div class="line"><span class="comment">//当路由匹配成功以后，修改路由为"/home"</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li>template:””</li>
-<li>controller:””  值是控制器的名称会将请求回来的视图与这个控制器进行关联.这样的话,就可以在控制器中制造数据 存储到$scope中.视图中就可以访问.</li>
-</ul>
-<blockquote>
-<h2 id="6-spa的优缺点"><a href="#6-spa的优缺点" class="headerlink" title="6.spa的优缺点"></a>6.spa的优缺点</h2><ul>
-<li>优点：用户体验极致</li>
-<li>对seo不友好</li>
-</ul>
-<h2 id="7-具体代码："><a href="#7-具体代码：" class="headerlink" title="7.具体代码："></a>7.具体代码：</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-contorller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">nav</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/home"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/my"</span>&gt;</span>我的音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/find"</span>&gt;</span>发现音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">ng-view</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> app.angular.module(<span class="string">"hmApp"</span>,[<span class="string">"ngRoute"</span>]);</div><div class="line">    app.config([<span class="string">"$locationProcider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$locationProcider</span>)</span>&#123;</div><div class="line">        $locationProcider.hashPrefix(<span class="string">""</span>); </div><div class="line">    &#125;])</div><div class="line"></div><div class="line">    <span class="comment">//针对 路由规则(锚点值变化) 进行配置</span></div><div class="line">    app.config([<span class="string">"$rotoueProcider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$rotoueProcider</span>)</span>&#123;</div><div class="line">        $rotoueProcider.when(<span class="string">"/home"</span>,&#123;</div><div class="line">            templateUrl:<span class="string">"./musice/home.html"</span></div><div class="line">        &#125;).when(<span class="string">"/my"</span>,&#123;</div><div class="line">            template:<span class="string">"&lt;h1&gt;哈哈哈哈&lt;/h1&gt;"</span>,</div><div class="line">            controller:<span class="string">"hmCtrl"</span></div><div class="line">            <span class="comment">//将请求回来的视图和名称叫做“myCtrl”的控制器关联起来</span></div><div class="line">        &#125;).when(<span class="string">"/"</span>,&#123;</div><div class="line">            redirectTo:<span class="string">"/home"</span></div><div class="line">            <span class="comment">//如果现在的URL地址上的路由是一个空路由，name就跳转到、home这个路由</span></div><div class="line">        &#125;).otherwise(&#123;</div><div class="line">            templateUrl:<span class="string">"./404.html"</span></div><div class="line">        &#125;)</div><div class="line">    &#125;]);</div><div class="line"></div><div class="line">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</div><div class="line">        $scope.name = <span class="string">"歌曲"</span></div><div class="line">    &#125;])</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-<blockquote>
-<h2 id="路由参数"><a href="#路由参数" class="headerlink" title="路由参数"></a>路由参数</h2></blockquote>
-<ul>
-<li><p>路由的后面可以跟参数.</p>
-<ul>
-<li>可以跟Query String类型的参数.  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/my?name=jack&amp;age=18"</span>&gt;</span>我的音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">//仍然可以成功匹配 /my 这个路由规则.</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>需要特别注意的是:</p>
-<ul>
-<li>当路由匹配成功以后,ng路由机制会去请求my.html资源回来放到ng-view中.</li>
-<li><p>并不会主动的将参数发给服务器.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$routeParams"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$routeParams</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log($routeParams);</div><div class="line">&#125;])</div></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/21/AngularJS中的路由/" data-id="cj7uj2paq0001kg9mynyn7k0l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/黑科技/">黑科技</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-云音乐案例(利用锚点值)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/21/云音乐案例(利用锚点值)/" class="article-date">
-  <time datetime="2017-09-21T12:40:43.905Z" itemprop="datePublished">2017-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/开发技巧/">开发技巧</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+        AngularJS中的路由
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/21/云音乐案例(利用锚点值)/">云音乐案例业务逻辑(锚点值)</a>
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="1-锚点值"><a href="#1-锚点值" class="headerlink" title="1. 锚点值"></a>1. 锚点值</h2><ul>
-<li>通过window.location.hash 可以拿到当前地址栏上的锚点值</li>
-<li>window对象有一个事件 onhashchange这个事件在url地址栏的锚点值发生变化的时候触发.</li>
-</ul>
-</blockquote>
-<ul>
-<li>案例：<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">    header&gt;nav&gt;a&#123;</span></div><div class="line"><span class="undefined">        text-decoration: none;</span></div><div class="line"><span class="undefined">        color: #333;</span></div><div class="line"><span class="undefined">        font-size: 14px;</span></div><div class="line"><span class="undefined">        margin-left: 16px;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">    header&gt;nav&gt;a:hover&#123;</span></div><div class="line"><span class="undefined">            text-decoration: underline;</span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">nav</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#home"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#my"</span>&gt;</span>我的音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#find"</span>&gt;</span>发现音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"content"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="built_in">window</span>.onhashchange = funciton()&#123;</div><div class="line">        <span class="comment">//1.获取url地址栏上的锚点值.</span></div><div class="line">        <span class="keyword">var</span> hash = <span class="built_in">window</span>.location.hash.slice(<span class="number">1</span>);</div><div class="line">            <span class="comment">// #home #my...</span></div><div class="line">        </div><div class="line">        <span class="comment">//2.发送Ajax请求</span></div><div class="line">        <span class="keyword">var</span> url = <span class="string">"./music/"</span>+ hash +<span class="string">".html"</span></div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"get"</span>,url);</div><div class="line">        xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                 <span class="built_in">document</span>.getElementById(<span class="string">"content"</span>).innerHTML = xhr.responseText;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responText);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        xhr.send();</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/21/云音乐案例(利用锚点值)/" data-id="cj7uj2pak0000kg9mpe9aa7ja" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/建站技巧/">建站技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS中的运行块(run)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/21/AngularJS中的运行块(run)/" class="article-date">
-  <time datetime="2017-09-21T12:18:49.968Z" itemprop="datePublished">2017-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Angular/">Angular</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/21/AngularJS中的运行块(run)/">AngularJS中的运行块(run)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="1-运行块"><a href="#1-运行块" class="headerlink" title="1. 运行块."></a>1. 运行块.</h2><ul>
-<li>ng内置的服务,如果我们想要使用.让服务脱离控制器执行.</li>
-</ul>
-<h2 id="2-让服务脱离控制器执行"><a href="#2-让服务脱离控制器执行" class="headerlink" title="2.让服务脱离控制器执行."></a>2.让服务脱离控制器执行.</h2><ul>
-<li>模块对象提供一个方法,叫做run,直接使用服务.而不依赖于控制器.<ul>
-<li>参数: 数组,前面写上要使用的服务的名称,后面1个回调</li>
-</ul>
-</li>
-</ul>
-<h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">app.run([<span class="string">"$rootScope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$rootScope</span>)</span>&#123;</div><div class="line">    $rootScope.age = <span class="number">100</span>;</div><div class="line">&#125;]);</div><div class="line"></div><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</div><div class="line">    $scope.name = <span class="string">"jack"</span></div><div class="line">&#125;]);</div><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$rootScope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$rootScope</span>)</span>&#123;</div><div class="line">&#125;])</div></pre></td></tr></table></figure></blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/21/AngularJS中的运行块(run)/" data-id="cj7ufv1gh0001ug9m26yvcxk5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS中的配置快(config)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/21/AngularJS中的配置快(config)/" class="article-date">
-  <time datetime="2017-09-21T11:59:32.841Z" itemprop="datePublished">2017-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Angular/">Angular</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/21/AngularJS中的配置快(config)/">AngularJS中的配置块(config)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="1-配置块"><a href="#1-配置块" class="headerlink" title="1. 配置块."></a>1. 配置块.</h2><ul>
-<li>在配置运行阶段,ng允许我们对ng内置的一些服务做一些修改.</li>
-</ul>
-<h2 id="2-如何进行针对服务进行配置"><a href="#2-如何进行针对服务进行配置" class="headerlink" title="2.如何进行针对服务进行配置."></a>2.如何进行针对服务进行配置.</h2><ul>
-<li>模块对象(app)提供了一个方法: config<ul>
-<li>功能: 就是对内置的服务进行修改 对内置的服务进行配置.</li>
-<li>参数: 是1个数组,数组前面写上你要配置的服务对应的Provider  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$log   $logProvider</div><div class="line">$http  $httpProvider</div><div class="line"></div><div class="line"><span class="comment">//每一个服务都有一个对应的Provider</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<pre><code>- 最后一个元素是一个回调函数，通过形参将这个Provider注入
-</code></pre><blockquote>
-<h2 id="实现："><a href="#实现：" class="headerlink" title="实现："></a>实现：</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-contorller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;name|firstBig&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</span></div><div class="line"><span class="javascript">    app.config([<span class="string">"$logProvider"</span>,<span class="string">"$filterProvider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$logProvider,$filterProvider</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $logProvider.debugEnabled(<span class="literal">false</span>);</span></div><div class="line"><span class="javascript">        $filterProvider.register(<span class="string">"firstBig"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            retrun <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span></div><div class="line"><span class="javascript">                <span class="keyword">return</span> data[<span class="number">0</span>].toUpperCase() + data.slice(<span class="number">1</span>);</span></div><div class="line"><span class="undefined">            &#125;</span></div><div class="line"><span class="undefined">        &#125;)</span></div><div class="line"><span class="undefined">    &#125;]);</span></div><div class="line"><span class="javascript">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$log"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$log</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $log.debug(<span class="string">"这是debug信息"</span>);</span></div><div class="line"><span class="javascript">        $log.error(<span class="string">"error!"</span>);</span></div><div class="line"><span class="javascript">        $scope.name = <span class="string">"hahah"</span></span></div><div class="line"><span class="undefined">    &#125;])</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/21/AngularJS中的配置快(config)/" data-id="cj7ufv1gc0000ug9m6r0ohske" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS中配置跨域白名单" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/21/AngularJS中配置跨域白名单/" class="article-date">
-  <time datetime="2017-09-21T11:40:36.206Z" itemprop="datePublished">2017-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Angular/">Angular</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/21/AngularJS中配置跨域白名单/">AngularJS中配置跨域白名单</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="http在跨域的时候-为了安全-必须要配置1个跨域白名单"><a href="#http在跨域的时候-为了安全-必须要配置1个跨域白名单" class="headerlink" title="$http在跨域的时候,为了安全,必须要配置1个跨域白名单."></a>$http在跨域的时候,为了安全,必须要配置1个跨域白名单.</h2></blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</div><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;]);</div><div class="line">app.config([<span class="string">"$sceDelegateProvider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">sceDelegateProvider</span>)</span>&#123;</div><div class="line">sceDelegateProvider.resourceUrlWhitelist([</div><div class="line">    <span class="string">"http://www.baikdu.com"</span></div><div class="line">]);</div><div class="line">&#125;])</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/21/AngularJS中配置跨域白名单/" data-id="cj7ufv1gk0002ug9mxixkcauf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发技巧/">开发技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS的执行顺序" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/21/AngularJS的执行顺序/" class="article-date">
-  <time datetime="2017-09-21T11:33:04.091Z" itemprop="datePublished">2017-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Angular/">Angular</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/21/AngularJS的执行顺序/">AngularJS中的执行顺序</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="AngularJS中的执行顺序"><a href="#AngularJS中的执行顺序" class="headerlink" title="AngularJS中的执行顺序"></a>AngularJS中的执行顺序</h2></blockquote>
-<ul>
-<li><p>浏览器解析DOM树，不认识的指令标签会略过.</p>
-</li>
-<li><p>当解析到angular.js的时候，执行ng脚本.</p>
-</li>
-<li><p>ng会监测到1个事件 DOMContentLoaded事件 (和jq的ready)ng就开始工作了.</p>
-</li>
-<li><p>查找模块依赖项.我们在创建模块的时候,将我们依赖的模块加载进来.</p>
-</li>
-<li><p>寻找ng-app 确定那1段代码是ng需要管理的.</p>
-</li>
-<li><p>初始化必要的组件.创建内部需要用的一些对象啊 变量啊….$rootScope 根作用域…</p>
-</li>
-<li><p>配置和运行: 允许我们写代码来干涉这一步.</p>
-</li>
-<li><p>ng开始解析dom树.ng-app指定的dom树.</p>
-</li>
-<li><p>遍历dom树 搜集ng指令.</p>
-</li>
-<li><p>执行指令对应的回调和link函数.</p>
-</li>
-<li><p>最终生成1个视图</p>
-</li>
-<li><p>使用1个死循环,监视视图中的事件触发.</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/21/AngularJS的执行顺序/" data-id="cj7udvvjz00006c9mvz6fstgj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/没事研究来玩的/">没事研究来玩的</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS中的自定义服务" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/21/AngularJS中的自定义服务/" class="article-date">
-  <time datetime="2017-09-21T05:32:45.751Z" itemprop="datePublished">2017-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Angular/">Angular</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/21/AngularJS中的自定义服务/">AngularJS中的自定义服务</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="常见的Angular内置服务："><a href="#常见的Angular内置服务：" class="headerlink" title="常见的Angular内置服务："></a>常见的Angular内置服务：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$log</div><div class="line">$timeout</div><div class="line">$interval</div><div class="line">$http</div><div class="line">$filter</div></pre></td></tr></table></figure>
-<h2 id="factory方法"><a href="#factory方法" class="headerlink" title="factory方法"></a>factory方法</h2></blockquote>
-<ul>
-<li><p>模块对象提供了一个factory方法. 这个方法允许我们自定义服务.</p>
-<ul>
-<li>第1个参数: 自定义服务的名称.</li>
-<li>第2个参数: 是1个数组.前面写上这个服务要依赖的别的服务,最后是1个回调函数.将需要依赖的服务通过形参注入.</li>
-<li>回到函数的返回值: 我们定义的服务是提供功能的嘛,所以要求返回1个函数或者1个对象.</li>
-</ul>
-</li>
-<li><p>具体实现：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">app.factory(<span class="string">"highven"</span>,[<span class="string">"$filter"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$filter</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        now:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">return</span> $filter(<span class="string">"data"</span>)(<span class="keyword">new</span> <span class="built_in">Date</span>(),<span class="string">"yyyy-MM-dd HH:mm:ss"</span>)</div><div class="line">        &#125;,</div><div class="line">        format:<span class="function"><span class="keyword">function</span>(<span class="params">format</span>)</span>&#123;</div><div class="line">             <span class="keyword">return</span> $filter(<span class="string">"date"</span>)(<span class="keyword">new</span> <span class="built_in">Date</span>(),format)   </div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<h2 id="serive方法："><a href="#serive方法：" class="headerlink" title="serive方法："></a>serive方法：</h2></blockquote>
-<ul>
-<li><p>使用模块对象的service方法也可以创建服务.</p>
-<ul>
-<li>与factory方法不同的是:<ul>
-<li>该方法不需要明确返回对象或者函数.使用this的方式为返回的对象添加属性和方法.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>具体实现：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">app.service(<span class="string">"highven"</span>,[<span class="string">"filter"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$filter</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.now = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> $filter(<span class="string">"data"</span>)(<span class="keyword">new</span> <span class="built_in">Date</span>(),<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</div><div class="line">    &#125;,</div><div class="line">    <span class="keyword">this</span>.format = <span class="function"><span class="keyword">function</span>(<span class="params">format</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> $filter(<span class="string">"data"</span>)(<span class="keyword">new</span> <span class="built_in">Date</span>(),format)</div><div class="line">    &#125;</div><div class="line">&#125;]);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<h2 id="调用："><a href="#调用：" class="headerlink" title="调用："></a>调用：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"demoCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"serive"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,serive</span>)</span>&#123;</div><div class="line">    $scope.now = serive.now();</div><div class="line">&#125;])</div></pre></td></tr></table></figure>
-</blockquote>
-<ul>
-<li>注意：<ul>
-<li>service方法只能返回对象.</li>
-<li>factory可以返回对象也可以返回函数.</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/21/AngularJS中的自定义服务/" data-id="cj7ucrjyf000fes9mthkr40cr" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/方法总结/">方法总结</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-关于跨域请求" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/关于跨域请求/" class="article-date">
-  <time datetime="2017-09-20T13:46:08.196Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/开发技巧/">开发技巧</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/关于跨域请求/">关于跨域请求</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="跨域请求"><a href="#跨域请求" class="headerlink" title="跨域请求"></a>跨域请求</h2></blockquote>
-<ul>
-<li><p>在A域以ajax请求另外域的资源.是不被允许的.ajax只能请求本域的资源.无法发起跨域请求.</p>
-<ul>
-<li>解决方案：<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">方向代理</div><div class="line">服务器设置</div><div class="line">jsonp</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>关于script标签</p>
-<ul>
-<li>引入外部的js文件.script标签的src属性:将外部的js文件引入,并且将其中的代码执行.</li>
-<li>script标签的src属性,可以请求任意类型的文件.</li>
-<li>script标签的src属性天然支持跨域.<ul>
-<li>CDN: 内容分发网络.</li>
-<li>libs:<pre><code>xxx  xx x xx x x x x x x x
-</code></pre></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>jsonp的跨域原理</p>
-<ul>
-<li>就是利用script标签的src属性来完成的</li>
-<li>先在浏览器端准备一个函数(demo)这个函数有一个参数</li>
-<li><p>利用script标签的src属性.在请求的时候,要把我事先准备的函数的名字发给服务器.</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./php/stus.php?callback=demo"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
-</li>
-<li><p>在服务器端</p>
-<ul>
-<li><p>先接受浏览器传递过来的函数的名称</p>
-</li>
-<li><p>正常处理请求.</p>
-</li>
-<li><p>返回数据的时候:要返回的格式: 函数名(真正的数据)</p>
-</li>
-</ul>
-</li>
-<li><p>当浏览器接收到服务器返回的数据的时候.,事先准备的函数就被执行了. </p>
-</li>
-</ul>
-</li>
-<li><p>jsonp的特点：</p>
-<ul>
-<li><p>必须要服务器支持才可以(必须服务器和浏览器互相配合才可以)</p>
-</li>
-<li><p>jsonp只支持get</p>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<h2 id="将跨域请求封装成一个函数："><a href="#将跨域请求封装成一个函数：" class="headerlink" title="将跨域请求封装成一个函数："></a>将跨域请求封装成一个函数：</h2></blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> id = <span class="number">1</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">opts</span>)</span>&#123;</div><div class="line">        <span class="comment">//1.拼接url</span></div><div class="line">        <span class="keyword">var</span> url = opts.url + <span class="string">"?"</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> opts.params)&#123;</div><div class="line">            url += (key + <span class="string">"="</span> + opts.parms[key] + <span class="string">"&amp;"</span>)</div><div class="line"></div><div class="line">            <span class="comment">//2.保存匿名函数</span></div><div class="line">            <span class="comment">//https://api.asilu.com/weather/?city=深圳&amp;day=3&amp;sb=4&amp;callback=hmCallback</span></div><div class="line">            <span class="comment">//hmCallback(数据); </span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> callbackName = <span class="string">"hmCallback"</span> + (id++);</div><div class="line">        <span class="comment">//hmCallback1</span></div><div class="line">        <span class="comment">//window[hmCallback1] = opts.callback;</span></div><div class="line"></div><div class="line">        <span class="built_in">window</span>[callbackName] = opts.callback;</div><div class="line">        url += <span class="string">"callback="</span>+callbackName;</div><div class="line">        consol.log(url);</div><div class="line"></div><div class="line">        <span class="comment">//3. 创建script标签.</span></div><div class="line">        <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>)</div><div class="line">        script.src = url;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getW</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">//调用封装好的jsonp函数发起跨域请求</span></div><div class="line">        jsonp(&#123;</div><div class="line">            url:<span class="string">"https://api.asilu.com/weather/"</span>,</div><div class="line">            params:&#123;</div><div class="line">                city:<span class="string">"深圳"</span>,</div><div class="line">                day:<span class="number">3</span>,</div><div class="line">                sb:<span class="number">4</span></div><div class="line">            &#125;,</div><div class="line">            calback:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(data)</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/关于跨域请求/" data-id="cj7ucrk0e0036es9mniyi6uic" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS中的$http服务" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/AngularJS中的$http服务/" class="article-date">
-  <time datetime="2017-09-20T07:28:26.008Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/AngularJS中的$http服务/">AngularJS中的$http服务</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="AngularJS中的-http服务"><a href="#AngularJS中的-http服务" class="headerlink" title="AngularJS中的$http服务"></a>AngularJS中的$http服务</h2></blockquote>
-<ul>
-<li><p>$http服务,ng封装的一个ajax请求工具.</p>
-</li>
-<li><p>使用$http服务.</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">$http(&#123;</div><div class="line">    <span class="comment">//一个对象</span></div><div class="line">    <span class="comment">//通过对象的键值对来指定请求的参数</span></div><div class="line"></div><div class="line">    url:  <span class="comment">//指定要请求的资源的路径.</span></div><div class="line">    method:  <span class="comment">//指定请求的方式 get/post 默认是get</span></div><div class="line">    params: &#123;&#125;  <span class="comment">//当请求方式是get的时候,发送的数据要以键值对的形式存储在这个对象中.</span></div><div class="line">    data: <span class="string">""</span> <span class="comment">//字符串. 当请求的方式是post的时候,发送的数据要存储在这个属性中.</span></div><div class="line">    headers: &#123;&#125;  <span class="comment">//设置请求头.转换formData格式</span></div><div class="line"></div><div class="line">    <span class="comment">//当请求方式是post的时候,发送的数据的格式ng底层并没有帮我们转换,所以,需要我们手动的加请求头转换formData格式</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//通过链式编程的方式点1个then方法出来.</span></div><div class="line">    <span class="number">1.</span>传入两个回调.</div><div class="line">    <span class="number">2.</span>第<span class="number">1</span>个回调:在请求成功的时候执行. 有<span class="number">1</span>个参数(response)</div><div class="line">    <span class="number">3.</span>response 代表服务器返回的数据。</div><div class="line">    <span class="number">4.</span>response.data可以拿到服务器返回的真正的数据.</div><div class="line">    <span class="number">5.</span>第<span class="number">2</span>个回调:在请求失败的时候执行.</div></pre></td></tr></table></figure>
-</li>
-<li><p>具体实现：</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</div><div class="line">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$http"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$http</span>)</span>&#123;</div><div class="line">        $scope.httpGet = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"get"</span>,</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//不带数据Get请求</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpPost = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"post"</span>,</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(respon.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line">            </div><div class="line">            <span class="comment">//不带数据post请求</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpGetWithData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"get"</span>,</div><div class="line">                params:&#123;</div><div class="line">                    name:<span class="string">"jack"</span>,</div><div class="line">                    pwd:<span class="string">"123456"</span></div><div class="line">                &#125;</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//带数据Get请求发送</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpPostWithData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"post"</span>,</div><div class="line">                data:<span class="string">"?name='jack'&amp;pwd=1234"</span>,</div><div class="line">                headers:&#123;</div><div class="line">                    <span class="string">"Content-Type"</span>:<span class="string">"application/x-www-form-urlencoded"</span></div><div class="line">                &#125;</div><div class="line">            &#125;.then(funciton(response)&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//带数据post请求发送</span></div><div class="line">        &#125;</div><div class="line">    &#125;])</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>利用$http进行跨域请求：</p>
-<ul>
-<li>只需要将method设置为jsonp就可以</li>
-<li>在发起跨域之前，需要设置一个白名单<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"demoCtrl"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>, []);</span></div><div class="line"><span class="javascript">        app.config([<span class="string">'$sceDelegateProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$sceDelegateProvider</span>) </span>&#123;</span></div><div class="line"><span class="undefined">            </span></div><div class="line"><span class="javascript">            <span class="comment">// 设置跨域白名单</span></span></div><div class="line"><span class="javascript">            $sceDelegateProvider.resourceUrlWhitelist([<span class="string">"https://api.asilu.com/weather/"</span>]);</span></div><div class="line"><span class="undefined">        &#125;])</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="javascript">        app.controller(<span class="string">"demoCtrl"</span>, [<span class="string">"$scope"</span>, <span class="string">"$http"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, $http</span>) </span>&#123;</span></div><div class="line"><span class="undefined">            $http(&#123;</span></div><div class="line"><span class="javascript">                url: <span class="string">"https://api.asilu.com/weather/"</span>,</span></div><div class="line"><span class="undefined">                params: &#123;</span></div><div class="line"><span class="javascript">                    city: <span class="string">"深圳"</span></span></div><div class="line"><span class="undefined">                &#125;,</span></div><div class="line"><span class="javascript">                method: <span class="string">"jsonp"</span></span></div><div class="line"><span class="javascript">            &#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span></div><div class="line"><span class="javascript">                <span class="built_in">console</span>.log(response.data);</span></div><div class="line"><span class="undefined">            &#125;);</span></div><div class="line"><span class="undefined">        &#125;]);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/AngularJS中的$http服务/" data-id="cj7ucrjy70005es9myidce8sb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-对AJAX的进一步理解" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/对AJAX的进一步理解/" class="article-date">
-  <time datetime="2017-09-20T05:43:22.385Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/对AJAX的进一步理解/">对AJAX的进一步理解</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2></blockquote>
-<ul>
-<li>是一种异步请求的技术.页面的局部刷新</li>
-<li><p>浏览器向服务器发送数据的时候.发送的数据是分格式的.</p>
-<ul>
-<li>当我们以get方式向服务器发送数据的时候,发送的数据的格式:Query String</li>
-<li>当我们以post方式向服务器发送数据的时候,发送的数据的格式默认是: Request Payload<ul>
-<li>如果我们以post方式向服务器发送数据,发送的数据的格式是Request Payload, 服务器绝大多数情况下不会解析接收，服务器会解析接收form data格式的数据.<br> 所以,为了服务器可以正常接收我们post过去的数据.<br> 我们就要将默认的Request Payload格式的数据转换为服务器认识的form data格式的.</li>
-</ul>
-</li>
-<li>如何转form data格式<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhr.setReauestHeader(<span class="string">"content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>)</div><div class="line"><span class="comment">//将post方式发送的数据由默认的Request Payload格式转换为form data</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>总结：</p>
-<ul>
-<li>向服务器发送的数据是分格式的</li>
-<li>以get方式发送的数据的格式是:Query String服务器可以解析接收</li>
-<li>以post方式发送的数据,其格式默认是Request Payload服务器大多数情况下,是不会解析接收这种格式的.</li>
-<li>post接口如果没有做特殊说明,发送的数据的格式一定要转换成form data.</li>
-</ul>
-</li>
-<li><p>具体实现：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxGet</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">//1.创建异步对象</span></div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XHLHttpRequest();</div><div class="line"></div><div class="line">        <span class="comment">//2.设置请求的方式和资源的路径</span></div><div class="line">        xhr.open(<span class="string">"get"</span>,<span class="string">"./php/stus.php"</span>);</div><div class="line"></div><div class="line">        <span class="comment">//3.注册事件</span></div><div class="line">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//当xhr异步对象已经拿到了服务器返回的数据</span></div><div class="line">            <span class="comment">//服务器正确处理</span></div><div class="line">            <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//4.发送</span></div><div class="line">        xhr.send();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxPost</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span>  XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"post"</span>,<span class="string">"./php/stus.php"</span>);</div><div class="line">        <span class="comment">//xhr异步对象向服务器请求数据的时候,它有四种状态</span></div><div class="line">        <span class="comment">//onreadystatechange 只要xhr的状态发生了改变就会触发.</span></div><div class="line">        <span class="comment">//准备发送  正在发送  正在接受  接受完成 4</span></div><div class="line">        <span class="comment">//每一种状态都有1个状态码.</span></div><div class="line"></div><div class="line">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        xhr.send();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxGetWithData</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"get"</span>,<span class="string">"./php/get.php?name=jack&amp;age=18"</span>);</div><div class="line">        xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//onload是1个事件: 当xhr的状态变为4的时候触发用了onload事件就不需要判断xhr.readyState == 4</span></div><div class="line">        xhr.send();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxPostWithData</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"post"</span>,<span class="string">"./php/post.php"</span>)</div><div class="line"></div><div class="line">        xhr.setRequsetHeader(<span class="string">"content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line"></div><div class="line">        xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">        xhr.send(<span class="string">"name=admin&amp;pwd=123456"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxGet()"</span>&gt;</span>ajax纯get请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxPost()"</span>&gt;</span>ajax纯post请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxGetWithData()"</span>&gt;</span>get请求带数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxPostWthData()"</span>&gt;</span>post请求带数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>还有一种改变数据格式的方法：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"./php/xxx.php"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"file"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/对AJAX的进一步理解/" data-id="cj7ucrk0r003les9mx39hlbbk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/建站技巧/">建站技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
-  </nav>
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AJAX/">AJAX</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Angular/">Angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JSON/">JSON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RequireJS/">RequireJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Requirejs/">Requirejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cookie/">cookie</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery源码分析/">jQuery源码分析</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/关于ES5规范/">关于ES5规范</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发技巧/">开发技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/网站搭建/">网站搭建</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequireJs中遇到的坑/">RequireJs中遇到的坑</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript基础知识/">javascript基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/建站技巧/">建站技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发技巧/">开发技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发用到的新技术/">开发用到的新技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开大技巧/">开大技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/掉坑里了/">掉坑里了</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法区别/">方法区别</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法总结/">方法总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/没事研究来玩的/">没事研究来玩的</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网站性能优化方方面面/">网站性能优化方方面面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/RequireJs中遇到的坑/" style="font-size: 10px;">RequireJs中遇到的坑</a> <a href="/tags/javascript基础知识/" style="font-size: 16px;">javascript基础知识</a> <a href="/tags/建站技巧/" style="font-size: 18px;">建站技巧</a> <a href="/tags/开发技巧/" style="font-size: 20px;">开发技巧</a> <a href="/tags/开发用到的新技术/" style="font-size: 12px;">开发用到的新技术</a> <a href="/tags/开大技巧/" style="font-size: 10px;">开大技巧</a> <a href="/tags/掉坑里了/" style="font-size: 10px;">掉坑里了</a> <a href="/tags/方法区别/" style="font-size: 12px;">方法区别</a> <a href="/tags/方法总结/" style="font-size: 10px;">方法总结</a> <a href="/tags/没事研究来玩的/" style="font-size: 14px;">没事研究来玩的</a> <a href="/tags/网站性能优化方方面面/" style="font-size: 10px;">网站性能优化方方面面</a> <a href="/tags/黑科技/" style="font-size: 14px;">黑科技</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的路由/">AngularJS中的路由</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/云音乐案例(利用锚点值)/">云音乐案例业务逻辑(锚点值)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的运行块(run)/">AngularJS中的运行块(run)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的配置快(config)/">AngularJS中的配置块(config)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中配置跨域白名单/">AngularJS中配置跨域白名单</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Zeng<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_9.png)"></div>
+    
   </div>
-</footer>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/黑科技/">
+              <span>黑科技</span>
+            </a>
+          
+        </div>
+      
     </div>
-    <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+</div>
+
+
+
+    
+        
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/云音乐案例(利用锚点值)/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/云音乐案例(利用锚点值)/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        云音乐案例业务逻辑(锚点值)
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_26.png)"></div>
+    
+  </div>
   
-</nav>
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/建站技巧/">
+              <span>建站技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中的运行块(run)/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中的运行块(run)/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的运行块(run)
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_31.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中的配置快(config)/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中的配置快(config)/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的配置块(config)
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_3.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中配置跨域白名单/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中配置跨域白名单/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中配置跨域白名单
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_42.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS的执行顺序/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS的执行顺序/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的执行顺序
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_20.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/没事研究来玩的/">
+              <span>没事研究来玩的</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中的自定义服务/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中的自定义服务/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的自定义服务
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_9.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/方法总结/">
+              <span>方法总结</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/关于跨域请求/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/关于跨域请求/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        关于跨域请求
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_27.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/AngularJS中的$http服务/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/AngularJS中的$http服务/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的$http服务
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_11.png)"></div>
+    
+  </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/对AJAX的进一步理解/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/对AJAX的进一步理解/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        对AJAX的进一步理解
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_27.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/建站技巧/">
+              <span>建站技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+  </div>
+  
+  <ul class="pagination">
+    
+    <li>
+      <a class="mdui-text-color-theme-icon-disabled">
+        <i class="mdui-icon material-icons">&#xe5cb;</i>
+      </a>
+    </li>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+      
+        <li class="mdui-color-theme-accent">
+          <a class="mdui-text-color-theme-text">1</a>
+        </li>
+      
+    
+
+    
+
+    
+      
+    
+      
+    
+
+    
+
+    
+      
+        <li class="mdui-ripple">
+          <a href="/page/2/" class="mdui-text-color-theme-text">
+            2
+          </a>
+        </li>
+      
+    
+      
+        <li class="mdui-ripple">
+          <a href="/page/3/" class="mdui-text-color-theme-text">
+            3
+          </a>
+        </li>
+      
+    
+
+    
+      <li class="mdui-ripple">
+        <a class="mdui-text-color-theme-text" name="snackbar">..</a>
+      </li>
+    
+
+    
+      <li class="mdui-ripple">
+        <a href="/page/6/" class="mdui-text-color-theme-text">
+          6
+        </a>
+      </li>
+    
+
+    
+      
+        <li class="mdui-ripple">
+          <a href="/page/2/" class="mdui-text-color-theme-text">
+            <i class="mdui-icon material-icons">&#xe5cc;</i>
+          </a>
+        </li>
+      
+    
+   </ul>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
+  <i class="mdui-icon material-icons">&#xe5d8;</i>
+</button>
+
+</div>
 
 
-<script src="/js/script.js"></script>
 
-  </div>
+</main>
+
+<div id="outdated" style="z-index: 9999;">
+  <h6>Your browser is out-of-date!</h6>
+  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+
+
+
+
+<!-- Import JS -->
+
+  <script>lsloader.load("outdatedbrowser_js","/js/outdatedbrowser.min.js?e/I5uIbdkHHfJGD4oNpMfA==", true)</script>
+
+
+
+    <script>lsloader.load("main_js","/js/js.min.js?7Tw9Ng5ky7PDfky4qwNovg==", true)</script>
+
+
+
+
+
+  
+    <script type="text/ls-javascript" id="global-script">
+  /* appbar button */
+  (function() {
+    var drawer = document.querySelector('#drawer')
+    var drawerBtn = document.querySelector('.drawer-button')
+
+    drawer.addEventListener('open.mdui.drawer', function (e) {
+      drawerBtn.classList.add('back')
+    })
+    drawer.addEventListener('close.mdui.drawer', function (e) {
+      drawerBtn.classList.remove('back')
+    })
+  })();
+
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/ls-javascript" id="to-top-script">
+  /* fab */
+  (function() {
+    var pageFlag = false;
+    var fab = new mdui.Fab('#toTop');
+    fab.hide();
+    window.addEventListener('scroll', function() {
+      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      var divTop = document.querySelector('div#top').offsetTop
+      var pageLocation = divTop - bodyTop;
+      if (!pageFlag && pageLocation < 0) {
+        fab.show();
+        pageFlag = true;
+      } else if (pageFlag && pageLocation >= 0) {
+        fab.hide();
+        pageFlag = false;
+      }
+    });
+  })();
+</script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<!-- Custom javascript -->
+
+
+<!-- remove diplay:none -->
+<script type="text/ls-javascript" id="html-script">
+  if (document.readyState === 'complete' || document.readyState !== 'loading') {
+    showHTML();
+  } else {
+    document.addEventListener('DOMContentLoaded', showHTML);
+  }
+  function showHTML(){
+    document.querySelector('html').style.display = 'block';
+  }
+</script>
+
+<script>
+  (function(){
+    var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+    for (var i = 0; i < scriptList.length; ++i) {
+      var item = scriptList[i];
+      lsloader.runInlineScript(item.id,item.id);
+    }
+  })()
+  /*! Copyright 2017 Halyul */
+  console.info("%cCopyright © 2017 Halyul\n"+'Theme Version: 1.5.0'+'%c\nhttps://github.com/Halyul/hexo-theme-mdui',"font-size: 14px;color: #3F51B5;","color: #448AFF;text-decoration: none");
+</script>
+
 </body>
+
 </html>

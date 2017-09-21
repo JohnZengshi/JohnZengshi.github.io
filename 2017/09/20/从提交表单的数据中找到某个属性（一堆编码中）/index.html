@@ -1,96 +1,507 @@
+
 <!DOCTYPE html>
-<html>
+<html  style="display: none;">
+
+  
 <head>
-  <meta charset="utf-8">
+  <script>
+    window.mduiVersion = "1.5.0"
+    window.oldVersion = [
+     '1.4.7',
+     '1.4.8',
+     '1.4.9',
+     'unknownVersion'
+    ]
+  </script>
+  <!--
+        © HEXO MDUI Theme
+        https://github.com/Halyul/hexo-theme-mdui
+        Version: 1.5.0 -->
+  <meta charset="UTF-8">
+  <title>从提交表单的数据中找到某个数据 - John Zeng的个人播客</title>
+
+  <!-- Favicons -->
+  <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+  <link rel="icon" sizes="192x192" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/favicon.png">
+
+  <!-- Meta & Info -->
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   
-  <title>从提交表单的数据中找到某个数据 | John Zeng的个人播客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从提交表单的数据中找到某个属性：  12var formDate = $(form).serialize(); consol.log(formDate)  //得到的是一堆编码  封装一个获取属性的函数：   1234567891011121314151617181920212223function getName(formData)&amp;#123;    var result;    //1.这个">
-<meta name="keywords" content="开发技巧">
-<meta property="og:type" content="article">
-<meta property="og:title" content="从提交表单的数据中找到某个数据">
-<meta property="og:url" content="http://yoursite.com/2017/09/20/从提交表单的数据中找到某个属性（一堆编码中）/index.html">
-<meta property="og:site_name" content="John Zeng的个人播客">
-<meta property="og:description" content="从提交表单的数据中找到某个属性：  12var formDate = $(form).serialize(); consol.log(formDate)  //得到的是一堆编码  封装一个获取属性的函数：   1234567891011121314151617181920212223function getName(formData)&amp;#123;    var result;    //1.这个">
-<meta property="og:updated_time" content="2017-09-16T13:18:31.097Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从提交表单的数据中找到某个数据">
-<meta name="twitter:description" content="从提交表单的数据中找到某个属性：  12var formDate = $(form).serialize(); consol.log(formDate)  //得到的是一堆编码  封装一个获取属性的函数：   1234567891011121314151617181920212223function getName(formData)&amp;#123;    var result;    //1.这个">
+    <meta name="theme-color" content="
   
-    <link rel="alternate" href="/atom.xml" title="John Zeng的个人播客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+  #3F51B5
   
 
+">
+  
+
+  <meta name="author" content="John Zeng">
+  
+  <meta name="keywords" content="blog, hexo, mdui,开发技巧">
+
+  <!--iOS -->
+  <meta name="apple-mobile-web-app-title" content="John Zeng的个人播客">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="480">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://yoursite.com">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="从提交表单的数据中找到某个数据 - John Zeng的个人播客 | John Zeng的个人播客">
+  <meta property="og:image" content="/img/favicon.png" />
+  
+
+    <meta property="og:article:tag" content="开发技巧"> 
+
+  <!-- Cache -->
+  <meta http-equiv="Cache-Control" content="max-age=7200" />
+  <meta http-equiv="Expires" content="Fri, 29 Dec 2017 23:00:00 GMT" />
+
+  
+
+  <script>
+    (function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.mduiVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf(c)!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();
+  </script>
+
+  <!-- Import CSS -->
+  
+    <link rel="stylesheet" href="/css/fonts.min.css">
+  
+  
+    
+      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?OeEY1DPEWhXQ5nt08XaZcg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    
+  
+
+  <!-- Custom Head -->
+  
+
+  
+    <style>
+      body {
+        background-color: #eeeeee;
+      }
+    </style>
+  
+
+  
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">John Zeng的个人播客</a>
-      </h1>
+
+
+
+  
+    
+  <body class="mdui-theme-primary-indigo mdui-theme-accent-blue
+   
+  
+    mdui-appbar-with-toolbar
+  
+  " >
+
+
+  
+
+
+<div id="top"></div>
+
+
+  
+
+  <div class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed animate-appbar" id="blog-appbar">
+    <div class="mdui-toolbar mdui-color-theme">
+      <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
+        <i class="mdui-icon">
+          <span></span>
+        </i>
+      </button>
+      
+        <a href="/" class="mdui-typo-headline">
+          Title
+        </a>
+      
+      
+      
+        <div class="flex-spacer"></div>
+      
+      
+      
+
+    </div>
+  </div>
+
+
+  <div id="search-cover" searchResult onclick="closeSearch()"></div>
+
+
+
+
+
+
+  
+  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
+  " id="drawer" style="z-index: 2001;">
+  <div class="userview" style="background-image: url(/img/bg.png)">
+  <div class="overlay">
+    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
+    <div class="bottom">
+      <div class="info">
+        <div class="author mdui-text-color-white-text">
+          John Zeng
+        </div>
+        <div class="slogan mdui-text-color-white-secondary">
+          I&#39;m your slogan!
+        </div>
+      </div>
+      <div class="flex-spacer"></div>
       
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  </div>
+</div>
+
+  <div class="content">
+  <div class="hexo">
+    
+      <div class="mdui-list no-padding-bottom">
+        <a href="/">
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+            <div class="mdui-list-item-content">
+              Index
+            </div>
+          </li>
+        </a>
+      </div>
+    
+    
+      <div class="mdui-list no-padding">
+        <a href="/archives">
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+            <div class="mdui-list-item-content">
+              Archives
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">58</span>
+            </div>
+          </li>
+        </a>
+      </div>
+    
+    
+      <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
+              <div class="mdui-list-item-content">Categories</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站搭建
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Angular
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
+                </a>
+              
+                <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Git
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJS
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
+                </a>
+              
+                <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  AJAX
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  cookie
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  关于ES5规范
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery源码分析
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Requirejs
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  JSON
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  设计模式
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+            </div>
+          </div>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
         
-      </nav>
-      <nav id="sub-nav">
+          <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
+              <div class="mdui-list-item-content">Tags</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  建站技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
+                </a>
+              
+                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法总结
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  黑科技
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  没事研究来玩的
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开大技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发用到的新技术
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  掉坑里了
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript基础知识
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
+                </a>
+              
+                <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法区别
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJs中遇到的坑
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站性能优化方方面面
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+            </div>
+          </div>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <div class="mdui-collapse-item ">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+            <div class="mdui-list-item-content">Years</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+          </div>
+          <div class="mdui-collapse-item-body mdui-list">
+            
+            
+              <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
+                2017
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  
+</div>
+
+  <div class="flex-spacer"></div>
+  <div class="drawer-footer">
+  <div class="mdui-typo mdui-typo-caption-opacity">
+    Powered by <a href="http://hexo.io">Hexo</a>
+    <br />
+    Theme - <a href="//github.com/Halyul/hexo-theme-mdui">Halyul/MDUI</a>
+    <br />
+    <span>
+      Copyright ©
+      <span year></span>
+      John Zeng
+    </span>
+    
+    
+  </div>
+</div>
+<script type="text/javascript">
+  var copyrightNow = new Date().getFullYear();
+  var textContent = document.querySelector('span[year]')
+  
+    textContent.textContent = copyrightNow
+  
+</script>
+
+</div>
+
+
+
+
+
+
+
+<main>
+  
+
+
+  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/now/post.min.css?9TmLsksSXsN7apP3A0qy0g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+<style id="lightgallery_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("lightgallery_css","/css/src/lightgallery.min.css?+c5+nzUi2JvkvxweHDf/nA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+<style>
+  .lg-outer .lg-item {
+    background-image: url("/img/loading.gif");
+  }
+</style>
+<div class="post-warpper animate-post">
+  <div class="post-bg-color
+    
+      
+        mdui-color-theme
+      
+    
+  "></div>
+  <div class="post-header
+    
+      
+        mdui-color-theme
+      
+    
+  ">
+    <div class="post-header-container">
+      <div class="post-title mdui-text-truncate">从提交表单的数据中找到某个数据</div>
+      <div class="post-actions mdui-valign">
+        <div>
+          <span>Posted: </span>
+          <span style="float: right">Sep 20, 2017</span>
+          
+          <br>
+            <span>Last Modified: </span>
+            <span>Sep 16, 2017</span>
+          
+        </div>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+
+        
+
       </div>
     </div>
   </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-从提交表单的数据中找到某个属性（一堆编码中）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/从提交表单的数据中找到某个属性（一堆编码中）/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.907Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/开发技巧/">开发技巧</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+  <div class="post-container flex-spacer
+  
+  ">
+    <div class="post-adjust">
+      <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
+        <div class="warning">
+          This article was last modified
+          <span id="content-warning"></span>
+          days ago.
+          The content of this post may be outdated!
+        </div>
         
-  
-    <h1 class="article-title" itemprop="name">
-      从提交表单的数据中找到某个数据
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
+        
+          <div class="mdui-card-media">
+            <img src="/img/random/picHD_25.png"/>
+          </div>
+        
+        <div class="post-content mdui-typo no-margin" id="post-content">
+          <blockquote>
 <h2 id="从提交表单的数据中找到某个属性："><a href="#从提交表单的数据中找到某个属性：" class="headerlink" title="从提交表单的数据中找到某个属性："></a>从提交表单的数据中找到某个属性：</h2></blockquote>
 <ul>
 <li><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> formDate = $(form).serialize(); </div><div class="line">consol.log(formDate)  <span class="comment">//得到的是一堆编码</span></div></pre></td></tr></table></figure>
@@ -100,145 +511,334 @@
 </li>
 </ul>
 
+        </div>
+
+        
+          <div class="license mdui-typo">
+            <span>
+              Article License: 
+              
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
+              
+            </span>
+            <br />
+            <span>Article Permalink: <a href="http://yoursite.com/2017/09/20/从提交表单的数据中找到某个属性（一堆编码中）/">http://yoursite.com/2017/09/20/从提交表单的数据中找到某个属性（一堆编码中）/</a></span>
+            
+              <br />
+              <span>Article Markdown: <a href="http://yoursite.com/2017/09/20/从提交表单的数据中找到某个属性（一堆编码中）/从提交表单的数据中找到某个属性（一堆编码中）.md">http://yoursite.com/2017/09/20/从提交表单的数据中找到某个属性（一堆编码中）/从提交表单的数据中找到某个属性（一堆编码中）.md</a></span>
+            
+          </div>
+        
+
+        
+          <div class="posts-info">
+            
+            <div class="flex-spacer"></div>
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon material-icons">&#xe149;</i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/categories/开发技巧/">
+                    <span>开发技巧</span>
+                  </a>
+                
+              </div>
+            
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon fa fa-tags"></i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/tags/开发技巧/">
+                    <span>开发技巧</span>
+                  </a>
+                
+              </div>
+            
+          </div>
+        
+        
+          
+        
+      </div>
+      
+        <div id="card-toc" class="
+        
+          mdui-color-theme
+        
+        ">
+          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#从提交表单的数据中找到某个属性："><span class="post-toc-number">1.<span class="post-toc-text">从提交表单的数据中找到某个属性：</span></span></a></a></ul>
+        </div>
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/从提交表单的数据中找到某个属性（一堆编码中）/" data-id="cj7ucrk06002ues9m01s9vtrk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发技巧/">开发技巧</a></li></ul>
-
-    </footer>
   </div>
+  <div class="post-pagination mdui-color-theme">
   
-    
-<nav id="article-nav">
-  
-    <a href="/2017/09/20/跨页面传值的方法和使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
+    <div class="prev mdui-ripple mdui-color-theme mdui-valign">
+      <a href="/2017/09/20/跨页面传值的方法和使用/" class="content no-text-decoration mdui-text-left">
+        <div>
+          <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Newer Post</span>
+        </div>
+        <div class="mdui-typo-title mdui-text-truncate">
           跨页面传值的方法和使用
-        
-      </div>
-    </a>
+        </div>
+      </a>
+    </div>
   
-  
-    <a href="/2017/09/20/设计模式：MVC设计模式/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">设计模式：MVC设计模式</div>
-    </a>
-  
-</nav>
 
   
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
+    <div class="next mdui-ripple mdui-color-theme mdui-valign">
+      <a href="/2017/09/20/设计模式：MVC设计模式/" class="content no-text-decoration mdui-text-right">
+        <div>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Older Post</span>
+          <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
+        </div>
+        <div class="mdui-typo-title mdui-text-truncate">
+          设计模式：MVC设计模式
+        </div>
+      </a>
+    </div>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AJAX/">AJAX</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Angular/">Angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JSON/">JSON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RequireJS/">RequireJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Requirejs/">Requirejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cookie/">cookie</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery源码分析/">jQuery源码分析</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/关于ES5规范/">关于ES5规范</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发技巧/">开发技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/网站搭建/">网站搭建</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul>
-    </div>
-  </div>
+</div>
+
+  
+    <button id="button-toc" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-hidden-md-up" style="z-index: 9;" mdui-menu="{target: '#menu-toc', fixed: true}">
+  <i class="mdui-icon material-icons">&#xe242;</i>
+</button>
+<ul class="mdui-menu mdui-typo no-margin-bottom auto-width" id="menu-toc" style="padding: 8px;max-height: 80%">
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#从提交表单的数据中找到某个属性："><span class="toc-number">1.</span> <span class="toc-text">从提交表单的数据中找到某个属性：</span></a></li></ol>
+</ul>
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequireJs中遇到的坑/">RequireJs中遇到的坑</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript基础知识/">javascript基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/建站技巧/">建站技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发技巧/">开发技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发用到的新技术/">开发用到的新技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开大技巧/">开大技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/掉坑里了/">掉坑里了</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法区别/">方法区别</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法总结/">方法总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/没事研究来玩的/">没事研究来玩的</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网站性能优化方方面面/">网站性能优化方方面面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a></li></ul>
-    </div>
-  </div>
+
+</div>
+
+</main>
+
+<div id="outdated" style="z-index: 9999;">
+  <h6>Your browser is out-of-date!</h6>
+  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/RequireJs中遇到的坑/" style="font-size: 10px;">RequireJs中遇到的坑</a> <a href="/tags/javascript基础知识/" style="font-size: 16px;">javascript基础知识</a> <a href="/tags/建站技巧/" style="font-size: 18px;">建站技巧</a> <a href="/tags/开发技巧/" style="font-size: 20px;">开发技巧</a> <a href="/tags/开发用到的新技术/" style="font-size: 12px;">开发用到的新技术</a> <a href="/tags/开大技巧/" style="font-size: 10px;">开大技巧</a> <a href="/tags/掉坑里了/" style="font-size: 10px;">掉坑里了</a> <a href="/tags/方法区别/" style="font-size: 12px;">方法区别</a> <a href="/tags/方法总结/" style="font-size: 10px;">方法总结</a> <a href="/tags/没事研究来玩的/" style="font-size: 14px;">没事研究来玩的</a> <a href="/tags/网站性能优化方方面面/" style="font-size: 10px;">网站性能优化方方面面</a> <a href="/tags/黑科技/" style="font-size: 14px;">黑科技</a>
-    </div>
-  </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
-    </div>
-  </div>
+
+<!-- Import JS -->
+
+  <script>lsloader.load("outdatedbrowser_js","/js/outdatedbrowser.min.js?e/I5uIbdkHHfJGD4oNpMfA==", true)</script>
+
+
+
+    <script>lsloader.load("main_js","/js/js.min.js?7Tw9Ng5ky7PDfky4qwNovg==", true)</script>
+
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的路由/">AngularJS中的路由</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/云音乐案例(利用锚点值)/">云音乐案例业务逻辑(锚点值)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的运行块(run)/">AngularJS中的运行块(run)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的配置快(config)/">AngularJS中的配置块(config)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中配置跨域白名单/">AngularJS中配置跨域白名单</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    <script type="text/ls-javascript" id="global-script">
+  /* appbar button */
+  (function() {
+    var drawer = document.querySelector('#drawer')
+    var drawerBtn = document.querySelector('.drawer-button')
+
+    drawer.addEventListener('open.mdui.drawer', function (e) {
+      drawerBtn.classList.add('back')
+    })
+    drawer.addEventListener('close.mdui.drawer', function (e) {
+      drawerBtn.classList.remove('back')
+    })
+  })();
 
   
-</aside>
-        
-      </div>
-      <footer id="footer">
+</script>
+
+
+  <script type="text/ls-javascript" id="appbar-script">
+  /* post appbar */
+  (function() {
+    var pageFlag = false;
+    var appbar = new mdui.Headroom('#blog-appbar');
+    appbar.disable();
+    var toolbar = document.querySelector('#blog-appbar .mdui-toolbar')
+
+    window.addEventListener('scroll', function() {
+      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      var divTop = document.querySelector('div#top').offsetTop
+
+      var pageLocation = divTop - bodyTop;
+      if (!pageFlag && pageLocation < 0) {
+        toolbar.classList.add('mdui-shadow-2')
+        appbar.enable();
+        pageFlag = true;
+      } else if (pageFlag && pageLocation >= 0) {
+        toolbar.classList.remove('mdui-shadow-2')
+        appbar.disable();
+        pageFlag = false;
+      }
+    })
+  })();
+</script>
+
+  <script type="text/ls-javascript" id="toc-active-script">
+  if (document.querySelector('ul#menu-toc > ol') !== null && document.querySelector('div#card-toc > ul') !== null) {
+    window.addEventListener("load", function() {
+      var timer;
+      function doWork() {
+        listens.forEach(function(value, index) {
+          value[1]();
+          value[0].classList.remove("mdui-list-item-active");
+        })
+        let actionToc = (listens[listens.reduce(function(r, v, index) {
+          if (v[2] == true) {
+            return index;
+          } else return r;
+        }, undefined)] || [])[0] || listens[0][0];
+        actionToc.classList.add("mdui-list-item-active");
+        if(actionToc.getClientRects().length == 0)return;
+        showToc(actionToc);
+      }
+
+      function showToc(toc) {
+        let offsetTop = toc.getClientRects()[0].top - cardToc.getClientRects()[0].top - 40;
+        let offsetBottom = toc.getClientRects()[0].bottom - cardToc.getClientRects()[0].bottom + 40;
+        let offset = 0;
+        if (offsetTop < 0) offset = offsetTop;
+        if (offsetBottom > 0) offset = offsetBottom;
+        var targetTop = Math.max(0, Math.min(cardToc.scrollTop + offset, toclist.offsetHeight - cardToc.offsetHeight));
+        clearInterval(timer);
+        timer = setInterval(function() {
+          var now = cardToc.scrollTop;
+          var speed = (targetTop - now) / 10;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+          if (Math.abs(now - targetTop) < 1) {
+            clearInterval(timer);
+          }
+          cardToc.scrollTop = now + speed;
+        }, 30);
+      }
+      var listens = [];
+      var cardToc = document.querySelector('#card-toc');
+      var links = document.querySelectorAll("a.post-toc-link");
+      var toclist = document.querySelector("#card-toc > ul");
+      Array.prototype.forEach.call(links, function(value, index) {
+        var id = (value.getAttribute("href") || "#").slice(1);
+        var element = document.getElementById(id);
+        listens.push([value, function() {
+          var readed = false;
+          var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+          if (element.offsetTop <= scrollTop + element.clientHeight + 64) {
+            readed = true;
+          } else {
+            readed = false;
+          }
+          listens[index][2] = readed;
+        }, false])
+      })
+      doWork();
+      window.addEventListener("scroll", doWork)
+    });
+  }
+</script>
+
+  <script type="text/ls-javascript" id="post-lg-script">
+  var images = document.querySelectorAll('#post-content img')
+  for (i = 0; i < images.length; i++) {
+    images[i].addEventListener("click", openLG);
+  }
+  function openLG() {
+    var img_src = this.getAttribute('src');
+    var img_alt = this.getAttribute('alt');
+    lightGallery(this, {
+      dynamic: true,
+      counter: false,
+      dynamicEl: [{
+        "src": img_src,
+        'subHtml': "<span author>John Zeng</span> • Public<div descr>" + img_alt + "</div>"
+      }],
+    });
+  }
+</script>
+
+  <!-- content warning -->
+<script type="text/ls-javascript" id="content-warning-script">
+  (function() {
+    var postLastModifiedDate = 1505567911097
+    var today = (new Date()).getTime()
+    var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
+    if (difference >= 100) {
+      document.querySelector('div.warning').style.display = 'block'
+      document.querySelector('#content-warning').textContent = difference
+    }
+  })();
+</script>
+
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Zeng<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+  <script>lsloader.load("lightgallery_js","/js/lightgallery.min.js?tQptxVaCRzQ3zx70gMUYig==", true)</script>
 
 
-<script src="/js/script.js"></script>
 
-  </div>
+
+
+
+
+
+<!-- Custom javascript -->
+
+
+<!-- remove diplay:none -->
+<script type="text/ls-javascript" id="html-script">
+  if (document.readyState === 'complete' || document.readyState !== 'loading') {
+    showHTML();
+  } else {
+    document.addEventListener('DOMContentLoaded', showHTML);
+  }
+  function showHTML(){
+    document.querySelector('html').style.display = 'block';
+  }
+</script>
+
+<script>
+  (function(){
+    var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+    for (var i = 0; i < scriptList.length; ++i) {
+      var item = scriptList[i];
+      lsloader.runInlineScript(item.id,item.id);
+    }
+  })()
+  /*! Copyright 2017 Halyul */
+  console.info("%cCopyright © 2017 Halyul\n"+'Theme Version: 1.5.0'+'%c\nhttps://github.com/Halyul/hexo-theme-mdui',"font-size: 14px;color: #3F51B5;","color: #448AFF;text-decoration: none");
+</script>
+
 </body>
+
 </html>

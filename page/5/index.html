@@ -1,749 +1,1260 @@
+
 <!DOCTYPE html>
-<html>
+<html  style="display: none;">
+
+  
 <head>
-  <meta charset="utf-8">
+  <script>
+    window.mduiVersion = "1.5.0"
+    window.oldVersion = [
+     '1.4.7',
+     '1.4.8',
+     '1.4.9',
+     'unknownVersion'
+    ]
+  </script>
+  <!--
+        © HEXO MDUI Theme
+        https://github.com/Halyul/hexo-theme-mdui
+        Version: 1.5.0 -->
+  <meta charset="UTF-8">
+  <title>Index - John Zeng的个人播客</title>
+
+  <!-- Favicons -->
+  <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+  <link rel="icon" sizes="192x192" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/favicon.png">
+
+  <!-- Meta & Info -->
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   
-  <title>John Zeng的个人播客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="John Zeng的个人播客">
-<meta property="og:url" content="http://yoursite.com/page/5/index.html">
-<meta property="og:site_name" content="John Zeng的个人播客">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="John Zeng的个人播客">
+    <meta name="theme-color" content="
   
-    <link rel="alternate" href="/atom.xml" title="John Zeng的个人播客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+  #3F51B5
   
 
+">
+  
+
+  <meta name="author" content="John Zeng">
+  
+  <meta name="keywords" content="blog, hexo, mdui">
+
+  <!--iOS -->
+  <meta name="apple-mobile-web-app-title" content="John Zeng的个人播客">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="480">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://yoursite.com">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Index - John Zeng的个人播客 | John Zeng的个人播客">
+  <meta property="og:image" content="/img/favicon.png" />
+  
+
+    
+
+  <!-- Cache -->
+  <meta http-equiv="Cache-Control" content="max-age=7200" />
+  <meta http-equiv="Expires" content="Fri, 29 Dec 2017 23:00:00 GMT" />
+
+  
+
+  <script>
+    (function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.mduiVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf(c)!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();
+  </script>
+
+  <!-- Import CSS -->
+  
+    <link rel="stylesheet" href="/css/fonts.min.css">
+  
+  
+    
+      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?OeEY1DPEWhXQ5nt08XaZcg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    
+  
+
+  <!-- Custom Head -->
+  
+
+  
+    <style>
+      body {
+        background-color: #eeeeee;
+      }
+    </style>
+  
+
+  
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">John Zeng的个人播客</a>
-      </h1>
+
+
+
+  
+    
+  <body class="mdui-theme-primary-indigo mdui-theme-accent-blue
+   
+  
+  " >
+
+
+  
+
+
+<div id="top"></div>
+
+
+  
+
+  <div class="mdui-appbar animate-appbar mdui-shadow-0" id="blog-appbar">
+    <div class="mdui-toolbar">
+      <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
+        <i class="mdui-icon">
+          <span></span>
+        </i>
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  
+  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
+  " id="drawer" style="z-index: 2001;">
+  <div class="userview" style="background-image: url(/img/bg.png)">
+  <div class="overlay">
+    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
+    <div class="bottom">
+      <div class="info">
+        <div class="author mdui-text-color-white-text">
+          John Zeng
+        </div>
+        <div class="slogan mdui-text-color-white-secondary">
+          I&#39;m your slogan!
+        </div>
+      </div>
+      <div class="flex-spacer"></div>
       
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  </div>
+</div>
+
+  <div class="content">
+  <div class="hexo">
+    
+      <div class="mdui-list no-padding-bottom">
+        <li class="mdui-list-item mdui-ripple mdui-list-item-active">
+          <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-accent">&#xe88a;</i>
+          <div class="mdui-list-item-content mdui-text-color-theme-accent">
+            Index
+          </div>
+        </li>
+      </div>
+    
+    
+      <div class="mdui-list no-padding">
+        <a href="/archives">
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+            <div class="mdui-list-item-content">
+              Archives
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">58</span>
+            </div>
+          </li>
+        </a>
+      </div>
+    
+    
+      <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
+              <div class="mdui-list-item-content">Categories</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站搭建
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Angular
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
+                </a>
+              
+                <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Git
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJS
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
+                </a>
+              
+                <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  AJAX
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  cookie
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  关于ES5规范
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery源码分析
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Requirejs
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  JSON
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  设计模式
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+            </div>
+          </div>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
         
-      </nav>
-      <nav id="sub-nav">
+          <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
+              <div class="mdui-list-item-content">Tags</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  建站技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
+                </a>
+              
+                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法总结
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  黑科技
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  没事研究来玩的
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开大技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发用到的新技术
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  掉坑里了
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript基础知识
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
+                </a>
+              
+                <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法区别
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJs中遇到的坑
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站性能优化方方面面
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+            </div>
+          </div>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        <div class="mdui-collapse-item ">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+            <div class="mdui-list-item-content">Years</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+          </div>
+          <div class="mdui-collapse-item-body mdui-list">
+            
+            
+              <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
+                2017
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  
+</div>
+
+  <div class="flex-spacer"></div>
+  <div class="drawer-footer">
+  <div class="mdui-typo mdui-typo-caption-opacity">
+    Powered by <a href="http://hexo.io">Hexo</a>
+    <br />
+    Theme - <a href="//github.com/Halyul/hexo-theme-mdui">Halyul/MDUI</a>
+    <br />
+    <span>
+      Copyright ©
+      <span year></span>
+      John Zeng
+    </span>
+    
+    
+  </div>
+</div>
+<script type="text/javascript">
+  var copyrightNow = new Date().getFullYear();
+  var textContent = document.querySelector('span[year]')
+  
+    textContent.textContent = copyrightNow
+  
+</script>
+
+</div>
+
+
+
+
+
+
+
+<main>
+  
+  <div class="index-warper animate-post">
+  <div id="index">
+    <div class="faviconImg">
+      <img class="mdui-img-fluid" src="/img/favicon.png" />
+    </div>
+    
+  </div>
+  <div id="search-cover" searchResult></div>
+
+  
+
+  <div id="posts">
+    
+    
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
       </div>
     </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/js 有哪些内置对象（简单总结）/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
   </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-js 有哪些内置对象（简单总结）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/js 有哪些内置对象（简单总结）/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.706Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/javascript/">javascript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/js 有哪些内置对象（简单总结）/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/js 有哪些内置对象（简单总结）/">js 有哪些内置对象</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="js-有哪些内置对象"><a href="#js-有哪些内置对象" class="headerlink" title="js 有哪些内置对象"></a>js 有哪些内置对象</h2></blockquote>
-<ul>
-<li><p>数据封装类对象：</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>,<span class="built_in">Array</span>,<span class="built_in">Boolean</span>,<span class="built_in">Number</span>,<span class="built_in">String</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>其他对象：</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Function</span>,Argument,<span class="built_in">Math</span>,<span class="built_in">Date</span>,<span class="built_in">RegExp</span>,<span class="built_in">Error</span></div></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/js 有哪些内置对象（简单总结）/" data-id="cj7ucrjzo0025es9mh51shxv4" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript基础知识/">javascript基础知识</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTTP 状态码知道哪些？" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/HTTP 状态码知道哪些？/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.686Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/网站搭建/">网站搭建</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+        js 有哪些内置对象
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/HTTP 状态码知道哪些？/">HTTP 状态码知道哪些？</a>
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="HTTP-状态码知道哪些？"><a href="#HTTP-状态码知道哪些？" class="headerlink" title="HTTP 状态码知道哪些？"></a>HTTP 状态码知道哪些？</h2></blockquote>
-<ul>
-<li><p>100 Continue 继续，一般在发送post请求时，已发送了 http header 之后服务端将返回此<br>信息，表示确认，之后发送具体参数信息</p>
-</li>
-<li><p>200 OK 正常返回信息</p>
-</li>
-<li><p>201 Created 请求成功并且服务器创建了新资源</p>
-</li>
-<li><p>202 Accepted 服务器已接收请求，但未处理</p>
-</li>
-<li><p>301 Moved Permanently 请求的网页以永久移动到新位置</p>
-</li>
-<li><p>302 Found 临时性重定位</p>
-</li>
-<li><p>303 See Other 临时性重定向，且总是使用 GET 请求新的 URI 。</p>
-</li>
-<li><p>304 Not Modified 自从上次请求后，请求的网页未修改过。</p>
-</li>
-<li><p>400 Bad Request 服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发<br>起请求。</p>
-</li>
-<li><p>401 Unauthorized 请求未授权。</p>
-</li>
-<li><p>403 Forbidden 禁止访问。</p>
-</li>
-<li><p>404 Not Found 找不到如何与 URI 相匹配的资源。</p>
-</li>
-<li><p>500 Internal Server Error 最常见的服务器端错误。</p>
-</li>
-<li><p>503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/HTTP 状态码知道哪些？/" data-id="cj7ucrjyx0016es9mwtwxv76p" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/建站技巧/">建站技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-元数据（meta）的一般应用" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/元数据（meta）的一般应用/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.661Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/开发技巧/">开发技巧</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/元数据（meta）的一般应用/">元数据（meta）的一般应用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="元数据（meta）的一般应用"><a href="#元数据（meta）的一般应用" class="headerlink" title="元数据（meta）的一般应用"></a>元数据（meta）的一般应用</h2></blockquote>
-<ul>
-<li><p>(面试题）HTML代码中的元数据对于代码编码格式，SEO，移动端网页呈现具有重要的作用。请用元数据分别实现以上功能(且移动端网页禁止缩放)。</p>
-</li>
-<li><p>常见的方法：</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span> = <span class="string">"utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">keywords</span> = <span class="string">"网页关键字"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">description</span> = <span class="string">"关于网站的描述"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span> = <span class="string">"viewport"</span> <span class="attr">content</span> = <span class="string">"width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"</span>&gt;</span></div></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/元数据（meta）的一般应用/" data-id="cj7ucrk09002zes9mk54nbbxj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/黑科技/">黑科技</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-javascript加载的俩种方式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/javascript加载的俩种方式/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.653Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/网站搭建/">网站搭建</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/javascript加载的俩种方式/">js的加载有两种方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="同步加载："><a href="#同步加载：" class="headerlink" title="同步加载："></a>同步加载：</h2></blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://yourdomain.com/script.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://yourdomain.com/script.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line">//同步模式又称阻塞模式，会阻止浏览器的后续处理，停止后续的解析，只有当当前加载完成，才能进行下一步操作，所以默认同步执行才是安全的。但这样如果js中有输出document内容、修改dom、重定向等行为，就会造成页面堵塞。所以一般建议把<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml">标签放在<span class="tag">&lt;<span class="name">body</span>&gt;</span>结尾处，这样尽可能减少页面阻塞。</span></div></pre></td></tr></table></figure>
-<blockquote>
-<h2 id="异步加载："><a href="#异步加载：" class="headerlink" title="异步加载："></a>异步加载：</h2></blockquote>
-<ul>
-<li><p>异步加载又叫非阻塞加载，浏览器在下载执行js的同时，还会继续进行后续页面的处理。主要有三种方式。</p>
-<ul>
-<li><p>方法一：也叫Script DOM Element</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> scriptEle = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</div><div class="line">    scriptEle.type = <span class="string">"text/javasctipt"</span>;</div><div class="line">    scriptEle.async = <span class="literal">true</span>;</div><div class="line">    scriptEle.src = <span class="string">"http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js"</span>;</div><div class="line">    <span class="keyword">var</span> x = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>];</div><div class="line">    x.insertBefore(scriptEle, x.firstChild);	</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//&lt;async&gt;属性是HTML5中新增的异步支持。此方法被称为Script DOM Element 方法。Google Analytics 和 Google+ Badge 都使用了这种异步加载代码</span></div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;;</div><div class="line">    <span class="keyword">var</span> ga = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>); </div><div class="line">    ga.type = <span class="string">'text/javascript'</span>; </div><div class="line">    ga.async = <span class="literal">true</span>; </div><div class="line">    ga.src = (<span class="string">'https:'</span> == <span class="built_in">document</span>.location.protocol ? <span class="string">'https://ssl'</span> : <span class="string">'http://www'</span>) + <span class="string">'.google-analytics.com/ga.js'</span>; </div><div class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'script'</span>)[<span class="number">0</span>]; </div><div class="line">    s.parentNode.insertBefore(ga, s); </div><div class="line">&#125;)();</div><div class="line"></div><div class="line"><span class="comment">//但是这种加载方式执行完之前会阻止onload事件的触发，而现在很多页面的代码都在onload时还执行额外的渲染工作，所以还是会阻塞部分页面的初始化处理。</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>方法二：onload时的异步加载</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">window</span>.attachEvent)&#123;</div><div class="line">        <span class="built_in">window</span>.attachEvent(<span class="string">"load"</span>, asyncLoad);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="built_in">window</span>.addEventListener(<span class="string">"load"</span>, asyncLoad);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> asyncLoad = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> ga = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>); </div><div class="line">        ga.type = <span class="string">'text/javascript'</span>; </div><div class="line">        ga.async = <span class="literal">true</span>; </div><div class="line">        ga.src = (<span class="string">'https:'</span> == <span class="built_in">document</span>.location.protocol ? <span class="string">'https://ssl'</span> : <span class="string">'http://www'</span>) + <span class="string">'.google-analytics.com/ga.js'</span>; </div><div class="line">        <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'script'</span>)[<span class="number">0</span>]; </div><div class="line">        s.parentNode.insertBefore(ga, s);</div><div class="line">    &#125;</div><div class="line">)();</div></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/javascript加载的俩种方式/" data-id="cj7ucrjzi001xes9m3p9pypel" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发技巧/">开发技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-退出登录常用的方法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/20/退出登录常用的方法/" class="article-date">
-  <time datetime="2017-09-20T01:59:08.599Z" itemprop="datePublished">2017-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/开发技巧/">开发技巧</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/20/退出登录常用的方法/">退出登录常用的方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="退出登录时事件触发-正确的顺序"><a href="#退出登录时事件触发-正确的顺序" class="headerlink" title="退出登录时事件触发(正确的顺序)"></a>退出登录时事件触发(正确的顺序)</h2></blockquote>
-<ul>
-<li><p>清除session —&gt; 发送ajax请求；</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$(.退出登录按钮).on(<span class="string">"click"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $.post(<span class="string">"数据库退出登录API"</span>,&#123;&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</div><div class="line">        <span class="comment">//后台会有业务逻辑清除session</span></div><div class="line"></div><div class="line">        <span class="comment">//在回调函数(浏览器端)中清除cookie;(需要到入jquery.cookie.js)</span></div><div class="line">        $.removeCookie(<span class="string">"键名"</span>)</div><div class="line"></div><div class="line">        <span class="comment">//跳转到登录页面</span></div><div class="line">        location.href = <span class="string">"login.html"</span></div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/20/退出登录常用的方法/" data-id="cj7ucrk1o004qes9mt5fazijo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/建站技巧/">建站技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/19/hello-world/" class="article-date">
-  <time datetime="2017-09-19T14:14:47.531Z" itemprop="datePublished">2017-09-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/19/hello-world/" data-id="cj7ucrjza001les9mb0sxg48o" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS中的$log服务" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/19/AngularJS中的$log服务/" class="article-date">
-  <time datetime="2017-09-19T13:54:16.579Z" itemprop="datePublished">2017-09-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Angular/">Angular</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/AngularJS中的$log服务/">Angular中的$log服务</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="Angular中的-log服务"><a href="#Angular中的-log服务" class="headerlink" title="Angular中的$log服务"></a>Angular中的$log服务</h2></blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$log.error(<span class="string">"这是error输出的消息!"</span>); <span class="comment">//错误格式的消息 红色</span></div><div class="line">$log.log(<span class="string">"这是log输出的消息!"</span>); <span class="comment">//与console.log()没有差别</span></div><div class="line">$log.info(<span class="string">"这是info输出的消息"</span>);<span class="comment">//与console.log()没有差别</span></div><div class="line">$log.debug(<span class="string">"这是debug输出的消息!"</span>);<span class="comment">//与console.log()没有差别</span></div><div class="line">$log.warn(<span class="string">"这是warn输出的消息"</span>); <span class="comment">//警告格式 黄色</span></div><div class="line"><span class="comment">//都是在向控制台输出消息.</span></div><div class="line"><span class="comment">//debug方法.</span></div><div class="line"><span class="comment">//找bug 打断点 调试 监视代码运行到某1局的时候变量的值是如何变化的.</span></div><div class="line"><span class="comment">// $log.debug()通过配置可以让其失效.</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/19/AngularJS中的$log服务/" data-id="cj7ucrjy80006es9mp6ts78e4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS中的依赖注入" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/19/AngularJS中的依赖注入/" class="article-date">
-  <time datetime="2017-09-19T13:45:42.818Z" itemprop="datePublished">2017-09-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Angular/">Angular</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/AngularJS中的依赖注入/">AngularJS中的依赖注入</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="依赖注入-angularjs解决这种依赖提供的方案-依赖注入。、"><a href="#依赖注入-angularjs解决这种依赖提供的方案-依赖注入。、" class="headerlink" title="依赖注入,angularjs解决这种依赖提供的方案: 依赖注入。、"></a>依赖注入,angularjs解决这种依赖提供的方案: 依赖注入。、</h2></blockquote>
-<ul>
-<li><p>行内式注入</p>
-<ul>
-<li>创建控制器的时候,第2个参数是1个数组.<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"$Ctrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$log"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$log</span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;])</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>推断式注入.</p>
-<ul>
-<li>第2个参数不需要写数组 不需要指定什么服务要注入只需要将注入的服务写成形参.<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"demoCtrl"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$log</span>)</span>&#123;</div><div class="line">    </div><div class="line">&#125;)</div></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/19/AngularJS中的依赖注入/" data-id="cj7ucrjyd000des9m6bgqctz9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS自定义过滤器" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/19/AngularJS自定义过滤器/" class="article-date">
-  <time datetime="2017-09-19T13:14:31.643Z" itemprop="datePublished">2017-09-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/AngularJS自定义过滤器/">自定义过滤器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h2></blockquote>
-<ul>
-<li><p>功能: 允许我们自定义过滤器</p>
-<ul>
-<li>参数1:自定义过滤器的名称.</li>
-<li>参数2:是1个回调函数.<ul>
-<li>这个回调函数要要求返回1个函数.<br>   返回的这个函数在过滤器被调用的时候,会被自动执行.<br>   这个返回的函数至少有1个参数data 代表原本要显示的数据.<br>   函数内部对原本要显示的数据按照我们自己的业务逻辑进行处理。<br>   将处理后的数据返回.将返回的数据显示.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>具体案例：</p>
-  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</span></div><div class="line"><span class="javascript">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</span></div><div class="line"><span class="undefined">        </span></div><div class="line"><span class="undefined">    &#125;]);</span></div><div class="line"><span class="javascript">    app.filter(<span class="string">"firstBig"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span></div><div class="line"><span class="javascript">            <span class="keyword">return</span> data[<span class="number">0</span>].toUpperCase()+data.slice(<span class="number">1</span>);</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    &#125;)</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/19/AngularJS自定义过滤器/" data-id="cj7ucrjyl000nes9mm9nimj5f" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-AngularJS中常见的过滤器" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/19/AngularJS中常见的过滤器/" class="article-date">
-  <time datetime="2017-09-19T12:37:54.867Z" itemprop="datePublished">2017-09-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/AngularJS中常见的过滤器/">AngularJS中的常见的过滤器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<h2 id="AngularJS中的常见的过滤器"><a href="#AngularJS中的常见的过滤器" class="headerlink" title="AngularJS中的常见的过滤器"></a>AngularJS中的常见的过滤器</h2></blockquote>
-<ul>
-<li><p>过滤器：</p>
-<ul>
-<li>指对数据进行过滤(处理)</li>
-<li>我们现在讲的过滤器,是用在视图中的.对原本要显示在视图中的数据进行过滤然后再显示.</li>
-<li>过滤器的使用:  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;原本要显示的数据|过滤器名称:参数:参数&#125;&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>currency 货币过滤器</p>
-<ul>
-<li>功能：对价格进行过滤<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;pirce|currency&#125;&#125;   //默认在前面显示一个美刀符号.</div><div class="line">&#123;&#123;pirce|currency:"￥"&#125;&#125;  //自定义货币符号.</div><div class="line">&#123;&#123;pirce|currency:"￥":"2"&#125;&#125;  //自定义保留的小数的位数 四舍五入</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>date过滤器</p>
-<ul>
-<li>功能: 对日期进行过滤<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;now|date&#125;&#125;   //默认的格式是美国佬的格式.</div><div class="line">&#123;&#123;now|date:"yyyy-MM-dd HH:mm:ss"&#125;&#125;   //自定义时间的格式</div><div class="line"></div><div class="line">y: year 年. </div><div class="line">M: 月份</div><div class="line">d: 几号.</div><div class="line">H: 24小时制的小时</div><div class="line">h: 12小时制的小时.</div><div class="line">m: 分钟</div><div class="line">s：秒.</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>uppercase</p>
-</li>
-<li><p>lowercase</p>
-</li>
-<li><p>limitTo过滤器</p>
-<ul>
-<li>截取数组/字符串中指定的位数的元素  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;arr|limitTO:n&#125;&#125;</div><div class="line">//n是1个正数的话，就显示前面的n个</div><div class="line">//n是1个负数的话，就显示后面的n个</div><div class="line"></div><div class="line">&#123;&#123;arr|limitTo:n:m&#125;&#125;</div><div class="line">//当n是正数，从n个开始往后显示m个</div><div class="line">//当n是负数，从n个开始往前显示m个</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>number过滤器</p>
-<ul>
-<li>可以对数字进行指定的位数保留  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;num|number:2&#125;&#125;</div><div class="line">//保留两位小数，四舍五入</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>json过滤器</p>
-<ul>
-<li>将一个对象转换为json字符串显示  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;person|json&#125;&#125;</div><div class="line">//当我们显示1个对象的时候 如果没有调json过滤器ng会自动的帮助我们调这个过滤器.</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>orderBy过滤器</p>
-<ul>
-<li><p>对数组元素进行排序</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;stus|orderBy:"age"&#125;&#125;  //对数组中的对象以age属性排序，默认为升序。</div><div class="line"></div><div class="line">&#123;&#123;stus|orderBy:"age":"true"&#125;&#125;  //自定义降序，false升序</div></pre></td></tr></table></figure>
-</li>
-<li><p>如果是一个基本数据类型数组</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;arr|orderBy&#125;&#125;  //默认升序</div><div class="line">&#123;&#123;arr|orderBy:null:true&#125;&#125;  //前面加个null可以指定降序</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>filter过滤器</p>
-<ul>
-<li>从数组中筛选符合条件的元素<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;staus|filter:&#123;age:16,genger:"男"&#125;&#125;&#125;</div><div class="line">//从数组中指定筛选age-16， genger-男 的元素</div></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/" data-id="cj7ucrjxz0001es9mcfigih2o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发技巧/">开发技巧</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/page/4/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">__('next') &raquo;</a>
-  </nav>
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AJAX/">AJAX</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Angular/">Angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JSON/">JSON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RequireJS/">RequireJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Requirejs/">Requirejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cookie/">cookie</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery源码分析/">jQuery源码分析</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/关于ES5规范/">关于ES5规范</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发技巧/">开发技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/网站搭建/">网站搭建</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequireJs中遇到的坑/">RequireJs中遇到的坑</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript基础知识/">javascript基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/建站技巧/">建站技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发技巧/">开发技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发用到的新技术/">开发用到的新技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开大技巧/">开大技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/掉坑里了/">掉坑里了</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法区别/">方法区别</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法总结/">方法总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/没事研究来玩的/">没事研究来玩的</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网站性能优化方方面面/">网站性能优化方方面面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/RequireJs中遇到的坑/" style="font-size: 10px;">RequireJs中遇到的坑</a> <a href="/tags/javascript基础知识/" style="font-size: 16px;">javascript基础知识</a> <a href="/tags/建站技巧/" style="font-size: 18px;">建站技巧</a> <a href="/tags/开发技巧/" style="font-size: 20px;">开发技巧</a> <a href="/tags/开发用到的新技术/" style="font-size: 12px;">开发用到的新技术</a> <a href="/tags/开大技巧/" style="font-size: 10px;">开大技巧</a> <a href="/tags/掉坑里了/" style="font-size: 10px;">掉坑里了</a> <a href="/tags/方法区别/" style="font-size: 12px;">方法区别</a> <a href="/tags/方法总结/" style="font-size: 10px;">方法总结</a> <a href="/tags/没事研究来玩的/" style="font-size: 14px;">没事研究来玩的</a> <a href="/tags/网站性能优化方方面面/" style="font-size: 10px;">网站性能优化方方面面</a> <a href="/tags/黑科技/" style="font-size: 14px;">黑科技</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的路由/">AngularJS中的路由</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/云音乐案例(利用锚点值)/">云音乐案例业务逻辑(锚点值)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的运行块(run)/">AngularJS中的运行块(run)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中的配置快(config)/">AngularJS中的配置块(config)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/21/AngularJS中配置跨域白名单/">AngularJS中配置跨域白名单</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Zeng<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_12.png)"></div>
+    
   </div>
-</footer>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/javascript/">
+              <span>javascript</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/javascript基础知识/">
+              <span>javascript基础知识</span>
+            </a>
+          
+        </div>
+      
     </div>
-    <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+</div>
+
+
+
+    
+        
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/HTTP 状态码知道哪些？/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/HTTP 状态码知道哪些？/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        HTTP 状态码知道哪些？
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_24.png)"></div>
+    
+  </div>
   
-</nav>
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/网站搭建/">
+              <span>网站搭建</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/建站技巧/">
+              <span>建站技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/元数据（meta）的一般应用/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/元数据（meta）的一般应用/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        元数据（meta）的一般应用
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_28.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/黑科技/">
+              <span>黑科技</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/javascript加载的俩种方式/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/javascript加载的俩种方式/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        js的加载有两种方法
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_13.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/网站搭建/">
+              <span>网站搭建</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/退出登录常用的方法/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/退出登录常用的方法/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        退出登录常用的方法
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_10.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/建站技巧/">
+              <span>建站技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 19, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/19/hello-world/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/19/hello-world/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        Hello World
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        Welcome to Hexo
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_34.png)"></div>
+    
+  </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 19, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/19/AngularJS中的$log服务/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/19/AngularJS中的$log服务/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        Angular中的$log服务
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_12.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 19, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/19/AngularJS中的依赖注入/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/19/AngularJS中的依赖注入/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的依赖注入
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_33.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 19, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/19/AngularJS自定义过滤器/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/19/AngularJS自定义过滤器/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        自定义过滤器
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_9.png)"></div>
+    
+  </div>
+  
+</div>
+
+
+
+    
+        
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 19, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/19/AngularJS中常见的过滤器/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/19/AngularJS中常见的过滤器/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的常见的过滤器
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_22.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    
+  </div>
+  
+  <ul class="pagination">
+    
+    <li class="mdui-ripple">
+      
+      <a href="/page/4/" class="mdui-text-color-theme-text">
+      
+        <i class="mdui-icon material-icons">&#xe5cb;</i>
+      </a>
+    </li>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+      
+        <li class="mdui-ripple">
+          <a href="/" class="mdui-text-color-theme-text">
+            1
+          </a>
+        </li>
+      
+    
+
+    
+      <li class="mdui-ripple mdui-text-color-theme-text">
+        <a class="mdui-text-color-theme-text">..</a>
+      </li>
+    
+
+    
+      
+        
+          <li class="mdui-ripple">
+            <a href="/page/3/" class="mdui-text-color-theme-text">
+              3
+            </a>
+          </li>
+        
+      
+    
+      
+        
+          <li class="mdui-ripple">
+            <a href="/page/4/" class="mdui-text-color-theme-text">
+              4
+            </a>
+          </li>
+        
+      
+    
+
+    
+      <li class="mdui-color-theme-accent">
+        <a class="mdui-text-color-theme-text">5</a>
+      </li>
+    
+
+    
+      
+    
+      
+    
+
+    
+
+    
+      <li class="mdui-ripple">
+        <a href="/page/6/" class="mdui-text-color-theme-text">
+          6
+        </a>
+      </li>
+    
+
+    
+      
+        <li class="mdui-ripple">
+          <a href="/page/6/" class="mdui-text-color-theme-text">
+            <i class="mdui-icon material-icons">&#xe5cc;</i>
+          </a>
+        </li>
+      
+    
+   </ul>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
+  <i class="mdui-icon material-icons">&#xe5d8;</i>
+</button>
+
+</div>
 
 
-<script src="/js/script.js"></script>
 
-  </div>
+</main>
+
+<div id="outdated" style="z-index: 9999;">
+  <h6>Your browser is out-of-date!</h6>
+  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+
+
+
+
+<!-- Import JS -->
+
+  <script>lsloader.load("outdatedbrowser_js","/js/outdatedbrowser.min.js?e/I5uIbdkHHfJGD4oNpMfA==", true)</script>
+
+
+
+    <script>lsloader.load("main_js","/js/js.min.js?7Tw9Ng5ky7PDfky4qwNovg==", true)</script>
+
+
+
+
+
+  
+    <script type="text/ls-javascript" id="global-script">
+  /* appbar button */
+  (function() {
+    var drawer = document.querySelector('#drawer')
+    var drawerBtn = document.querySelector('.drawer-button')
+
+    drawer.addEventListener('open.mdui.drawer', function (e) {
+      drawerBtn.classList.add('back')
+    })
+    drawer.addEventListener('close.mdui.drawer', function (e) {
+      drawerBtn.classList.remove('back')
+    })
+  })();
+
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/ls-javascript" id="to-top-script">
+  /* fab */
+  (function() {
+    var pageFlag = false;
+    var fab = new mdui.Fab('#toTop');
+    fab.hide();
+    window.addEventListener('scroll', function() {
+      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      var divTop = document.querySelector('div#top').offsetTop
+      var pageLocation = divTop - bodyTop;
+      if (!pageFlag && pageLocation < 0) {
+        fab.show();
+        pageFlag = true;
+      } else if (pageFlag && pageLocation >= 0) {
+        fab.hide();
+        pageFlag = false;
+      }
+    });
+  })();
+</script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<!-- Custom javascript -->
+
+
+<!-- remove diplay:none -->
+<script type="text/ls-javascript" id="html-script">
+  if (document.readyState === 'complete' || document.readyState !== 'loading') {
+    showHTML();
+  } else {
+    document.addEventListener('DOMContentLoaded', showHTML);
+  }
+  function showHTML(){
+    document.querySelector('html').style.display = 'block';
+  }
+</script>
+
+<script>
+  (function(){
+    var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+    for (var i = 0; i < scriptList.length; ++i) {
+      var item = scriptList[i];
+      lsloader.runInlineScript(item.id,item.id);
+    }
+  })()
+  /*! Copyright 2017 Halyul */
+  console.info("%cCopyright © 2017 Halyul\n"+'Theme Version: 1.5.0'+'%c\nhttps://github.com/Halyul/hexo-theme-mdui',"font-size: 14px;color: #3F51B5;","color: #448AFF;text-decoration: none");
+</script>
+
 </body>
+
 </html>
