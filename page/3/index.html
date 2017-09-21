@@ -1,21 +1,1020 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <title>John Zeng的个人播客</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
   
-  <!-- Import lsloader -->
-  <script>!function(){var e="http://"+location.host+"/combo?combo=";window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(e){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(e){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(e){t=""}return t},lsloader.load=function(e,t,s){s=s||function(){};var n;if(n=this.getLS(e),!/\/\*codestartv1\*\//.test(n))return this.removeLS(e),void this.requestResource(e,t,s);if(n){var a=n.split("/*codestartv1*/")[0];if(a!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,s);n=n.split("/*codestartv1*/")[1],/\.js?.+$/.test(a)?(this.jsRunSequence.push({name:e,code:n}),this.runjs(t,e,n)):(document.getElementById(e).appendChild(document.createTextNode(n)),s())}else this.requestResource(e,t,s)},lsloader.requestResource=function(e,t,s){var n=this;/\.js?.+$/.test(t)?this.iojs(t,e,function(e,t,s){n.setLS(t,e+"/*codestartv1*/"+s),n.runjs(e,t,s)}):/\.css?.+$/.test(t)&&this.iocss(t,e,function(s){document.getElementById(e).appendChild(document.createTextNode(s)),n.setLS(e,t+"/*codestartv1*/"+s)},s)},lsloader.iojs=function(e,t,s){var n=this;n.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void s(e,t,a.response);n.jsfallback(e,t)}},a.send(null)}catch(s){n.jsfallback(e,t)}},lsloader.iocss=function(e,t,s,n){var a=this;try{var u=new XMLHttpRequest;u.open("get",e,!0),u.onreadystatechange=function(){if(4==u.readyState){if((u.status>=200&&u.status<300||304==u.status)&&""!=u.response)return s(u.response),void n();a.cssfallback(e,t,n)}},u.send(null)}catch(s){a.cssfallback(e,t,n)}},lsloader.iofonts=function(e,t,s,n){var a=this;try{var u=new XMLHttpRequest;u.open("get",e,!0),u.onreadystatechange=function(){if(4==u.readyState){if((u.status>=200&&u.status<300||304==u.status)&&""!=u.response)return s(u.response),void n();a.cssfallback(e,t,n)}},u.send(null)}catch(s){a.cssfallback(e,t,n)}},lsloader.runjs=function(e,t,s){if(t&&s)for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code=s);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var u=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){u.jsRunSequence.shift(),u.jsRunSequence.length>0&&u.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code="",this.jsRunSequence[s].status="failed",this.jsRunSequence[s].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,s){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var n=document.createElement("link");n.type="text/css",n.href=e,n.rel="stylesheet",n.onload=n.onerror=s;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a)}},lsloader.runInlineScript=function(e,t){var s=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:s}),this.runjs()},lsloader.loadCombo=function(t){var s="",n={};for(var a in t){var u=this.getLS(t[a].name);if(u)var o=u.split("/*codestartv1*/")[0],c=u.split("/*codestartv1*/")[1];else var o="";o==t[a].path?this.jsRunSequence.push({name:t[a].name,code:c,path:t[a].path}):(this.jsRunSequence.push({name:t[a].name,code:null,path:t[a].path,status:"comboloading"}),n[t[a].name]=!0,s+=(""==s?"":";")+t[a].path)}var i=this;if(s){var r=new XMLHttpRequest;r.open("get",e+s,!0),r.onreadystatechange=function(){if(4==r.readyState)if(r.status>=200&&r.status<300||304==r.status){if(""!=r.response)return void i.runCombo(r.response,n)}else{for(var e in i.jsRunSequence)n[i.jsRunSequence[e].name]&&(i.jsRunSequence[e].status="failed");i.runjs()}},r.send(null)}this.runjs()},lsloader.runCombo=function(e,t){e=e.split("/*combojs*/"),e.shift();for(var s in this.jsRunSequence)t[this.jsRunSequence[s].name]&&e[0]&&(this.jsRunSequence[s].status="comboJS",this.jsRunSequence[s].code=e[0],this.setLS(this.jsRunSequence[s].name,this.jsRunSequence[s].path+"/*codestartv1*/"+e[0]),e.shift());this.runjs()}}();</script>
+  <title>John Zeng的个人播客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="John Zeng的个人播客">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="John Zeng的个人播客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="John Zeng的个人播客">
+  
+    <link rel="alternate" href="/atom.xml" title="John Zeng的个人播客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
 </head>
+
 <body>
-  <div id="app"></div>
-  <script type="text/javascript">
-    window.rootUrl = "/"
-    window.one = {"site":{"title":"John Zeng的个人播客","subtitle":null,"description":null,"author":"John Zeng","language":null,"timezone":null,"url":"http://yoursite.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"folder","deploy":{"type":"git","repo":"https://github.com/JohnZengshi/JohnZengshi.github.io.git","branch":"master"},"ignore":[],"index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true}},"theme":{"title":"John Zeng的个人播客","subtitle":null,"description":null,"author":"John Zeng","language":null,"timezone":null,"url":"http://yoursite.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"folder","deploy":{"type":"git","repo":"https://github.com/JohnZengshi/JohnZengshi.github.io.git","branch":"master"},"ignore":[],"index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"head":{"favicon":"img/smiling face.png"},"img":{"avatar":"img/smiling face.png","left_pic":["img/bg.png"],"right_pic":["img/sidebar_header.png","img/random/picHD_44.png","img/random/picHD_43.png","img/random/picHD_42.png","img/random/picHD_41.png","img/random/picHD_40.png","img/random/picHD_39.png","img/random/picHD_38.png","img/random/picHD_37.png","img/random/picHD_36.png","img/random/picHD_35.png","img/random/picHD_34.png","img/random/picHD_33.png","img/random/picHD_32.png"],"post_thumbnail":["img/random/picHD_2.png","img/random/picHD_1.png","img/random/picHD_3.png","img/random/picHD_4.png","img/random/picHD_5.png","img/random/picHD_6.png","img/random/picHD_7.png","img/random/picHD_8.png","img/random/picHD_9.png","img/random/picHD_10.png","img/random/picHD_11.png","img/random/picHD_12.png","img/random/picHD_13.png","img/random/picHD_14.png","img/random/picHD_15.png","img/random/picHD_16.png","img/random/picHD_17.png","img/random/picHD_18.png","img/random/picHD_19.png","img/random/picHD_20.png","img/random/picHD_21.png","img/random/picHD_22.png","img/random/picHD_23.png","img/random/picHD_24.png","img/random/picHD_25.png","img/random/picHD_26.png","img/random/picHD_27.png","img/random/picHD_28.png","img/random/picHD_29.png","img/random/picHD_30.png","img/random/picHD_31.png","img/random/picHD_32.png","img/random/picHD_33.png","img/random/picHD_34.png","img/random/picHD_35.png","img/random/picHD_36.png"],"drawerHeaderBg":["img/random/picHD_36.png","img/random/picHD_26.png","img/random/picHD_27.png","img/random/picHD_28.png","img/random/picHD_29.png","img/random/picHD_30.png","img/random/picHD_31.png"]},"uiux":{"slogan":"脾气暴躁的工程师","defaultPrimaryColor":["skyblue"],"defaultAccentColor":["red"]},"comment":{"disqus":{"shortName":"xxx"}},"Drawer":[{"title":"首页","type":"sitelink","href":"/","icon":"home"},{"title":"hr","type":"hr"},{"title":"关于我","type":"page","name":"关于我","icon":"account_circle"},{"title":"搜索","type":"sitelink","href":"/search/","icon":"search"},{"title":"联系我","icon":"contact_phone","nested":[{"title":"Email","type":"link","href":"135100916@qq.com","icon":"mail_outline"},{"title":"Github","type":"link","href":"https://github.com/JohnZengshi","icon":{"type":"svg","date":"<path d=\"M941.714 512q0 143.433-83.712 258.011t-216.283 158.574q-15.433 2.853-22.565-3.986t-7.131-17.152v-120.576q0-55.442-29.696-81.152 32.585-3.438 58.587-10.277t53.723-22.272 46.299-37.998 30.281-60.014 11.703-86.016q0-69.157-45.129-117.723 21.138-52.005-4.571-116.553-16.018-5.157-46.299 6.29t-52.553 25.161l-21.723 13.714q-53.138-14.848-109.714-14.848t-109.714 14.848q-9.143-6.29-24.283-15.433t-47.726-22.016-49.152-7.717q-25.161 64.585-3.986 116.553-45.129 48.567-45.129 117.723 0 48.567 11.703 85.723t29.989 60.014 46.007 38.29 53.723 22.272 58.587 10.277q-22.857 20.553-28.014 58.843-11.995 5.705-25.71 8.558t-32.585 2.853-37.413-12.288-31.707-35.73q-10.862-18.286-27.721-29.696t-28.27-13.714l-11.447-1.719q-11.995 0-16.567 2.56t-2.853 6.583 5.157 8.009 7.424 6.839l3.986 2.853q12.581 5.705 24.869 21.723t17.993 29.147l5.705 13.129q7.424 21.723 25.161 35.145t38.29 17.152 39.717 3.986 31.707-2.011l13.129-2.304q0 21.723 0.293 50.871t0.293 30.866q0 10.277-7.424 17.152t-22.857 3.986q-132.571-43.995-216.283-158.574t-83.712-258.011q0-119.442 58.843-220.27t159.707-159.707 220.27-58.843 220.27 58.843 159.707 159.707 58.843 220.27z\" p-id=\"997\"></path>","viewBox":"0 0 1024 1024"}},{"title":"QQ","type":"link","href":"http://wpa.qq.com/msgrd?v=3&uin=799149890&site=qq&menu=yes","icon":{"type":"svg","style":{"height":"20px","width":"20px","margin":"14px"},"date":"<path d=\"M971.464704 668.658688 968.998912 651.020288 965.843968 633.814016 963.337216 624.9728 960.917504 615.569408 957.71648 606.598144 954.430464 596.612096 950.668288 587.208704 946.562048 577.545216 939.254784 561.765376 932.769792 547.8656 926.285824 535.437312 920.62208 523.848704 914.138112 513.301504 909.382656 503.616512 899.309568 489.15456 886.64064 469.894144 883.70176 465.138688 882.707456 463.107072 882.707456 461.50656 884.825088 455.000064 887.763968 449.207296 890.314752 437.772288 891.742208 431.869952 891.742208 425.77408 892.478464 420.867072 892.478464 415.93856 891.742208 410.27584 890.92096 405.649408 889.061376 396.26752 886.64064 387.145728 884.435968 378.779648 880.97792 370.651136 877.08672 363.864064 874.015744 357.487616 870.601728 351.413248 865.240064 342.463488 863.25248 339.28704 862.646272 336.520192 860.182528 319.161344 858.58304 307.725312 856.767488 293.567488 853.957632 278.93248 849.547264 262.158336 847.040512 252.754944 845.049856 244.799488 842.284032 235.547648 839.171072 225.712128 836.058112 216.590336 832.079872 206.77632 823.953408 187.817984 819.15392 178.84672 813.359104 168.557568 807.913472 159.73888 802.465792 149.751808 794.769408 140.498944 788.286464 131.52768 780.374016 122.27584 772.332544 113.88928 764.203008 105.783296 754.562048 97.373184 749.504512 94.348288 744.706048 90.153984 734.329856 82.783232 722.312192 74.806272 710.032384 67.586048 697.365504 61.079552 683.531264 55.135232 670.560256 49.492992 657.027072 44.56448 642.24256 40.521728 628.7104 36.912128 614.31296 33.75616 600.694784 30.427136 585.996288 28.827648 571.597824 27.076608 557.246464 25.19552 542.416896 25.19552 528.106496 25.19552 514.271232 25.19552 499.70176 26.039296 486.040576 27.940864 472.421376 29.821952 458.587136 32.135168 444.88192 34.750464 431.911936 37.927936 418.941952 42.121216 406.880256 46.31552 394.81856 50.357248 382.712832 56.301568 371.299328 61.079552 361.182208 66.873344 350.63296 73.37984 340.90496 80.167936 331.308032 87.819264 323.396608 94.930944 310.9888 106.626048 300.698624 117.49888 290.8416 128.048128 281.8048 138.770432 273.332224 149.751808 265.895936 160.451584 258.676736 171.15136 255.304704 175.929344 252.191744 181.722112 245.446656 191.860736 240.086016 201.977856 235.33056 211.530752 231.179264 221.648896 227.115008 230.899712 223.742976 239.5904 220.63104 248.841216 217.474048 257.380352 213.279744 272.858112 210.210816 287.753216 208.525312 300.203008 206.795776 310.925312 206.795776 319.161344 206.795776 325.818368 206.795776 331.741184 203.855872 334.941184 201.17504 339.28704 199.057408 343.177216 197.240832 347.370496 194.950144 356.493312 192.442368 364.880896 191.62112 372.381696 191.058944 377.893888 191.058944 383.816704 185.265152 392.225792 181.157888 400.613376 178.045952 408.697856 175.75424 415.93856 173.98272 422.878208 172.296192 429.405184 172.296192 434.875392 172.296192 440.971264 172.296192 446.0288 173.290496 450.071552 174.716928 457.464832 176.489472 463.107072 173.290496 465.570816 164.210688 472.358912 152.236032 483.339264 144.88576 489.846784 137.709568 496.223232 132.781056 501.303296 128.7168 505.778176 119.983104 515.180544 111.68256 524.583936 105.197568 532.690944 97.415168 544.407552 89.979904 554.954752 82.629632 566.693888 76.447744 577.545216 71.303168 589.089792 65.855488 599.810048 61.877248 610.36032 57.683968 621.362176 54.571008 632.061952 51.501056 643.064832 48.77824 652.619776 47.263744 662.888448 45.57824 672.421888 44.150784 681.695232 43.287552 699.766784 43.287552 716.540928 43.287552 724.063232 44.150784 731.456512 46.44352 744.0384 47.263744 749.572096 48.77824 755.190784 50.6368 760.510464 52.366336 764.269568 55.133184 771.23072 57.25184 772.658176 58.548224 775.597056 60.191744 776.288256 61.186048 776.288256 61.877248 776.288256 69.097472 775.597056 76.447744 773.696512 82.629632 771.23072 89.114624 767.03744 95.03744 763.14624 100.39808 758.044672 106.191872 752.72704 111.077376 747.235328 115.745792 741.010432 119.983104 735.388672 123.961344 730.722304 126.425088 725.36064 131.267584 716.540928 132.781056 712.930304 133.645312 710.769664 134.076416 708.304896 135.201792 706.27328 136.066048 705.841152 137.709568 704.974848 138.74688 704.974848 139.179008 705.841152 140.000256 705.841152 140.822528 706.27328 143.545344 718.270464 146.485248 727.955456 150.419456 738.11456 154.396672 747.235328 157.72672 756.31616 162.871296 764.269568 166.631424 772.658176 170.86976 780.352512 175.75424 787.009536 179.472384 793.409536 189.329408 805.254144 197.933056 815.804416 206.2336 824.018944 214.40512 831.412224 221.495296 837.204992 232.044544 846.58688 236.281856 848.661504 237.707264 850.650112 237.707264 851.644416 236.713984 852.552704 236.281856 852.552704 234.1632 853.244928 226.250752 853.850112 218.901504 854.844416 212.718592 855.709696 206.2336 857.135104 200.569856 858.907648 194.950144 860.637184 190.021632 863.275008 186.131456 865.696768 181.157888 867.296256 178.045952 869.890048 174.716928 871.921664 171.127808 874.816512 166.631424 880.438272 164.94592 883.076096 162.871296 885.366784 160.017408 891.290624 158.461952 896.22016 156.601344 901.146624 156.212224 905.470976 156.212224 911.133696 156.212224 913.598464 155.390976 917.618688 155.390976 921.726976 154.396672 925.7472 154.396672 929.33632 155.390976 933.269504 156.212224 936.77056 158.461952 943.516672 160.017408 946.715648 162.006016 949.9136 164.210688 953.069568 166.631424 955.838464 169.875456 958.993408 172.296192 961.5872 179.472384 966.948864 186.692608 971.444224 194.950144 975.50848 203.855872 979.139584 213.279744 983.02976 223.742976 985.452544 234.1632 988.9536 245.446656 991.289344 256.688128 992.974848 268.273664 994.748416 280.249344 996.477952 303.855616 998.940672 328.195072 999.3728 350.63296 999.3728 361.182208 999.3728 371.299328 999.3728 381.847552 998.940672 390.884352 997.905408 399.617024 997.213184 407.788544 996.477952 420.931584 993.883136 430.398464 991.289344 439.392256 988.9536 455.993344 981.994496 463.516672 979.139584 470.69184 975.50848 482.53952 968.85248 493.216768 963.489792 501.129216 958.43328 506.921984 953.069568 515.95776 954.063872 522.96192 954.843136 536.79616 955.838464 543.281152 955.838464 548.770816 955.838464 552.96512 956.70272 557.246464 958.43328 564.033536 960.893952 571.597824 963.489792 585.996288 967.986176 600.694784 973.345792 615.005184 977.496064 629.445632 980.438016 644.187136 984.155136 659.448832 986.359808 673.931264 987.959296 688.458752 989.990912 702.03392 991.289344 716.560384 992.108544 730.481664 992.108544 744.013824 992.108544 756.854784 992.108544 769.823744 990.554112 782.534656 989.990912 794.769408 987.959296 806.052864 985.452544 817.337344 983.02976 828.147712 980.438016 832.641024 979.139584 837.6576 977.496064 847.040512 973.778944 855.384064 969.887744 863.25248 965.823488 870.601728 961.5872 877.08672 956.70272 879.637504 954.063872 882.707456 950.4768 886.64064 945.677312 890.92096 939.754496 892.478464 936.77056 893.169664 934.264832 894.984192 931.064832 895.676416 927.60576 895.676416 924.275712 896.54272 920.947712 895.676416 916.063232 894.984192 911.868928 893.169664 906.940416 891.742208 902.87616 889.061376 897.946624 885.820416 893.452288 882.707456 889.561088 878.513152 886.275072 869.866496 878.751744 860.182528 871.488512 850.41152 865.696768 840.121344 859.772928 816.603136 848.186368 810.9824 844.727296 809.426944 843.127808 808.430592 842.090496 819.759104 830.675968 824.644608 825.056256 828.70784 819.867648 836.619264 808.411136 844.09856 796.694528 850.41152 786.275328 856.377344 776.288256 864.375808 756.31616 870.601728 739.714048 874.707968 727.955456 877.08672 724.063232 878.513152 720.907264 880.97792 719.004672 882.015232 719.004672 882.707456 719.438848 888.759296 731.456512 894.163968 743.042048 897.968128 749.572096 901.901312 755.190784 905.793536 762.107904 910.808064 768.941056 915.001344 773.696512 917.552128 776.288256 920.059904 778.625024 922.351616 780.352512 924.557312 781.953024 929.398784 784.417792 931.90656 785.282048 933.593088 785.282048 935.839744 785.282048 938.391552 784.417792 941.548544 782.81728 945.050624 781.216768 947.945472 778.625024 950.668288 775.597056 953.73824 771.835904 956.158976 768.941056 958.88384 764.269568 960.917504 760.510464 963.337216 755.190784 964.6336 750.695424 968.136704 739.714048 970.426368 727.565312 972.068864 714.097664 973.193216 706.27328 973.193216 699.766784 973.193216 692.805632 973.193216 684.288Z\" p-id=\"996\"></path>","viewBox":"0 0 1024 1024"}}]}],"colorPicker":false,"homeToolBar":[{"icon":"more_vert","items":[{"title":"RSS","type":"link","href":"/atom.xml","icon":"rss_feed"}]}],"footer":["Copyright © 2017 - 2019 EYHN",["拼命想抓住一些东西！","带你装逼带你飞！"]]}}
-  </script>
-  <script>lsloader.load("vendor.js","/vendor.js")</script>
-  <script>lsloader.load("bundle.js","/bundle.js")</script>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">John Zeng的个人播客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Require JS的笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/Require JS的笔记/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.848Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RequireJS/">RequireJS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/Require JS的笔记/">RequireJS 是一个基于原生js实现的模块化解决方案</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<h2 id="1-模块化"><a href="#1-模块化" class="headerlink" title="1.模块化"></a>1.模块化</h2></blockquote>
+<ul>
+<li><p>模块化是什么？</p>
+<ul>
+<li>具有实现一个完整功能的整体</li>
+</ul>
+</li>
+<li><p>为什么要使用模块化?</p>
+<ul>
+<li>为了更好地复用</li>
+<li>减少全局变量污染</li>
+<li><p>解决功能之间的依赖关系</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  var KTV=(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    var leastPrice=1000;</div><div class="line">    var total=0;</div><div class="line">    <span class="built_in">return</span> &#123;</div><div class="line">        pay:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            <span class="keyword">if</span>(total&gt;=leastPrice)&#123;</div><div class="line">                alert(<span class="string">"买单成功"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="2-模块化的实现方式"><a href="#2-模块化的实现方式" class="headerlink" title="2.模块化的实现方式"></a>2.模块化的实现方式</h2></blockquote>
+<ul>
+<li><p>使用闭包来实现</p>
+<ul>
+<li>随着功能的增加，暴露的全局变量也会越来越多<ul>
+<li>requireJS几乎没有全局变量</li>
+</ul>
+</li>
+<li>不能很好的解决模块依赖的问题</li>
+</ul>
+</li>
+<li><p>使用主流的一些实现模块化的库来实现</p>
+<ul>
+<li>requireJS–&gt;AMD规范–&gt;Async Module Define–&gt;(异步模块加载规范)</li>
+<li>seaJS–&gt;CMD规范–&gt;Common Module Define–&gt;同步模块加载规范 ：玉伯<ul>
+<li>阿里：朴灵《深入浅出Node.JS》</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>browserify</p>
+</li>
+<li>webpack</li>
+<li>Node.JS–&gt;CommonJS规范</li>
+<li>mv*框架<ul>
+<li>angular vue backbone avalon</li>
+</ul>
+</li>
+<li>组件化<ul>
+<li>react /react native /ionic</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="3-面试的重点-AMD规范和CMD规范比较大的区别："><a href="#3-面试的重点-AMD规范和CMD规范比较大的区别：" class="headerlink" title="3.(面试的重点)AMD规范和CMD规范比较大的区别："></a>3.(面试的重点)AMD规范和CMD规范比较大的区别：</h2></blockquote>
+<ul>
+<li><p>1.AMD规范就是指requireJS</p>
+<ul>
+<li>–&gt;ansnc module define: 异步模块定义（异步加载模块，依赖前置）<ul>
+<li>–&gt;模块定义和导入（使用）：define定义一个模块，define([“导入的模块”])/require([“导入的模块”])</li>
+<li>–&gt;异步加载模块 动态创建script标签</li>
+<li>–&gt;把所有依赖的模块放在文件的头部</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.CMD规范就是指的seajs</p>
+<ul>
+<li>–&gt;common module define：通用模块定义(同步加载模块)</li>
+<li>–&gt;模块定义和导入：exports/module.exports</li>
+<li>–&gt;同步加载模块</li>
+<li>–&gt;依赖就近：50行代码使用商品模块的功能，就在49行依赖商品模块</li>
+</ul>
+</li>
+<li><p>3.CommonJS规范：nodeJS</p>
+</li>
+</ul>
+<blockquote>
+<h2 id="4-requireJS这种模块化解决方案称之为AMD规范"><a href="#4-requireJS这种模块化解决方案称之为AMD规范" class="headerlink" title="4.requireJS这种模块化解决方案称之为AMD规范"></a>4.requireJS这种模块化解决方案称之为AMD规范</h2></blockquote>
+<ul>
+<li><p>AMD:async module define:异步模块定义</p>
+</li>
+<li><p>一直非常现实的有CMD规范–》sea.js(玉伯)</p>
+<ul>
+<li>CMD:common module define(借鉴了node.js中的CommonJS规范)</li>
+</ul>
+</li>
+<li><p>模块化规范：AMD CMD CommonJS</p>
+</li>
+<li><p>模块化解决方案：requireJS seaJS browerify webpack</p>
+</li>
+<li><p>MV*: mvc mvvm mvp</p>
+</li>
+<li><p>组件化开发：react</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/Require JS的笔记/" data-id="cj7ucrjyz001aes9m4f2ssllg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发用到的新技术/">开发用到的新技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post---第一次用Hexo+Github-搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/--第一次用Hexo+Github-搭建博客/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.842Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/网站搭建/">网站搭建</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/--第一次用Hexo+Github-搭建博客/">第一次用Hexo+Github 搭建博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="大概可以分为以下几个步骤："><a href="#大概可以分为以下几个步骤：" class="headerlink" title="大概可以分为以下几个步骤："></a>大概可以分为以下几个步骤：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.搭建环境准备（包括node.js和git环境，gitHub账户的配置）</div><div class="line">2.安装Hexo</div><div class="line">3.配置Hexo</div><div class="line">4.怎样将Hexo与github page 联系起来</div><div class="line">5.怎样发布文章</div></pre></td></tr></table></figure>
+<blockquote>
+<h1 id="搭建环境准备"><a href="#搭建环境准备" class="headerlink" title="搭建环境准备"></a>搭建环境准备</h1><ul>
+<li>Node.js 的安装和准备 (本文略过)</li>
+<li>Git的安装和准备 (本文略过)</li>
+<li>gitHub账户的配置(本文略过)</li>
+</ul>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><h3 id="创建一个文件夹Hexo-并在命令行的窗口进入到该目录"><a href="#创建一个文件夹Hexo-并在命令行的窗口进入到该目录" class="headerlink" title="创建一个文件夹Hexo,并在命令行的窗口进入到该目录"></a>创建一个文件夹Hexo,并在命令行的窗口进入到该目录</h3><h4 id="1-命令行中输入："><a href="#1-命令行中输入：" class="headerlink" title="1.命令行中输入："></a>1.命令行中输入：</h4><pre><code>npm install hexo-cli -g
+npm install hexo --save
+</code></pre><h4 id="2查看hexo版本："><a href="#2查看hexo版本：" class="headerlink" title="2查看hexo版本："></a>2查看hexo版本：</h4><pre><code>hexo -v
+</code></pre><h1 id="hexo的相关配置"><a href="#hexo的相关配置" class="headerlink" title="hexo的相关配置"></a>hexo的相关配置</h1><h4 id="1-初始化Hexo："><a href="#1-初始化Hexo：" class="headerlink" title="1.初始化Hexo："></a>1.初始化Hexo：</h4><pre><code>hexo init
+npm install（之后npm将会自动安装你需要的组件）
+</code></pre><h4 id="2-在命令行中，输入："><a href="#2-在命令行中，输入：" class="headerlink" title="2.在命令行中，输入："></a>2.在命令行中，输入：</h4><pre><code>hexo g
+hexo s
+</code></pre><h3 id="在浏览器中打开-http-localhost-4000-访问本地的博客"><a href="#在浏览器中打开-http-localhost-4000-访问本地的博客" class="headerlink" title="在浏览器中打开 http://localhost:4000 访问本地的博客"></a>在浏览器中打开 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 访问本地的博客</h3><h1 id="将Hexo与github-page-联系起来"><a href="#将Hexo与github-page-联系起来" class="headerlink" title="将Hexo与github page 联系起来"></a>将Hexo与github page 联系起来</h1><h4 id="1-设置Git的user-name和email：-如果是第一次的话"><a href="#1-设置Git的user-name和email：-如果是第一次的话" class="headerlink" title="1.设置Git的user name和email：(如果是第一次的话)"></a>1.设置Git的user name和email：(如果是第一次的话)</h4><pre><code>git config --global user.name &quot;xujun&quot;
+git config --global user.email &quot;gdutxiaoxu@163.com&quot;
+</code></pre><h4 id="2-生成密钥-可以忽略"><a href="#2-生成密钥-可以忽略" class="headerlink" title="2.生成密钥(可以忽略)"></a>2.生成密钥(可以忽略)</h4><pre><code>ssh-keygen -t rsa -C &quot;gdutxiaoxu@163.com&quot;
+</code></pre><h4 id="3-配置Deployment（在-config-yml文件中，找到Deployment）"><a href="#3-配置Deployment（在-config-yml文件中，找到Deployment）" class="headerlink" title="3.配置Deployment（在_config.yml文件中，找到Deployment）"></a>3.配置Deployment（在_config.yml文件中，找到Deployment）</h4><pre><code>deploy:
+type: git
+repo: git@github.com:yourname/yourname.github.io.git
+branch: master
+</code></pre><h1 id="写博客、发布文章"><a href="#写博客、发布文章" class="headerlink" title="写博客、发布文章"></a>写博客、发布文章</h1><h2 id="博客文章存放在hexo-source-posts下"><a href="#博客文章存放在hexo-source-posts下" class="headerlink" title="博客文章存放在hexo\source\ _posts下"></a>博客文章存放在hexo\source\ _posts下</h2><h4 id="1-MarDown编辑器编辑文章后，执行下面的命令"><a href="#1-MarDown编辑器编辑文章后，执行下面的命令" class="headerlink" title="1.MarDown编辑器编辑文章后，执行下面的命令"></a>1.MarDown编辑器编辑文章后，执行下面的命令</h4><pre><code>hexo d -g （#在部署前先生成）
+</code></pre><h4 id="2-踩坑提醒：（注意需要提前安装一个扩展：）"><a href="#2-踩坑提醒：（注意需要提前安装一个扩展：）" class="headerlink" title="2.踩坑提醒：（注意需要提前安装一个扩展：）"></a>2.踩坑提醒：（注意需要提前安装一个扩展：）</h4><pre><code>npm install hexo-deployer-git --save
+</code></pre></blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/--第一次用Hexo+Github-搭建博客/" data-id="cj7ucrjy40003es9mg5hk66ad" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/建站技巧/">建站技巧</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-对象的序列化和反序列化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/对象的序列化和反序列化/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.840Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JSON/">JSON</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/对象的序列化和反序列化/">对象的序列化和反序列化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<h1 id="对象的序列化和反序列化"><a href="#对象的序列化和反序列化" class="headerlink" title="对象的序列化和反序列化"></a>对象的序列化和反序列化</h1></blockquote>
+<ul>
+<li>JSON.stringify(对象)：把一个对象转换成json数据</li>
+<li>JSON.parse(“json数据”)：把一个json数据转换成对象  （！parse(“”)里面要加冒号）</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/对象的序列化和反序列化/" data-id="cj7ucrk0u003nes9m99cb8g7j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发技巧/">开发技巧</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-关于javascript的数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/关于javascript的数据类型/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.831Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/关于javascript的数据类型/">关于javascript的数据类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="关于javascript的数据类型"><a href="#关于javascript的数据类型" class="headerlink" title="关于javascript的数据类型"></a>关于javascript的数据类型</h2><blockquote>
+<h3 id="1-返回数据类型"><a href="#1-返回数据类型" class="headerlink" title="1.返回数据类型"></a>1.返回数据类型</h3></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1. <span class="string">"undefined"</span> ---未定义</div><div class="line">2. <span class="string">"boolean"</span> ---布尔值</div><div class="line">3. <span class="string">"string"</span> ---字符串</div><div class="line">4. <span class="string">"number"</span> ---数值</div><div class="line">5. <span class="string">"object"</span> ---对象或者null</div><div class="line">6. <span class="string">"function"</span> ---函数</div></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="2-强制类型转换"><a href="#2-强制类型转换" class="headerlink" title="2.强制类型转换"></a>2.强制类型转换</h3></blockquote>
+<p>1.常见五个例子</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. Number(参数)强制把数据类型转换成数值类型</div><div class="line">2. parseInt(参数1，参数2)将字符串转换成整数</div><div class="line">3. parseFloat()将字符串转成浮点数</div><div class="line">4. string(参数)：将任何数据类型转换成字符串</div><div class="line">5. Boolean()可以将任何数据类型转化成布尔类型的值</div></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="3-隐式类型转换"><a href="#3-隐式类型转换" class="headerlink" title="3.隐式类型转换"></a>3.隐式类型转换</h3></blockquote>
+<ol>
+<li>四则运算</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.加法运算符+是双目运算符，只要其中一个是string类型，表达式的值便是一个String。</div><div class="line"></div><div class="line">2.对于其他的四则运算，只有其中一个是Number类型，表达式的便是一个Number。(列如 <span class="string">"-"</span> 运算符)</div><div class="line"></div><div class="line">3.对于非法字符的情况通常会返回NaN:<span class="string">'1'</span>*<span class="string">'a'</span>    // =&gt; NaN,这是因为parseInt(a)值为NaN，1*NaN还是NaN</div></pre></td></tr></table></figure>
+<ol>
+<li>判断语句</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"> 判断语句中的判断条件需要是 Boolean类型，所以条件表达式会被隐式转换为Boolean。其转换规则则同Boolean的构造函数。比如:</div><div class="line"></div><div class="line">var obj = &#123;&#125;;</div><div class="line"></div><div class="line"><span class="keyword">if</span>(obj)&#123;</div><div class="line">　　　<span class="keyword">while</span>(obj);</div><div class="line">　　　　&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>Native代码调用</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">JavaScript宿主环境都会提供大量的对象，它们往往不少通过JavaScript来实现的。JavaScript给这些函数传入的参数也会进行隐式转换。例如BOM提供的alert方法接受String类型的参数：</div><div class="line"></div><div class="line">alert(&#123;a:1&#125;);  //=&gt;[object Object]</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/关于javascript的数据类型/" data-id="cj7ucrk0b0032es9mhifa7vob" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript基础知识/">javascript基础知识</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Git的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/Git的使用/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.826Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Git/">Git</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/Git的使用/">Git的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下"><a href="#1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下" class="headerlink" title="1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下"></a>1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下</h2><ul>
+<li><p>1.刚进入公司，领导让你对某个项目进行二次开发（服务器仓库并不是空的）</p>
+<ul>
+<li>第一种方式：<ul>
+<li>git clone 服务器仓库地址 app</li>
+<li>cd app</li>
+<li>touch 1.txt</li>
+<li>git add .</li>
+<li>git commit -m 备注信息</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+<li>第二种方式：<ul>
+<li>mkdir app</li>
+<li>cd app</li>
+<li>git init</li>
+<li>git pull 服务器仓库地址 master   <code>a、将本地仓库和服务器仓库进行了关联 b、将服务器仓库中的代码下载到本地</code></li>
+<li>touch 3.txt</li>
+<li>git add .</li>
+<li>git commit -m 备注信息</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.之后还需要更新代码</p>
+<ul>
+<li>只能：git pull 服务器仓库地址 master</li>
+</ul>
+</li>
+<li>3.之后需要往服务器中提交代码<ul>
+<li>只能：git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-创建github个人网站（静态网站）"><a href="#2-创建github个人网站（静态网站）" class="headerlink" title="2.创建github个人网站（静态网站）"></a>2.创建github个人网站（静态网站）</h2><ul>
+<li>能解析正常的静态页面：.html .js .css</li>
+<li>不能解析动态页面：.php  .jsp .asp .aspx</li>
+</ul>
+<ul>
+<li>添加一个仓库，仓库名字固定格式：github用户名.github.io</li>
+<li>往该仓库中提交文件，输入该仓库地址就可以看到这些文件了(默认显示index.html)<ul>
+<li>如果有README.md 也会自动加载README.md</li>
+<li>其他文件不会自动渲染，需要确定的文件名</li>
+<li>访问该网站必须使用https协议访问</li>
+</ul>
+</li>
+</ul>
+<p>html /css /js  /png</p>
+<ul>
+<li>index.php：动态的页面：由apache解析</li>
+<li>index.jsp：java开发的动态页面：tomcat/apache</li>
+<li>index.aspx/index.asp：c#/vb开发的动态页面：iis来解析</li>
+</ul>
+<h2 id="3-移除全局用户名"><a href="#3-移除全局用户名" class="headerlink" title="3.移除全局用户名"></a>3.移除全局用户名</h2><p>git config –global –unset user.name</p>
+<h2 id="4-git-remote：保存服务器地址"><a href="#4-git-remote：保存服务器地址" class="headerlink" title="4.git remote：保存服务器地址"></a>4.git remote：保存服务器地址</h2><ul>
+<li><p>保存服务器地址：git remote add 变量名 服务器地址</p>
+<ul>
+<li>举例：git remote add origin <a href="https://github.com/hahareg12345/hahareg12345.github.io.git" target="_blank" rel="external">https://github.com/hahareg12345/hahareg12345.github.io.git</a></li>
+</ul>
+</li>
+<li><p>删除服务器地址：git remote remove 变量名</p>
+</li>
+<li><p>变量重命名：git remote rename 旧变量名 新变量名</p>
+</li>
+<li><p>获取变量名保存的服务器地址：git remote get-url 变量名</p>
+<ul>
+<li>举例： git remote get-url origin</li>
+</ul>
+</li>
+<li>重新设置变量名保存的服务器地址：git remote set-url 变量名 服务器地址</li>
+</ul>
+<h2 id="5-设置文件不让git管理：隔离文件–-gt-项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中"><a href="#5-设置文件不让git管理：隔离文件–-gt-项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中" class="headerlink" title="5.设置文件不让git管理：隔离文件–&gt;项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中"></a>5.设置文件不让git管理：隔离文件–&gt;项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中</h2><ol>
+<li>在.git同级目录添加一个文件，叫 .gitignore<br> 创建这个文件名的时候，<pre><code>a：文件名：&quot;.gitignore.&quot;
+b、bash命令：touch .gitignore
+</code></pre></li>
+<li><p>打开.gitignore进行编辑，一行一行的添加不需要git管理的文件<br> 可以设置同类型的文件：<em>.js </em>.css<br> 也可以设置整个目录：</p>
+<pre><code>a/*--&gt;a目录下面的所有文件
+a/*.js--&gt;a目录下面的所有js文件
+</code></pre></li>
+<li><p>注意点：</p>
+<ul>
+<li>要隔离某个文件或者文件夹，一定要在它进入暂存区之前就隔离</li>
+<li>隔离的时候需要准备一个.gitignore文件，这个文件应该存放于仓库的根目录中(.git文件夹同级)</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-删除服务器中的文件"><a href="#6-删除服务器中的文件" class="headerlink" title="6.删除服务器中的文件"></a>6.删除服务器中的文件</h2><h3 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">右击删除/rm 文件名                   --&gt;物理删除</div><div class="line">git add 文件名                     --&gt;把删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把删除操作告诉服务器仓库</div></pre></td></tr></table></figure>
+<h3 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm 文件名                     --&gt;删除文件，同时把该删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把该删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把该删除操作告诉服务器仓库</div></pre></td></tr></table></figure>
+<ul>
+<li><p>如果一个文件从没进入过暂存区，要想删除：rm</p>
+</li>
+<li><p>如果一个文件进入本地仓库，但是没有进入到服务器仓库,也就不需要执行git push</p>
+</li>
+<li><p>一个细节：如果某个文件没有进入到本地仓库，也没有进入服务器仓库<br>git rm 无法正常删除文件<br>git rm xxx -f 可以实现把文件删除</p>
+</li>
+</ul>
+<h3 id="对一个文件的重命名操作，"><a href="#对一个文件的重命名操作，" class="headerlink" title="对一个文件的重命名操作，"></a>对一个文件的重命名操作，</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+ 1.txt--&gt;2.txt</div><div class="line">    - git status查看状态的的时候，发现1.txt被删除，2.txt新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为2.txt</div><div class="line"></div><div class="line">+ 删除了1.txt，新建了1.html</div><div class="line">    + git status查看状态的的时候，发现1.txt被删除，1.html新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为1.html</div></pre></td></tr></table></figure>
+<h2 id="7-git-add-把在工作区对文件的操作告诉暂存区"><a href="#7-git-add-把在工作区对文件的操作告诉暂存区" class="headerlink" title="7.git add(把在工作区对文件的操作告诉暂存区)"></a>7.git add(把在工作区对文件的操作告诉暂存区)</h2><h3 id="git-add"><a href="#git-add" class="headerlink" title="git add *"></a>git add *</h3><ul>
+<li><p>默认为将修改的文件和新添加的文件添加到git系统的暂存区<br>☆注意☆：不包括删除</p>
+</li>
+<li><p>git add *.js 将修改了和新添加的以.js为后缀的文件添加到暂存区</p>
+</li>
+<li>git add *.txt 将修改了和新添加的以.txt为后缀的文件添加到暂存区</li>
+</ul>
+<h3 id="git-add-u-或者-git-add-–update"><a href="#git-add-u-或者-git-add-–update" class="headerlink" title="git add -u 或者 git add –update"></a>git add -u 或者 git add –update</h3><ul>
+<li>表示将(修改和删除的文件)的操作告诉暂存区<ul>
+<li>不能将新添加的文件告诉暂存区</li>
+</ul>
+</li>
+</ul>
+<h3 id="git-add-A-或者-git-add-–all"><a href="#git-add-A-或者-git-add-–all" class="headerlink" title="git add -A  或者 git add –all"></a>git add -A  或者 git add –all</h3><p>表示将所有的修改与删除和未跟踪的文件都告诉暂存区。<br>–&gt;新创建的文件<br>–&gt;修改的文件<br>–&gt;删除的文件</p>
+<h3 id="git-add-文件夹名称-可以把指定目录下面的所有子目录中的文件操作放到暂存区"><a href="#git-add-文件夹名称-可以把指定目录下面的所有子目录中的文件操作放到暂存区" class="headerlink" title="git add 文件夹名称   可以把指定目录下面的所有子目录中的文件操作放到暂存区"></a>git add 文件夹名称   可以把指定目录下面的所有子目录中的文件操作放到暂存区</h3><ul>
+<li>如果当前就是git仓库的根目录，就可以一次性把所有文件的状态放到暂存区</li>
+<li><p>如果当前不是git仓库的根目录，只能把该目录以及所有子目录中的文件操作放到暂存区</p>
+</li>
+<li><p>如果当前就是git仓库的根目录，要提交所有的文件，可以选择使用下面三种之一的方式</p>
+<ul>
+<li>git add .</li>
+</ul>
+<ul>
+<li>git add -A</li>
+<li>git add -u+git add *</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚"><a href="#8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚" class="headerlink" title="8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)"></a>8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)</h2><h3 id="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"><a href="#将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件" class="headerlink" title="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"></a>将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git reset --hard 提交的版本号(每一次提交都会有一个黄色的唯一标识，该标识就是版本号)</div><div class="line">    - git <span class="built_in">log</span> 获取到很长的版本号，也可以通过git <span class="built_in">log</span> --oneline获取到短的版本号</div><div class="line">    - 绝大多数情况下，还可以使用git reflog也会提示版本号</div></pre></td></tr></table></figure>
+<h3 id="git-log-–oneline：每一次提交的-短-版本号，以及备注信息"><a href="#git-log-–oneline：每一次提交的-短-版本号，以及备注信息" class="headerlink" title="git log –oneline：每一次提交的(短)版本号，以及备注信息"></a>git log –oneline：每一次提交的(短)版本号，以及备注信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span>的简便方法</div></pre></td></tr></table></figure>
+<h3 id="git-reflog-查看历史记录"><a href="#git-reflog-查看历史记录" class="headerlink" title="git reflog 查看历史记录"></a>git reflog 查看历史记录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些历史记录包括：每一次提交的信息；以及每一次版本回滚的操作；分支切换操作</div></pre></td></tr></table></figure>
+<h3 id="（了解）单文件特殊操作-☆☆☆不可逆☆☆☆"><a href="#（了解）单文件特殊操作-☆☆☆不可逆☆☆☆" class="headerlink" title="（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)"></a>（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)</h3><h3 id="git-checkout-–-1-txt：-替换文件内容"><a href="#git-checkout-–-1-txt：-替换文件内容" class="headerlink" title="git checkout – 1.txt：(替换文件内容)"></a>git checkout – 1.txt：(替换文件内容)</h3><ul>
+<li>将暂存区中的文件取出并替换工作目录的文件<ul>
+<li>误删了一个文件，通过该命令，从仓库中把文件恢复(ps：前提是之前该文件已经进入过仓库了)</li>
+<li>对于某个文件来说，之前已经提交到仓库了，这些又随便写了一些内容，发现这些内容不是自己想要的，就可以通过该操作把仓库中的原内容取出来</li>
+</ul>
+</li>
+</ul>
+<h3 id="git-reset-HEAD-–-1-txt：-不会替换文件内容"><a href="#git-reset-HEAD-–-1-txt：-不会替换文件内容" class="headerlink" title="git reset HEAD – 1.txt：(不会替换文件内容)"></a>git reset HEAD – 1.txt：(不会替换文件内容)</h3><p>将某个操作告诉暂存区，后来发现这是一次误操作，通过这个命令反悔</p>
+<h2 id="9-tortoiseGit比较文件差异-单文件"><a href="#9-tortoiseGit比较文件差异-单文件" class="headerlink" title="9.tortoiseGit比较文件差异(单文件)"></a>9.tortoiseGit比较文件差异(单文件)</h2><ul>
+<li>1、通过对某个文件右击，依次选择tortoiseGit–&gt;diff<br>  –&gt;将当前工作区的代码跟仓库中最新的代码进行比较</li>
+<li><p>2、通过对某个文件右击，依次选择tortoiseGit–&gt;diff with previous version<br>  –&gt;将当前工作区的代码根仓库中最新版本的前一个版本的代码进行比较</p>
+</li>
+<li><p>3、如果希望把某个文件跟之前很早的版本进行代码比较，应该：<br>  –&gt;右击该文件，依次选择：tortoiseGit–&gt;show log</p>
+<pre><code>--&gt;选择要比较的某个版本，右击选择菜单：compare with working tree
+</code></pre></li>
+<li><p>4、tortoiseGit图标</p>
+<ul>
+<li>一个新创建的文件没有图标</li>
+<li>已经添加到暂存区的文件具有”+”</li>
+<li>已经commit 的文件具有 “√:</li>
+<li>已经修改过的文件：红色的!</li>
+<li>冲突的文件：黄色的三角形</li>
+</ul>
+</li>
+</ul>
+<h3 id="分支操作相关指令"><a href="#分支操作相关指令" class="headerlink" title="分支操作相关指令"></a>分支操作相关指令</h3><h3 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h3><p>查看当前拥有的所有分支(带*前缀的是当前的分支)</p>
+<h3 id="git-branch-分支名"><a href="#git-branch-分支名" class="headerlink" title="git branch 分支名"></a>git branch 分支名</h3><p>在当前分支下创建新分支<br>    –&gt;新分支会继承所有的当前分支到目前为止的所有代码</p>
+<h3 id="git-checkout-分支名"><a href="#git-checkout-分支名" class="headerlink" title="git checkout 分支名"></a>git checkout 分支名</h3><p>切换到指定分支下面去</p>
+<h3 id="git-merge-m-备注信息"><a href="#git-merge-m-备注信息" class="headerlink" title="git merge -m 备注信息"></a>git merge -m 备注信息</h3><p>将指定分支合并到当前分支下</p>
+<h3 id="git-branch-d-分支名"><a href="#git-branch-d-分支名" class="headerlink" title="git branch -d 分支名"></a>git branch -d 分支名</h3><p>删除指定的分支</p>
+<h3 id="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"><a href="#无论是创建分支还是合并分支时刻警醒当前位于哪个位置" class="headerlink" title="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"></a>无论是创建分支还是合并分支时刻警醒当前位于哪个位置</h3><h3 id="对于一个仓库，如果没有任何本地提交，git-branch-没有结果"><a href="#对于一个仓库，如果没有任何本地提交，git-branch-没有结果" class="headerlink" title="对于一个仓库，如果没有任何本地提交，git branch 没有结果"></a>对于一个仓库，如果没有任何本地提交，git branch 没有结果</h3><h3 id="不要在本地分支上push代码"><a href="#不要在本地分支上push代码" class="headerlink" title="不要在本地分支上push代码"></a>不要在本地分支上push代码</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/Git的使用/" data-id="cj7ucrjyu000zes9m2jqtf9ry" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/建站技巧/">建站技巧</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery源码分析（02）--整体架构" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/jQuery源码分析（02）--整体架构/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.807Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/jQuery源码分析/">jQuery源码分析</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/jQuery源码分析（02）--整体架构/">jQuery源码分析(02)--整体架构</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="jQuery整体架构"><a href="#jQuery整体架构" class="headerlink" title="jQuery整体架构"></a>jQuery整体架构</h2><p>任何程序代码不是一开始就复杂的，成功也不是一躇而蹴的，早期jQuery的作者John Resig在2005年提议改进Prototype的“Behaviour”库时，只是想让其使用更简单才发布新的jQuery框架。起初John Resig估计也没料想jQuery会如此的火热。我们可以看到从发布的第一个1.0开始到目前最新的2.1.1其代码膨胀到了9000多行，它兼容CSS3，还兼容各种浏览器，jQuery使用户能更方便地处理DOM、事件、实现动画效果，并且方便地为网站提供AJAX交互。</p>
+<ol>
+<li><p>最新jQuery2.1.1版本的结构：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</div><div class="line">;(<span class="keyword">function</span>(global, factory) &#123;</div><div class="line">    factory(global);</div><div class="line">&#125;(typeof window !== <span class="string">"undefined"</span> ? window : this, <span class="keyword">function</span>(window, noGlobal) &#123;</div><div class="line">    var jQuery = <span class="keyword">function</span>( selector, context ) &#123;</div><div class="line">        <span class="built_in">return</span> new jQuery.fn.init( selector, context );</div><div class="line">    &#125;;</div><div class="line">    jQuery.fn = jQuery.prototype = &#123;&#125;;</div><div class="line">    // 核心方法</div><div class="line">    // 回调系统</div><div class="line">    // 异步队列</div><div class="line">    // 数据缓存</div><div class="line">    // 队列操作</div><div class="line">    // 选择器引</div><div class="line">    // 属性操作</div><div class="line">    // 节点遍历</div><div class="line">    // 文档处理</div><div class="line">    // 样式操作</div><div class="line">    // 属性操作</div><div class="line">    // 事件体系</div><div class="line">    // AJAX交互</div><div class="line">    // 动画引擎</div><div class="line">    <span class="built_in">return</span> jQuery;</div><div class="line">&#125;));</div><div class="line"></div><div class="line">jQuery.each( [ <span class="string">"get"</span>, <span class="string">"post"</span> ], <span class="keyword">function</span>( i, method ) &#123;</div><div class="line">    jQuery[ method ] = <span class="keyword">function</span>( url, data, callback, <span class="built_in">type</span> ) &#123;</div><div class="line">        // Shift arguments <span class="keyword">if</span> data argument was omitted</div><div class="line">        <span class="keyword">if</span> ( jQuery.isFunction( data ) ) &#123;</div><div class="line">            <span class="built_in">type</span>     = <span class="built_in">type</span> || callback;</div><div class="line">            callback = data;</div><div class="line">            data     = undefined;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">return</span> jQuery.ajax(&#123;</div><div class="line">            url: url,</div><div class="line">            <span class="built_in">type</span>: method,</div><div class="line">            dataType: <span class="built_in">type</span>,</div><div class="line">            data: data,</div><div class="line">            success: callback</div><div class="line">        &#125;);</div><div class="line">    &#125;;</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>jQuery的模块依赖图：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![alt text](http://img.mukewang.com/53fa8fec0001754806930473.jpg)</div></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/jQuery源码分析（02）--整体架构/" data-id="cj7ucrjzf001ses9me5h0iv0h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/没事研究来玩的/">没事研究来玩的</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Require JS的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/Require JS的使用/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.796Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RequireJS/">RequireJS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/Require JS的使用/">RequireJS的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<h2 id="1-入门"><a href="#1-入门" class="headerlink" title="1.入门"></a>1.入门</h2></blockquote>
+<ul>
+<li><p>下载requirejs文件</p>
+</li>
+<li><p>在需要使用requireJS的html页面中引入requirejs文件</p>
+</li>
+<li><p>编写js代码–&gt;编写一个模块</p>
+<ul>
+<li><p>在a.js文件中通过来定义一个模块(tip:约定一个js文件就是一个模块)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">define([],<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    //模块内部的代码</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>在b.js文件中从而获取a.js中的代码，这样的话就可以保证在执行b.js中的代码之前先执行了a.js中的代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x require([<span class="string">"a"</span>],<span class="function"><span class="title">function</span></span>()&#123;&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="2-依赖注入：模块具有返回值："><a href="#2-依赖注入：模块具有返回值：" class="headerlink" title="2.依赖注入：模块具有返回值："></a>2.依赖注入：模块具有返回值：</h2></blockquote>
+<ul>
+<li><p>1.给定义模块的回调函数添加return语句</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//a.js文件中</div><div class="line">define(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    //模块的逻辑</div><div class="line">    <span class="built_in">return</span> 10;</div><div class="line">&#125;)</div><div class="line">//b.js文件中</div><div class="line">define(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    <span class="built_in">return</span> &#123;name:<span class="string">"张三"</span>&#125;;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>2.在获取模块的时候，通过require()的二个参数来依次获取各个模块的返回值</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">require([<span class="string">"./a.js"</span>,<span class="string">"./b.js"</span>],<span class="keyword">function</span>(a,b)&#123;</div><div class="line">    console.log(a);//10</div><div class="line">    console.log(b.name);//<span class="string">"张三"</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<ul>
+<li><p>依赖注入的使用注意点：以后在实际项目中，可能一个js文件会依赖无数个模块，对于无数个模块有的有返回值，有的没有返回值，在添加模块依赖的时候，应该注意：</p>
+<ul>
+<li>把所有的有返回值的模块在前面添加，把没有返回值的模块在后面添加</li>
+<li><p>举例：如果有a、b、c 3个模块，其中，a模块有返回值，b模块没有返回值，c模块有返回值</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">    define([<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>],<span class="keyword">function</span>(a,c)&#123;</div><div class="line">//如果形参编写的时候变成了：a,c</div><div class="line">//  --&gt;a模块可以正常获取，c接受了b模块的返回值，b模块没有返回值，所以c的值为：undefined</div><div class="line">//  --&gt;所以必须要求在形参的位置，写成：a,b,c</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>推荐的做法：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">define([<span class="string">"a"</span>,<span class="string">"c"</span>,<span class="string">"b"</span>],<span class="keyword">function</span>(a,c)&#123;</div><div class="line">    //a接受a模块返回值</div><div class="line">    //c接受c模块返回值</div><div class="line">    //b模块没有返回值，就不用接收</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="3-入口文件"><a href="#3-入口文件" class="headerlink" title="3.入口文件"></a>3.入口文件</h2></blockquote>
+<ul>
+<li>通过给引入requirejs时的script标签添加data-main属性值，那么requirejs就会自动加载该文件(模块)，可以通过该文件来进行访问其他的模块  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"require.js"</span> data-main=<span class="string">"./main"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<h2 id="4-如何检测第三方库是否支持AMD规范？"><a href="#4-如何检测第三方库是否支持AMD规范？" class="headerlink" title="4.如何检测第三方库是否支持AMD规范？"></a>4.如何检测第三方库是否支持AMD规范？</h2></blockquote>
+<ul>
+<li>查看源代码，看看是否有以下内容？如果有，说明支持AMD规范，如果没有说明不支持  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (typeof define === <span class="string">"function"</span> &amp;&amp; define.amd) &#123;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<h2 id="5-路径-加载模块时遵循的规则"><a href="#5-路径-加载模块时遵循的规则" class="headerlink" title="5.路径(加载模块时遵循的规则)"></a>5.路径(加载模块时遵循的规则)</h2></blockquote>
+<ul>
+<li><p>如果没有入口文件，加载模块时的路径以引入requirejs时的路径为准(优先级最低)</p>
+</li>
+<li><p>如果有入口文件，加载模块的路径以入口文件所在目录为准(优先级次高)</p>
+</li>
+<li><p>通过配置来自定义路径(优先级最高)</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">require.config(&#123;</div><div class="line">    //这里的baseUrl还是相对于html文件</div><div class="line">    baseUrl:<span class="string">""</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<h2 id="6-配置常用的模块路径-比如：jquery-arttemplate"><a href="#6-配置常用的模块路径-比如：jquery-arttemplate" class="headerlink" title="6.配置常用的模块路径(比如：jquery/arttemplate)"></a>6.配置常用的模块路径(比如：jquery/arttemplate)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">require.config(&#123;</div><div class="line">baseUrl:<span class="string">"./lib"</span>,</div><div class="line">paths:&#123;</div><div class="line">    //路径不需要.js后缀，最终该文件的路径将会和baseUrl拼接，也就是：<span class="string">"./lib/js/jquery-2.1.4"</span></div><div class="line">    jquery:<span class="string">"js/jquery-2.1.4"</span></div><div class="line">&#125;</div><div class="line">&#125;)</div><div class="line">//a.js文件中</div><div class="line">define([<span class="string">"jquery"</span>],<span class="keyword">function</span>($)&#123;</div><div class="line">    //这里请求的jquery也就是去上面paths中设置的jquery进行查找,也就是：<span class="string">"./lib/js/jquery-2.1.4"</span></div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="7-如果一个js文件不支持AMD这种模块定义规范-比如bootstrap-js-，但是它又依赖于我们定义的模块-jquery-，通过以下方式来解决"><a href="#7-如果一个js文件不支持AMD这种模块定义规范-比如bootstrap-js-，但是它又依赖于我们定义的模块-jquery-，通过以下方式来解决" class="headerlink" title="7.如果一个js文件不支持AMD这种模块定义规范(比如bootstrap.js)，但是它又依赖于我们定义的模块(jquery)，通过以下方式来解决"></a>7.如果一个js文件不支持AMD这种模块定义规范(比如bootstrap.js)，但是它又依赖于我们定义的模块(jquery)，通过以下方式来解决</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">    require.config(&#123;</div><div class="line">    baseUrl:<span class="string">"./lib"</span>,</div><div class="line">    paths:&#123;</div><div class="line">        //路径不需要.js后缀，最终该文件的路径将会和baseUrl拼接，也就是：<span class="string">"./lib/js/jquery-2.1.4"</span></div><div class="line">        jquery:<span class="string">"js/jquery-2.1.4"</span>,</div><div class="line">        bootstrap:<span class="string">"assets/bootstrap/bootstrap"</span></div><div class="line">    &#125;,</div><div class="line">    shim:&#123;</div><div class="line">        //这里的bootstrap就是上面的paths中的bootstrap</div><div class="line">        bootstrap:&#123;</div><div class="line">            //这样在请求bootstrap的时候会自动去请求jquery模块</div><div class="line">            deps:[<span class="string">"jquery"</span>] //这里的<span class="string">"jquery"</span>也是上面paths中的jquery</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/Require JS的使用/" data-id="cj7ucrjyv0012es9m0vlbkiew" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发用到的新技术/">开发用到的新技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-什么时候使用shim" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/什么时候使用shim/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.794Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/RequireJS/">RequireJS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/什么时候使用shim/">什么时候使用shim</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<h1 id="什么时候使用shim"><a href="#什么时候使用shim" class="headerlink" title="什么时候使用shim"></a>什么时候使用shim</h1><ul>
+<li>shim只用于第三方模块</li>
+<li>shim一般适用于：<ul>
+<li>a.引用了两个第三方模块，</li>
+<li>b.之间存在依赖关系，</li>
+<li>c.其中一个不支持AMD规范<ul>
+<li>列如：导入了jquery/bootstrap，bootstrap依赖了jquery，bootstrap不支持AMD规范，所以采用了shim</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/什么时候使用shim/" data-id="cj7ucrk04002res9mp9qmx11j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RequireJs中遇到的坑/">RequireJs中遇到的坑</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-requirejs中使用arttemplate模板引擎" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/requirejs中使用arttemplate模板引擎/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.788Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Requirejs/">Requirejs</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/requirejs中使用arttemplate模板引擎/">requirejs中使用arttemplate模板引擎</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<h2 id="requirejs中使用arttemplate模板引擎"><a href="#requirejs中使用arttemplate模板引擎" class="headerlink" title="requirejs中使用arttemplate模板引擎"></a>requirejs中使用arttemplate模板引擎</h2></blockquote>
+<ul>
+<li>1、把代码放到项目中的指定位置</li>
+<li>2、配置模板引擎的路径</li>
+<li><p>3、在需要编译模板的文件中导入该模块，可以通过形参获取模板引擎的入口函数</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">require([<span class="string">"template"</span>],<span class="keyword">function</span>(template)&#123;</div><div class="line">     //这里的形参template就是arttemplate模板引擎的入口函数</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<h2 id="常用的API"><a href="#常用的API" class="headerlink" title="常用的API"></a>常用的API</h2></blockquote>
+<ul>
+<li><p>tempalte(script的id，数据)</p>
+</li>
+<li><p>template.render(模板内容，数据)</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/requirejs中使用arttemplate模板引擎/" data-id="cj7ucrjzx002ges9mcpigxuhp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发技巧/">开发技巧</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-post,get请求之间的区别" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/20/post,get请求之间的区别/" class="article-date">
+  <time datetime="2017-09-20T01:59:08.787Z" itemprop="datePublished">2017-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/网站搭建/">网站搭建</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/20/post,get请求之间的区别/">post/get请求之间的区别</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<h2 id="post-get请求之间的区别？"><a href="#post-get请求之间的区别？" class="headerlink" title="post/get请求之间的区别？"></a>post/get请求之间的区别？</h2></blockquote>
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><ul>
+<li>git请求的参数作为url地址的一部分</li>
+<li>git请求相对不太安全，常用于传入一些安全性不高的参数</li>
+<li>get请求的地址受制于url长度的限制，参数大小有一定的限制</li>
+</ul>
+<h3 id="post"><a href="#post" class="headerlink" title="post"></a>post</h3><ul>
+<li>post请求的参数作为请求报文的一部分</li>
+<li>post请求的相对安全，常用于传入一些安全性较高的参数(账号，密码)</li>
+<li>post请求的参数大小没有限制</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/20/post,get请求之间的区别/" data-id="cj7ucrjzs0029es9mbhdal9gi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/方法区别/">方法区别</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AJAX/">AJAX</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Angular/">Angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JSON/">JSON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RequireJS/">RequireJS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Requirejs/">Requirejs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cookie/">cookie</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/jQuery源码分析/">jQuery源码分析</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/关于ES5规范/">关于ES5规范</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发/">开发</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/开发技巧/">开发技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/网站搭建/">网站搭建</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/设计模式/">设计模式</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RequireJs中遇到的坑/">RequireJs中遇到的坑</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript基础知识/">javascript基础知识</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/建站技巧/">建站技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发技巧/">开发技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发用到的新技术/">开发用到的新技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开大技巧/">开大技巧</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/掉坑里了/">掉坑里了</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法区别/">方法区别</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/方法总结/">方法总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/没事研究来玩的/">没事研究来玩的</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网站性能优化方方面面/">网站性能优化方方面面</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/黑科技/">黑科技</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/RequireJs中遇到的坑/" style="font-size: 10px;">RequireJs中遇到的坑</a> <a href="/tags/javascript基础知识/" style="font-size: 16px;">javascript基础知识</a> <a href="/tags/建站技巧/" style="font-size: 18px;">建站技巧</a> <a href="/tags/开发技巧/" style="font-size: 20px;">开发技巧</a> <a href="/tags/开发用到的新技术/" style="font-size: 12px;">开发用到的新技术</a> <a href="/tags/开大技巧/" style="font-size: 10px;">开大技巧</a> <a href="/tags/掉坑里了/" style="font-size: 10px;">掉坑里了</a> <a href="/tags/方法区别/" style="font-size: 12px;">方法区别</a> <a href="/tags/方法总结/" style="font-size: 10px;">方法总结</a> <a href="/tags/没事研究来玩的/" style="font-size: 14px;">没事研究来玩的</a> <a href="/tags/网站性能优化方方面面/" style="font-size: 10px;">网站性能优化方方面面</a> <a href="/tags/黑科技/" style="font-size: 14px;">黑科技</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/21/AngularJS中的路由/">AngularJS中的路由</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/21/云音乐案例(利用锚点值)/">云音乐案例业务逻辑(锚点值)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/21/AngularJS中的运行块(run)/">AngularJS中的运行块(run)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/21/AngularJS中的配置快(config)/">AngularJS中的配置块(config)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/21/AngularJS中配置跨域白名单/">AngularJS中配置跨域白名单</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Zeng<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
 </body>
 </html>
