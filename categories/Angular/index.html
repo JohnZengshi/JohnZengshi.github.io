@@ -1,21 +1,1369 @@
+
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>John Zeng的个人播客</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+<html  style="display: none;">
+
   
-  <!-- Import lsloader -->
-  <script>!function(){var e="http://"+location.host+"/combo?combo=";window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(e){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(e){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(e){t=""}return t},lsloader.load=function(e,t,s){s=s||function(){};var n;if(n=this.getLS(e),!/\/\*codestartv1\*\//.test(n))return this.removeLS(e),void this.requestResource(e,t,s);if(n){var a=n.split("/*codestartv1*/")[0];if(a!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,s);n=n.split("/*codestartv1*/")[1],/\.js?.+$/.test(a)?(this.jsRunSequence.push({name:e,code:n}),this.runjs(t,e,n)):(document.getElementById(e).appendChild(document.createTextNode(n)),s())}else this.requestResource(e,t,s)},lsloader.requestResource=function(e,t,s){var n=this;/\.js?.+$/.test(t)?this.iojs(t,e,function(e,t,s){n.setLS(t,e+"/*codestartv1*/"+s),n.runjs(e,t,s)}):/\.css?.+$/.test(t)&&this.iocss(t,e,function(s){document.getElementById(e).appendChild(document.createTextNode(s)),n.setLS(e,t+"/*codestartv1*/"+s)},s)},lsloader.iojs=function(e,t,s){var n=this;n.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void s(e,t,a.response);n.jsfallback(e,t)}},a.send(null)}catch(s){n.jsfallback(e,t)}},lsloader.iocss=function(e,t,s,n){var a=this;try{var u=new XMLHttpRequest;u.open("get",e,!0),u.onreadystatechange=function(){if(4==u.readyState){if((u.status>=200&&u.status<300||304==u.status)&&""!=u.response)return s(u.response),void n();a.cssfallback(e,t,n)}},u.send(null)}catch(s){a.cssfallback(e,t,n)}},lsloader.iofonts=function(e,t,s,n){var a=this;try{var u=new XMLHttpRequest;u.open("get",e,!0),u.onreadystatechange=function(){if(4==u.readyState){if((u.status>=200&&u.status<300||304==u.status)&&""!=u.response)return s(u.response),void n();a.cssfallback(e,t,n)}},u.send(null)}catch(s){a.cssfallback(e,t,n)}},lsloader.runjs=function(e,t,s){if(t&&s)for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code=s);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var u=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){u.jsRunSequence.shift(),u.jsRunSequence.length>0&&u.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code="",this.jsRunSequence[s].status="failed",this.jsRunSequence[s].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,s){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var n=document.createElement("link");n.type="text/css",n.href=e,n.rel="stylesheet",n.onload=n.onerror=s;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a)}},lsloader.runInlineScript=function(e,t){var s=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:s}),this.runjs()},lsloader.loadCombo=function(t){var s="",n={};for(var a in t){var u=this.getLS(t[a].name);if(u)var o=u.split("/*codestartv1*/")[0],c=u.split("/*codestartv1*/")[1];else var o="";o==t[a].path?this.jsRunSequence.push({name:t[a].name,code:c,path:t[a].path}):(this.jsRunSequence.push({name:t[a].name,code:null,path:t[a].path,status:"comboloading"}),n[t[a].name]=!0,s+=(""==s?"":";")+t[a].path)}var i=this;if(s){var r=new XMLHttpRequest;r.open("get",e+s,!0),r.onreadystatechange=function(){if(4==r.readyState)if(r.status>=200&&r.status<300||304==r.status){if(""!=r.response)return void i.runCombo(r.response,n)}else{for(var e in i.jsRunSequence)n[i.jsRunSequence[e].name]&&(i.jsRunSequence[e].status="failed");i.runjs()}},r.send(null)}this.runjs()},lsloader.runCombo=function(e,t){e=e.split("/*combojs*/"),e.shift();for(var s in this.jsRunSequence)t[this.jsRunSequence[s].name]&&e[0]&&(this.jsRunSequence[s].status="comboJS",this.jsRunSequence[s].code=e[0],this.setLS(this.jsRunSequence[s].name,this.jsRunSequence[s].path+"/*codestartv1*/"+e[0]),e.shift());this.runjs()}}();</script>
-</head>
-<body>
-  <div id="app"></div>
-  <script type="text/javascript">
-    window.rootUrl = "/"
-    window.one = {"site":{"title":"John Zeng的个人播客","subtitle":null,"description":null,"author":"John Zeng","language":null,"timezone":null,"url":"http://yoursite.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"folder","deploy":{"type":"git","repo":"https://github.com/JohnZengshi/JohnZengshi.github.io.git","branch":"master"},"ignore":[],"index_generator":{"per_page":10,"order_by":"-date","path":""},"category_generator":{"per_page":10},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true}},"theme":{"title":"John Zeng的个人播客","subtitle":null,"description":null,"author":"John Zeng","language":null,"timezone":null,"url":"http://yoursite.com","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"folder","deploy":{"type":"git","repo":"https://github.com/JohnZengshi/JohnZengshi.github.io.git","branch":"master"},"ignore":[],"index_generator":{"per_page":10,"order_by":"-date","path":""},"category_generator":{"per_page":10},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"ip":"0.0.0.0","compress":false,"header":true},"head":{"favicon":"img/xiaoliang.png"},"img":{"avatar":"img/xiaoliang.png","left_pic":["img/bg.png"],"right_pic":["img/sidebar_header.png","img/random/picHD_44.png","img/random/picHD_43.png","img/random/picHD_42.png","img/random/picHD_41.png","img/random/picHD_40.png","img/random/picHD_39.png","img/random/picHD_38.png","img/random/picHD_37.png","img/random/picHD_36.png","img/random/picHD_35.png","img/random/picHD_34.png","img/random/picHD_33.png","img/random/picHD_32.png"],"post_thumbnail":["img/random/picHD_2.png","img/random/picHD_1.png","img/random/picHD_3.png","img/random/picHD_4.png","img/random/picHD_5.png","img/random/picHD_6.png","img/random/picHD_7.png","img/random/picHD_8.png","img/random/picHD_9.png","img/random/picHD_10.png","img/random/picHD_11.png","img/random/picHD_12.png","img/random/picHD_13.png","img/random/picHD_14.png","img/random/picHD_15.png","img/random/picHD_16.png","img/random/picHD_17.png","img/random/picHD_18.png","img/random/picHD_19.png","img/random/picHD_20.png","img/random/picHD_21.png","img/random/picHD_22.png","img/random/picHD_23.png","img/random/picHD_24.png","img/random/picHD_25.png","img/random/picHD_26.png","img/random/picHD_27.png","img/random/picHD_28.png","img/random/picHD_29.png","img/random/picHD_30.png","img/random/picHD_31.png","img/random/picHD_32.png","img/random/picHD_33.png","img/random/picHD_34.png","img/random/picHD_35.png","img/random/picHD_36.png"],"drawerHeaderBg":["img/random/picHD_36.png","img/random/picHD_26.png","img/random/picHD_27.png","img/random/picHD_28.png","img/random/picHD_29.png","img/random/picHD_30.png","img/random/picHD_31.png"]},"uiux":{"slogan":"脾气暴躁的工程师","defaultPrimaryColor":["skyblue"],"defaultAccentColor":["red"]},"comment":{"disqus":{"shortName":"xxx"}},"Drawer":[{"title":"首页","type":"sitelink","href":"/","icon":"home"},{"title":"hr","type":"hr"},{"title":"关于我","type":"page","name":"关于我","icon":"account_circle"},{"title":"搜索","type":"sitelink","href":"/search/","icon":"search"},{"title":"联系我","icon":"contact_phone","nested":[{"title":"Email","type":"link","href":"135100916@qq.com","icon":"mail_outline"},{"title":"Github","type":"link","href":"https://github.com/JohnZengshi","icon":{"type":"svg","date":"<path d=\"M941.714 512q0 143.433-83.712 258.011t-216.283 158.574q-15.433 2.853-22.565-3.986t-7.131-17.152v-120.576q0-55.442-29.696-81.152 32.585-3.438 58.587-10.277t53.723-22.272 46.299-37.998 30.281-60.014 11.703-86.016q0-69.157-45.129-117.723 21.138-52.005-4.571-116.553-16.018-5.157-46.299 6.29t-52.553 25.161l-21.723 13.714q-53.138-14.848-109.714-14.848t-109.714 14.848q-9.143-6.29-24.283-15.433t-47.726-22.016-49.152-7.717q-25.161 64.585-3.986 116.553-45.129 48.567-45.129 117.723 0 48.567 11.703 85.723t29.989 60.014 46.007 38.29 53.723 22.272 58.587 10.277q-22.857 20.553-28.014 58.843-11.995 5.705-25.71 8.558t-32.585 2.853-37.413-12.288-31.707-35.73q-10.862-18.286-27.721-29.696t-28.27-13.714l-11.447-1.719q-11.995 0-16.567 2.56t-2.853 6.583 5.157 8.009 7.424 6.839l3.986 2.853q12.581 5.705 24.869 21.723t17.993 29.147l5.705 13.129q7.424 21.723 25.161 35.145t38.29 17.152 39.717 3.986 31.707-2.011l13.129-2.304q0 21.723 0.293 50.871t0.293 30.866q0 10.277-7.424 17.152t-22.857 3.986q-132.571-43.995-216.283-158.574t-83.712-258.011q0-119.442 58.843-220.27t159.707-159.707 220.27-58.843 220.27 58.843 159.707 159.707 58.843 220.27z\" p-id=\"997\"></path>","viewBox":"0 0 1024 1024"}},{"title":"QQ","type":"link","href":"http://wpa.qq.com/msgrd?v=3&uin=799149890&site=qq&menu=yes","icon":{"type":"svg","style":{"height":"20px","width":"20px","margin":"14px"},"date":"<path d=\"M971.464704 668.658688 968.998912 651.020288 965.843968 633.814016 963.337216 624.9728 960.917504 615.569408 957.71648 606.598144 954.430464 596.612096 950.668288 587.208704 946.562048 577.545216 939.254784 561.765376 932.769792 547.8656 926.285824 535.437312 920.62208 523.848704 914.138112 513.301504 909.382656 503.616512 899.309568 489.15456 886.64064 469.894144 883.70176 465.138688 882.707456 463.107072 882.707456 461.50656 884.825088 455.000064 887.763968 449.207296 890.314752 437.772288 891.742208 431.869952 891.742208 425.77408 892.478464 420.867072 892.478464 415.93856 891.742208 410.27584 890.92096 405.649408 889.061376 396.26752 886.64064 387.145728 884.435968 378.779648 880.97792 370.651136 877.08672 363.864064 874.015744 357.487616 870.601728 351.413248 865.240064 342.463488 863.25248 339.28704 862.646272 336.520192 860.182528 319.161344 858.58304 307.725312 856.767488 293.567488 853.957632 278.93248 849.547264 262.158336 847.040512 252.754944 845.049856 244.799488 842.284032 235.547648 839.171072 225.712128 836.058112 216.590336 832.079872 206.77632 823.953408 187.817984 819.15392 178.84672 813.359104 168.557568 807.913472 159.73888 802.465792 149.751808 794.769408 140.498944 788.286464 131.52768 780.374016 122.27584 772.332544 113.88928 764.203008 105.783296 754.562048 97.373184 749.504512 94.348288 744.706048 90.153984 734.329856 82.783232 722.312192 74.806272 710.032384 67.586048 697.365504 61.079552 683.531264 55.135232 670.560256 49.492992 657.027072 44.56448 642.24256 40.521728 628.7104 36.912128 614.31296 33.75616 600.694784 30.427136 585.996288 28.827648 571.597824 27.076608 557.246464 25.19552 542.416896 25.19552 528.106496 25.19552 514.271232 25.19552 499.70176 26.039296 486.040576 27.940864 472.421376 29.821952 458.587136 32.135168 444.88192 34.750464 431.911936 37.927936 418.941952 42.121216 406.880256 46.31552 394.81856 50.357248 382.712832 56.301568 371.299328 61.079552 361.182208 66.873344 350.63296 73.37984 340.90496 80.167936 331.308032 87.819264 323.396608 94.930944 310.9888 106.626048 300.698624 117.49888 290.8416 128.048128 281.8048 138.770432 273.332224 149.751808 265.895936 160.451584 258.676736 171.15136 255.304704 175.929344 252.191744 181.722112 245.446656 191.860736 240.086016 201.977856 235.33056 211.530752 231.179264 221.648896 227.115008 230.899712 223.742976 239.5904 220.63104 248.841216 217.474048 257.380352 213.279744 272.858112 210.210816 287.753216 208.525312 300.203008 206.795776 310.925312 206.795776 319.161344 206.795776 325.818368 206.795776 331.741184 203.855872 334.941184 201.17504 339.28704 199.057408 343.177216 197.240832 347.370496 194.950144 356.493312 192.442368 364.880896 191.62112 372.381696 191.058944 377.893888 191.058944 383.816704 185.265152 392.225792 181.157888 400.613376 178.045952 408.697856 175.75424 415.93856 173.98272 422.878208 172.296192 429.405184 172.296192 434.875392 172.296192 440.971264 172.296192 446.0288 173.290496 450.071552 174.716928 457.464832 176.489472 463.107072 173.290496 465.570816 164.210688 472.358912 152.236032 483.339264 144.88576 489.846784 137.709568 496.223232 132.781056 501.303296 128.7168 505.778176 119.983104 515.180544 111.68256 524.583936 105.197568 532.690944 97.415168 544.407552 89.979904 554.954752 82.629632 566.693888 76.447744 577.545216 71.303168 589.089792 65.855488 599.810048 61.877248 610.36032 57.683968 621.362176 54.571008 632.061952 51.501056 643.064832 48.77824 652.619776 47.263744 662.888448 45.57824 672.421888 44.150784 681.695232 43.287552 699.766784 43.287552 716.540928 43.287552 724.063232 44.150784 731.456512 46.44352 744.0384 47.263744 749.572096 48.77824 755.190784 50.6368 760.510464 52.366336 764.269568 55.133184 771.23072 57.25184 772.658176 58.548224 775.597056 60.191744 776.288256 61.186048 776.288256 61.877248 776.288256 69.097472 775.597056 76.447744 773.696512 82.629632 771.23072 89.114624 767.03744 95.03744 763.14624 100.39808 758.044672 106.191872 752.72704 111.077376 747.235328 115.745792 741.010432 119.983104 735.388672 123.961344 730.722304 126.425088 725.36064 131.267584 716.540928 132.781056 712.930304 133.645312 710.769664 134.076416 708.304896 135.201792 706.27328 136.066048 705.841152 137.709568 704.974848 138.74688 704.974848 139.179008 705.841152 140.000256 705.841152 140.822528 706.27328 143.545344 718.270464 146.485248 727.955456 150.419456 738.11456 154.396672 747.235328 157.72672 756.31616 162.871296 764.269568 166.631424 772.658176 170.86976 780.352512 175.75424 787.009536 179.472384 793.409536 189.329408 805.254144 197.933056 815.804416 206.2336 824.018944 214.40512 831.412224 221.495296 837.204992 232.044544 846.58688 236.281856 848.661504 237.707264 850.650112 237.707264 851.644416 236.713984 852.552704 236.281856 852.552704 234.1632 853.244928 226.250752 853.850112 218.901504 854.844416 212.718592 855.709696 206.2336 857.135104 200.569856 858.907648 194.950144 860.637184 190.021632 863.275008 186.131456 865.696768 181.157888 867.296256 178.045952 869.890048 174.716928 871.921664 171.127808 874.816512 166.631424 880.438272 164.94592 883.076096 162.871296 885.366784 160.017408 891.290624 158.461952 896.22016 156.601344 901.146624 156.212224 905.470976 156.212224 911.133696 156.212224 913.598464 155.390976 917.618688 155.390976 921.726976 154.396672 925.7472 154.396672 929.33632 155.390976 933.269504 156.212224 936.77056 158.461952 943.516672 160.017408 946.715648 162.006016 949.9136 164.210688 953.069568 166.631424 955.838464 169.875456 958.993408 172.296192 961.5872 179.472384 966.948864 186.692608 971.444224 194.950144 975.50848 203.855872 979.139584 213.279744 983.02976 223.742976 985.452544 234.1632 988.9536 245.446656 991.289344 256.688128 992.974848 268.273664 994.748416 280.249344 996.477952 303.855616 998.940672 328.195072 999.3728 350.63296 999.3728 361.182208 999.3728 371.299328 999.3728 381.847552 998.940672 390.884352 997.905408 399.617024 997.213184 407.788544 996.477952 420.931584 993.883136 430.398464 991.289344 439.392256 988.9536 455.993344 981.994496 463.516672 979.139584 470.69184 975.50848 482.53952 968.85248 493.216768 963.489792 501.129216 958.43328 506.921984 953.069568 515.95776 954.063872 522.96192 954.843136 536.79616 955.838464 543.281152 955.838464 548.770816 955.838464 552.96512 956.70272 557.246464 958.43328 564.033536 960.893952 571.597824 963.489792 585.996288 967.986176 600.694784 973.345792 615.005184 977.496064 629.445632 980.438016 644.187136 984.155136 659.448832 986.359808 673.931264 987.959296 688.458752 989.990912 702.03392 991.289344 716.560384 992.108544 730.481664 992.108544 744.013824 992.108544 756.854784 992.108544 769.823744 990.554112 782.534656 989.990912 794.769408 987.959296 806.052864 985.452544 817.337344 983.02976 828.147712 980.438016 832.641024 979.139584 837.6576 977.496064 847.040512 973.778944 855.384064 969.887744 863.25248 965.823488 870.601728 961.5872 877.08672 956.70272 879.637504 954.063872 882.707456 950.4768 886.64064 945.677312 890.92096 939.754496 892.478464 936.77056 893.169664 934.264832 894.984192 931.064832 895.676416 927.60576 895.676416 924.275712 896.54272 920.947712 895.676416 916.063232 894.984192 911.868928 893.169664 906.940416 891.742208 902.87616 889.061376 897.946624 885.820416 893.452288 882.707456 889.561088 878.513152 886.275072 869.866496 878.751744 860.182528 871.488512 850.41152 865.696768 840.121344 859.772928 816.603136 848.186368 810.9824 844.727296 809.426944 843.127808 808.430592 842.090496 819.759104 830.675968 824.644608 825.056256 828.70784 819.867648 836.619264 808.411136 844.09856 796.694528 850.41152 786.275328 856.377344 776.288256 864.375808 756.31616 870.601728 739.714048 874.707968 727.955456 877.08672 724.063232 878.513152 720.907264 880.97792 719.004672 882.015232 719.004672 882.707456 719.438848 888.759296 731.456512 894.163968 743.042048 897.968128 749.572096 901.901312 755.190784 905.793536 762.107904 910.808064 768.941056 915.001344 773.696512 917.552128 776.288256 920.059904 778.625024 922.351616 780.352512 924.557312 781.953024 929.398784 784.417792 931.90656 785.282048 933.593088 785.282048 935.839744 785.282048 938.391552 784.417792 941.548544 782.81728 945.050624 781.216768 947.945472 778.625024 950.668288 775.597056 953.73824 771.835904 956.158976 768.941056 958.88384 764.269568 960.917504 760.510464 963.337216 755.190784 964.6336 750.695424 968.136704 739.714048 970.426368 727.565312 972.068864 714.097664 973.193216 706.27328 973.193216 699.766784 973.193216 692.805632 973.193216 684.288Z\" p-id=\"996\"></path>","viewBox":"0 0 1024 1024"}}]}],"colorPicker":false,"homeToolBar":[{"icon":"more_vert","items":[{"title":"RSS","type":"link","href":"/atom.xml","icon":"rss_feed"}]}],"footer":["Copyright © 2017 - 2019 EYHN",["拼命想抓住一些东西！","带你装逼带你飞！"]]}}
+<head>
+  <script>
+    window.mduiVersion = "1.5.0"
+    window.oldVersion = [
+     '1.4.7',
+     '1.4.8',
+     '1.4.9',
+     'unknownVersion'
+    ]
   </script>
-  <script>lsloader.load("vendor.js","/vendor.js")</script>
-  <script>lsloader.load("bundle.js","/bundle.js")</script>
+  <!--
+        © HEXO MDUI Theme
+        https://github.com/Halyul/hexo-theme-mdui
+        Version: 1.5.0 -->
+  <meta charset="UTF-8">
+  <title>分类: Angular - John Zeng的个人播客</title>
+
+  <!-- Favicons -->
+  <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+  <link rel="icon" sizes="192x192" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/favicon.png">
+
+  <!-- Meta & Info -->
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  
+    <meta name="theme-color" content="
+  
+  #3F51B5
+  
+
+">
+  
+
+  <meta name="author" content="John Zeng">
+  
+  <meta name="keywords" content="blog">
+
+  <!--iOS -->
+  <meta name="apple-mobile-web-app-title" content="John Zeng的个人播客">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="480">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://yoursite.com">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="分类: Angular - John Zeng的个人播客 | John Zeng的个人播客">
+  <meta property="og:image" content="/img/favicon.png" />
+  
+
+    
+
+  <!-- Cache -->
+  <meta http-equiv="Cache-Control" content="max-age=7200" />
+  <meta http-equiv="Expires" content="Fri, 29 Dec 2017 23:00:00 GMT" />
+
+  
+
+  <script>
+    (function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.mduiVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf(c)!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();
+  </script>
+
+  <!-- Import CSS -->
+  
+    <link rel="stylesheet" href="/css/fonts.min.css">
+  
+  
+    
+      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?OeEY1DPEWhXQ5nt08XaZcg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+    
+  
+
+  <!-- Custom Head -->
+  
+
+  
+    <style>
+      body {
+        background-color: #eeeeee;
+      }
+    </style>
+  
+
+  
+</head>
+
+
+
+
+  
+    
+  <body class="mdui-theme-primary-indigo mdui-theme-accent-blue
+   
+  
+    mdui-appbar-with-toolbar
+  
+  
+    side-content style-fix
+  " onresize="styleChanging()">
+
+
+  
+
+
+<div id="top"></div>
+
+
+  
+
+    <div class="mdui-appbar animate-appbar mdui-shadow-0 mdui-appbar-fixed" id="blog-appbar">
+      <div class="mdui-toolbar mdui-color-theme mdui-shadow-2">
+        <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
+          <i class="mdui-icon">
+            <span></span>
+          </i>
+        </button>
+        
+          <a href="/" class="mdui-typo-headline">
+            Title
+          </a>
+          <span class="appbar-border-line mdui-hidden-xs"></span>
+        
+        
+          <span class="mdui-typo-title mdui-hidden-xs"
+            
+              onclick="smoothScroll.animateScroll( 0 );"
+            
+          >
+            Angular
+          </span>
+        
+        
+        
+          <div class="flex-spacer"></div>
+        
+        
+        
+
+      </div>
+    </div>
+  
+
+  <div id="search-cover" searchResult onclick="closeSearch()"></div>
+
+
+
+
+
+
+  
+  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
+  
+    drawer-fix
+  " id="drawer" style="z-index: 2001;">
+  <div class="userview" style="background-image: url(/img/bg.png)">
+  <div class="overlay">
+    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
+    <div class="bottom">
+      <div class="info">
+        <div class="author mdui-text-color-white-text">
+          John Zeng
+        </div>
+        <div class="slogan mdui-text-color-white-secondary">
+          I&#39;m your slogan!
+        </div>
+      </div>
+      <div class="flex-spacer"></div>
+      
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+  <div class="hexo">
+    
+      <div class="mdui-list no-padding-bottom">
+        <a href="/">
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+            <div class="mdui-list-item-content">
+              首页
+            </div>
+          </li>
+        </a>
+      </div>
+    
+    
+      <div class="mdui-list no-padding">
+        <a href="/archives">
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+            <div class="mdui-list-item-content">
+              归档
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
+            </div>
+          </li>
+        </a>
+      </div>
+    
+    
+      <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
+        
+          <div class="mdui-collapse-item mdui-collapse-item-open">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
+              <div class="mdui-list-item-content">分类</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站搭建
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Angular
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
+                </a>
+              
+                <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Git
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJS
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
+                </a>
+              
+                <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  AJAX
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  cookie
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  关于ES5规范
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
+                </a>
+              
+                <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery源码分析
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  Requirejs
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  JSON
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  jQuery
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  设计模式
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+            </div>
+          </div>
+        
+        
+          <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+              <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
+              <div class="mdui-list-item-content">标签</div>
+              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+              
+                <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
+                </a>
+              
+                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  建站技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+                </a>
+              
+                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法总结
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  黑科技
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  没事研究来玩的
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开大技巧
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  开发用到的新技术
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  掉坑里了
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  javascript基础知识
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+                </a>
+              
+                <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  方法区别
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+                </a>
+              
+                <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  RequireJs中遇到的坑
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+                <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  网站性能优化方方面面
+                  <div style="flex-grow: 1;"></div>
+                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+                </a>
+              
+            </div>
+          </div>
+        
+        <div class="mdui-collapse-item ">
+          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+            <div class="mdui-list-item-content">年份</div>
+            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+          </div>
+          <div class="mdui-collapse-item-body mdui-list">
+            
+            
+              <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
+                2017
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  
+</div>
+
+  <div class="flex-spacer"></div>
+  <div class="drawer-footer">
+  <div class="mdui-typo mdui-typo-caption-opacity">
+    Powered by <a href="http://hexo.io">Hexo</a>
+    <br />
+    Theme - <a href="//github.com/Halyul/hexo-theme-mdui">Halyul/MDUI</a>
+    <br />
+    <span>
+      Copyright ©
+      <span year></span>
+      John Zeng
+    </span>
+    
+    
+  </div>
+</div>
+<script type="text/javascript">
+  var copyrightNow = new Date().getFullYear();
+  var textContent = document.querySelector('span[year]')
+  
+    textContent.textContent = copyrightNow
+  
+</script>
+
+</div>
+
+
+
+
+
+
+  
+
+  <style id="side_content_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("side_content_css","/css/src/now/side_content.min.css?6QUsjVbcFbaNw1GxvnmHrA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+<div id="side-content" class="mdui-color-pink animate-drawer">
+  <div class="mdui-grid-tile" style="overflow: visible;">
+    <div class="bg">
+      <img src="/img/random/picHD_7.png" />
+    </div>
+    <div class="mdui-grid-tile-actions mdui-grid-tile-actions-top mdui-grid-tile-actions-gradient">
+      <div class="flex-spacer"></div>
+      <div class="mdui-grid-tile-buttons">
+        
+
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
+    <div class="author mdui-text-center">
+      John Zeng
+    </div>
+    <div class="name">
+      Angular
+    </div>
+    <div class="length">
+      
+      10篇文章
+    </div>
+  </div>
+</div>
+<div id="contentLocation"></div>
+
+
+
+<main>
+  <div class="posts-container column-3">
+
+</div>
+<div id="content-list" class="animate-post">
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中的路由/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中的路由/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的路由
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_22.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/黑科技/">
+              <span>黑科技</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中的运行块(run)/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中的运行块(run)/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的运行块(run)
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_5.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中的配置快(config)/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中的配置快(config)/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的配置块(config)
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_20.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中配置跨域白名单/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中配置跨域白名单/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中配置跨域白名单
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_5.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/开发技巧/">
+              <span>开发技巧</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS的执行顺序/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS的执行顺序/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的执行顺序
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_19.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/没事研究来玩的/">
+              <span>没事研究来玩的</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 21, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/21/AngularJS中的自定义服务/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/21/AngularJS中的自定义服务/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的自定义服务
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_21.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+           
+             mdui-text-color-black-icon
+           
+           fa fa-tags mdui-text-center"></i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/tags/方法总结/">
+              <span>方法总结</span>
+            </a>
+          
+        </div>
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/AngularJS中的$filter服务/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/AngularJS中的$filter服务/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的$filter服务
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_31.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/AngularJS中的$timeout和$interval服务/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/AngularJS中的$timeout和$interval服务/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        AngularJS中的$timeout和$interval服务
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_18.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 20, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/20/AngularJS中的ng-switch指令/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/20/AngularJS中的ng-switch指令/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        Angular中的ng-switch指令
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_43.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+    <div class="content-item">
+      
+  
+<div class="mdui-card card-bottom-fix mdui-hoverable">
+  <div class="mdui-card-header posts-header">
+    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
+    <div class="content mdui-valign">
+      <div class="mdui-typo-body-1-opacity mdui-typo">
+        <span>John Zeng</span>
+        <span> · </span>
+        <span>Sep 19, 2017</span>
+      </div>
+    </div>
+  <div class="flex-spacer"></div>
+    <a href="/2017/09/19/AngularJS中的$log服务/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  </div>
+  <div class="mdui-card-content posts-content">
+    <div class="posts-excerpt">
+      <a href="/2017/09/19/AngularJS中的$log服务/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
+        
+        Angular中的$log服务
+      </a>
+      <div class="posts-strip mdui-typo-body-1">
+        
+
+      </div>
+    </div>
+    <div class="flex-spacer"></div>
+    
+      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_7.png)"></div>
+    
+  </div>
+  
+    <div class="mdui-divider" style="margin: 0 16px;"></div>
+    <div class="posts-bottom">
+      
+        <div class="mdui-chip">
+          <span class="mdui-chip-icon"><i class="mdui-icon
+          
+            mdui-text-color-black-icon
+          
+           material-icons mdui-text-center">&#xe149;</i></span>
+        </div>
+        <div class="content mdui-typo">
+          
+            <a href="/categories/Angular/">
+              <span>Angular</span>
+            </a>
+          
+        </div>
+      
+      
+    </div>
+  
+</div>
+
+
+
+    </div>
+  
+</div>
+
+
+  <ul class="pagination">
+    
+    <li>
+      <a class="mdui-text-color-theme-icon-disabled">
+        <i class="mdui-icon material-icons">&#xe5cb;</i>
+      </a>
+    </li>
+    
+
+    
+      
+        <li class="mdui-color-theme-accent">
+          <a class="mdui-text-color-theme-text">1</a>
+        </li>
+      
+    
+
+    
+
+    
+      
+    
+      
+    
+
+    
+
+    
+      
+    
+      
+    
+
+    
+
+    
+      <li class="mdui-ripple">
+        <a href="/categories/Angular/page/2/" class="mdui-text-color-theme-text">
+          2
+        </a>
+      </li>
+    
+
+    
+      
+        <li class="mdui-ripple">
+          <a href="/categories/Angular/page/2/" class="mdui-text-color-theme-text">
+            <i class="mdui-icon material-icons">&#xe5cc;</i>
+          </a>
+        </li>
+      
+    
+   </ul>
+
+
+
+<button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
+  <i class="mdui-icon material-icons">&#xe5d8;</i>
+</button>
+
+
+</main>
+
+<div id="outdated" style="z-index: 9999;">
+  <h6>你的浏览器一直过气辣！</h6>
+  <p>赶紧升级浏览器来访问本站吧！<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">现在就去</a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="关闭">&times;</a></p>
+</div>
+
+
+
+
+<!-- Import JS -->
+
+  <script>lsloader.load("outdatedbrowser_js","/js/outdatedbrowser.min.js?e/I5uIbdkHHfJGD4oNpMfA==", true)</script>
+
+
+
+    <script>lsloader.load("main_js","/js/js.min.js?7Tw9Ng5ky7PDfky4qwNovg==", true)</script>
+
+
+
+
+
+  
+    <script type="text/ls-javascript" id="global-script">
+  /* appbar button */
+  (function() {
+    var drawer = document.querySelector('#drawer')
+    var drawerBtn = document.querySelector('.drawer-button')
+
+    drawer.addEventListener('open.mdui.drawer', function (e) {
+      drawerBtn.classList.add('back')
+    })
+    drawer.addEventListener('close.mdui.drawer', function (e) {
+      drawerBtn.classList.remove('back')
+    })
+  })();
+
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+  <script type="text/ls-javascript" id="style-changing-script">
+  var content_flag = false;
+  var appbar = document.querySelector('div#blog-appbar')
+  var body = document.querySelector('body')
+
+  window.addEventListener('scroll', function() {
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    var divTop = document.querySelector('div#contentLocation').offsetTop
+    var contentLocation = divTop - scrollTop - 56;
+
+    if (!content_flag && contentLocation < 0 && window.innerWidth < 860) {
+      appbar.classList.add('style-fix');
+      body.classList.remove('style-fix');
+      content_flag = true;
+    } else if (content_flag && contentLocation >= 0 && window.innerWidth < 860) {
+      appbar.classList.remove('style-fix');
+      body.classList.add('style-fix');
+      content_flag = false;
+    };
+  })
+
+  function styleChanging() {
+    var hide = new mdui.Headroom('div#blog-appbar');
+    var windowWidth = window.innerWidth,
+      toLeftWidth = 860;
+    if (windowWidth < toLeftWidth) {
+      hide.enable();
+    } else {
+      hide.disable();
+    }
+  };
+  styleChanging();
+</script>
+
+
+
+
+
+
+  <script type="text/ls-javascript" id="to-top-script">
+  /* fab */
+  (function() {
+    var pageFlag = false;
+    var fab = new mdui.Fab('#toTop');
+    fab.hide();
+    window.addEventListener('scroll', function() {
+      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      var divTop = document.querySelector('div#top').offsetTop
+      var pageLocation = divTop - bodyTop;
+      if (!pageFlag && pageLocation < 0) {
+        fab.show();
+        pageFlag = true;
+      } else if (pageFlag && pageLocation >= 0) {
+        fab.hide();
+        pageFlag = false;
+      }
+    });
+  })();
+</script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<!-- Custom javascript -->
+
+
+<!-- remove diplay:none -->
+<script type="text/ls-javascript" id="html-script">
+  if (document.readyState === 'complete' || document.readyState !== 'loading') {
+    showHTML();
+  } else {
+    document.addEventListener('DOMContentLoaded', showHTML);
+  }
+  function showHTML(){
+    document.querySelector('html').style.display = 'block';
+  }
+</script>
+
+<script>
+  (function(){
+    var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+    for (var i = 0; i < scriptList.length; ++i) {
+      var item = scriptList[i];
+      lsloader.runInlineScript(item.id,item.id);
+    }
+  })()
+  /*! Copyright 2017 Halyul */
+  console.info("%cCopyright © 2017 Halyul\n"+'Theme Version: 1.5.0'+'%c\nhttps://github.com/Halyul/hexo-theme-mdui',"font-size: 14px;color: #3F51B5;","color: #448AFF;text-decoration: none");
+</script>
+
 </body>
+
 </html>
