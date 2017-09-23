@@ -1,4 +1,6 @@
 
+  
+
 <!DOCTYPE html>
 <html  style="display: none;">
 
@@ -21,7 +23,7 @@
   <title>对AJAX的进一步理解 - John Zeng的个人播客</title>
 
   <!-- Favicons -->
-  <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+  <link rel="icon shortcut" type="image/ico" href="/img/xiaoliang.png">
   <link rel="icon" sizes="192x192" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/favicon.png">
 
@@ -32,7 +34,7 @@
   
     <meta name="theme-color" content="
   
-  #3F51B5
+  #795548
   
 
 ">
@@ -77,7 +79,7 @@
   
   
     
-      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?OeEY1DPEWhXQ5nt08XaZcg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-plus.min.css?7M6AHt3uK/iOtUnzPE5kRw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
     
   
 
@@ -100,12 +102,14 @@
 
   
     
-  <body class="mdui-theme-primary-indigo mdui-theme-accent-blue
-   
   
-    mdui-appbar-with-toolbar
+    <body class="mdui-appbar-with-toolbar mdui-theme-primary-brown mdui-theme-accent-red
+    
+    
+      mdui-drawer-body-left
+    
+     drawer-overlay-none" >
   
-  " >
 
 
   
@@ -116,12 +120,10 @@
 
   
 
-  <div class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed animate-appbar" id="blog-appbar">
+  <div class="mdui-appbar mdui-appbar-fixed animate-appbar" id="blog-appbar">
     <div class="mdui-toolbar mdui-color-theme">
-      <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
-        <i class="mdui-icon">
-          <span></span>
-        </i>
+      <button class="mdui-btn mdui-ripple mdui-btn-icon" mdui-drawer="{target: '#drawer'}">
+        <i class="mdui-icon material-icons">&#xe5d2;</i>
       </button>
       
         <a href="/" class="mdui-typo-headline">
@@ -129,282 +131,289 @@
         </a>
       
       
-      
-        <div class="flex-spacer"></div>
-      
-      
-      
-
-    </div>
-  </div>
-
-
-  <div id="search-cover" searchResult onclick="closeSearch()"></div>
-
-
-
-
-
-
-  
-  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
-  " id="drawer" style="z-index: 2001;">
-  <div class="userview" style="background-image: url(/img/bg.png)">
-  <div class="overlay">
-    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
-    <div class="bottom">
-      <div class="info">
-        <div class="author mdui-text-color-white-text">
-          John Zeng
+        <div class="search mdui-hidden-xs" onclick="window.open('/search', '_self');">
+          <div class="icon">
+            <i class="mdui-icon material-icons">&#xe8b6;</i>
+          </div>
+          <div class="text">
+            Search something...
+          </div>
         </div>
-        <div class="slogan mdui-text-color-white-secondary">
-          I&#39;m your slogan!
-        </div>
+      
+      <div class="mdui-toolbar-spacer"></div>
+      
+        <a href="/search" class="mdui-btn mdui-ripple mdui-btn-icon mdui-hidden-sm-up search-button" target="_self"><i class="mdui-icon material-icons">&#xe8b6;</i></a>
+      
+      
+
+      <div class="appbar-userview mdui-valign" mdui-menu="{target: '#menu-userview', covered: false}">
+        <img class="mdui-img-circle appbar-userview-avatar mdui-center" src="/img/xiaoliang.png"/>
       </div>
+      <div class="mdui-menu no-padding mdui-hidden-xs" id="menu-userview">
+  <div class="menu-userview-container">
+    <img class="mdui-img-circle menu-userview-avatar" src="/img/xiaoliang.png"/>
+    <div class="menu-userview-content">
+      <div class="mdui-typo-body-1">John Zeng</div>
+      <div class="mdui-typo-caption">脾气很爆。。。很爆</div>
       <div class="flex-spacer"></div>
       
     </div>
   </div>
 </div>
 
-  <div class="content">
-  <div class="hexo">
+    </div>
+  </div>
+
+
+
+
+
+
+  
+  <div class="mdui-drawer drawer-container
+  " id="drawer" style="z-index: 2001;">
+  <div class="drawer-head mdui-valign mdui-hidden-md-up">
+  <div class="mdui-typo-title-opacity">Title</div>
+  <div class="flex-spacer"></div>
+  <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer-close><i class="mdui-icon material-icons">&#xe314;</i></button>
+</div>
+
+  <div class="mdui-divider"></div>
+  <div class="drawer-content">
     
-      <div class="mdui-list no-padding-bottom">
-        <a href="/">
-          <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
-            <div class="mdui-list-item-content">
-              Index
-            </div>
-          </li>
-        </a>
-      </div>
+  <div class="mdui-list no-padding-bottom">
+    <a href="/">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+        <div class="mdui-list-item-content">
+          Index
+        </div>
+      </li>
+    </a>
+  </div>
+
+
+  <div class="mdui-list no-padding">
+    <a href="/archives">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+        <div class="mdui-list-item-content">
+          Archives
+          <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
+        </div>
+      </li>
+    </a>
+  </div>
+
+
+  <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
     
-    
-      <div class="mdui-list no-padding">
-        <a href="/archives">
-          <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
-            <div class="mdui-list-item-content">
-              Archives
-              <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
-            </div>
-          </li>
-        </a>
-      </div>
-    
-    
-      <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
-        
-          <div class="mdui-collapse-item ">
-            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-              <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-              <div class="mdui-list-item-content">Categories</div>
-              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-            </div>
-            <div class="mdui-collapse-item-body mdui-list">
-              
-                <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  网站搭建
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
-                <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  Angular
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
-                </a>
-              
-                <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  Git
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  RequireJS
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
-                </a>
-              
-                <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  AJAX
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  cookie
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  关于ES5规范
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  javascript
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
-                </a>
-              
-                <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  jQuery源码分析
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-                <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  Requirejs
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
-                <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  JSON
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  jQuery
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  设计模式
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-            </div>
-          </div>
-        
-        
-          <div class="mdui-collapse-item ">
-            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-              <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-              <div class="mdui-list-item-content">Tags</div>
-              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-            </div>
-            <div class="mdui-collapse-item-body mdui-list">
-              
-                <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
-                </a>
-              
-                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  建站技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
-                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  方法总结
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  黑科技
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
-                </a>
-              
-                <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  没事研究来玩的
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
-                </a>
-              
-                <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开大技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发用到的新技术
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-                <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  掉坑里了
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  javascript基础知识
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
-                </a>
-              
-                <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  方法区别
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-                <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  RequireJs中遇到的坑
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  网站性能优化方方面面
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-            </div>
-          </div>
-        
-        <div class="mdui-collapse-item ">
-          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-            <div class="mdui-list-item-content">Years</div>
-            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-          </div>
-          <div class="mdui-collapse-item-body mdui-list">
-            
-            
-              <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
-                2017
-              </a>
-            
-          </div>
+      <div class="mdui-collapse-item ">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+          <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
+          <div class="mdui-list-item-content">Categories</div>
+          <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+        </div>
+        <div class="mdui-collapse-item-body mdui-list">
+          
+            <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
+              网站搭建
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+            </a>
+          
+            <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Angular
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
+            </a>
+          
+            <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Git
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
+              RequireJS
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
+            </a>
+          
+            <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
+              AJAX
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+              cookie
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+              关于ES5规范
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
+              javascript
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
+            </a>
+          
+            <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
+              jQuery源码分析
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+            </a>
+          
+            <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Requirejs
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开发
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开发技巧
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+            </a>
+          
+            <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
+              JSON
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
+              jQuery
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+              设计模式
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+            </a>
+          
         </div>
       </div>
     
+    
+      <div class="mdui-collapse-item ">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+          <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
+          <div class="mdui-list-item-content">Tags</div>
+          <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+        </div>
+        <div class="mdui-collapse-item-body mdui-list">
+          
+            <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开发技巧
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
+            </a>
+          
+            <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+              建站技巧
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+            </a>
+          
+            <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+              方法总结
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
+              黑科技
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+            </a>
+          
+            <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
+              没事研究来玩的
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+            </a>
+          
+            <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开大技巧
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开发用到的新技术
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+            </a>
+          
+            <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
+              掉坑里了
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
+              javascript基础知识
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+            </a>
+          
+            <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
+              方法区别
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+            </a>
+          
+            <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
+              RequireJs中遇到的坑
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
+              网站性能优化方方面面
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+        </div>
+      </div>
+    
+    <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+        <div class="mdui-list-item-content">Years</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        
+        
+          <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
+            2017
+          </a>
+        
+      </div>
+    </div>
   </div>
-  
-</div>
 
-  <div class="flex-spacer"></div>
-  <div class="drawer-footer">
+
+
+    <div style="flex-grow: 1;"></div>
+    <div class="drawer-footer">
   <div class="mdui-typo mdui-typo-caption-opacity">
     Powered by <a href="http://hexo.io">Hexo</a>
     <br />
@@ -427,6 +436,7 @@
   
 </script>
 
+  </div>
 </div>
 
 
@@ -439,9 +449,11 @@
   
 
 
-  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/now/post.min.css?9TmLsksSXsN7apP3A0qy0g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/plus/post.min.css?s2Cy7B+C4HrFgqORHJMv5Q==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
 <style id="lightgallery_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("lightgallery_css","/css/src/lightgallery.min.css?+c5+nzUi2JvkvxweHDf/nA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+  <style id="prism_theme_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prism_theme_css","/css/src/prism-themes/coy.min.css?9udJlAMispjFcAd0Wx6aQw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
 
 <style>
@@ -452,16 +464,8 @@
 <div class="post-warpper animate-post">
   <div class="post-bg-color
     
-      
-        mdui-color-theme
-      
-    
   "></div>
   <div class="post-header
-    
-      
-        mdui-color-theme
-      
     
   ">
     <div class="post-header-container">
@@ -493,7 +497,7 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_41.png"/>
+            <img src="/img/random/picHD_7.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -508,7 +512,7 @@
 <li>如果我们以post方式向服务器发送数据,发送的数据的格式是Request Payload, 服务器绝大多数情况下不会解析接收，服务器会解析接收form data格式的数据.<br> 所以,为了服务器可以正常接收我们post过去的数据.<br> 我们就要将默认的Request Payload格式的数据转换为服务器认识的form data格式的.</li>
 </ul>
 </li>
-<li>如何转form data格式<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhr.setReauestHeader(<span class="string">"content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>)</div><div class="line"><span class="comment">//将post方式发送的数据由默认的Request Payload格式转换为form data</span></div></pre></td></tr></table></figure>
+<li>如何转form data格式<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhr.setReauestHeader(<span class="string">"content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>)</div><div class="line"><span class="comment">//将post方式发送的数据由默认的Request Payload格式转换为form data</span></div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
@@ -521,11 +525,11 @@
 </ul>
 </li>
 <li><p>具体实现：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxGet</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">//1.创建异步对象</span></div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XHLHttpRequest();</div><div class="line"></div><div class="line">        <span class="comment">//2.设置请求的方式和资源的路径</span></div><div class="line">        xhr.open(<span class="string">"get"</span>,<span class="string">"./php/stus.php"</span>);</div><div class="line"></div><div class="line">        <span class="comment">//3.注册事件</span></div><div class="line">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//当xhr异步对象已经拿到了服务器返回的数据</span></div><div class="line">            <span class="comment">//服务器正确处理</span></div><div class="line">            <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//4.发送</span></div><div class="line">        xhr.send();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxPost</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span>  XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"post"</span>,<span class="string">"./php/stus.php"</span>);</div><div class="line">        <span class="comment">//xhr异步对象向服务器请求数据的时候,它有四种状态</span></div><div class="line">        <span class="comment">//onreadystatechange 只要xhr的状态发生了改变就会触发.</span></div><div class="line">        <span class="comment">//准备发送  正在发送  正在接受  接受完成 4</span></div><div class="line">        <span class="comment">//每一种状态都有1个状态码.</span></div><div class="line"></div><div class="line">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        xhr.send();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxGetWithData</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"get"</span>,<span class="string">"./php/get.php?name=jack&amp;age=18"</span>);</div><div class="line">        xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//onload是1个事件: 当xhr的状态变为4的时候触发用了onload事件就不需要判断xhr.readyState == 4</span></div><div class="line">        xhr.send();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxPostWithData</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"post"</span>,<span class="string">"./php/post.php"</span>)</div><div class="line"></div><div class="line">        xhr.setRequsetHeader(<span class="string">"content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line"></div><div class="line">        xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">        xhr.send(<span class="string">"name=admin&amp;pwd=123456"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxGet()"</span>&gt;</span>ajax纯get请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxPost()"</span>&gt;</span>ajax纯post请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxGetWithData()"</span>&gt;</span>get请求带数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxPostWthData()"</span>&gt;</span>post请求带数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxGet</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">//1.创建异步对象</span></div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XHLHttpRequest();</div><div class="line"></div><div class="line">        <span class="comment">//2.设置请求的方式和资源的路径</span></div><div class="line">        xhr.open(<span class="string">"get"</span>,<span class="string">"./php/stus.php"</span>);</div><div class="line"></div><div class="line">        <span class="comment">//3.注册事件</span></div><div class="line">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="comment">//当xhr异步对象已经拿到了服务器返回的数据</span></div><div class="line">            <span class="comment">//服务器正确处理</span></div><div class="line">            <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText)</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//4.发送</span></div><div class="line">        xhr.send();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxPost</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span>  XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"post"</span>,<span class="string">"./php/stus.php"</span>);</div><div class="line">        <span class="comment">//xhr异步对象向服务器请求数据的时候,它有四种状态</span></div><div class="line">        <span class="comment">//onreadystatechange 只要xhr的状态发生了改变就会触发.</span></div><div class="line">        <span class="comment">//准备发送  正在发送  正在接受  接受完成 4</span></div><div class="line">        <span class="comment">//每一种状态都有1个状态码.</span></div><div class="line"></div><div class="line">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        xhr.send();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxGetWithData</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"get"</span>,<span class="string">"./php/get.php?name=jack&amp;age=18"</span>);</div><div class="line">        xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//onload是1个事件: 当xhr的状态变为4的时候触发用了onload事件就不需要判断xhr.readyState == 4</span></div><div class="line">        xhr.send();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajaxPostWithData</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">        xhr.open(<span class="string">"post"</span>,<span class="string">"./php/post.php"</span>)</div><div class="line"></div><div class="line">        xhr.setRequsetHeader(<span class="string">"content-type"</span>,<span class="string">"application/x-www-form-urlencoded"</span>);</div><div class="line"></div><div class="line">        xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">if</span>(xhr.status == <span class="number">200</span>)&#123;</div><div class="line">                <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">        xhr.send(<span class="string">"name=admin&amp;pwd=123456"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></div></figure>
+<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxGet()"</span>&gt;</span>ajax纯get请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxPost()"</span>&gt;</span>ajax纯post请求<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxGetWithData()"</span>&gt;</span>get请求带数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"ajaxPostWthData()"</span>&gt;</span>post请求带数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></div></figure>
 </li>
 <li><p>还有一种改变数据格式的方法：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"./php/xxx.php"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"file"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"./php/xxx.php"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"file"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 
@@ -649,49 +653,17 @@
 
 
   
-    <script type="text/ls-javascript" id="global-script">
-  /* appbar button */
+    <script type="text/ls-javascript" id="back-button-script">
+  /* back button */
   (function() {
-    var drawer = document.querySelector('#drawer')
-    var drawerBtn = document.querySelector('.drawer-button')
-
-    drawer.addEventListener('open.mdui.drawer', function (e) {
-      drawerBtn.classList.add('back')
-    })
-    drawer.addEventListener('close.mdui.drawer', function (e) {
-      drawerBtn.classList.remove('back')
-    })
-  })();
-
-  
-</script>
-
-
-  <script type="text/ls-javascript" id="appbar-script">
-  /* post appbar */
-  (function() {
-    var pageFlag = false;
-    var appbar = new mdui.Headroom('#blog-appbar');
-    appbar.disable();
-    var toolbar = document.querySelector('#blog-appbar .mdui-toolbar')
-
-    window.addEventListener('scroll', function() {
-      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-      var divTop = document.querySelector('div#top').offsetTop
-
-      var pageLocation = divTop - bodyTop;
-      if (!pageFlag && pageLocation < 0) {
-        toolbar.classList.add('mdui-shadow-2')
-        appbar.enable();
-        pageFlag = true;
-      } else if (pageFlag && pageLocation >= 0) {
-        toolbar.classList.remove('mdui-shadow-2')
-        appbar.disable();
-        pageFlag = false;
-      }
+    var backBtn = document.querySelector('button[back]')
+    if (backBtn !== null)
+    backBtn.addEventListener('click', function() {
+        window.history.back();
     })
   })();
 </script>
+
 
   <script type="text/ls-javascript" id="toc-active-script">
   if (document.querySelector('ul#menu-toc > ol') !== null && document.querySelector('div#card-toc > ul') !== null) {
@@ -789,8 +761,6 @@
   
 
   
-
-
 
 
 

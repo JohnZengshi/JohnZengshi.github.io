@@ -1,4 +1,6 @@
 
+  
+
 <!DOCTYPE html>
 <html  style="display: none;">
 
@@ -21,7 +23,7 @@
   <title>上下文调用模式 - John Zeng的个人播客</title>
 
   <!-- Favicons -->
-  <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+  <link rel="icon shortcut" type="image/ico" href="/img/xiaoliang.png">
   <link rel="icon" sizes="192x192" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/favicon.png">
 
@@ -32,7 +34,7 @@
   
     <meta name="theme-color" content="
   
-  #3F51B5
+  #FF5722
   
 
 ">
@@ -77,7 +79,7 @@
   
   
     
-      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?OeEY1DPEWhXQ5nt08XaZcg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-plus.min.css?7M6AHt3uK/iOtUnzPE5kRw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
     
   
 
@@ -100,12 +102,14 @@
 
   
     
-  <body class="mdui-theme-primary-indigo mdui-theme-accent-blue
-   
   
-    mdui-appbar-with-toolbar
+    <body class="mdui-appbar-with-toolbar mdui-theme-primary-deep-orange mdui-theme-accent-blue
+    
+    
+      mdui-drawer-body-left
+    
+     drawer-overlay-none" >
   
-  " >
 
 
   
@@ -116,12 +120,10 @@
 
   
 
-  <div class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed animate-appbar" id="blog-appbar">
+  <div class="mdui-appbar mdui-appbar-fixed animate-appbar" id="blog-appbar">
     <div class="mdui-toolbar mdui-color-theme">
-      <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
-        <i class="mdui-icon">
-          <span></span>
-        </i>
+      <button class="mdui-btn mdui-ripple mdui-btn-icon" mdui-drawer="{target: '#drawer'}">
+        <i class="mdui-icon material-icons">&#xe5d2;</i>
       </button>
       
         <a href="/" class="mdui-typo-headline">
@@ -129,282 +131,289 @@
         </a>
       
       
-      
-        <div class="flex-spacer"></div>
-      
-      
-      
-
-    </div>
-  </div>
-
-
-  <div id="search-cover" searchResult onclick="closeSearch()"></div>
-
-
-
-
-
-
-  
-  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
-  " id="drawer" style="z-index: 2001;">
-  <div class="userview" style="background-image: url(/img/bg.png)">
-  <div class="overlay">
-    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
-    <div class="bottom">
-      <div class="info">
-        <div class="author mdui-text-color-white-text">
-          John Zeng
+        <div class="search mdui-hidden-xs" onclick="window.open('/search', '_self');">
+          <div class="icon">
+            <i class="mdui-icon material-icons">&#xe8b6;</i>
+          </div>
+          <div class="text">
+            Search something...
+          </div>
         </div>
-        <div class="slogan mdui-text-color-white-secondary">
-          I&#39;m your slogan!
-        </div>
+      
+      <div class="mdui-toolbar-spacer"></div>
+      
+        <a href="/search" class="mdui-btn mdui-ripple mdui-btn-icon mdui-hidden-sm-up search-button" target="_self"><i class="mdui-icon material-icons">&#xe8b6;</i></a>
+      
+      
+
+      <div class="appbar-userview mdui-valign" mdui-menu="{target: '#menu-userview', covered: false}">
+        <img class="mdui-img-circle appbar-userview-avatar mdui-center" src="/img/xiaoliang.png"/>
       </div>
+      <div class="mdui-menu no-padding mdui-hidden-xs" id="menu-userview">
+  <div class="menu-userview-container">
+    <img class="mdui-img-circle menu-userview-avatar" src="/img/xiaoliang.png"/>
+    <div class="menu-userview-content">
+      <div class="mdui-typo-body-1">John Zeng</div>
+      <div class="mdui-typo-caption">脾气很爆。。。很爆</div>
       <div class="flex-spacer"></div>
       
     </div>
   </div>
 </div>
 
-  <div class="content">
-  <div class="hexo">
+    </div>
+  </div>
+
+
+
+
+
+
+  
+  <div class="mdui-drawer drawer-container
+  " id="drawer" style="z-index: 2001;">
+  <div class="drawer-head mdui-valign mdui-hidden-md-up">
+  <div class="mdui-typo-title-opacity">Title</div>
+  <div class="flex-spacer"></div>
+  <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer-close><i class="mdui-icon material-icons">&#xe314;</i></button>
+</div>
+
+  <div class="mdui-divider"></div>
+  <div class="drawer-content">
     
-      <div class="mdui-list no-padding-bottom">
-        <a href="/">
-          <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
-            <div class="mdui-list-item-content">
-              Index
-            </div>
-          </li>
-        </a>
-      </div>
+  <div class="mdui-list no-padding-bottom">
+    <a href="/">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+        <div class="mdui-list-item-content">
+          Index
+        </div>
+      </li>
+    </a>
+  </div>
+
+
+  <div class="mdui-list no-padding">
+    <a href="/archives">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+        <div class="mdui-list-item-content">
+          Archives
+          <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
+        </div>
+      </li>
+    </a>
+  </div>
+
+
+  <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
     
-    
-      <div class="mdui-list no-padding">
-        <a href="/archives">
-          <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
-            <div class="mdui-list-item-content">
-              Archives
-              <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
-            </div>
-          </li>
-        </a>
-      </div>
-    
-    
-      <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
-        
-          <div class="mdui-collapse-item ">
-            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-              <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-              <div class="mdui-list-item-content">Categories</div>
-              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-            </div>
-            <div class="mdui-collapse-item-body mdui-list">
-              
-                <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  网站搭建
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
-                <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  Angular
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
-                </a>
-              
-                <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  Git
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  RequireJS
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
-                </a>
-              
-                <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  AJAX
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  cookie
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  关于ES5规范
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  javascript
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
-                </a>
-              
-                <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  jQuery源码分析
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-                <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  Requirejs
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
-                <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  JSON
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  jQuery
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  设计模式
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-            </div>
-          </div>
-        
-        
-          <div class="mdui-collapse-item ">
-            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-              <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-              <div class="mdui-list-item-content">Tags</div>
-              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-            </div>
-            <div class="mdui-collapse-item-body mdui-list">
-              
-                <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
-                </a>
-              
-                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  建站技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
-                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  方法总结
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  黑科技
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
-                </a>
-              
-                <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  没事研究来玩的
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
-                </a>
-              
-                <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开大技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发用到的新技术
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-                <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  掉坑里了
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  javascript基础知识
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
-                </a>
-              
-                <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  方法区别
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-                <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  RequireJs中遇到的坑
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  网站性能优化方方面面
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-            </div>
-          </div>
-        
-        <div class="mdui-collapse-item ">
-          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-            <div class="mdui-list-item-content">Years</div>
-            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-          </div>
-          <div class="mdui-collapse-item-body mdui-list">
-            
-            
-              <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
-                2017
-              </a>
-            
-          </div>
+      <div class="mdui-collapse-item ">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+          <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
+          <div class="mdui-list-item-content">Categories</div>
+          <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+        </div>
+        <div class="mdui-collapse-item-body mdui-list">
+          
+            <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
+              网站搭建
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+            </a>
+          
+            <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Angular
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
+            </a>
+          
+            <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Git
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
+              RequireJS
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
+            </a>
+          
+            <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
+              AJAX
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+              cookie
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+              关于ES5规范
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
+              javascript
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
+            </a>
+          
+            <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
+              jQuery源码分析
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+            </a>
+          
+            <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Requirejs
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开发
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开发技巧
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+            </a>
+          
+            <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
+              JSON
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
+              jQuery
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+              设计模式
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+            </a>
+          
         </div>
       </div>
     
+    
+      <div class="mdui-collapse-item ">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+          <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
+          <div class="mdui-list-item-content">Tags</div>
+          <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+        </div>
+        <div class="mdui-collapse-item-body mdui-list">
+          
+            <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开发技巧
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
+            </a>
+          
+            <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+              建站技巧
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+            </a>
+          
+            <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
+              方法总结
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
+              黑科技
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+            </a>
+          
+            <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
+              没事研究来玩的
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+            </a>
+          
+            <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开大技巧
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
+              开发用到的新技术
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+            </a>
+          
+            <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
+              掉坑里了
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
+              javascript基础知识
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
+            </a>
+          
+            <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
+              方法区别
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+            </a>
+          
+            <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
+              RequireJs中遇到的坑
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
+              网站性能优化方方面面
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+        </div>
+      </div>
+    
+    <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+        <div class="mdui-list-item-content">Years</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list">
+        
+        
+          <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
+            2017
+          </a>
+        
+      </div>
+    </div>
   </div>
-  
-</div>
 
-  <div class="flex-spacer"></div>
-  <div class="drawer-footer">
+
+
+    <div style="flex-grow: 1;"></div>
+    <div class="drawer-footer">
   <div class="mdui-typo mdui-typo-caption-opacity">
     Powered by <a href="http://hexo.io">Hexo</a>
     <br />
@@ -427,6 +436,7 @@
   
 </script>
 
+  </div>
 </div>
 
 
@@ -439,9 +449,11 @@
   
 
 
-  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/now/post.min.css?9TmLsksSXsN7apP3A0qy0g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/plus/post.min.css?s2Cy7B+C4HrFgqORHJMv5Q==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
 <style id="lightgallery_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("lightgallery_css","/css/src/lightgallery.min.css?+c5+nzUi2JvkvxweHDf/nA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+  <style id="prism_theme_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prism_theme_css","/css/src/prism-themes/coy.min.css?9udJlAMispjFcAd0Wx6aQw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
 
 <style>
@@ -452,16 +464,8 @@
 <div class="post-warpper animate-post">
   <div class="post-bg-color
     
-      
-        mdui-color-theme
-      
-    
   "></div>
   <div class="post-header
-    
-      
-        mdui-color-theme
-      
     
   ">
     <div class="post-header-container">
@@ -497,36 +501,36 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_33.png"/>
+            <img src="/img/random/picHD_17.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
           <blockquote>
 <h2 id="调用方式1-函数调用"><a href="#调用方式1-函数调用" class="headerlink" title="调用方式1 函数调用"></a>调用方式1 函数调用</h2></blockquote>
 <ul>
-<li><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'test 调用了'</span>);</div><div class="line">    <span class="built_in">console</span>.log(argument);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
+<li><figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'test 调用了'</span>);</div><div class="line">    <span class="built_in">console</span>.log(argument);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 <blockquote>
 <h2 id="调用方式2-call方法调用"><a href="#调用方式2-call方法调用" class="headerlink" title="调用方式2 call方法调用"></a>调用方式2 call方法调用</h2></blockquote>
 <ul>
-<li>动态改变this  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：...参数n 传递给函数的实参</div><div class="line"></div><div class="line">test.call(&#123;<span class="attr">name</span>:<span class="string">'jack'</span>,<span class="attr">skill</span>:<span class="string">'jump'</span>&#125;,<span class="string">'rose'</span>,<span class="string">'john'</span>)</div><div class="line"><span class="comment">//(调用一个对象的一个方法，以另一个对象替换当前对象,即调用上面test的方法)</span></div></pre></td></tr></table></figure>
+<li>动态改变this  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：...参数n 传递给函数的实参</div><div class="line"></div><div class="line">test.call(&#123;<span class="attr">name</span>:<span class="string">'jack'</span>,<span class="attr">skill</span>:<span class="string">'jump'</span>&#125;,<span class="string">'rose'</span>,<span class="string">'john'</span>)</div><div class="line"><span class="comment">//(调用一个对象的一个方法，以另一个对象替换当前对象,即调用上面test的方法)</span></div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 <blockquote>
 <h2 id="调用方式3-apply方法调用"><a href="#调用方式3-apply方法调用" class="headerlink" title="调用方式3 apply方法调用"></a>调用方式3 apply方法调用</h2></blockquote>
 <ul>
-<li>也可以动态的改变this  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：传入一个数组(或伪数组)传递给函数</div><div class="line"></div><div class="line">test.apply(&#123;<span class="attr">name</span>:<span class="string">'rose'</span>,<span class="attr">skill</span>:<span class="string">'swim'</span>&#125;,&#123;<span class="number">0</span>:<span class="string">'jack'</span>,<span class="number">1</span>:<span class="string">'rose'</span>,<span class="attr">length</span>:<span class="number">1</span>&#125;)</div><div class="line"><span class="comment">//与call差不多</span></div></pre></td></tr></table></figure>
+<li>也可以动态的改变this  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：传入一个数组(或伪数组)传递给函数</div><div class="line"></div><div class="line">test.apply(&#123;<span class="attr">name</span>:<span class="string">'rose'</span>,<span class="attr">skill</span>:<span class="string">'swim'</span>&#125;,&#123;<span class="number">0</span>:<span class="string">'jack'</span>,<span class="number">1</span>:<span class="string">'rose'</span>,<span class="attr">length</span>:<span class="number">1</span>&#125;)</div><div class="line"><span class="comment">//与call差不多</span></div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 <blockquote>
 <h2 id="call和apply的区别："><a href="#call和apply的区别：" class="headerlink" title="call和apply的区别："></a>call和apply的区别：</h2></blockquote>
 <ul>
 <li><p>call方法从第二个参数开始可以接受任意的参数，每个参数会映射到相应位置的func的参数，可以通过参数名调用，但是如果所有参数作为数组传入，他会作为一个整个映射到func对应的第一个参数，之后参数都会为空：</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b,c</span>)</span>&#123;&#125;</div><div class="line"></div><div class="line">func.call(obj,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line"><span class="comment">//function接收到的参数为1,2,3</span></div><div class="line"></div><div class="line">func.call(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</div><div class="line"><span class="comment">//funvtion接收到的参数为[1,2,3],untifined,untifined</span></div></pre></td></tr></table></figure>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b,c</span>)</span>&#123;&#125;</div><div class="line"></div><div class="line">func.call(obj,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line"><span class="comment">//function接收到的参数为1,2,3</span></div><div class="line"></div><div class="line">func.call(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</div><div class="line"><span class="comment">//funvtion接收到的参数为[1,2,3],untifined,untifined</span></div></pre></td></tr></table></div></figure>
 </li>
 <li><p>apply方法最多只有两个参数，第二个参数接受的只能是数组或伪数组，并传入到func对应的参数上</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">func.apply(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line"><span class="comment">//function接受到的实际参数是1,2,3</span></div><div class="line"></div><div class="line">func.apply(obj,&#123;<span class="number">0</span>:<span class="number">1</span>,<span class="number">1</span>:<span class="number">2</span>,<span class="number">2</span>:<span class="number">3</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;)</div><div class="line"><span class="comment">//function接收到的参数实际上是1,2,3</span></div></pre></td></tr></table></figure></li>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">func.apply(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line"><span class="comment">//function接受到的实际参数是1,2,3</span></div><div class="line"></div><div class="line">func.apply(obj,&#123;<span class="number">0</span>:<span class="number">1</span>,<span class="number">1</span>:<span class="number">2</span>,<span class="number">2</span>:<span class="number">3</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;)</div><div class="line"><span class="comment">//function接收到的参数实际上是1,2,3</span></div></pre></td></tr></table></div></figure></li>
 </ul>
 
         </div>
@@ -660,49 +664,17 @@
 
 
   
-    <script type="text/ls-javascript" id="global-script">
-  /* appbar button */
+    <script type="text/ls-javascript" id="back-button-script">
+  /* back button */
   (function() {
-    var drawer = document.querySelector('#drawer')
-    var drawerBtn = document.querySelector('.drawer-button')
-
-    drawer.addEventListener('open.mdui.drawer', function (e) {
-      drawerBtn.classList.add('back')
-    })
-    drawer.addEventListener('close.mdui.drawer', function (e) {
-      drawerBtn.classList.remove('back')
-    })
-  })();
-
-  
-</script>
-
-
-  <script type="text/ls-javascript" id="appbar-script">
-  /* post appbar */
-  (function() {
-    var pageFlag = false;
-    var appbar = new mdui.Headroom('#blog-appbar');
-    appbar.disable();
-    var toolbar = document.querySelector('#blog-appbar .mdui-toolbar')
-
-    window.addEventListener('scroll', function() {
-      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-      var divTop = document.querySelector('div#top').offsetTop
-
-      var pageLocation = divTop - bodyTop;
-      if (!pageFlag && pageLocation < 0) {
-        toolbar.classList.add('mdui-shadow-2')
-        appbar.enable();
-        pageFlag = true;
-      } else if (pageFlag && pageLocation >= 0) {
-        toolbar.classList.remove('mdui-shadow-2')
-        appbar.disable();
-        pageFlag = false;
-      }
+    var backBtn = document.querySelector('button[back]')
+    if (backBtn !== null)
+    backBtn.addEventListener('click', function() {
+        window.history.back();
     })
   })();
 </script>
+
 
   <script type="text/ls-javascript" id="toc-active-script">
   if (document.querySelector('ul#menu-toc > ol') !== null && document.querySelector('div#card-toc > ul') !== null) {
@@ -800,8 +772,6 @@
   
 
   
-
-
 
 
 
