@@ -1,1 +1,682 @@
-<!DOCTYPE html><html class="index" lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="John Zeng"><link rel="alternative" href="/atom.xml" title="John Zeng的个人播客" type="application/atom+xml"><link rel="icon" href="/favicon.png"><title>John Zeng的个人播客</title><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css"><!--[if lt IE 9]><script>(function(a,b){a="abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video".split(" ");for(b=a.length-1;b>=0;b--)document.createElement(a[b])})()</script><![endif]--><script src="/js/jquery-3.1.1.min.js"></script><script src="/js/fancybox/jquery.fancybox.min.js"></script></head><body>   <div class="hide" id="particles-oli-wrapper"></div><div class="index-wrapper"><header class="head index hide"><h1 class="head-title u-fl">John Zeng的个人播客</h1><nav class="head-nav u-fr"><ul class="head-nav__list"><li class="head-nav__item"><a class="head-nav__link" href="/archives">カタログ/（目录）</a></li></ul></nav></header></div><script src="/js/particles.min.js"></script><script src="/js/particles.oli.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/page/4/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">John Zeng的个人播客</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<header class="intro-header" style="background-image: url('/')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                <div class="site-heading">
+                    <h1>John Zeng的个人播客</h1>
+                    <!--<hr class="small">-->
+                    <span class="subheading"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/ajax的优缺点/">
+        <h2 class="post-title">
+            ajax的优缺点
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+ajax的优缺点
+优点：
+异步刷新==&gt;实现页面局部刷新==&gt;只刷新一部分内容
+减少了资源的重复加载
+1.页面的响应速度有一定的提升(提升了用户体验)
+2.降低了服务器的压力(最重要的一点)
+
+
+
+缺点
+不能跨域 ==&gt;现在有了一些跨域的手段：jsonp/方向代理/window.name
+对SEO不友好  (SEO:搜索引擎优化)
+百度如何收录网站？
+网络爬虫搜索某个网站......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/事件触发的时候，弹出模态框时的处理/">
+        <h2 class="post-title">
+            事件触发的时候，弹出模态框
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+事件触发的时候，弹出模态框
+
+先准备一个模态框的模板
+使用text插件获取模板内容
+把该内容放到页面中，并且以模态框的形式呈现出来，绑定hidden.bs.modal事件在事件中删除模态框
+
+点击提交，把数据提交到服务器中
+
+a.把同步的表单作为异步的表单(页面整个刷新–》局部刷新)
+给表单绑定submit事件，通过事件回调函数的形参e：e.preventDefault();
+
+
+b.获取......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/es5之前要获取当前函数本身/">
+        <h2 class="post-title">
+            es5之前要获取当前函数本身
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+es5之前要获取当前函数本身，可以在函数体内部通过arguments.callee
+
+es5规定了严格模式，严格模式中禁止使用callee/caller
+
+在严格模式下面如何获取当前函数？
+
+
+12345678910111213(function fn()&#123;    //fn是一个"特殊的名字",这个名字在外界访问不是一个函数名，在函数体内部访问就指向函数本身&#125;)()``......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/cookie的用途/">
+        <h2 class="post-title">
+            cookie的用途
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+cookie的用途
+
+保存一些使用多个页面访问的数据（&gt;=2个页面）
+
+不能保存一些有效性很高的数据，比如：表格数据
+可以保存当前用户登录的信息：比如用户名，id,用户头像等
+
+
+不能保存安全性较高的数据
+
+不能保存密码
+甚至在一些安全性做的比较好的网站中，通过http请求发送密码的时候，会浏览器端进行加密，然后加密传输；在服务器中进行加密，加密存储在数据库中
+
+
+保存数据的大小也有......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/网站性能优化方方面面之闭包实现模块化的坏处/">
+        <h2 class="post-title">
+            闭包实现模块化的坏处(网站性能优化)
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+闭包实现模块化的坏处？
+
+闭包实现模块化并没有规定一个文件就是一个模块，一个文件会有多个模块，无数个文件要去找某个模块比较麻烦。
+随着功能的增加，编写了无数各模块，就至少会有无数个模块的入口（全局变量），会导致全局变量污染。
+模块依赖：减少了页面对于无数个js文件的引用，引用文件太多，会影响网页性能（首屏加载）
+使用requireJS之后，会根据你实现的功能，按需加载指定的模块。也就提高了......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/设计模式：模块模式/">
+        <h2 class="post-title">
+            设计模式：模块模式
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+模块化–&gt;设计模式：模块模式
+1234567891011var modal = (function()&#123;    var total = XXX    return &#123;        fn1:function()&#123;        &#125;,        fn2:function()&#123;                    &#125;   ......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/if()括号内的数据类型的转换/">
+        <h2 class="post-title">
+            if()括号内的数据类型的转换
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为：
+
+
+
+数据类型
+转换为true
+转换为false
+
+
+
+
+boolean
+true
+false
+
+
+String
+任何非空字符串
+空字符串
+
+
+Number
+任何非零数字值
+0和NaN
+
+
+Object
+任何对象
+null
+
+
+Unde......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/javascript常用内置对象总结/">
+        <h2 class="post-title">
+            javascript常用内置对象总结
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+javascript常用内置对象总结(重要)
+
+Date
+
+属性：
+  12constructor  所建立对象的函数参考prototype       能够为对象加入的属性和方法
+
+方法：
+  12345678910111213141516171819202122232425262728293031323334353637383940414243getDay()        返回一周中......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/上下文调用模式(call和apply的区别）/">
+        <h2 class="post-title">
+            上下文调用模式
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+调用方式1 函数调用
+
+123456function test()&#123;    console.log(this);    console.log('test 调用了');    console.log(argument);&#125;test();
+
+
+
+调用方式2 call方法调用
+
+动态改变this  12345参数1：this是要替换test的对象参数2：...参数n 传递给......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/09/20/HTTP 状态码知道哪些？/">
+        <h2 class="post-title">
+            HTTP 状态码知道哪些？
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+HTTP 状态码知道哪些？
+
+100 Continue 继续，一般在发送post请求时，已发送了 http header 之后服务端将返回此信息，表示确认，之后发送具体参数信息
+
+200 OK 正常返回信息
+
+201 Created 请求成功并且服务器创建了新资源
+
+202 Accepted 服务器已接收请求，但未处理
+
+301 Moved Permanently 请求的网页以永久移动到新......
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by John Zeng on
+        2017-09-20
+    </p>
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+        <li class="previous">
+            <a href="/page/3/">&larr; Newer Posts</a>
+        </li>
+    
+    
+        <li class="next">
+            <a href="/page/5/">Older Posts &rarr;</a>
+        </li>
+    
+</ul>
+
+
+
+                <!-- 如果开启评论功能 -->
+                
+
+            </div>
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-3 col-lg-offset-0
+                col-md-3 col-md-offset-0
+                col-sm-12
+                col-xs-12
+                sidebar-container
+            ">
+                <!-- Featured Tags -->
+                
+
+                <!-- Short About -->
+                <section class="visible-md visible-lg">
+                    <hr><h5><a href="/about/">ABOUT ME</a></h5>
+                    <div class="short-about">
+
+                        
+
+                        
+
+                        <!-- SNS Link -->
+                        <ul class="list-inline">
+                            
+                            
+                            
+
+                            
+
+                            
+
+                            
+                            
+                            
+                            
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Friends Blog -->
+                
+            </div>
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; John Zeng的个人播客 2017 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
