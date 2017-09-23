@@ -175,7 +175,7 @@
           <li class="mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
             <div class="mdui-list-item-content">
-              首页
+              Index
             </div>
           </li>
         </a>
@@ -187,7 +187,7 @@
           <li class="mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
             <div class="mdui-list-item-content">
-              归档
+              Archives
               <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
             </div>
           </li>
@@ -200,7 +200,7 @@
           <div class="mdui-collapse-item ">
             <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
               <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-              <div class="mdui-list-item-content">分类</div>
+              <div class="mdui-list-item-content">Categories</div>
               <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
@@ -235,14 +235,14 @@
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  cookie
+                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  关于ES5规范
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  关于ES5规范
+                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  cookie
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
@@ -302,7 +302,7 @@
           <div class="mdui-collapse-item ">
             <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
               <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-              <div class="mdui-list-item-content">标签</div>
+              <div class="mdui-list-item-content">Tags</div>
               <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
@@ -385,7 +385,7 @@
         <div class="mdui-collapse-item ">
           <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-            <div class="mdui-list-item-content">年份</div>
+            <div class="mdui-list-item-content">Years</div>
             <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
           </div>
           <div class="mdui-collapse-item-body mdui-list">
@@ -468,7 +468,7 @@
       <div class="post-title mdui-text-truncate">AngularJS中的$http服务</div>
       <div class="post-actions mdui-valign">
         <div>
-          <span>编写时间：</span>
+          <span>Posted: </span>
           <span style="float: right">Sep 20, 2017</span>
           
         </div>
@@ -485,15 +485,15 @@
     <div class="post-adjust">
       <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
         <div class="warning">
-          这篇文章最后修改于
+          This article was last modified
           <span id="content-warning"></span>
-          天之前。
-          本页内容可能已经过时！
+          days ago.
+          The content of this post may be outdated!
         </div>
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_8.png"/>
+            <img src="/img/random/picHD_21.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -503,15 +503,15 @@
 <li><p>$http服务,ng封装的一个ajax请求工具.</p>
 </li>
 <li><p>使用$http服务.</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">$http(&#123;</div><div class="line">    <span class="comment">//一个对象</span></div><div class="line">    <span class="comment">//通过对象的键值对来指定请求的参数</span></div><div class="line"></div><div class="line">    url:  <span class="comment">//指定要请求的资源的路径.</span></div><div class="line">    method:  <span class="comment">//指定请求的方式 get/post 默认是get</span></div><div class="line">    params: &#123;&#125;  <span class="comment">//当请求方式是get的时候,发送的数据要以键值对的形式存储在这个对象中.</span></div><div class="line">    data: <span class="string">""</span> <span class="comment">//字符串. 当请求的方式是post的时候,发送的数据要存储在这个属性中.</span></div><div class="line">    headers: &#123;&#125;  <span class="comment">//设置请求头.转换formData格式</span></div><div class="line"></div><div class="line">    <span class="comment">//当请求方式是post的时候,发送的数据的格式ng底层并没有帮我们转换,所以,需要我们手动的加请求头转换formData格式</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//通过链式编程的方式点1个then方法出来.</span></div><div class="line">    <span class="number">1.</span>传入两个回调.</div><div class="line">    <span class="number">2.</span>第<span class="number">1</span>个回调:在请求成功的时候执行. 有<span class="number">1</span>个参数(response)</div><div class="line">    <span class="number">3.</span>response 代表服务器返回的数据。</div><div class="line">    <span class="number">4.</span>response.data可以拿到服务器返回的真正的数据.</div><div class="line">    <span class="number">5.</span>第<span class="number">2</span>个回调:在请求失败的时候执行.</div></pre></td></tr></table></figure>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">$http(&#123;</div><div class="line">    <span class="comment">//一个对象</span></div><div class="line">    <span class="comment">//通过对象的键值对来指定请求的参数</span></div><div class="line"></div><div class="line">    url:  <span class="comment">//指定要请求的资源的路径.</span></div><div class="line">    method:  <span class="comment">//指定请求的方式 get/post 默认是get</span></div><div class="line">    params: &#123;&#125;  <span class="comment">//当请求方式是get的时候,发送的数据要以键值对的形式存储在这个对象中.</span></div><div class="line">    data: <span class="string">""</span> <span class="comment">//字符串. 当请求的方式是post的时候,发送的数据要存储在这个属性中.</span></div><div class="line">    headers: &#123;&#125;  <span class="comment">//设置请求头.转换formData格式</span></div><div class="line"></div><div class="line">    <span class="comment">//当请求方式是post的时候,发送的数据的格式ng底层并没有帮我们转换,所以,需要我们手动的加请求头转换formData格式</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//通过链式编程的方式点1个then方法出来.</span></div><div class="line">    <span class="number">1.</span>传入两个回调.</div><div class="line">    <span class="number">2.</span>第<span class="number">1</span>个回调:在请求成功的时候执行. 有<span class="number">1</span>个参数(response)</div><div class="line">    <span class="number">3.</span>response 代表服务器返回的数据。</div><div class="line">    <span class="number">4.</span>response.data可以拿到服务器返回的真正的数据.</div><div class="line">    <span class="number">5.</span>第<span class="number">2</span>个回调:在请求失败的时候执行.</div></pre></td></tr></table></div></figure>
 </li>
 <li><p>具体实现：</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</div><div class="line">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$http"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$http</span>)</span>&#123;</div><div class="line">        $scope.httpGet = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"get"</span>,</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//不带数据Get请求</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpPost = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"post"</span>,</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(respon.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line">            </div><div class="line">            <span class="comment">//不带数据post请求</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpGetWithData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"get"</span>,</div><div class="line">                params:&#123;</div><div class="line">                    name:<span class="string">"jack"</span>,</div><div class="line">                    pwd:<span class="string">"123456"</span></div><div class="line">                &#125;</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//带数据Get请求发送</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpPostWithData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"post"</span>,</div><div class="line">                data:<span class="string">"?name='jack'&amp;pwd=1234"</span>,</div><div class="line">                headers:&#123;</div><div class="line">                    <span class="string">"Content-Type"</span>:<span class="string">"application/x-www-form-urlencoded"</span></div><div class="line">                &#125;</div><div class="line">            &#125;.then(funciton(response)&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//带数据post请求发送</span></div><div class="line">        &#125;</div><div class="line">    &#125;])</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</div><div class="line">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$http"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$http</span>)</span>&#123;</div><div class="line">        $scope.httpGet = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"get"</span>,</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//不带数据Get请求</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpPost = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"post"</span>,</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(respon.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line">            </div><div class="line">            <span class="comment">//不带数据post请求</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpGetWithData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"get"</span>,</div><div class="line">                params:&#123;</div><div class="line">                    name:<span class="string">"jack"</span>,</div><div class="line">                    pwd:<span class="string">"123456"</span></div><div class="line">                &#125;</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//带数据Get请求发送</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpPostWithData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"post"</span>,</div><div class="line">                data:<span class="string">"?name='jack'&amp;pwd=1234"</span>,</div><div class="line">                headers:&#123;</div><div class="line">                    <span class="string">"Content-Type"</span>:<span class="string">"application/x-www-form-urlencoded"</span></div><div class="line">                &#125;</div><div class="line">            &#125;.then(funciton(response)&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//带数据post请求发送</span></div><div class="line">        &#125;</div><div class="line">    &#125;])</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></div></figure>
 </li>
 <li><p>利用$http进行跨域请求：</p>
 <ul>
 <li>只需要将method设置为jsonp就可以</li>
-<li>在发起跨域之前，需要设置一个白名单<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"demoCtrl"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>, []);</span></div><div class="line"><span class="javascript">        app.config([<span class="string">'$sceDelegateProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$sceDelegateProvider</span>) </span>&#123;</span></div><div class="line"><span class="undefined">            </span></div><div class="line"><span class="javascript">            <span class="comment">// 设置跨域白名单</span></span></div><div class="line"><span class="javascript">            $sceDelegateProvider.resourceUrlWhitelist([<span class="string">"https://api.asilu.com/weather/"</span>]);</span></div><div class="line"><span class="undefined">        &#125;])</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="javascript">        app.controller(<span class="string">"demoCtrl"</span>, [<span class="string">"$scope"</span>, <span class="string">"$http"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, $http</span>) </span>&#123;</span></div><div class="line"><span class="undefined">            $http(&#123;</span></div><div class="line"><span class="javascript">                url: <span class="string">"https://api.asilu.com/weather/"</span>,</span></div><div class="line"><span class="undefined">                params: &#123;</span></div><div class="line"><span class="javascript">                    city: <span class="string">"深圳"</span></span></div><div class="line"><span class="undefined">                &#125;,</span></div><div class="line"><span class="javascript">                method: <span class="string">"jsonp"</span></span></div><div class="line"><span class="javascript">            &#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span></div><div class="line"><span class="javascript">                <span class="built_in">console</span>.log(response.data);</span></div><div class="line"><span class="undefined">            &#125;);</span></div><div class="line"><span class="undefined">        &#125;]);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></li>
+<li>在发起跨域之前，需要设置一个白名单<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"demoCtrl"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>, []);</span></div><div class="line"><span class="javascript">        app.config([<span class="string">'$sceDelegateProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$sceDelegateProvider</span>) </span>&#123;</span></div><div class="line"><span class="undefined">            </span></div><div class="line"><span class="javascript">            <span class="comment">// 设置跨域白名单</span></span></div><div class="line"><span class="javascript">            $sceDelegateProvider.resourceUrlWhitelist([<span class="string">"https://api.asilu.com/weather/"</span>]);</span></div><div class="line"><span class="undefined">        &#125;])</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="javascript">        app.controller(<span class="string">"demoCtrl"</span>, [<span class="string">"$scope"</span>, <span class="string">"$http"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, $http</span>) </span>&#123;</span></div><div class="line"><span class="undefined">            $http(&#123;</span></div><div class="line"><span class="javascript">                url: <span class="string">"https://api.asilu.com/weather/"</span>,</span></div><div class="line"><span class="undefined">                params: &#123;</span></div><div class="line"><span class="javascript">                    city: <span class="string">"深圳"</span></span></div><div class="line"><span class="undefined">                &#125;,</span></div><div class="line"><span class="javascript">                method: <span class="string">"jsonp"</span></span></div><div class="line"><span class="javascript">            &#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span></div><div class="line"><span class="javascript">                <span class="built_in">console</span>.log(response.data);</span></div><div class="line"><span class="undefined">            &#125;);</span></div><div class="line"><span class="undefined">        &#125;]);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></div></figure></li>
 </ul>
 </li>
 </ul>
@@ -521,16 +521,16 @@
         
           <div class="license mdui-typo">
             <span>
-              本文许可协议：
+              Article License: 
               
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
               
             </span>
             <br />
-            <span>本文永久链接：<a href="http://yoursite.com/2017/09/20/AngularJS中的$http服务/">http://yoursite.com/2017/09/20/AngularJS中的$http服务/</a></span>
+            <span>Article Permalink: <a href="http://yoursite.com/2017/09/20/AngularJS中的$http服务/">http://yoursite.com/2017/09/20/AngularJS中的$http服务/</a></span>
             
               <br />
-              <span>本文Markdown：<a href="http://yoursite.com/2017/09/20/AngularJS中的$http服务/AngularJS中的$http服务.md">http://yoursite.com/2017/09/20/AngularJS中的$http服务/AngularJS中的$http服务.md</a></span>
+              <span>Article Markdown: <a href="http://yoursite.com/2017/09/20/AngularJS中的$http服务/AngularJS中的$http服务.md">http://yoursite.com/2017/09/20/AngularJS中的$http服务/AngularJS中的$http服务.md</a></span>
             
           </div>
         
@@ -557,7 +557,7 @@
       <a href="/2017/09/20/关于跨域请求(封装jsonp)/" class="content no-text-decoration mdui-text-left">
         <div>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Newer Post</span>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
           关于跨域请求(封装jsonp)
@@ -570,7 +570,7 @@
     <div class="next mdui-ripple mdui-color-theme mdui-valign">
       <a href="/2017/09/20/对AJAX的进一步理解/" class="content no-text-decoration mdui-text-right">
         <div>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Older Post</span>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
@@ -597,9 +597,9 @@
 </main>
 
 <div id="outdated" style="z-index: 9999;">
-  <h6>你的浏览器一直过气辣！</h6>
-  <p>赶紧升级浏览器来访问本站吧！<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">现在就去</a></p>
-  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="关闭">&times;</a></p>
+  <h6>Your browser is out-of-date!</h6>
+  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
 
 
@@ -736,7 +736,7 @@
       counter: false,
       dynamicEl: [{
         "src": img_src,
-        'subHtml': "<span author>John Zeng</span> • 公开<div descr>" + img_alt + "</div>"
+        'subHtml': "<span author>John Zeng</span> • Public<div descr>" + img_alt + "</div>"
       }],
     });
   }

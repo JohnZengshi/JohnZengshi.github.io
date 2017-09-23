@@ -175,7 +175,7 @@
           <li class="mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
             <div class="mdui-list-item-content">
-              首页
+              Index
             </div>
           </li>
         </a>
@@ -187,7 +187,7 @@
           <li class="mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
             <div class="mdui-list-item-content">
-              归档
+              Archives
               <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
             </div>
           </li>
@@ -200,7 +200,7 @@
           <div class="mdui-collapse-item ">
             <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
               <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-              <div class="mdui-list-item-content">分类</div>
+              <div class="mdui-list-item-content">Categories</div>
               <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
@@ -235,14 +235,14 @@
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  cookie
+                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  关于ES5规范
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  关于ES5规范
+                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  cookie
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
@@ -302,7 +302,7 @@
           <div class="mdui-collapse-item ">
             <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
               <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-              <div class="mdui-list-item-content">标签</div>
+              <div class="mdui-list-item-content">Tags</div>
               <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
@@ -385,7 +385,7 @@
         <div class="mdui-collapse-item ">
           <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-            <div class="mdui-list-item-content">年份</div>
+            <div class="mdui-list-item-content">Years</div>
             <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
           </div>
           <div class="mdui-collapse-item-body mdui-list">
@@ -468,11 +468,11 @@
       <div class="post-title mdui-text-truncate">上下文调用模式</div>
       <div class="post-actions mdui-valign">
         <div>
-          <span>编写时间：</span>
+          <span>Posted: </span>
           <span style="float: right">Sep 20, 2017</span>
           
           <br>
-            <span>最后修改时间：</span>
+            <span>Last Modified: </span>
             <span>Sep 15, 2017</span>
           
         </div>
@@ -489,44 +489,44 @@
     <div class="post-adjust">
       <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
         <div class="warning">
-          这篇文章最后修改于
+          This article was last modified
           <span id="content-warning"></span>
-          天之前。
-          本页内容可能已经过时！
+          days ago.
+          The content of this post may be outdated!
         </div>
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_21.png"/>
+            <img src="/img/random/picHD_6.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
           <blockquote>
 <h2 id="调用方式1-函数调用"><a href="#调用方式1-函数调用" class="headerlink" title="调用方式1 函数调用"></a>调用方式1 函数调用</h2></blockquote>
 <ul>
-<li><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'test 调用了'</span>);</div><div class="line">    <span class="built_in">console</span>.log(argument);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></figure>
+<li><figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'test 调用了'</span>);</div><div class="line">    <span class="built_in">console</span>.log(argument);</div><div class="line">&#125;</div><div class="line">test();</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 <blockquote>
 <h2 id="调用方式2-call方法调用"><a href="#调用方式2-call方法调用" class="headerlink" title="调用方式2 call方法调用"></a>调用方式2 call方法调用</h2></blockquote>
 <ul>
-<li>动态改变this  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：...参数n 传递给函数的实参</div><div class="line"></div><div class="line">test.call(&#123;<span class="attr">name</span>:<span class="string">'jack'</span>,<span class="attr">skill</span>:<span class="string">'jump'</span>&#125;,<span class="string">'rose'</span>,<span class="string">'john'</span>)</div><div class="line"><span class="comment">//(调用一个对象的一个方法，以另一个对象替换当前对象,即调用上面test的方法)</span></div></pre></td></tr></table></figure>
+<li>动态改变this  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：...参数n 传递给函数的实参</div><div class="line"></div><div class="line">test.call(&#123;<span class="attr">name</span>:<span class="string">'jack'</span>,<span class="attr">skill</span>:<span class="string">'jump'</span>&#125;,<span class="string">'rose'</span>,<span class="string">'john'</span>)</div><div class="line"><span class="comment">//(调用一个对象的一个方法，以另一个对象替换当前对象,即调用上面test的方法)</span></div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 <blockquote>
 <h2 id="调用方式3-apply方法调用"><a href="#调用方式3-apply方法调用" class="headerlink" title="调用方式3 apply方法调用"></a>调用方式3 apply方法调用</h2></blockquote>
 <ul>
-<li>也可以动态的改变this  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：传入一个数组(或伪数组)传递给函数</div><div class="line"></div><div class="line">test.apply(&#123;<span class="attr">name</span>:<span class="string">'rose'</span>,<span class="attr">skill</span>:<span class="string">'swim'</span>&#125;,&#123;<span class="number">0</span>:<span class="string">'jack'</span>,<span class="number">1</span>:<span class="string">'rose'</span>,<span class="attr">length</span>:<span class="number">1</span>&#125;)</div><div class="line"><span class="comment">//与call差不多</span></div></pre></td></tr></table></figure>
+<li>也可以动态的改变this  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">参数<span class="number">1</span>：<span class="keyword">this</span>是要替换test的对象</div><div class="line">参数<span class="number">2</span>：传入一个数组(或伪数组)传递给函数</div><div class="line"></div><div class="line">test.apply(&#123;<span class="attr">name</span>:<span class="string">'rose'</span>,<span class="attr">skill</span>:<span class="string">'swim'</span>&#125;,&#123;<span class="number">0</span>:<span class="string">'jack'</span>,<span class="number">1</span>:<span class="string">'rose'</span>,<span class="attr">length</span>:<span class="number">1</span>&#125;)</div><div class="line"><span class="comment">//与call差不多</span></div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 <blockquote>
 <h2 id="call和apply的区别："><a href="#call和apply的区别：" class="headerlink" title="call和apply的区别："></a>call和apply的区别：</h2></blockquote>
 <ul>
 <li><p>call方法从第二个参数开始可以接受任意的参数，每个参数会映射到相应位置的func的参数，可以通过参数名调用，但是如果所有参数作为数组传入，他会作为一个整个映射到func对应的第一个参数，之后参数都会为空：</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b,c</span>)</span>&#123;&#125;</div><div class="line"></div><div class="line">func.call(obj,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line"><span class="comment">//function接收到的参数为1,2,3</span></div><div class="line"></div><div class="line">func.call(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</div><div class="line"><span class="comment">//funvtion接收到的参数为[1,2,3],untifined,untifined</span></div></pre></td></tr></table></figure>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b,c</span>)</span>&#123;&#125;</div><div class="line"></div><div class="line">func.call(obj,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</div><div class="line"><span class="comment">//function接收到的参数为1,2,3</span></div><div class="line"></div><div class="line">func.call(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</div><div class="line"><span class="comment">//funvtion接收到的参数为[1,2,3],untifined,untifined</span></div></pre></td></tr></table></div></figure>
 </li>
 <li><p>apply方法最多只有两个参数，第二个参数接受的只能是数组或伪数组，并传入到func对应的参数上</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">func.apply(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line"><span class="comment">//function接受到的实际参数是1,2,3</span></div><div class="line"></div><div class="line">func.apply(obj,&#123;<span class="number">0</span>:<span class="number">1</span>,<span class="number">1</span>:<span class="number">2</span>,<span class="number">2</span>:<span class="number">3</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;)</div><div class="line"><span class="comment">//function接收到的参数实际上是1,2,3</span></div></pre></td></tr></table></figure></li>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">func.apply(obj,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div><div class="line"><span class="comment">//function接受到的实际参数是1,2,3</span></div><div class="line"></div><div class="line">func.apply(obj,&#123;<span class="number">0</span>:<span class="number">1</span>,<span class="number">1</span>:<span class="number">2</span>,<span class="number">2</span>:<span class="number">3</span>,<span class="attr">length</span>:<span class="number">3</span>&#125;)</div><div class="line"><span class="comment">//function接收到的参数实际上是1,2,3</span></div></pre></td></tr></table></div></figure></li>
 </ul>
 
         </div>
@@ -534,16 +534,16 @@
         
           <div class="license mdui-typo">
             <span>
-              本文许可协议：
+              Article License: 
               
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
               
             </span>
             <br />
-            <span>本文永久链接：<a href="http://yoursite.com/2017/09/20/上下文调用模式(call和apply的区别）/">http://yoursite.com/2017/09/20/上下文调用模式(call和apply的区别）/</a></span>
+            <span>Article Permalink: <a href="http://yoursite.com/2017/09/20/上下文调用模式(call和apply的区别）/">http://yoursite.com/2017/09/20/上下文调用模式(call和apply的区别）/</a></span>
             
               <br />
-              <span>本文Markdown：<a href="http://yoursite.com/2017/09/20/上下文调用模式(call和apply的区别）/上下文调用模式(call和apply的区别）.md">http://yoursite.com/2017/09/20/上下文调用模式(call和apply的区别）/上下文调用模式(call和apply的区别）.md</a></span>
+              <span>Article Markdown: <a href="http://yoursite.com/2017/09/20/上下文调用模式(call和apply的区别）/上下文调用模式(call和apply的区别）.md">http://yoursite.com/2017/09/20/上下文调用模式(call和apply的区别）/上下文调用模式(call和apply的区别）.md</a></span>
             
           </div>
         
@@ -599,7 +599,7 @@
       <a href="/2017/09/20/javascript常用内置对象总结/" class="content no-text-decoration mdui-text-left">
         <div>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Newer Post</span>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
           javascript常用内置对象总结
@@ -612,7 +612,7 @@
     <div class="next mdui-ripple mdui-color-theme mdui-valign">
       <a href="/2017/09/20/HTTP 状态码知道哪些？/" class="content no-text-decoration mdui-text-right">
         <div>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Older Post</span>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
@@ -639,9 +639,9 @@
 </main>
 
 <div id="outdated" style="z-index: 9999;">
-  <h6>你的浏览器一直过气辣！</h6>
-  <p>赶紧升级浏览器来访问本站吧！<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">现在就去</a></p>
-  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="关闭">&times;</a></p>
+  <h6>Your browser is out-of-date!</h6>
+  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
 
 
@@ -778,7 +778,7 @@
       counter: false,
       dynamicEl: [{
         "src": img_src,
-        'subHtml': "<span author>John Zeng</span> • 公开<div descr>" + img_alt + "</div>"
+        'subHtml': "<span author>John Zeng</span> • Public<div descr>" + img_alt + "</div>"
       }],
     });
   }

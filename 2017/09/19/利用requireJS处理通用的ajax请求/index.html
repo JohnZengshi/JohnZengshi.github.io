@@ -175,7 +175,7 @@
           <li class="mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
             <div class="mdui-list-item-content">
-              首页
+              Index
             </div>
           </li>
         </a>
@@ -187,7 +187,7 @@
           <li class="mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
             <div class="mdui-list-item-content">
-              归档
+              Archives
               <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
             </div>
           </li>
@@ -200,7 +200,7 @@
           <div class="mdui-collapse-item ">
             <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
               <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-              <div class="mdui-list-item-content">分类</div>
+              <div class="mdui-list-item-content">Categories</div>
               <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
@@ -235,14 +235,14 @@
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  cookie
+                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  关于ES5规范
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  关于ES5规范
+                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  cookie
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
@@ -302,7 +302,7 @@
           <div class="mdui-collapse-item ">
             <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
               <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-              <div class="mdui-list-item-content">标签</div>
+              <div class="mdui-list-item-content">Tags</div>
               <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
@@ -385,7 +385,7 @@
         <div class="mdui-collapse-item ">
           <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-            <div class="mdui-list-item-content">年份</div>
+            <div class="mdui-list-item-content">Years</div>
             <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
           </div>
           <div class="mdui-collapse-item-body mdui-list">
@@ -468,8 +468,12 @@
       <div class="post-title mdui-text-truncate">处理通用的ajax请求</div>
       <div class="post-actions mdui-valign">
         <div>
-          <span>编写时间：</span>
+          <span>Posted: </span>
           <span style="float: right">Sep 19, 2017</span>
+          
+          <br>
+            <span>Last Modified: </span>
+            <span>Sep 23, 2017</span>
           
         </div>
         
@@ -485,15 +489,15 @@
     <div class="post-adjust">
       <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
         <div class="warning">
-          这篇文章最后修改于
+          This article was last modified
           <span id="content-warning"></span>
-          天之前。
-          本页内容可能已经过时！
+          days ago.
+          The content of this post may be outdated!
         </div>
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_17.png"/>
+            <img src="/img/random/picHD_30.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -501,7 +505,7 @@
 <h2 id="处理通用的ajax请求"><a href="#处理通用的ajax请求" class="headerlink" title="处理通用的ajax请求"></a>处理通用的ajax请求</h2></blockquote>
 <ul>
 <li><p>定义模块：</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">define([</div><div class="line">    <span class="string">"jquery"</span>,</div><div class="line"></div><div class="line">],<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> obj = &#123;</div><div class="line">        ajax:<span class="function"><span class="keyword">function</span>(<span class="params">url,data,type,callback</span>)</span>&#123;</div><div class="line">            $.ajax(&#123;</div><div class="line">                url:url,</div><div class="line">                data:data,</div><div class="line">                type:type,</div><div class="line">                success:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</div><div class="line">                    <span class="keyword">if</span>(res.code!=<span class="number">200</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(res.msg);</div><div class="line">                    callback(res);</div><div class="line">                &#125;</div><div class="line"></div><div class="line">            &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> way = [<span class="string">"get"</span>,<span class="string">"post"</span>];</div><div class="line"></div><div class="line">    way.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">        obj[v] = funciton(url,data,callback)&#123;</div><div class="line">            <span class="keyword">this</span>.ajax(url,data,v,callback);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> obj;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></li>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">define([</div><div class="line">    <span class="string">"jquery"</span>,</div><div class="line"></div><div class="line">],<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> obj = &#123;</div><div class="line">        ajax:<span class="function"><span class="keyword">function</span>(<span class="params">url,data,type,callback</span>)</span>&#123;</div><div class="line">            $.ajax(&#123;</div><div class="line">                url:url,</div><div class="line">                data:data,</div><div class="line">                type:type,</div><div class="line">                success:<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</div><div class="line">                    <span class="keyword">if</span>(res.code!=<span class="number">200</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(res.msg);</div><div class="line">                    callback(res);</div><div class="line">                &#125;</div><div class="line"></div><div class="line">            &#125;)</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> way = [<span class="string">"get"</span>,<span class="string">"post"</span>];</div><div class="line"></div><div class="line">    way.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">v</span>)</span>&#123;</div><div class="line">        obj[v] = funciton(url,data,callback)&#123;</div><div class="line">            <span class="keyword">this</span>.ajax(url,data,v,callback);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    <span class="keyword">return</span> obj;</div><div class="line">&#125;)</div></pre></td></tr></table></div></figure></li>
 </ul>
 
         </div>
@@ -509,16 +513,16 @@
         
           <div class="license mdui-typo">
             <span>
-              本文许可协议：
+              Article License: 
               
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
               
             </span>
             <br />
-            <span>本文永久链接：<a href="http://yoursite.com/2017/09/19/利用requireJS处理通用的ajax请求/">http://yoursite.com/2017/09/19/利用requireJS处理通用的ajax请求/</a></span>
+            <span>Article Permalink: <a href="http://yoursite.com/2017/09/19/利用requireJS处理通用的ajax请求/">http://yoursite.com/2017/09/19/利用requireJS处理通用的ajax请求/</a></span>
             
               <br />
-              <span>本文Markdown：<a href="http://yoursite.com/2017/09/19/利用requireJS处理通用的ajax请求/利用requireJS处理通用的ajax请求.md">http://yoursite.com/2017/09/19/利用requireJS处理通用的ajax请求/利用requireJS处理通用的ajax请求.md</a></span>
+              <span>Article Markdown: <a href="http://yoursite.com/2017/09/19/利用requireJS处理通用的ajax请求/利用requireJS处理通用的ajax请求.md">http://yoursite.com/2017/09/19/利用requireJS处理通用的ajax请求/利用requireJS处理通用的ajax请求.md</a></span>
             
           </div>
         
@@ -574,7 +578,7 @@
       <a href="/2017/09/19/Angurlar的基本模板/" class="content no-text-decoration mdui-text-left">
         <div>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Newer Post</span>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
           Angular的基本模板套用
@@ -587,7 +591,7 @@
     <div class="next mdui-ripple mdui-color-theme mdui-valign">
       <a href="/2017/09/19/Angular中数据的单向绑定/" class="content no-text-decoration mdui-text-right">
         <div>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Older Post</span>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
@@ -614,9 +618,9 @@
 </main>
 
 <div id="outdated" style="z-index: 9999;">
-  <h6>你的浏览器一直过气辣！</h6>
-  <p>赶紧升级浏览器来访问本站吧！<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">现在就去</a></p>
-  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="关闭">&times;</a></p>
+  <h6>Your browser is out-of-date!</h6>
+  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
 
 
@@ -753,7 +757,7 @@
       counter: false,
       dynamicEl: [{
         "src": img_src,
-        'subHtml': "<span author>John Zeng</span> • 公开<div descr>" + img_alt + "</div>"
+        'subHtml': "<span author>John Zeng</span> • Public<div descr>" + img_alt + "</div>"
       }],
     });
   }
@@ -762,7 +766,7 @@
   <!-- content warning -->
 <script type="text/ls-javascript" id="content-warning-script">
   (function() {
-    var postLastModifiedDate = 1505810855045
+    var postLastModifiedDate = 1506129012206
     var today = (new Date()).getTime()
     var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
     if (difference >= 100) {

@@ -175,7 +175,7 @@
           <li class="mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
             <div class="mdui-list-item-content">
-              首页
+              Index
             </div>
           </li>
         </a>
@@ -187,7 +187,7 @@
           <li class="mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
             <div class="mdui-list-item-content">
-              归档
+              Archives
               <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
             </div>
           </li>
@@ -200,7 +200,7 @@
           <div class="mdui-collapse-item ">
             <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
               <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-              <div class="mdui-list-item-content">分类</div>
+              <div class="mdui-list-item-content">Categories</div>
               <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
@@ -235,14 +235,14 @@
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  cookie
+                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  关于ES5规范
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
               
-                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  关于ES5规范
+                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
+                  cookie
                   <div style="flex-grow: 1;"></div>
                   <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
                 </a>
@@ -302,7 +302,7 @@
           <div class="mdui-collapse-item ">
             <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
               <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-              <div class="mdui-list-item-content">标签</div>
+              <div class="mdui-list-item-content">Tags</div>
               <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
@@ -385,7 +385,7 @@
         <div class="mdui-collapse-item ">
           <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
             <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-            <div class="mdui-list-item-content">年份</div>
+            <div class="mdui-list-item-content">Years</div>
             <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
           </div>
           <div class="mdui-collapse-item-body mdui-list">
@@ -468,11 +468,11 @@
       <div class="post-title mdui-text-truncate">关于跨域请求(封装jsonp)</div>
       <div class="post-actions mdui-valign">
         <div>
-          <span>编写时间：</span>
+          <span>Posted: </span>
           <span style="float: right">Sep 20, 2017</span>
           
           <br>
-            <span>最后修改时间：</span>
+            <span>Last Modified: </span>
             <span>Sep 22, 2017</span>
           
         </div>
@@ -489,15 +489,15 @@
     <div class="post-adjust">
       <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
         <div class="warning">
-          这篇文章最后修改于
+          This article was last modified
           <span id="content-warning"></span>
-          天之前。
-          本页内容可能已经过时！
+          days ago.
+          The content of this post may be outdated!
         </div>
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_10.png"/>
+            <img src="/img/random/picHD_3.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -506,7 +506,7 @@
 <ul>
 <li><p>在A域以ajax请求另外域的资源.是不被允许的.ajax只能请求本域的资源.无法发起跨域请求.</p>
 <ul>
-<li>解决方案：<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">方向代理</div><div class="line">服务器设置</div><div class="line">jsonp</div></pre></td></tr></table></figure>
+<li>解决方案：<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">方向代理</div><div class="line">服务器设置</div><div class="line">jsonp</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
@@ -527,7 +527,7 @@
 <li>就是利用script标签的src属性来完成的</li>
 <li>先在浏览器端准备一个函数(demo)这个函数有一个参数</li>
 <li><p>利用script标签的src属性.在请求的时候,要把我事先准备的函数的名字发给服务器.</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./php/stus.php?callback=demo"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"./php/stus.php?callback=demo"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></div></figure>
 </li>
 <li><p>在服务器端</p>
 <ul>
@@ -554,22 +554,22 @@
 </ul>
 <blockquote>
 <h2 id="将跨域请求封装成一个函数："><a href="#将跨域请求封装成一个函数：" class="headerlink" title="将跨域请求封装成一个函数："></a>将跨域请求封装成一个函数：</h2></blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> id = <span class="number">1</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">opts</span>)</span>&#123;</div><div class="line">        <span class="comment">//1.拼接url</span></div><div class="line">        <span class="keyword">var</span> url = opts.url + <span class="string">"?"</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> opts.params)&#123;</div><div class="line">            url += (key + <span class="string">"="</span> + opts.parms[key] + <span class="string">"&amp;"</span>)</div><div class="line"></div><div class="line">            <span class="comment">//2.保存匿名函数</span></div><div class="line">            <span class="comment">//https://api.asilu.com/weather/?city=深圳&amp;day=3&amp;sb=4&amp;callback=hmCallback</span></div><div class="line">            <span class="comment">//hmCallback(数据); </span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> callbackName = <span class="string">"hmCallback"</span> + (id++);</div><div class="line">        <span class="comment">//hmCallback1</span></div><div class="line">        <span class="comment">//window[hmCallback1] = opts.callback;</span></div><div class="line"></div><div class="line">        <span class="built_in">window</span>[callbackName] = opts.callback;</div><div class="line">        url += <span class="string">"callback="</span>+callbackName;</div><div class="line">        consol.log(url);</div><div class="line"></div><div class="line">        <span class="comment">//3. 创建script标签.</span></div><div class="line">        <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>)</div><div class="line">        script.src = url;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getW</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">//调用封装好的jsonp函数发起跨域请求</span></div><div class="line">        jsonp(&#123;</div><div class="line">            url:<span class="string">"https://api.asilu.com/weather/"</span>,</div><div class="line">            params:&#123;</div><div class="line">                city:<span class="string">"深圳"</span>,</div><div class="line">                day:<span class="number">3</span>,</div><div class="line">                sb:<span class="number">4</span></div><div class="line">            &#125;,</div><div class="line">            calback:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(data)</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> id = <span class="number">1</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsonp</span>(<span class="params">opts</span>)</span>&#123;</div><div class="line">        <span class="comment">//1.拼接url</span></div><div class="line">        <span class="keyword">var</span> url = opts.url + <span class="string">"?"</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> opts.params)&#123;</div><div class="line">            url += (key + <span class="string">"="</span> + opts.parms[key] + <span class="string">"&amp;"</span>)</div><div class="line"></div><div class="line">            <span class="comment">//2.保存匿名函数</span></div><div class="line">            <span class="comment">//https://api.asilu.com/weather/?city=深圳&amp;day=3&amp;sb=4&amp;callback=hmCallback</span></div><div class="line">            <span class="comment">//hmCallback(数据); </span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">var</span> callbackName = <span class="string">"hmCallback"</span> + (id++);</div><div class="line">        <span class="comment">//hmCallback1</span></div><div class="line">        <span class="comment">//window[hmCallback1] = opts.callback;</span></div><div class="line"></div><div class="line">        <span class="built_in">window</span>[callbackName] = opts.callback;</div><div class="line">        url += <span class="string">"callback="</span>+callbackName;</div><div class="line">        consol.log(url);</div><div class="line"></div><div class="line">        <span class="comment">//3. 创建script标签.</span></div><div class="line">        <span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>)</div><div class="line">        script.src = url;</div><div class="line">        <span class="built_in">document</span>.body.appendChild(script);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getW</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="comment">//调用封装好的jsonp函数发起跨域请求</span></div><div class="line">        jsonp(&#123;</div><div class="line">            url:<span class="string">"https://api.asilu.com/weather/"</span>,</div><div class="line">            params:&#123;</div><div class="line">                city:<span class="string">"深圳"</span>,</div><div class="line">                day:<span class="number">3</span>,</div><div class="line">                sb:<span class="number">4</span></div><div class="line">            &#125;,</div><div class="line">            calback:<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(data)</div><div class="line">            &#125;</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></div></figure>
         </div>
 
         
           <div class="license mdui-typo">
             <span>
-              本文许可协议：
+              Article License: 
               
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
               
             </span>
             <br />
-            <span>本文永久链接：<a href="http://yoursite.com/2017/09/20/关于跨域请求(封装jsonp)/">http://yoursite.com/2017/09/20/关于跨域请求(封装jsonp)/</a></span>
+            <span>Article Permalink: <a href="http://yoursite.com/2017/09/20/关于跨域请求(封装jsonp)/">http://yoursite.com/2017/09/20/关于跨域请求(封装jsonp)/</a></span>
             
               <br />
-              <span>本文Markdown：<a href="http://yoursite.com/2017/09/20/关于跨域请求(封装jsonp)/关于跨域请求(封装jsonp).md">http://yoursite.com/2017/09/20/关于跨域请求(封装jsonp)/关于跨域请求(封装jsonp).md</a></span>
+              <span>Article Markdown: <a href="http://yoursite.com/2017/09/20/关于跨域请求(封装jsonp)/关于跨域请求(封装jsonp).md">http://yoursite.com/2017/09/20/关于跨域请求(封装jsonp)/关于跨域请求(封装jsonp).md</a></span>
             
           </div>
         
@@ -614,7 +614,7 @@
       <a href="/2017/09/21/AngularJS中的自定义服务/" class="content no-text-decoration mdui-text-left">
         <div>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Newer Post</span>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
           AngularJS中的自定义服务
@@ -627,7 +627,7 @@
     <div class="next mdui-ripple mdui-color-theme mdui-valign">
       <a href="/2017/09/20/AngularJS中的$http服务/" class="content no-text-decoration mdui-text-right">
         <div>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Older Post</span>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
@@ -654,9 +654,9 @@
 </main>
 
 <div id="outdated" style="z-index: 9999;">
-  <h6>你的浏览器一直过气辣！</h6>
-  <p>赶紧升级浏览器来访问本站吧！<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">现在就去</a></p>
-  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="关闭">&times;</a></p>
+  <h6>Your browser is out-of-date!</h6>
+  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
 
 
@@ -793,7 +793,7 @@
       counter: false,
       dynamicEl: [{
         "src": img_src,
-        'subHtml': "<span author>John Zeng</span> • 公开<div descr>" + img_alt + "</div>"
+        'subHtml': "<span author>John Zeng</span> • Public<div descr>" + img_alt + "</div>"
       }],
     });
   }
