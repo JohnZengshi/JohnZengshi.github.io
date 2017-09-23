@@ -1,471 +1,508 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="yanm1ng&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/css/images/logo.png">
-  
-  <title>
-    
-      John Zeng的个人播客
-    
-  </title>
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/plugins/gitment.css">
-  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script>
-</head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
 
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/">
-      <div class="logo"></div>
-      <span>John Zeng的个人播客</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/" class="item-link">Home</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/tags/" class="item-link">Tags</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/archives/" class="item-link">Archives</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/project/" class="item-link">Projects</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/about/" class="item-link">About</a>
-          
-        </li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Archives | John Zeng的个人播客</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="generator" content="John Zeng的个人播客">
+
+  
+  
+  
+
+  
+</head>
+
+<!--
+<body class="home-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">John Zeng的个人播客</h1>
+            <h2 class="blog-description"><button id="showMenu">Show Menu</button></h2>
+        </div>
     </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/" class="menu-link">Home</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/tags/" class="menu-link">Tags</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/archives/" class="menu-link">Archives</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/project/" class="menu-link">Projects</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/about/" class="menu-link">About</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 </header>
 
-    <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">文章归档</p>
-</div>
-<main class="app-body" id="archives">
+      
+<main class="content" role="main">
   
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.781Z" itemprop="datePublished">
+          2017-09-20
+      </time>
+    
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/ajax的优缺点/">ajax的优缺点</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+ajax的优缺点
+优点：
+异步刷新==&gt;实现页面局部刷新==&gt;只刷新一部分内容
+减少了资源的重复加载
+1.页面的响应速度有一定的提升(提升了用户体验)
+2.降低了服务器的压力(最重要的一点)
+
+
+
+缺点
+不能跨域 ==&gt;现在有了一些跨域的手段：jsonp/方向代理/window.name
+对SEO不友好  (SEO:搜索引擎优化)
+百度如何收录网站？
+网络爬虫搜索某个网站时，不会执行任何js代码–&gt;自然ajax
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/ajax的优缺点/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
   
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.779Z" itemprop="datePublished">
+          2017-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/开发技巧/'>开发技巧</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/事件触发的时候，弹出模态框时的处理/">事件触发的时候，弹出模态框</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+事件触发的时候，弹出模态框
+
+先准备一个模态框的模板
+使用text插件获取模板内容
+把该内容放到页面中，并且以模态框的形式呈现出来，绑定hidden.bs.modal事件在事件中删除模态框
+
+点击提交，把数据提交到服务器中
+
+a.把同步的表单作为异步的表单(页面整个刷新–》局部刷新)
+给表单绑定submit事件，通过事件回调函数的形参e：e.preventDefault();
+
+
+b.获取数据
+找到文档中添加对应的接口，看接口请求的参
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/事件触发的时候，弹出模态框时的处理/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
   
-    <section class="time-section">
-  <h1 class="section-year">
-    2017
-  </h1>
-  <div class="section-list">
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.777Z" itemprop="datePublished">
+          2017-09-20
+      </time>
     
     
-      <div class="section-list-item">
-        <a href="/2017/09/21/AngularJS中的路由/" class="archive-title">AngularJS中的路由</a>
-        <p class="archive-date">09-21</p>
-      </div>
+    | 
+    <a href='/tags/掉坑里了/'>掉坑里了</a>
     
-      <div class="section-list-item">
-        <a href="/2017/09/21/云音乐案例(利用锚点值)/" class="archive-title">云音乐案例业务逻辑(锚点值)</a>
-        <p class="archive-date">09-21</p>
-      </div>
     
-      <div class="section-list-item">
-        <a href="/2017/09/21/AngularJS中的运行块(run)/" class="archive-title">AngularJS中的运行块(run)</a>
-        <p class="archive-date">09-21</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/21/AngularJS中的配置快(config)/" class="archive-title">AngularJS中的配置块(config)</a>
-        <p class="archive-date">09-21</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/21/AngularJS中配置跨域白名单/" class="archive-title">AngularJS中配置跨域白名单</a>
-        <p class="archive-date">09-21</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/21/AngularJS的执行顺序/" class="archive-title">AngularJS中的执行顺序</a>
-        <p class="archive-date">09-21</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/21/AngularJS中的自定义服务/" class="archive-title">AngularJS中的自定义服务</a>
-        <p class="archive-date">09-21</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/关于跨域请求(封装jsonp)/" class="archive-title">关于跨域请求(封装jsonp)</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/AngularJS中的$http服务/" class="archive-title">AngularJS中的$http服务</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/对AJAX的进一步理解/" class="archive-title">对AJAX的进一步理解</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/AngularJS中的$filter服务/" class="archive-title">AngularJS中的$filter服务</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/AngularJS中的$timeout和$interval服务/" class="archive-title">AngularJS中的$timeout和$interval服务</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/AngularJS中的ng-switch指令/" class="archive-title">Angular中的ng-switch指令</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/判断用户有没有登录过(利用cookie)/" class="archive-title">判断用户有没有登录过(利用cookie)</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/跨页面传值的方法和使用/" class="archive-title">跨页面传值的方法和使用</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/从提交表单的数据中找到某个属性（一堆编码中）/" class="archive-title">从提交表单的数据中找到某个数据</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/设计模式：MVC设计模式/" class="archive-title">设计模式：MVC设计模式</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/表单的submit事件/" class="archive-title">jQuery中的submit事件</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/jQuery源码分析（01）--设计理念/" class="archive-title">jQuery源码分析(01)--设计理念</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/Require JS的笔记/" class="archive-title">RequireJS 是一个基于原生js实现的模块化解决方案</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/--第一次用Hexo+Github-搭建博客/" class="archive-title">第一次用Hexo+Github 搭建博客</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/对象的序列化和反序列化/" class="archive-title">对象的序列化和反序列化</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/关于javascript的数据类型/" class="archive-title">关于javascript的数据类型</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/Git的使用/" class="archive-title">Git的使用</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/jQuery源码分析（02）--整体架构/" class="archive-title">jQuery源码分析(02)--整体架构</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/Require JS的使用/" class="archive-title">RequireJS的使用</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/什么时候使用shim/" class="archive-title">什么时候使用shim</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/requirejs中使用arttemplate模板引擎/" class="archive-title">requirejs中使用arttemplate模板引擎</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/post,get请求之间的区别/" class="archive-title">post/get请求之间的区别</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/localtion对象常用的属性、方法/" class="archive-title">localtion对象常用的属性、方法</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/ajax的优缺点/" class="archive-title">ajax的优缺点</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/事件触发的时候，弹出模态框时的处理/" class="archive-title">事件触发的时候，弹出模态框</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/es5之前要获取当前函数本身/" class="archive-title">es5之前要获取当前函数本身</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/cookie的用途/" class="archive-title">cookie的用途</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/网站性能优化方方面面之闭包实现模块化的坏处/" class="archive-title">闭包实现模块化的坏处(网站性能优化)</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/设计模式：模块模式/" class="archive-title">设计模式：模块模式</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/if()括号内的数据类型的转换/" class="archive-title">if()括号内的数据类型的转换</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/javascript常用内置对象总结/" class="archive-title">javascript常用内置对象总结</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/上下文调用模式(call和apply的区别）/" class="archive-title">上下文调用模式</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/HTTP 状态码知道哪些？/" class="archive-title">HTTP 状态码知道哪些？</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/元数据（meta）的一般应用/" class="archive-title">元数据（meta）的一般应用</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/javascript加载的俩种方式/" class="archive-title">js的加载有两种方法</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/20/退出登录常用的方法/" class="archive-title">退出登录常用的方法</a>
-        <p class="archive-date">09-20</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/hello-world/" class="archive-title">Hello World</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/AngularJS中的$log服务/" class="archive-title">Angular中的$log服务</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/AngularJS中的依赖注入/" class="archive-title">AngularJS中的依赖注入</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/AngularJS自定义过滤器/" class="archive-title">自定义过滤器</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/AngularJS中常见的过滤器/" class="archive-title">AngularJS中的常见的过滤器</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/AngularJS的使用步骤/" class="archive-title">AngularJS的使用步骤</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/Angular常见的内部指令/" class="archive-title">AngularJS常见的内部指令</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/Angular中的ng-repeat指令/" class="archive-title">ng-repeat指令</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/Angular自定义指令/" class="archive-title">Angular自定义属性</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/Angurlar的基本模板/" class="archive-title">Angular的基本模板套用</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/利用requireJS处理通用的ajax请求/" class="archive-title">处理通用的ajax请求</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/Angular中数据的单向绑定/" class="archive-title">Angular中数据的单向绑定</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/19/原生js实现联动，和angularJS实现联动的对比/" class="archive-title">原生js实现联动，和angularJS实现联动的对比；</a>
-        <p class="archive-date">09-19</p>
-      </div>
-    
-  </div>
-</section>
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/es5之前要获取当前函数本身/">es5之前要获取当前函数本身</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+es5之前要获取当前函数本身，可以在函数体内部通过arguments.callee
+
+es5规定了严格模式，严格模式中禁止使用callee/caller
+
+在严格模式下面如何获取当前函数？
+
+
+12345678910111213(function fn()&#123;    //fn是一个"特殊的名字",这个名字在外界访问不是一个函数名，在函数体内部访问就指向函数本身&#125;)()``` + 面试题```bashvar f1 = 
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/es5之前要获取当前函数本身/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
   
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.771Z" itemprop="datePublished">
+          2017-09-20
+      </time>
+    
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/cookie的用途/">cookie的用途</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+cookie的用途
+
+保存一些使用多个页面访问的数据（&gt;=2个页面）
+
+不能保存一些有效性很高的数据，比如：表格数据
+可以保存当前用户登录的信息：比如用户名，id,用户头像等
+
+
+不能保存安全性较高的数据
+
+不能保存密码
+甚至在一些安全性做的比较好的网站中，通过http请求发送密码的时候，会浏览器端进行加密，然后加密传输；在服务器中进行加密，加密存储在数据库中
+
+
+保存数据的大小也有限制(不要保存数据太大的数据)
+
+后端：ses
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/cookie的用途/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.764Z" itemprop="datePublished">
+          2017-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/网站性能优化方方面面/'>网站性能优化方方面面</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/网站性能优化方方面面之闭包实现模块化的坏处/">闭包实现模块化的坏处(网站性能优化)</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+闭包实现模块化的坏处？
+
+闭包实现模块化并没有规定一个文件就是一个模块，一个文件会有多个模块，无数个文件要去找某个模块比较麻烦。
+随着功能的增加，编写了无数各模块，就至少会有无数个模块的入口（全局变量），会导致全局变量污染。
+模块依赖：减少了页面对于无数个js文件的引用，引用文件太多，会影响网页性能（首屏加载）
+使用requireJS之后，会根据你实现的功能，按需加载指定的模块。也就提高了首页的加载性能
+
+
+网站性能优化方方面面：cd
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/网站性能优化方方面面之闭包实现模块化的坏处/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.762Z" itemprop="datePublished">
+          2017-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/开发技巧/'>开发技巧</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/设计模式：模块模式/">设计模式：模块模式</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+模块化–&gt;设计模式：模块模式
+1234567891011var modal = (function()&#123;    var total = XXX    return &#123;        fn1:function()&#123;        &#125;,        fn2:function()&#123;                    &#125;    &#125;&#125;)()
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/设计模式：模块模式/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.759Z" itemprop="datePublished">
+          2017-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/javascript基础知识/'>javascript基础知识</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/if()括号内的数据类型的转换/">if()括号内的数据类型的转换</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为：
+
+
+
+数据类型
+转换为true
+转换为false
+
+
+
+
+boolean
+true
+false
+
+
+String
+任何非空字符串
+空字符串
+
+
+Number
+任何非零数字值
+0和NaN
+
+
+Object
+任何对象
+null
+
+
+Undefined
+n/a
+undefined
+
+
+
+
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/if()括号内的数据类型的转换/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.747Z" itemprop="datePublished">
+          2017-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/javascript基础知识/'>javascript基础知识</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/javascript常用内置对象总结/">javascript常用内置对象总结</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+javascript常用内置对象总结(重要)
+
+Date
+
+属性：
+  12constructor  所建立对象的函数参考prototype       能够为对象加入的属性和方法
+
+方法：
+  12345678910111213141516171819202122232425262728293031323334353637383940414243getDay()        返回一周中的第几天(0-6)getYear()     
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/javascript常用内置对象总结/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.710Z" itemprop="datePublished">
+          2017-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/方法区别/'>方法区别</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/上下文调用模式(call和apply的区别）/">上下文调用模式</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+调用方式1 函数调用
+
+123456function test()&#123;    console.log(this);    console.log('test 调用了');    console.log(argument);&#125;test();
+
+
+
+调用方式2 call方法调用
+
+动态改变this  12345参数1：this是要替换test的对象参数2：...参数n 传递给函数的实参test.call(&#123;na
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/上下文调用模式(call和apply的区别）/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2017-09-20T01:59:08.686Z" itemprop="datePublished">
+          2017-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/建站技巧/'>建站技巧</a>
+    
+    
+</span>
+      <h2 class="post-title"><a href="/2017/09/20/HTTP 状态码知道哪些？/">HTTP 状态码知道哪些？</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+HTTP 状态码知道哪些？
+
+100 Continue 继续，一般在发送post请求时，已发送了 http header 之后服务端将返回此信息，表示确认，之后发送具体参数信息
+
+200 OK 正常返回信息
+
+201 Created 请求成功并且服务器创建了新资源
+
+202 Accepted 服务器已接收请求，但未处理
+
+301 Moved Permanently 请求的网页以永久移动到新位置
+
+302 Found 临时性重定位
+
+3
+      
+      </p>
+      
+      <p>
+          <a href="/2017/09/20/HTTP 状态码知道哪些？/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <nav class="pagination" role="pagination">
+    <a class="newer-posts" href="/archives/page/3/">← Newer Posts</a>
+    <span class="page-number">Page 4 of 6</span>
+    <a class="older-posts" href="/archives/page/5/">Older Posts →</a>
+  </nav>
 </main>
 
-<script>
-  (function () {
-    var url = 'http://yoursite.com/archives/page/4/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
-  })();
-</script>
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
-</div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+
+      
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">John Zeng的个人播客</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
 </footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<script>
-  var hasLine = 'true';
-  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine == 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
 
-<script src="/js/script.js"></script>
-  </body>
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="/archive"><span>Archive</span></a>
+
+          <a class="icon-image"  href="/images"><span>Images</span></a>
+
+          <a class="icon-wiki"  href="/wiki/2014-10-28-wiki/"><span>Wiki</span></a>
+
+          <a class="icon-Favorites"  href="/favorites"><span>Favorites</span></a>
+
+          <a class="icon-mail"  href="/about/2014-09-11-mabao/"><span>Contact</span></a>
+
+</nav>
+
+</div>
+</body>
 </html>

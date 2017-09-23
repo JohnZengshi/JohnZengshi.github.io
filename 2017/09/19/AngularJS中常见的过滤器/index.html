@@ -1,127 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="yanm1ng&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/css/images/logo.png">
-  
-  <title>
-    
-      AngularJS中的常见的过滤器 | John Zeng的个人播客
-    
-  </title>
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/plugins/gitment.css">
-  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script>
-</head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
 
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/">
-      <div class="logo"></div>
-      <span>John Zeng的个人播客</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/" class="item-link">Home</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/tags/" class="item-link">Tags</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/archives/" class="item-link">Archives</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/project/" class="item-link">Projects</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/about/" class="item-link">About</a>
-          
-        </li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>AngularJS中的常见的过滤器 | John Zeng的个人播客</title>
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="generator" content="John Zeng的个人播客">
+
+  
+  
+  
+
+  
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">John Zeng的个人播客</h1>
+            <h2 class="blog-description"><button id="showMenu">Show Menu</button></h2>
+        </div>
     </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/" class="menu-link">Home</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/tags/" class="menu-link">Tags</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/archives/" class="menu-link">Archives</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/project/" class="menu-link">Projects</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/about/" class="menu-link">About</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 </header>
 
-    <div id="article-banner">
-  <h2>AngularJS中的常见的过滤器</h2>
-  <p class="post-date">2017-09-19</p>
-  <div class="arrow-down">
-    <a href="javascript:;"></a>
-  </div>
-</div>
-<main class="app-body flex-box">
-  <!-- Article START -->
-  <article class="post-article">
-    <section class="markdown-content"><blockquote>
+      
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2017-09-19T12:37:54.867Z" itemprop="datePublished">
+          2017-09-19
+      </time>
+    
+    
+    | 
+    <a href='/tags/开发技巧/'>开发技巧</a>
+    
+    
+</span>
+    <h1 class="post-title">AngularJS中的常见的过滤器</h1>
+    <section class="post-content">
+      <blockquote>
 <h2 id="AngularJS中的常见的过滤器"><a href="#AngularJS中的常见的过滤器" class="headerlink" title="AngularJS中的常见的过滤器"></a>AngularJS中的常见的过滤器</h2></blockquote>
 <ul>
 <li><p>过滤器：</p>
@@ -182,197 +117,94 @@
 </ul>
 </li>
 </ul>
-</section>
-    <!-- Tags START -->
-    
-      <div class="tags">
-        <span>Tags:</span>
-        
-  <a href="/tags#开发技巧" >
-    <span class="tag-code">开发技巧</span>
-  </a>
 
-      </div>
-    
-    <!-- Tags END -->
-    <!-- 打赏 START -->
-    
-      <div class="money-like">
-        <div class="reward-btn">
-          赏
-          <span class="money-code">
-            <span class="alipay-code">
-              <div class="code-image"></div>
-              <b>使用支付宝打赏</b>
-            </span>
-            <span class="wechat-code">
-              <div class="code-image"></div>
-              <b>使用微信打赏</b>
-            </span>
-          </span>
-        </div>
-        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
-      </div>
-    
-    <!-- 打赏 END -->
-    <!-- 二维码 START -->
-    <div class="qrcode">
-      <canvas id="share-qrcode"></canvas>
-      <p class="notice">扫描二维码，分享此文章</p>
-    </div>
-    <!-- 二维码 END -->
-    
-      <!-- Gitment START -->
-      <div id="comments"></div>
-      <!-- Gitment END -->
-    
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>John Zeng</h4>
+    <p>作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/" target="_blank">
+        <span class="hidden">weibo</span>
+    </a>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+    </footer>
   </article>
-  <!-- Article END -->
-  <!-- Catalog START -->
-  
-    <aside class="catalog-container">
-  <div class="toc-main">
-    <strong class="toc-title">Catalog</strong>
+  <nav class="pagination" role="pagination">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#AngularJS中的常见的过滤器"><span class="toc-nav-text">AngularJS中的常见的过滤器</span></a></li></ol>
+    <a class="newer-posts" href="/2017/09/19/AngularJS自定义过滤器/">
+        ← 自定义过滤器
+    </a>
     
-  </div>
-</aside>
-  
-  <!-- Catalog END -->
+    <span class="icon-logo">•</span>
+    
+    <a class="older-posts" href="/2017/09/19/AngularJS的使用步骤/">
+        AngularJS的使用步骤 →
+    </a>
+    
+</nav>
+
+  <div id="comment" class="comments-area">
+    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
+    
+</div>
+
 </main>
 
-<script>
-  (function () {
-    var url = 'http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/';
-    var banner = ''
-    if (banner !== 'undefined') {
-      $('#article-banner').css({
-        'background-image': 'url(' + banner + ')'
-      })
-    } else {
-      $('#article-banner').geopattern(url)
-    }
-    $('.header').removeClass('fixed-header')
 
-     // error image
-    $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
-      $(this).css({
-        'cursor': 'default'
-      })
-    })
-
-    // zoom image
-    $(".markdown-content img").on('click', function() {
-      var src = $(this).attr('src')
-      if (src !== 'http://file.muyutech.com/error-img.png') {
-        var imageW = $(this).width()
-        var imageH = $(this).height()
-        
-        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
-        zoom = zoom < 1 ? 1 : zoom
-        zoom = zoom > 2 ? 2 : zoom
-        var transY = (($(window).height() - imageH) / 2).toFixed(2)
-
-        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
-        $('.image-view-wrap').addClass('wrap-active')
-        $('.image-view-wrap img').css({
-          'width': `${imageW}`,
-          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
-        })
-        $('html').css('overflow', 'hidden')
-
-        $('.image-view-wrap').on('click', function() {
-          $(this).remove()
-          $('html').attr('style', '')
-        })
-      }
-    })
-
-    // qrcode
-    var qr = new QRious({
-      element: document.getElementById('share-qrcode'),
-      value: document.location.href
-    });
-
-    // gitment
-    var gitmentConfig = "yanm1ng";
-    if (gitmentConfig !== 'undefined') {
-      var gitment = new Gitment({
-        id: "AngularJS中的常见的过滤器",
-        owner: "yanm1ng",
-        repo: "yanm1ng.github.io",
-        oauth: {
-          client_id: "0f87e490e00ee3fd87ef",
-          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
-        }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
-  })();
-</script>
-
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
-</div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+      
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">John Zeng的个人播客</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
 </footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<script>
-  var hasLine = 'true';
-  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine == 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
 
-<script src="/js/script.js"></script>
-  </body>
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="/archive"><span>Archive</span></a>
+
+          <a class="icon-image"  href="/images"><span>Images</span></a>
+
+          <a class="icon-wiki"  href="/wiki/2014-10-28-wiki/"><span>Wiki</span></a>
+
+          <a class="icon-Favorites"  href="/favorites"><span>Favorites</span></a>
+
+          <a class="icon-mail"  href="/about/2014-09-11-mabao/"><span>Contact</span></a>
+
+</nav>
+
+</div>
+</body>
 </html>
