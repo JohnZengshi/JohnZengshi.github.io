@@ -495,28 +495,37 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_8.png"/>
+            <img src="/img/random/picHD_28.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
           <blockquote>
 <h2 id="AngularJS中的-filter服务"><a href="#AngularJS中的-filter服务" class="headerlink" title="AngularJS中的$filter服务"></a>AngularJS中的$filter服务</h2></blockquote>
 <ul>
-<li><p>出现filter的地方</p>
-<ul>
-<li><p>过滤器filter从数组中筛选符合条件的元素</p>
-  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;stus|filter:&#123;name:"jack",age:"18"&#125;&#125;&#125;</div></pre></td></tr></table></div></figure>
+<li>出现filter的地方<ul>
+<li>过滤器filter从数组中筛选符合条件的元素<pre><code class="html">  {{stus|filter:{name:"jack",age:"18"}}}
+</code></pre>
 </li>
-<li><p>自定义过滤器.</p>
-<ul>
-<li>模块对象有一个方法叫：filter,这个方法允许我们自定义过滤器  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;data|自定义过滤器名&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- ---------- --&gt;</span></div><div class="line">app.filter("自定义过滤器名"，function(data)&#123;</div><div class="line">    return xxx;</div><div class="line">&#125;)</div></pre></td></tr></table></div></figure>
+<li>自定义过滤器.<ul>
+<li>模块对象有一个方法叫：filter,这个方法允许我们自定义过滤器<pre><code class="html">  &lt;span&gt;{{data|自定义过滤器名}}&lt;/span&gt;
+  &lt;!-- ---------- --&gt;
+  app.filter(&quot;自定义过滤器名&quot;，function(data){
+      return xxx;
+  })
+</code></pre>
 </li>
 </ul>
 </li>
-<li><p>filter服务(是一个用在控制器中的过滤器)</p>
-  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> data = $filter(<span class="string">"date"</span>);</div><div class="line"><span class="comment">//date就是一个函数，这个函数就具备了date过滤器的功能</span></div></pre></td></tr></table></div></figure>
+<li>filter服务(是一个用在控制器中的过滤器)<pre><code class="js">  var data = $filter(&quot;date&quot;);
+  //date就是一个函数，这个函数就具备了date过滤器的功能
+</code></pre>
 <ul>
-<li>具体例子：  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</div><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$filter"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$filter</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> pirce = <span class="number">12.151</span>;</div><div class="line">    <span class="keyword">var</span> date = $filter(<span class="string">"过滤器的名字"</span>)(过滤的参数)</div><div class="line">&#125;])</div></pre></td></tr></table></div></figure>
+<li>具体例子：<pre><code class="js">  var app = angular.module(&quot;hmApp&quot;,[]);
+  app.controller(&quot;hmCtrl&quot;,[&quot;$scope&quot;,&quot;$filter&quot;,function($scope,$filter){
+      var pirce = 12.151;
+      var date = $filter(&quot;过滤器的名字&quot;)(过滤的参数)
+  }])
+</code></pre>
 </li>
 </ul>
 </li>
