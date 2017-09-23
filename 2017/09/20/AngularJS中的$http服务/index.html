@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      AngularJS中的$http服务 | John Zeng的个人播客
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>John Zeng的个人播客</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>AngularJS中的$http服务</h2>
+  <p class="post-date">2017-09-20</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><blockquote>
+<h2 id="AngularJS中的-http服务"><a href="#AngularJS中的-http服务" class="headerlink" title="AngularJS中的$http服务"></a>AngularJS中的$http服务</h2></blockquote>
+<ul>
+<li><p>$http服务,ng封装的一个ajax请求工具.</p>
+</li>
+<li><p>使用$http服务.</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">$http(&#123;</div><div class="line">    <span class="comment">//一个对象</span></div><div class="line">    <span class="comment">//通过对象的键值对来指定请求的参数</span></div><div class="line"></div><div class="line">    url:  <span class="comment">//指定要请求的资源的路径.</span></div><div class="line">    method:  <span class="comment">//指定请求的方式 get/post 默认是get</span></div><div class="line">    params: &#123;&#125;  <span class="comment">//当请求方式是get的时候,发送的数据要以键值对的形式存储在这个对象中.</span></div><div class="line">    data: <span class="string">""</span> <span class="comment">//字符串. 当请求的方式是post的时候,发送的数据要存储在这个属性中.</span></div><div class="line">    headers: &#123;&#125;  <span class="comment">//设置请求头.转换formData格式</span></div><div class="line"></div><div class="line">    <span class="comment">//当请求方式是post的时候,发送的数据的格式ng底层并没有帮我们转换,所以,需要我们手动的加请求头转换formData格式</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//通过链式编程的方式点1个then方法出来.</span></div><div class="line">    <span class="number">1.</span>传入两个回调.</div><div class="line">    <span class="number">2.</span>第<span class="number">1</span>个回调:在请求成功的时候执行. 有<span class="number">1</span>个参数(response)</div><div class="line">    <span class="number">3.</span>response 代表服务器返回的数据。</div><div class="line">    <span class="number">4.</span>response.data可以拿到服务器返回的真正的数据.</div><div class="line">    <span class="number">5.</span>第<span class="number">2</span>个回调:在请求失败的时候执行.</div></pre></td></tr></table></figure>
+</li>
+<li><p>具体实现：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</div><div class="line">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$http"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$http</span>)</span>&#123;</div><div class="line">        $scope.httpGet = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"get"</span>,</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//不带数据Get请求</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpPost = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"post"</span>,</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(respon.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line">            </div><div class="line">            <span class="comment">//不带数据post请求</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpGetWithData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"get"</span>,</div><div class="line">                params:&#123;</div><div class="line">                    name:<span class="string">"jack"</span>,</div><div class="line">                    pwd:<span class="string">"123456"</span></div><div class="line">                &#125;</div><div class="line">            &#125;.then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//带数据Get请求发送</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $scope.httpPostWithData = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            $http(&#123;</div><div class="line">                url:<span class="string">"./php/xxx.php"</span>,</div><div class="line">                method:<span class="string">"post"</span>,</div><div class="line">                data:<span class="string">"?name='jack'&amp;pwd=1234"</span>,</div><div class="line">                headers:&#123;</div><div class="line">                    <span class="string">"Content-Type"</span>:<span class="string">"application/x-www-form-urlencoded"</span></div><div class="line">                &#125;</div><div class="line">            &#125;.then(funciton(response)&#123;</div><div class="line">                <span class="built_in">console</span>.log(response.data)</div><div class="line">            &#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"error!"</span>)</div><div class="line">            &#125;))</div><div class="line"></div><div class="line">            <span class="comment">//带数据post请求发送</span></div><div class="line">        &#125;</div><div class="line">    &#125;])</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>利用$http进行跨域请求：</p>
+<ul>
+<li>只需要将method设置为jsonp就可以</li>
+<li>在发起跨域之前，需要设置一个白名单<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"demoCtrl"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>, []);</span></div><div class="line"><span class="javascript">        app.config([<span class="string">'$sceDelegateProvider'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$sceDelegateProvider</span>) </span>&#123;</span></div><div class="line"><span class="undefined">            </span></div><div class="line"><span class="javascript">            <span class="comment">// 设置跨域白名单</span></span></div><div class="line"><span class="javascript">            $sceDelegateProvider.resourceUrlWhitelist([<span class="string">"https://api.asilu.com/weather/"</span>]);</span></div><div class="line"><span class="undefined">        &#125;])</span></div><div class="line"><span class="undefined"></span></div><div class="line"><span class="javascript">        app.controller(<span class="string">"demoCtrl"</span>, [<span class="string">"$scope"</span>, <span class="string">"$http"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope, $http</span>) </span>&#123;</span></div><div class="line"><span class="undefined">            $http(&#123;</span></div><div class="line"><span class="javascript">                url: <span class="string">"https://api.asilu.com/weather/"</span>,</span></div><div class="line"><span class="undefined">                params: &#123;</span></div><div class="line"><span class="javascript">                    city: <span class="string">"深圳"</span></span></div><div class="line"><span class="undefined">                &#125;,</span></div><div class="line"><span class="javascript">                method: <span class="string">"jsonp"</span></span></div><div class="line"><span class="javascript">            &#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span></div><div class="line"><span class="javascript">                <span class="built_in">console</span>.log(response.data);</span></div><div class="line"><span class="undefined">            &#125;);</span></div><div class="line"><span class="undefined">        &#125;]);</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#AngularJS中的-http服务"><span class="toc-nav-text">AngularJS中的$http服务</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2017/09/20/AngularJS中的$http服务/';
+    var banner = ''
+    if (banner !== 'undefined') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "yanm1ng";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "AngularJS中的$http服务",
+        owner: "yanm1ng",
+        repo: "yanm1ng.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

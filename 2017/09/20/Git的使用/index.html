@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Git的使用 | John Zeng的个人播客
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>John Zeng的个人播客</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Git的使用</h2>
+  <p class="post-date">2017-09-20</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下"><a href="#1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下" class="headerlink" title="1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下"></a>1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下</h2><ul>
+<li><p>1.刚进入公司，领导让你对某个项目进行二次开发（服务器仓库并不是空的）</p>
+<ul>
+<li>第一种方式：<ul>
+<li>git clone 服务器仓库地址 app</li>
+<li>cd app</li>
+<li>touch 1.txt</li>
+<li>git add .</li>
+<li>git commit -m 备注信息</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+<li>第二种方式：<ul>
+<li>mkdir app</li>
+<li>cd app</li>
+<li>git init</li>
+<li>git pull 服务器仓库地址 master   <code>a、将本地仓库和服务器仓库进行了关联 b、将服务器仓库中的代码下载到本地</code></li>
+<li>touch 3.txt</li>
+<li>git add .</li>
+<li>git commit -m 备注信息</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.之后还需要更新代码</p>
+<ul>
+<li>只能：git pull 服务器仓库地址 master</li>
+</ul>
+</li>
+<li>3.之后需要往服务器中提交代码<ul>
+<li>只能：git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-创建github个人网站（静态网站）"><a href="#2-创建github个人网站（静态网站）" class="headerlink" title="2.创建github个人网站（静态网站）"></a>2.创建github个人网站（静态网站）</h2><ul>
+<li>能解析正常的静态页面：.html .js .css</li>
+<li>不能解析动态页面：.php  .jsp .asp .aspx</li>
+</ul>
+<ul>
+<li>添加一个仓库，仓库名字固定格式：github用户名.github.io</li>
+<li>往该仓库中提交文件，输入该仓库地址就可以看到这些文件了(默认显示index.html)<ul>
+<li>如果有README.md 也会自动加载README.md</li>
+<li>其他文件不会自动渲染，需要确定的文件名</li>
+<li>访问该网站必须使用https协议访问</li>
+</ul>
+</li>
+</ul>
+<p>html /css /js  /png</p>
+<ul>
+<li>index.php：动态的页面：由apache解析</li>
+<li>index.jsp：java开发的动态页面：tomcat/apache</li>
+<li>index.aspx/index.asp：c#/vb开发的动态页面：iis来解析</li>
+</ul>
+<h2 id="3-移除全局用户名"><a href="#3-移除全局用户名" class="headerlink" title="3.移除全局用户名"></a>3.移除全局用户名</h2><p>git config –global –unset user.name</p>
+<h2 id="4-git-remote：保存服务器地址"><a href="#4-git-remote：保存服务器地址" class="headerlink" title="4.git remote：保存服务器地址"></a>4.git remote：保存服务器地址</h2><ul>
+<li><p>保存服务器地址：git remote add 变量名 服务器地址</p>
+<ul>
+<li>举例：git remote add origin <a href="https://github.com/hahareg12345/hahareg12345.github.io.git" target="_blank" rel="external">https://github.com/hahareg12345/hahareg12345.github.io.git</a></li>
+</ul>
+</li>
+<li><p>删除服务器地址：git remote remove 变量名</p>
+</li>
+<li><p>变量重命名：git remote rename 旧变量名 新变量名</p>
+</li>
+<li><p>获取变量名保存的服务器地址：git remote get-url 变量名</p>
+<ul>
+<li>举例： git remote get-url origin</li>
+</ul>
+</li>
+<li>重新设置变量名保存的服务器地址：git remote set-url 变量名 服务器地址</li>
+</ul>
+<h2 id="5-设置文件不让git管理：隔离文件–-gt-项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中"><a href="#5-设置文件不让git管理：隔离文件–-gt-项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中" class="headerlink" title="5.设置文件不让git管理：隔离文件–&gt;项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中"></a>5.设置文件不让git管理：隔离文件–&gt;项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中</h2><ol>
+<li>在.git同级目录添加一个文件，叫 .gitignore<br> 创建这个文件名的时候，<pre><code>a：文件名：&quot;.gitignore.&quot;
+b、bash命令：touch .gitignore
+</code></pre></li>
+<li><p>打开.gitignore进行编辑，一行一行的添加不需要git管理的文件<br> 可以设置同类型的文件：<em>.js </em>.css<br> 也可以设置整个目录：</p>
+<pre><code>a/*--&gt;a目录下面的所有文件
+a/*.js--&gt;a目录下面的所有js文件
+</code></pre></li>
+<li><p>注意点：</p>
+<ul>
+<li>要隔离某个文件或者文件夹，一定要在它进入暂存区之前就隔离</li>
+<li>隔离的时候需要准备一个.gitignore文件，这个文件应该存放于仓库的根目录中(.git文件夹同级)</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-删除服务器中的文件"><a href="#6-删除服务器中的文件" class="headerlink" title="6.删除服务器中的文件"></a>6.删除服务器中的文件</h2><h3 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">右击删除/rm 文件名                   --&gt;物理删除</div><div class="line">git add 文件名                     --&gt;把删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把删除操作告诉服务器仓库</div></pre></td></tr></table></figure>
+<h3 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm 文件名                     --&gt;删除文件，同时把该删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把该删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把该删除操作告诉服务器仓库</div></pre></td></tr></table></figure>
+<ul>
+<li><p>如果一个文件从没进入过暂存区，要想删除：rm</p>
+</li>
+<li><p>如果一个文件进入本地仓库，但是没有进入到服务器仓库,也就不需要执行git push</p>
+</li>
+<li><p>一个细节：如果某个文件没有进入到本地仓库，也没有进入服务器仓库<br>git rm 无法正常删除文件<br>git rm xxx -f 可以实现把文件删除</p>
+</li>
+</ul>
+<h3 id="对一个文件的重命名操作，"><a href="#对一个文件的重命名操作，" class="headerlink" title="对一个文件的重命名操作，"></a>对一个文件的重命名操作，</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">+ 1.txt--&gt;2.txt</div><div class="line">    - git status查看状态的的时候，发现1.txt被删除，2.txt新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为2.txt</div><div class="line"></div><div class="line">+ 删除了1.txt，新建了1.html</div><div class="line">    + git status查看状态的的时候，发现1.txt被删除，1.html新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为1.html</div></pre></td></tr></table></figure>
+<h2 id="7-git-add-把在工作区对文件的操作告诉暂存区"><a href="#7-git-add-把在工作区对文件的操作告诉暂存区" class="headerlink" title="7.git add(把在工作区对文件的操作告诉暂存区)"></a>7.git add(把在工作区对文件的操作告诉暂存区)</h2><h3 id="git-add"><a href="#git-add" class="headerlink" title="git add *"></a>git add *</h3><ul>
+<li><p>默认为将修改的文件和新添加的文件添加到git系统的暂存区<br>☆注意☆：不包括删除</p>
+</li>
+<li><p>git add *.js 将修改了和新添加的以.js为后缀的文件添加到暂存区</p>
+</li>
+<li>git add *.txt 将修改了和新添加的以.txt为后缀的文件添加到暂存区</li>
+</ul>
+<h3 id="git-add-u-或者-git-add-–update"><a href="#git-add-u-或者-git-add-–update" class="headerlink" title="git add -u 或者 git add –update"></a>git add -u 或者 git add –update</h3><ul>
+<li>表示将(修改和删除的文件)的操作告诉暂存区<ul>
+<li>不能将新添加的文件告诉暂存区</li>
+</ul>
+</li>
+</ul>
+<h3 id="git-add-A-或者-git-add-–all"><a href="#git-add-A-或者-git-add-–all" class="headerlink" title="git add -A  或者 git add –all"></a>git add -A  或者 git add –all</h3><p>表示将所有的修改与删除和未跟踪的文件都告诉暂存区。<br>–&gt;新创建的文件<br>–&gt;修改的文件<br>–&gt;删除的文件</p>
+<h3 id="git-add-文件夹名称-可以把指定目录下面的所有子目录中的文件操作放到暂存区"><a href="#git-add-文件夹名称-可以把指定目录下面的所有子目录中的文件操作放到暂存区" class="headerlink" title="git add 文件夹名称   可以把指定目录下面的所有子目录中的文件操作放到暂存区"></a>git add 文件夹名称   可以把指定目录下面的所有子目录中的文件操作放到暂存区</h3><ul>
+<li>如果当前就是git仓库的根目录，就可以一次性把所有文件的状态放到暂存区</li>
+<li><p>如果当前不是git仓库的根目录，只能把该目录以及所有子目录中的文件操作放到暂存区</p>
+</li>
+<li><p>如果当前就是git仓库的根目录，要提交所有的文件，可以选择使用下面三种之一的方式</p>
+<ul>
+<li>git add .</li>
+</ul>
+<ul>
+<li>git add -A</li>
+<li>git add -u+git add *</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚"><a href="#8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚" class="headerlink" title="8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)"></a>8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)</h2><h3 id="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"><a href="#将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件" class="headerlink" title="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"></a>将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git reset --hard 提交的版本号(每一次提交都会有一个黄色的唯一标识，该标识就是版本号)</div><div class="line">    - git <span class="built_in">log</span> 获取到很长的版本号，也可以通过git <span class="built_in">log</span> --oneline获取到短的版本号</div><div class="line">    - 绝大多数情况下，还可以使用git reflog也会提示版本号</div></pre></td></tr></table></figure>
+<h3 id="git-log-–oneline：每一次提交的-短-版本号，以及备注信息"><a href="#git-log-–oneline：每一次提交的-短-版本号，以及备注信息" class="headerlink" title="git log –oneline：每一次提交的(短)版本号，以及备注信息"></a>git log –oneline：每一次提交的(短)版本号，以及备注信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">log</span>的简便方法</div></pre></td></tr></table></figure>
+<h3 id="git-reflog-查看历史记录"><a href="#git-reflog-查看历史记录" class="headerlink" title="git reflog 查看历史记录"></a>git reflog 查看历史记录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这些历史记录包括：每一次提交的信息；以及每一次版本回滚的操作；分支切换操作</div></pre></td></tr></table></figure>
+<h3 id="（了解）单文件特殊操作-☆☆☆不可逆☆☆☆"><a href="#（了解）单文件特殊操作-☆☆☆不可逆☆☆☆" class="headerlink" title="（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)"></a>（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)</h3><h3 id="git-checkout-–-1-txt：-替换文件内容"><a href="#git-checkout-–-1-txt：-替换文件内容" class="headerlink" title="git checkout – 1.txt：(替换文件内容)"></a>git checkout – 1.txt：(替换文件内容)</h3><ul>
+<li>将暂存区中的文件取出并替换工作目录的文件<ul>
+<li>误删了一个文件，通过该命令，从仓库中把文件恢复(ps：前提是之前该文件已经进入过仓库了)</li>
+<li>对于某个文件来说，之前已经提交到仓库了，这些又随便写了一些内容，发现这些内容不是自己想要的，就可以通过该操作把仓库中的原内容取出来</li>
+</ul>
+</li>
+</ul>
+<h3 id="git-reset-HEAD-–-1-txt：-不会替换文件内容"><a href="#git-reset-HEAD-–-1-txt：-不会替换文件内容" class="headerlink" title="git reset HEAD – 1.txt：(不会替换文件内容)"></a>git reset HEAD – 1.txt：(不会替换文件内容)</h3><p>将某个操作告诉暂存区，后来发现这是一次误操作，通过这个命令反悔</p>
+<h2 id="9-tortoiseGit比较文件差异-单文件"><a href="#9-tortoiseGit比较文件差异-单文件" class="headerlink" title="9.tortoiseGit比较文件差异(单文件)"></a>9.tortoiseGit比较文件差异(单文件)</h2><ul>
+<li>1、通过对某个文件右击，依次选择tortoiseGit–&gt;diff<br>  –&gt;将当前工作区的代码跟仓库中最新的代码进行比较</li>
+<li><p>2、通过对某个文件右击，依次选择tortoiseGit–&gt;diff with previous version<br>  –&gt;将当前工作区的代码根仓库中最新版本的前一个版本的代码进行比较</p>
+</li>
+<li><p>3、如果希望把某个文件跟之前很早的版本进行代码比较，应该：<br>  –&gt;右击该文件，依次选择：tortoiseGit–&gt;show log</p>
+<pre><code>--&gt;选择要比较的某个版本，右击选择菜单：compare with working tree
+</code></pre></li>
+<li><p>4、tortoiseGit图标</p>
+<ul>
+<li>一个新创建的文件没有图标</li>
+<li>已经添加到暂存区的文件具有”+”</li>
+<li>已经commit 的文件具有 “√:</li>
+<li>已经修改过的文件：红色的!</li>
+<li>冲突的文件：黄色的三角形</li>
+</ul>
+</li>
+</ul>
+<h3 id="分支操作相关指令"><a href="#分支操作相关指令" class="headerlink" title="分支操作相关指令"></a>分支操作相关指令</h3><h3 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h3><p>查看当前拥有的所有分支(带*前缀的是当前的分支)</p>
+<h3 id="git-branch-分支名"><a href="#git-branch-分支名" class="headerlink" title="git branch 分支名"></a>git branch 分支名</h3><p>在当前分支下创建新分支<br>    –&gt;新分支会继承所有的当前分支到目前为止的所有代码</p>
+<h3 id="git-checkout-分支名"><a href="#git-checkout-分支名" class="headerlink" title="git checkout 分支名"></a>git checkout 分支名</h3><p>切换到指定分支下面去</p>
+<h3 id="git-merge-m-备注信息"><a href="#git-merge-m-备注信息" class="headerlink" title="git merge -m 备注信息"></a>git merge -m 备注信息</h3><p>将指定分支合并到当前分支下</p>
+<h3 id="git-branch-d-分支名"><a href="#git-branch-d-分支名" class="headerlink" title="git branch -d 分支名"></a>git branch -d 分支名</h3><p>删除指定的分支</p>
+<h3 id="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"><a href="#无论是创建分支还是合并分支时刻警醒当前位于哪个位置" class="headerlink" title="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"></a>无论是创建分支还是合并分支时刻警醒当前位于哪个位置</h3><h3 id="对于一个仓库，如果没有任何本地提交，git-branch-没有结果"><a href="#对于一个仓库，如果没有任何本地提交，git-branch-没有结果" class="headerlink" title="对于一个仓库，如果没有任何本地提交，git branch 没有结果"></a>对于一个仓库，如果没有任何本地提交，git branch 没有结果</h3><h3 id="不要在本地分支上push代码"><a href="#不要在本地分支上push代码" class="headerlink" title="不要在本地分支上push代码"></a>不要在本地分支上push代码</h3></section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#建站技巧" >
+    <span class="tag-code">建站技巧</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下"><span class="toc-nav-text">1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-创建github个人网站（静态网站）"><span class="toc-nav-text">2.创建github个人网站（静态网站）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-移除全局用户名"><span class="toc-nav-text">3.移除全局用户名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-git-remote：保存服务器地址"><span class="toc-nav-text">4.git remote：保存服务器地址</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-设置文件不让git管理：隔离文件–-gt-项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中"><span class="toc-nav-text">5.设置文件不让git管理：隔离文件–>项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#6-删除服务器中的文件"><span class="toc-nav-text">6.删除服务器中的文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#第一种方式："><span class="toc-nav-text">第一种方式：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#第二种方式："><span class="toc-nav-text">第二种方式：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#对一个文件的重命名操作，"><span class="toc-nav-text">对一个文件的重命名操作，</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#7-git-add-把在工作区对文件的操作告诉暂存区"><span class="toc-nav-text">7.git add(把在工作区对文件的操作告诉暂存区)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-add"><span class="toc-nav-text">git add *</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-add-u-或者-git-add-–update"><span class="toc-nav-text">git add -u 或者 git add –update</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-add-A-或者-git-add-–all"><span class="toc-nav-text">git add -A  或者 git add –all</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-add-文件夹名称-可以把指定目录下面的所有子目录中的文件操作放到暂存区"><span class="toc-nav-text">git add 文件夹名称   可以把指定目录下面的所有子目录中的文件操作放到暂存区</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚"><span class="toc-nav-text">8.多文件特殊操作(版本回滚)(可逆–>版本来回滚、随意滚)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"><span class="toc-nav-text">将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-log-–oneline：每一次提交的-短-版本号，以及备注信息"><span class="toc-nav-text">git log –oneline：每一次提交的(短)版本号，以及备注信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-reflog-查看历史记录"><span class="toc-nav-text">git reflog 查看历史记录</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#（了解）单文件特殊操作-☆☆☆不可逆☆☆☆"><span class="toc-nav-text">（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-checkout-–-1-txt：-替换文件内容"><span class="toc-nav-text">git checkout – 1.txt：(替换文件内容)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-reset-HEAD-–-1-txt：-不会替换文件内容"><span class="toc-nav-text">git reset HEAD – 1.txt：(不会替换文件内容)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#9-tortoiseGit比较文件差异-单文件"><span class="toc-nav-text">9.tortoiseGit比较文件差异(单文件)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#分支操作相关指令"><span class="toc-nav-text">分支操作相关指令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-branch"><span class="toc-nav-text">git branch</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-branch-分支名"><span class="toc-nav-text">git branch 分支名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-checkout-分支名"><span class="toc-nav-text">git checkout 分支名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-merge-m-备注信息"><span class="toc-nav-text">git merge -m 备注信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#git-branch-d-分支名"><span class="toc-nav-text">git branch -d 分支名</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#无论是创建分支还是合并分支时刻警醒当前位于哪个位置"><span class="toc-nav-text">无论是创建分支还是合并分支时刻警醒当前位于哪个位置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#对于一个仓库，如果没有任何本地提交，git-branch-没有结果"><span class="toc-nav-text">对于一个仓库，如果没有任何本地提交，git branch 没有结果</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#不要在本地分支上push代码"><span class="toc-nav-text">不要在本地分支上push代码</span></a></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2017/09/20/Git的使用/';
+    var banner = ''
+    if (banner !== 'undefined') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "yanm1ng";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "Git的使用",
+        owner: "yanm1ng",
+        repo: "yanm1ng.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

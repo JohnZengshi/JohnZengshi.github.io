@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      RequireJS 是一个基于原生js实现的模块化解决方案 | John Zeng的个人播客
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>John Zeng的个人播客</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>RequireJS 是一个基于原生js实现的模块化解决方案</h2>
+  <p class="post-date">2017-09-20</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><blockquote>
+<h2 id="1-模块化"><a href="#1-模块化" class="headerlink" title="1.模块化"></a>1.模块化</h2></blockquote>
+<ul>
+<li><p>模块化是什么？</p>
+<ul>
+<li>具有实现一个完整功能的整体</li>
+</ul>
+</li>
+<li><p>为什么要使用模块化?</p>
+<ul>
+<li>为了更好地复用</li>
+<li>减少全局变量污染</li>
+<li><p>解决功能之间的依赖关系</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  var KTV=(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    var leastPrice=1000;</div><div class="line">    var total=0;</div><div class="line">    <span class="built_in">return</span> &#123;</div><div class="line">        pay:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            <span class="keyword">if</span>(total&gt;=leastPrice)&#123;</div><div class="line">                alert(<span class="string">"买单成功"</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)()</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="2-模块化的实现方式"><a href="#2-模块化的实现方式" class="headerlink" title="2.模块化的实现方式"></a>2.模块化的实现方式</h2></blockquote>
+<ul>
+<li><p>使用闭包来实现</p>
+<ul>
+<li>随着功能的增加，暴露的全局变量也会越来越多<ul>
+<li>requireJS几乎没有全局变量</li>
+</ul>
+</li>
+<li>不能很好的解决模块依赖的问题</li>
+</ul>
+</li>
+<li><p>使用主流的一些实现模块化的库来实现</p>
+<ul>
+<li>requireJS–&gt;AMD规范–&gt;Async Module Define–&gt;(异步模块加载规范)</li>
+<li>seaJS–&gt;CMD规范–&gt;Common Module Define–&gt;同步模块加载规范 ：玉伯<ul>
+<li>阿里：朴灵《深入浅出Node.JS》</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>browserify</p>
+</li>
+<li>webpack</li>
+<li>Node.JS–&gt;CommonJS规范</li>
+<li>mv*框架<ul>
+<li>angular vue backbone avalon</li>
+</ul>
+</li>
+<li>组件化<ul>
+<li>react /react native /ionic</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h2 id="3-面试的重点-AMD规范和CMD规范比较大的区别："><a href="#3-面试的重点-AMD规范和CMD规范比较大的区别：" class="headerlink" title="3.(面试的重点)AMD规范和CMD规范比较大的区别："></a>3.(面试的重点)AMD规范和CMD规范比较大的区别：</h2></blockquote>
+<ul>
+<li><p>1.AMD规范就是指requireJS</p>
+<ul>
+<li>–&gt;ansnc module define: 异步模块定义（异步加载模块，依赖前置）<ul>
+<li>–&gt;模块定义和导入（使用）：define定义一个模块，define([“导入的模块”])/require([“导入的模块”])</li>
+<li>–&gt;异步加载模块 动态创建script标签</li>
+<li>–&gt;把所有依赖的模块放在文件的头部</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.CMD规范就是指的seajs</p>
+<ul>
+<li>–&gt;common module define：通用模块定义(同步加载模块)</li>
+<li>–&gt;模块定义和导入：exports/module.exports</li>
+<li>–&gt;同步加载模块</li>
+<li>–&gt;依赖就近：50行代码使用商品模块的功能，就在49行依赖商品模块</li>
+</ul>
+</li>
+<li><p>3.CommonJS规范：nodeJS</p>
+</li>
+</ul>
+<blockquote>
+<h2 id="4-requireJS这种模块化解决方案称之为AMD规范"><a href="#4-requireJS这种模块化解决方案称之为AMD规范" class="headerlink" title="4.requireJS这种模块化解决方案称之为AMD规范"></a>4.requireJS这种模块化解决方案称之为AMD规范</h2></blockquote>
+<ul>
+<li><p>AMD:async module define:异步模块定义</p>
+</li>
+<li><p>一直非常现实的有CMD规范–》sea.js(玉伯)</p>
+<ul>
+<li>CMD:common module define(借鉴了node.js中的CommonJS规范)</li>
+</ul>
+</li>
+<li><p>模块化规范：AMD CMD CommonJS</p>
+</li>
+<li><p>模块化解决方案：requireJS seaJS browerify webpack</p>
+</li>
+<li><p>MV*: mvc mvvm mvp</p>
+</li>
+<li><p>组件化开发：react</p>
+</li>
+</ul>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#开发用到的新技术" >
+    <span class="tag-code">开发用到的新技术</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-模块化"><span class="toc-nav-text">1.模块化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-模块化的实现方式"><span class="toc-nav-text">2.模块化的实现方式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-面试的重点-AMD规范和CMD规范比较大的区别："><span class="toc-nav-text">3.(面试的重点)AMD规范和CMD规范比较大的区别：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-requireJS这种模块化解决方案称之为AMD规范"><span class="toc-nav-text">4.requireJS这种模块化解决方案称之为AMD规范</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2017/09/20/Require JS的笔记/';
+    var banner = ''
+    if (banner !== 'undefined') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "yanm1ng";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "RequireJS 是一个基于原生js实现的模块化解决方案",
+        owner: "yanm1ng",
+        repo: "yanm1ng.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

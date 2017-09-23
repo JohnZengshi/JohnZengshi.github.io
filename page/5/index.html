@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      John Zeng的个人播客
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>John Zeng的个人播客</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/20/元数据（meta）的一般应用/">元数据（meta）的一般应用</a>
+      </h2>
+      <p class="article-date">September 20, 2017</p>
+      
+        
+  <a href="/tags#黑科技" >
+    <span class="tag-code">黑科技</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+元数据（meta）的一般应用
+
+(面试题）HTML代码中的元数据对于代码编码格式，SEO，移动端网页呈现具有重要的作用。请用元数据分别实现以上功能(且移动端网页禁止缩放)。
+
+常见的方法：
+  1234&lt;meta charset = "utf-8"&gt;&lt;meta keywo ...
+        
+      </div>
+      <a class="more" href="/2017/09/20/元数据（meta）的一般应用/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/20/javascript加载的俩种方式/">js的加载有两种方法</a>
+      </h2>
+      <p class="article-date">September 20, 2017</p>
+      
+        
+  <a href="/tags#开发技巧" >
+    <span class="tag-code">开发技巧</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+同步加载：
+1234&lt;script src="http://yourdomain.com/script.js"&gt;&lt;/script&gt;&lt;script src="http://yourdomain.com/script.js"&gt;&lt;/script&gt;/ ...
+        
+      </div>
+      <a class="more" href="/2017/09/20/javascript加载的俩种方式/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/20/退出登录常用的方法/">退出登录常用的方法</a>
+      </h2>
+      <p class="article-date">September 20, 2017</p>
+      
+        
+  <a href="/tags#建站技巧" >
+    <span class="tag-code">建站技巧</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+退出登录时事件触发(正确的顺序)
+
+清除session —&gt; 发送ajax请求；
+  1234567891011$(.退出登录按钮).on("click",function()&#123;    $.post("数据库退出登录API",&#123;&#125;,function(re ...
+        
+      </div>
+      <a class="more" href="/2017/09/20/退出登录常用的方法/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/hello-world/">Hello World</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+      <div class="article-summary">
+        
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/hello-world/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/AngularJS中的$log服务/">Angular中的$log服务</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+      <div class="article-summary">
+        
+          
+Angular中的$log服务
+123456789$log.error("这是error输出的消息!"); //错误格式的消息 红色$log.log("这是log输出的消息!"); //与console.log()没有差别$log.info("这是info输出的消息");//与consol ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/AngularJS中的$log服务/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/AngularJS中的依赖注入/">AngularJS中的依赖注入</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+      <div class="article-summary">
+        
+          
+依赖注入,angularjs解决这种依赖提供的方案: 依赖注入。、
+
+行内式注入
+
+创建控制器的时候,第2个参数是1个数组.123app.controller("$Ctrl",["$scope","$log",function($scope,$log)&#123;&#125;])
+
+
+
+推 ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/AngularJS中的依赖注入/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/AngularJS自定义过滤器/">自定义过滤器</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+      <div class="article-summary">
+        
+          
+自定义过滤器
+
+功能: 允许我们自定义过滤器
+
+参数1:自定义过滤器的名称.
+参数2:是1个回调函数.
+这个回调函数要要求返回1个函数.   返回的这个函数在过滤器被调用的时候,会被自动执行.   这个返回的函数至少有1个参数data 代表原本要显示的数据.   函数内部对原本要显示的数据 ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/AngularJS自定义过滤器/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/AngularJS中常见的过滤器/">AngularJS中的常见的过滤器</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+        
+  <a href="/tags#开发技巧" >
+    <span class="tag-code">开发技巧</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+AngularJS中的常见的过滤器
+
+过滤器：
+
+指对数据进行过滤(处理)
+我们现在讲的过滤器,是用在视图中的.对原本要显示在视图中的数据进行过滤然后再显示.
+过滤器的使用:  1&#123;&#123;原本要显示的数据|过滤器名称:参数:参数&#125;&#125;
+
+
+
+currenc ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/AngularJS中常见的过滤器/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/AngularJS的使用步骤/">AngularJS的使用步骤</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+      <div class="article-summary">
+        
+          
+AngularJS的使用步骤
+
+使用ng-app指令来指定angularJS的管理范围，
+
+指令：都是ng 自定义的html属性
+把这个指令给谁，谁及其纸标签就都被ng管理
+
+
+AngularJS应用以模块化的方式构建的；ng-app指令指定ng管理范围，ng是以模块化的方式管理的
+
+an ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/AngularJS的使用步骤/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/Angular常见的内部指令/">AngularJS常见的内部指令</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+      <div class="article-summary">
+        
+          
+AngularJS常见的内部指令
+
+一般情况下都是ng新增的HTML属性
+  123ng-appng-controllerng-repeat
+
+ng-show指令
+
+功能：决定元素是否显示还是不显示
+取值：
+boolean值
+true：显示
+false:不显示
+
+
+可以直接给一个boole ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/Angular常见的内部指令/">Read more</a>
+    </article>
+  
+
+  
+    <div class="guide-pager">
+  
+    <a href="/page/4/"><span class="page-arrow">← </span>Prev</a>
+  
+  
+    <a href="/page/6/">Next<span class="page-arrow"> →</span></a>
+  
+</div>
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

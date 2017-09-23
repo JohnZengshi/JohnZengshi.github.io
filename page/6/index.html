@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      John Zeng的个人播客
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>John Zeng的个人播客</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/Angular中的ng-repeat指令/">ng-repeat指令</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+        
+  <a href="/tags#开大技巧" >
+    <span class="tag-code">开大技巧</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+ng-repeat指令
+
+ng-repeat指令
+
+重复的生成指定的标签
+可以遍历数组
+如果数组中的元素有重复，那么会遍历失败
+ng-底层会给数组的每一个元素自动的起一个标识，这个标识不允许重复，默认会将数组中的元素作为每一个元素的标识
+$index是ng预先定义好的变量，代表每一个元素的 ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/Angular中的ng-repeat指令/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/Angular自定义指令/">Angular自定义属性</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+        
+  <a href="/tags#开发技巧" >
+    <span class="tag-code">开发技巧</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+Angular自定义属性
+
+模块对象提供了一个方法: directive 
+
+功能: 自定义指令.
+参数1: 自定义指令的名称
+参数2: 是1个回调函数.这个回调函数在解析指令的时候会执行,报错的原因是因为回调函数没有按照规范写.
+这个回调函数要求返回1个对象.
+自定义的指令要做的事情通过 ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/Angular自定义指令/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/Angurlar的基本模板/">Angular的基本模板套用</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+      <div class="article-summary">
+        
+          
+Angurlar的基本模板套用
+
+导入angular.js
+  1&lt;script src="angular.js"&gt;&lt;/script&gt;
+
+html部分：
+  123&lt;body ng-app="App"&gt;    &lt;div ng-controller= ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/Angurlar的基本模板/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/利用requireJS处理通用的ajax请求/">处理通用的ajax请求</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+        
+  <a href="/tags#开发技巧" >
+    <span class="tag-code">开发技巧</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+处理通用的ajax请求
+
+定义模块：
+  1234567891011121314151617181920212223242526272829define([    "jquery",],function($)&#123;    var obj = &#123;        ajax:fu ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/利用requireJS处理通用的ajax请求/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/Angular中数据的单向绑定/">Angular中数据的单向绑定</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+      <div class="article-summary">
+        
+          
+Angular中数据的单向绑定
+
+数据的单向绑定
+
+在控制器中制造数据
+将制造好的数据存放在$scope数据模型中
+在视图中显示$scope中的数据
+
+
+数据绑定符号
+  1&#123;&#123;&#125;&#125;符号其实是ng-bind的简写形式
+
+闪烁问题
+
+原因:浏览器在解析 ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/Angular中数据的单向绑定/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/19/原生js实现联动，和angularJS实现联动的对比/">原生js实现联动，和angularJS实现联动的对比；</a>
+      </h2>
+      <p class="article-date">September 19, 2017</p>
+      
+        
+  <a href="/tags#黑科技" >
+    <span class="tag-code">黑科技</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+原生js实现联动，和angularJS实现联动的对比；
+
+原生js实现联动效果：
+  1234567891011&lt;input type="text" id="ipt"&gt;&lt;h1 id="content"&gt;&lt;/h1&gt;&lt;script&gt;    var ...
+        
+      </div>
+      <a class="more" href="/2017/09/19/原生js实现联动，和angularJS实现联动的对比/">Read more</a>
+    </article>
+  
+
+  
+    <div class="guide-pager">
+  
+    <a href="/page/5/"><span class="page-arrow">← </span>Prev</a>
+  
+  
+    <a class="unvisible" href="/">Next <span class="page-arrow">→</span></a>
+  
+</div>
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
