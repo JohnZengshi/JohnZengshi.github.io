@@ -1,509 +1,127 @@
-
 <!DOCTYPE html>
-<html  style="display: none;">
-
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
   
-<head>
-  <script>
-    window.mduiVersion = "1.5.0"
-    window.oldVersion = [
-     '1.4.7',
-     '1.4.8',
-     '1.4.9',
-     'unknownVersion'
-    ]
-  </script>
-  <!--
-        © HEXO MDUI Theme
-        https://github.com/Halyul/hexo-theme-mdui
-        Version: 1.5.0 -->
-  <meta charset="UTF-8">
-  <title>if()括号内的数据类型的转换 - John Zeng的个人播客</title>
-
-  <!-- Favicons -->
-  <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-  <link rel="icon" sizes="192x192" href="/img/favicon.png">
-  <link rel="apple-touch-icon" href="/img/favicon.png">
-
-  <!-- Meta & Info -->
-  <meta http-equiv="X-UA-Compatible">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <link rel="shortcut icon" href="/css/images/logo.png">
   
-    <meta name="theme-color" content="
-  
-  #3F51B5
-  
-
-">
-  
-
-  <meta name="author" content="John Zeng">
-  
-  <meta name="keywords" content=",javascript基础知识">
-
-  <!--iOS -->
-  <meta name="apple-mobile-web-app-title" content="John Zeng的个人播客">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="480">
-
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-
-  <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://yoursite.com">
-  <meta property="og:type" content="blog">
-  <meta property="og:title" content="if()括号内的数据类型的转换 - John Zeng的个人播客 | John Zeng的个人播客">
-  <meta property="og:image" content="/img/favicon.png" />
-  
-
-    <meta property="og:article:tag" content="javascript基础知识"> 
-
-  <!-- Cache -->
-  <meta http-equiv="Cache-Control" content="max-age=7200" />
-  <meta http-equiv="Expires" content="Fri, 29 Dec 2017 23:00:00 GMT" />
-
-  
-
-  <script>
-    (function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.mduiVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf(c)!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();
-  </script>
-
-  <!-- Import CSS -->
-  
-    <link rel="stylesheet" href="/css/fonts.min.css">
-  
-  
+  <title>
     
-      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?OeEY1DPEWhXQ5nt08XaZcg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+      if()括号内的数据类型的转换 | John Zeng的个人播客
     
-  
-
-  <!-- Custom Head -->
-  
-
-  
-    <style>
-      body {
-        background-color: #eeeeee;
-      }
-    </style>
-  
-
-  
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
 </head>
-
-
-
-
-  
-    
-  <body class="mdui-theme-primary-indigo mdui-theme-accent-blue
-   
-  
-    mdui-appbar-with-toolbar
-  
-  " >
-
-
-  
-
-
-<div id="top"></div>
-
-
-  
-
-  <div class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed animate-appbar" id="blog-appbar">
-    <div class="mdui-toolbar mdui-color-theme">
-      <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
-        <i class="mdui-icon">
-          <span></span>
-        </i>
-      </button>
-      
-        <a href="/" class="mdui-typo-headline">
-          Title
-        </a>
-      
-      
-      
-        <div class="flex-spacer"></div>
-      
-      
-      
-
-    </div>
-  </div>
-
-
-  <div id="search-cover" searchResult onclick="closeSearch()"></div>
-
-
-
-
-
-
-  
-  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
-  " id="drawer" style="z-index: 2001;">
-  <div class="userview" style="background-image: url(/img/bg.png)">
-  <div class="overlay">
-    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
-    <div class="bottom">
-      <div class="info">
-        <div class="author mdui-text-color-white-text">
-          John Zeng
-        </div>
-        <div class="slogan mdui-text-color-white-secondary">
-          I&#39;m your slogan!
-        </div>
-      </div>
-      <div class="flex-spacer"></div>
-      
-    </div>
-  </div>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
 </div>
 
-  <div class="content">
-  <div class="hexo">
-    
-      <div class="mdui-list no-padding-bottom">
-        <a href="/">
-          <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
-            <div class="mdui-list-item-content">
-              首页
-            </div>
-          </li>
-        </a>
-      </div>
-    
-    
-      <div class="mdui-list no-padding">
-        <a href="/archives">
-          <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
-            <div class="mdui-list-item-content">
-              归档
-              <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
-            </div>
-          </li>
-        </a>
-      </div>
-    
-    
-      <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
-        
-          <div class="mdui-collapse-item ">
-            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-              <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-              <div class="mdui-list-item-content">分类</div>
-              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-            </div>
-            <div class="mdui-collapse-item-body mdui-list">
-              
-                <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  网站搭建
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
-                <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  Angular
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
-                </a>
-              
-                <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  Git
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/RequireJS/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  RequireJS
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">5</span>
-                </a>
-              
-                <a href="/categories/AJAX/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  AJAX
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/cookie/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  cookie
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/关于ES5规范/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  关于ES5规范
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/javascript/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  javascript
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">4</span>
-                </a>
-              
-                <a href="/categories/jQuery源码分析/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  jQuery源码分析
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-                <a href="/categories/Requirejs/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  Requirejs
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/开发/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
-                <a href="/categories/JSON/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  JSON
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/jQuery/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  jQuery
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/categories/设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  设计模式
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-            </div>
-          </div>
-        
-        
-          <div class="mdui-collapse-item ">
-            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-              <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-              <div class="mdui-list-item-content">标签</div>
-              <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-            </div>
-            <div class="mdui-collapse-item-body mdui-list">
-              
-                <a href="/tags/建站技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  建站技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
-                </a>
-              
-                <a href="/tags/开发技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">15</span>
-                </a>
-              
-                <a href="/tags/方法总结/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  方法总结
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/黑科技/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  黑科技
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
-                </a>
-              
-                <a href="/tags/没事研究来玩的/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  没事研究来玩的
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
-                </a>
-              
-                <a href="/tags/开大技巧/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开大技巧
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/开发用到的新技术/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  开发用到的新技术
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-                <a href="/tags/掉坑里了/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  掉坑里了
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/javascript基础知识/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  javascript基础知识
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">3</span>
-                </a>
-              
-                <a href="/tags/方法区别/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  方法区别
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-                </a>
-              
-                <a href="/tags/RequireJs中遇到的坑/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  RequireJs中遇到的坑
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-                <a href="/tags/网站性能优化方方面面/" class="mdui-list-item mdui-ripple" style="display: flex">
-                  网站性能优化方方面面
-                  <div style="flex-grow: 1;"></div>
-                  <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
-                </a>
-              
-            </div>
-          </div>
-        
-        <div class="mdui-collapse-item ">
-          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-            <div class="mdui-list-item-content">年份</div>
-            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-          </div>
-          <div class="mdui-collapse-item-body mdui-list">
-            
-            
-              <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
-                2017
-              </a>
-            
-          </div>
-        </div>
-      </div>
-    
-  </div>
-  
-</div>
-
-  <div class="flex-spacer"></div>
-  <div class="drawer-footer">
-  <div class="mdui-typo mdui-typo-caption-opacity">
-    Powered by <a href="http://hexo.io">Hexo</a>
-    <br />
-    Theme - <a href="//github.com/Halyul/hexo-theme-mdui">Halyul/MDUI</a>
-    <br />
-    <span>
-      Copyright ©
-      <span year></span>
-      John Zeng
-    </span>
-    
-    
-  </div>
-</div>
-<script type="text/javascript">
-  var copyrightNow = new Date().getFullYear();
-  var textContent = document.querySelector('span[year]')
-  
-    textContent.textContent = copyrightNow
-  
-</script>
-
-</div>
-
-
-
-
-
-
-
-<main>
-  
-
-
-  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/now/post.min.css?9TmLsksSXsN7apP3A0qy0g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-<style id="lightgallery_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("lightgallery_css","/css/src/lightgallery.min.css?+c5+nzUi2JvkvxweHDf/nA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-  <style id="prism_theme_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prism_theme_css","/css/src/prism-themes/coy.min.css?9udJlAMispjFcAd0Wx6aQw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-
-<style>
-  .lg-outer .lg-item {
-    background-image: url("/img/loading.gif");
-  }
-</style>
-<div class="post-warpper animate-post">
-  <div class="post-bg-color
-    
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>John Zeng的个人播客</span>
+    </a>
+    <ul class="right-list">
       
-        mdui-color-theme
-      
-    
-  "></div>
-  <div class="post-header
-    
-      
-        mdui-color-theme
-      
-    
-  ">
-    <div class="post-header-container">
-      <div class="post-title mdui-text-truncate">if()括号内的数据类型的转换</div>
-      <div class="post-actions mdui-valign">
-        <div>
-          <span>编写时间：</span>
-          <span style="float: right">Sep 20, 2017</span>
+        <li class="list-item">
           
-          <br>
-            <span>最后修改时间：</span>
-            <span>Sep 13, 2017</span>
+            <a href="/" class="item-link">Home</a>
           
-        </div>
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
         
-
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
         
-
-      </div>
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
     </div>
   </div>
-  <div class="post-container flex-spacer
-  
-  ">
-    <div class="post-adjust">
-      <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
-        <div class="warning">
-          这篇文章最后修改于
-          <span id="content-warning"></span>
-          天之前。
-          本页内容可能已经过时！
-        </div>
-        
-        
-          <div class="mdui-card-media">
-            <img src="/img/random/picHD_26.png"/>
-          </div>
-        
-        <div class="post-content mdui-typo no-margin" id="post-content">
-          <blockquote>
+</header>
+
+    <div id="article-banner">
+  <h2>if()括号内的数据类型的转换</h2>
+  <p class="post-date">2017-09-20</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><blockquote>
 <h2 id="if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean-转换函数将结果转换为布尔值。转换规则为："><a href="#if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean-转换函数将结果转换为布尔值。转换规则为：" class="headerlink" title="if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为："></a>if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为：</h2></blockquote>
 <div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable ">
 <thead>
@@ -543,335 +161,197 @@
 </table></div>
 <blockquote>
 <h2 id="有关的面试题："><a href="#有关的面试题：" class="headerlink" title="有关的面试题："></a>有关的面试题：</h2></blockquote>
-<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var a=<span class="string">"undefined"</span>, b=<span class="string">"false"</span>, c=<span class="string">"null"</span>, d=<span class="string">""</span>,e=<span class="string">"0"</span>;</div><div class="line">var f=undefined,g=<span class="literal">false</span>,h=null,i=0;</div><div class="line"><span class="keyword">function</span> assert(x) &#123;</div><div class="line">    <span class="keyword">if</span> (x) &#123;</div><div class="line">        console.log(<span class="string">"true"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        console.log(<span class="string">"false"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(assert(a));//<span class="literal">true</span></div><div class="line">console.log(assert(b));//<span class="literal">true</span></div><div class="line">console.log(assert(c));//<span class="literal">true</span></div><div class="line">console.log(assert(d));//<span class="literal">false</span></div><div class="line">console.log(assert(e));//<span class="literal">true</span></div><div class="line">console.log(assert(f));//<span class="literal">false</span></div><div class="line">console.log(assert(g));//<span class="literal">false</span></div><div class="line">console.log(assert(h));//<span class="literal">false</span></div><div class="line">console.log(assert(i));//<span class="literal">false</span></div><div class="line">console.log(assert(j));//<span class="literal">false</span></div></pre></td></tr></table></div></figure>
-        </div>
-
-        
-          <div class="license mdui-typo">
-            <span>
-              本文许可协议：
-              
-                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
-              
-            </span>
-            <br />
-            <span>本文永久链接：<a href="http://yoursite.com/2017/09/20/if()括号内的数据类型的转换/">http://yoursite.com/2017/09/20/if()括号内的数据类型的转换/</a></span>
-            
-              <br />
-              <span>本文Markdown：<a href="http://yoursite.com/2017/09/20/if()括号内的数据类型的转换/if()括号内的数据类型的转换.md">http://yoursite.com/2017/09/20/if()括号内的数据类型的转换/if()括号内的数据类型的转换.md</a></span>
-            
-          </div>
-        
-
-        
-          <div class="posts-info">
-            
-            <div class="flex-spacer"></div>
-            
-              <div class="mdui-chip">
-                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon material-icons">&#xe149;</i></span>
-              </div>
-              <div class="content mdui-typo">
-                
-                  <a href="/categories/javascript/">
-                    <span>javascript</span>
-                  </a>
-                
-              </div>
-            
-            
-              <div class="mdui-chip">
-                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon fa fa-tags"></i></span>
-              </div>
-              <div class="content mdui-typo">
-                
-                  <a href="/tags/javascript基础知识/">
-                    <span>javascript基础知识</span>
-                  </a>
-                
-              </div>
-            
-          </div>
-        
-        
-          
-        
-      </div>
-      
-        <div id="card-toc" class="
-        
-          mdui-color-theme
-        
-        ">
-          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean-转换函数将结果转换为布尔值。转换规则为："><span class="post-toc-number">1.<span class="post-toc-text">if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为：</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#有关的面试题："><span class="post-toc-number">2.<span class="post-toc-text">有关的面试题：</span></span></a></a></ul>
-        </div>
-      
-    </div>
-  </div>
-  <div class="post-pagination mdui-color-theme">
-  
-    <div class="prev mdui-ripple mdui-color-theme mdui-valign">
-      <a href="/2017/09/20/设计模式：模块模式/" class="content no-text-decoration mdui-text-left">
-        <div>
-          <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
-        </div>
-        <div class="mdui-typo-title mdui-text-truncate">
-          设计模式：模块模式
-        </div>
-      </a>
-    </div>
-  
-
-  
-    <div class="next mdui-ripple mdui-color-theme mdui-valign">
-      <a href="/2017/09/20/javascript常用内置对象总结/" class="content no-text-decoration mdui-text-right">
-        <div>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
-          <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
-        </div>
-        <div class="mdui-typo-title mdui-text-truncate">
-          javascript常用内置对象总结
-        </div>
-      </a>
-    </div>
+<figure class="highlight bash"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">var a=<span class="string">"undefined"</span>, b=<span class="string">"false"</span>, c=<span class="string">"null"</span>, d=<span class="string">""</span>,e=<span class="string">"0"</span>;</div><div class="line">var f=undefined,g=<span class="literal">false</span>,h=null,i=0;</div><div class="line"><span class="keyword">function</span> assert(x) &#123;</div><div class="line">    <span class="keyword">if</span> (x) &#123;</div><div class="line">        console.log(<span class="string">"true"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        console.log(<span class="string">"false"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(assert(a));//<span class="literal">true</span></div><div class="line">console.log(assert(b));//<span class="literal">true</span></div><div class="line">console.log(assert(c));//<span class="literal">true</span></div><div class="line">console.log(assert(d));//<span class="literal">false</span></div><div class="line">console.log(assert(e));//<span class="literal">true</span></div><div class="line">console.log(assert(f));//<span class="literal">false</span></div><div class="line">console.log(assert(g));//<span class="literal">false</span></div><div class="line">console.log(assert(h));//<span class="literal">false</span></div><div class="line">console.log(assert(i));//<span class="literal">false</span></div><div class="line">console.log(assert(j));//<span class="literal">false</span></div></pre></td></tr></table></div></figure></section>
+    <!-- Tags START -->
     
-</div>
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#javascript基础知识" >
+    <span class="tag-code">javascript基础知识</span>
+  </a>
 
+      </div>
+    
+    <!-- Tags END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    <div class="qrcode">
+      <canvas id="share-qrcode"></canvas>
+      <p class="notice">扫描二维码，分享此文章</p>
+    </div>
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
   
-    <button id="button-toc" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-hidden-md-up" style="z-index: 9;" mdui-menu="{target: '#menu-toc', fixed: true}">
-  <i class="mdui-icon material-icons">&#xe242;</i>
-</button>
-<ul class="mdui-menu mdui-typo no-margin-bottom auto-width" id="menu-toc" style="padding: 8px;max-height: 80%">
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean-转换函数将结果转换为布尔值。转换规则为："><span class="toc-number">1.</span> <span class="toc-text">if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有关的面试题："><span class="toc-number">2.</span> <span class="toc-text">有关的面试题：</span></a></li></ol>
-</ul>
-
-
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean-转换函数将结果转换为布尔值。转换规则为："><span class="toc-nav-text">if（condition）的condition求值结果若非布尔值，ECMAScript会自动调用Boolean()转换函数将结果转换为布尔值。转换规则为：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#有关的面试题："><span class="toc-nav-text">有关的面试题：</span></a></li></ol>
+    
+  </div>
+</aside>
   
-
-</div>
-
+  <!-- Catalog END -->
 </main>
 
-<div id="outdated" style="z-index: 9999;">
-  <h6>你的浏览器一直过气辣！</h6>
-  <p>赶紧升级浏览器来访问本站吧！<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">现在就去</a></p>
-  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="关闭">&times;</a></p>
-</div>
-
-
-
-
-<!-- Import JS -->
-
-  <script>lsloader.load("outdatedbrowser_js","/js/outdatedbrowser.min.js?e/I5uIbdkHHfJGD4oNpMfA==", true)</script>
-
-
-
-    <script>lsloader.load("main_js","/js/js.min.js?7Tw9Ng5ky7PDfky4qwNovg==", true)</script>
-
-
-
-
-
-  
-    <script type="text/ls-javascript" id="global-script">
-  /* appbar button */
-  (function() {
-    var drawer = document.querySelector('#drawer')
-    var drawerBtn = document.querySelector('.drawer-button')
-
-    drawer.addEventListener('open.mdui.drawer', function (e) {
-      drawerBtn.classList.add('back')
-    })
-    drawer.addEventListener('close.mdui.drawer', function (e) {
-      drawerBtn.classList.remove('back')
-    })
-  })();
-
-  
-</script>
-
-
-  <script type="text/ls-javascript" id="appbar-script">
-  /* post appbar */
-  (function() {
-    var pageFlag = false;
-    var appbar = new mdui.Headroom('#blog-appbar');
-    appbar.disable();
-    var toolbar = document.querySelector('#blog-appbar .mdui-toolbar')
-
-    window.addEventListener('scroll', function() {
-      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-      var divTop = document.querySelector('div#top').offsetTop
-
-      var pageLocation = divTop - bodyTop;
-      if (!pageFlag && pageLocation < 0) {
-        toolbar.classList.add('mdui-shadow-2')
-        appbar.enable();
-        pageFlag = true;
-      } else if (pageFlag && pageLocation >= 0) {
-        toolbar.classList.remove('mdui-shadow-2')
-        appbar.disable();
-        pageFlag = false;
-      }
-    })
-  })();
-</script>
-
-  <script type="text/ls-javascript" id="toc-active-script">
-  if (document.querySelector('ul#menu-toc > ol') !== null && document.querySelector('div#card-toc > ul') !== null) {
-    window.addEventListener("load", function() {
-      var timer;
-      function doWork() {
-        listens.forEach(function(value, index) {
-          value[1]();
-          value[0].classList.remove("mdui-list-item-active");
-        })
-        let actionToc = (listens[listens.reduce(function(r, v, index) {
-          if (v[2] == true) {
-            return index;
-          } else return r;
-        }, undefined)] || [])[0] || listens[0][0];
-        actionToc.classList.add("mdui-list-item-active");
-        if(actionToc.getClientRects().length == 0)return;
-        showToc(actionToc);
-      }
-
-      function showToc(toc) {
-        let offsetTop = toc.getClientRects()[0].top - cardToc.getClientRects()[0].top - 40;
-        let offsetBottom = toc.getClientRects()[0].bottom - cardToc.getClientRects()[0].bottom + 40;
-        let offset = 0;
-        if (offsetTop < 0) offset = offsetTop;
-        if (offsetBottom > 0) offset = offsetBottom;
-        var targetTop = Math.max(0, Math.min(cardToc.scrollTop + offset, toclist.offsetHeight - cardToc.offsetHeight));
-        clearInterval(timer);
-        timer = setInterval(function() {
-          var now = cardToc.scrollTop;
-          var speed = (targetTop - now) / 10;
-          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
-          if (Math.abs(now - targetTop) < 1) {
-            clearInterval(timer);
-          }
-          cardToc.scrollTop = now + speed;
-        }, 30);
-      }
-      var listens = [];
-      var cardToc = document.querySelector('#card-toc');
-      var links = document.querySelectorAll("a.post-toc-link");
-      var toclist = document.querySelector("#card-toc > ul");
-      Array.prototype.forEach.call(links, function(value, index) {
-        var id = (value.getAttribute("href") || "#").slice(1);
-        var element = document.getElementById(id);
-        listens.push([value, function() {
-          var readed = false;
-          var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-          if (element.offsetTop <= scrollTop + element.clientHeight + 64) {
-            readed = true;
-          } else {
-            readed = false;
-          }
-          listens[index][2] = readed;
-        }, false])
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2017/09/20/if()括号内的数据类型的转换/';
+    var banner = ''
+    if (banner !== 'undefined') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
       })
-      doWork();
-      window.addEventListener("scroll", doWork)
-    });
-  }
-</script>
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
 
-  <script type="text/ls-javascript" id="post-lg-script">
-  var images = document.querySelectorAll('#post-content img')
-  for (i = 0; i < images.length; i++) {
-    images[i].addEventListener("click", openLG);
-  }
-  function openLG() {
-    var img_src = this.getAttribute('src');
-    var img_alt = this.getAttribute('alt');
-    lightGallery(this, {
-      dynamic: true,
-      counter: false,
-      dynamicEl: [{
-        "src": img_src,
-        'subHtml': "<span author>John Zeng</span> • 公开<div descr>" + img_alt + "</div>"
-      }],
-    });
-  }
-</script>
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
 
-  <!-- content warning -->
-<script type="text/ls-javascript" id="content-warning-script">
-  (function() {
-    var postLastModifiedDate = 1505293102729
-    var today = (new Date()).getTime()
-    var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
-    if (difference >= 100) {
-      document.querySelector('div.warning').style.display = 'block'
-      document.querySelector('#content-warning').textContent = difference
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "yanm1ng";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "if()括号内的数据类型的转换",
+        owner: "yanm1ng",
+        repo: "yanm1ng.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
     }
   })();
 </script>
 
-  
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2017 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  <script>lsloader.load("lightgallery_js","/js/lightgallery.min.js?tQptxVaCRzQ3zx70gMUYig==", true)</script>
-
-
-
-
-
-
-
-
-<!-- Custom javascript -->
-
-
-<!-- remove diplay:none -->
-<script type="text/ls-javascript" id="html-script">
-  if (document.readyState === 'complete' || document.readyState !== 'loading') {
-    showHTML();
-  } else {
-    document.addEventListener('DOMContentLoaded', showHTML);
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
   }
-  function showHTML(){
-    document.querySelector('html').style.display = 'block';
-  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
 </script>
 
 <script>
-  (function(){
-    var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-    for (var i = 0; i < scriptList.length; ++i) {
-      var item = scriptList[i];
-      lsloader.runInlineScript(item.id,item.id);
-    }
-  })()
-  /*! Copyright 2017 Halyul */
-  console.info("%cCopyright © 2017 Halyul\n"+'Theme Version: 1.5.0'+'%c\nhttps://github.com/Halyul/hexo-theme-mdui',"font-size: 14px;color: #3F51B5;","color: #448AFF;text-decoration: none");
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
 </script>
+<!-- Baidu Tongji -->
 
-</body>
-
+<script src="/js/script.js"></script>
+  </body>
 </html>
