@@ -34,7 +34,7 @@
   
     <meta name="theme-color" content="
   
-  #FF5722
+  #607D8B
   
 
 ">
@@ -95,7 +95,7 @@
   
 
   
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 
@@ -103,7 +103,7 @@
   
     
   
-    <body class="mdui-appbar-with-toolbar mdui-theme-primary-deep-orange mdui-theme-accent-light-blue
+    <body class="mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue
     
     
       mdui-drawer-body-left
@@ -136,7 +136,7 @@
             <i class="mdui-icon material-icons">&#xe8b6;</i>
           </div>
           <div class="text">
-            Search something...
+            搜索什么...
           </div>
         </div>
       
@@ -186,7 +186,7 @@
       <li class="mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
         <div class="mdui-list-item-content">
-          Index
+          首页
         </div>
       </li>
     </a>
@@ -198,7 +198,7 @@
       <li class="mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
         <div class="mdui-list-item-content">
-          Archives
+          归档
           <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
         </div>
       </li>
@@ -211,21 +211,21 @@
       <div class="mdui-collapse-item ">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-          <div class="mdui-list-item-content">Categories</div>
+          <div class="mdui-list-item-content">分类</div>
           <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
         </div>
         <div class="mdui-collapse-item-body mdui-list">
-          
-            <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
-              Angular
-              <div style="flex-grow: 1;"></div>
-              <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
-            </a>
           
             <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
               网站搭建
               <div style="flex-grow: 1;"></div>
               <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+            </a>
+          
+            <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Angular
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
             </a>
           
             <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
@@ -313,7 +313,7 @@
       <div class="mdui-collapse-item ">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-          <div class="mdui-list-item-content">Tags</div>
+          <div class="mdui-list-item-content">标签</div>
           <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
         </div>
         <div class="mdui-collapse-item-body mdui-list">
@@ -396,7 +396,7 @@
     <div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-        <div class="mdui-list-item-content">Years</div>
+        <div class="mdui-list-item-content">年份</div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
@@ -474,11 +474,11 @@
       <div class="post-title mdui-text-truncate">AngularJS中的路由</div>
       <div class="post-actions mdui-valign">
         <div>
-          <span>Posted: </span>
+          <span>编写时间：</span>
           <span style="float: right">Sep 21, 2017</span>
           
           <br>
-            <span>Last Modified: </span>
+            <span>最后修改时间：</span>
             <span>Sep 22, 2017</span>
           
         </div>
@@ -495,15 +495,15 @@
     <div class="post-adjust">
       <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
         <div class="warning">
-          This article was last modified
+          这篇文章最后修改于
           <span id="content-warning"></span>
-          days ago.
-          The content of this post may be outdated!
+          天之前。
+          本页内容可能已经过时！
         </div>
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_21.png"/>
+            <img src="/img/random/picHD_32.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -532,26 +532,26 @@
 <h2 id="4-routeProvider"><a href="#4-routeProvider" class="headerlink" title="4.$routeProvider"></a>4.$routeProvider</h2><ul>
 <li>使用$routeProvider进行路由规则的配置</li>
 <li><p>when方法： 设定当路由匹配成功以后,要做的事情.</p>
-  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">when(<span class="string">"路由"</span>，&#123;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></div></figure>
+  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">when(<span class="string">"路由"</span>，&#123;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></div></figure>
 </li>
 <li><p>但成功匹配后，要做的事情通过第二个参数对象来指定。</p>
 <ul>
-<li>第二个参数：对象<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">templateUrl:<span class="string">""</span></div><div class="line"><span class="comment">//资源路径，匹配成功后请求这个资源，将请求回来的资源放在ng-view</span></div><div class="line"></div><div class="line">otherwise方法</div><div class="line"><span class="comment">//当所有的路由规矩都不匹配的时候，做的事情</span></div><div class="line"></div><div class="line"><span class="string">"/"</span>代表空路由</div></pre></td></tr></table></div></figure>
+<li>第二个参数：对象<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">templateUrl:<span class="string">""</span></div><div class="line"><span class="comment">//资源路径，匹配成功后请求这个资源，将请求回来的资源放在ng-view</span></div><div class="line"></div><div class="line">otherwise方法</div><div class="line"><span class="comment">//当所有的路由规矩都不匹配的时候，做的事情</span></div><div class="line"></div><div class="line"><span class="string">"/"</span>代表空路由</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="5-when方法的第二个参数的键值对的说明"><a href="#5-when方法的第二个参数的键值对的说明" class="headerlink" title="5.when方法的第二个参数的键值对的说明"></a>5.when方法的第二个参数的键值对的说明</h2><figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">templateUrl</div><div class="line">redirectTo 跳转路由</div><div class="line">   redirectTo:<span class="string">"/home"</span></div><div class="line">   <span class="comment">//当路由匹配成功以后，修改路由为"/home"</span></div><div class="line">   </div><div class="line">template:<span class="string">""</span></div><div class="line">controller:<span class="string">""</span>  值是控制器的名称会将请求回来的视图与这个控制器进行关联.这样的话,就可以在控制器中制造数据 存储到$scope中.视图中就可以访问.</div></pre></td></tr></table></div></figure>
+<h2 id="5-when方法的第二个参数的键值对的说明"><a href="#5-when方法的第二个参数的键值对的说明" class="headerlink" title="5.when方法的第二个参数的键值对的说明"></a>5.when方法的第二个参数的键值对的说明</h2><figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">templateUrl</div><div class="line">redirectTo 跳转路由</div><div class="line">   redirectTo:<span class="string">"/home"</span></div><div class="line">   <span class="comment">//当路由匹配成功以后，修改路由为"/home"</span></div><div class="line">   </div><div class="line">template:<span class="string">""</span></div><div class="line">controller:<span class="string">""</span>  值是控制器的名称会将请求回来的视图与这个控制器进行关联.这样的话,就可以在控制器中制造数据 存储到$scope中.视图中就可以访问.</div></pre></td></tr></table></div></figure>
 <h2 id="6-spa的优缺点"><a href="#6-spa的优缺点" class="headerlink" title="6.spa的优缺点"></a>6.spa的优缺点</h2><ul>
 <li>优点：用户体验极致</li>
 <li>对seo不友好</li>
 </ul>
-<h2 id="7-具体代码："><a href="#7-具体代码：" class="headerlink" title="7.具体代码："></a>7.具体代码：</h2><figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-contorller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">nav</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/home"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/my"</span>&gt;</span>我的音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/find"</span>&gt;</span>发现音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">ng-view</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></div></figure>
-<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> app.angular.module(<span class="string">"hmApp"</span>,[<span class="string">"ngRoute"</span>]);</div><div class="line">    app.config([<span class="string">"$locationProcider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$locationProcider</span>)</span>&#123;</div><div class="line">        $locationProcider.hashPrefix(<span class="string">""</span>); </div><div class="line">    &#125;])</div><div class="line">    <span class="comment">//锚点格式化。。去掉#!</span></div><div class="line"></div><div class="line">    <span class="comment">//针对 路由规则(锚点值变化) 进行配置</span></div><div class="line">    app.config([<span class="string">"$rotoueProcider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$rotoueProcider</span>)</span>&#123;</div><div class="line">        $rotoueProcider.when(<span class="string">"/home"</span>,&#123;</div><div class="line">            templateUrl:<span class="string">"./musice/home.html"</span></div><div class="line">        &#125;).when(<span class="string">"/my"</span>,&#123;</div><div class="line">            template:<span class="string">"&lt;h1&gt;哈哈哈哈&lt;/h1&gt;"</span>,</div><div class="line">            controller:<span class="string">"hmCtrl"</span></div><div class="line">            <span class="comment">//将请求回来的视图和名称叫做“myCtrl”的控制器关联起来</span></div><div class="line">        &#125;).when(<span class="string">"/"</span>,&#123;</div><div class="line">            redirectTo:<span class="string">"/home"</span></div><div class="line">            <span class="comment">//如果现在的URL地址上的路由是一个空路由，name就跳转到、home这个路由</span></div><div class="line">        &#125;).otherwise(&#123;</div><div class="line">            templateUrl:<span class="string">"./404.html"</span></div><div class="line">        &#125;)</div><div class="line">    &#125;]);</div><div class="line"></div><div class="line">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</div><div class="line">        $scope.name = <span class="string">"歌曲"</span></div><div class="line">    &#125;])</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></div></figure>
+<h2 id="7-具体代码："><a href="#7-具体代码：" class="headerlink" title="7.具体代码："></a>7.具体代码：</h2><figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-contorller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">nav</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/home"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/my"</span>&gt;</span>我的音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/find"</span>&gt;</span>发现音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">ng-view</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></div></figure>
+<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> app.angular.module(<span class="string">"hmApp"</span>,[<span class="string">"ngRoute"</span>]);</div><div class="line">    app.config([<span class="string">"$locationProcider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$locationProcider</span>)</span>&#123;</div><div class="line">        $locationProcider.hashPrefix(<span class="string">""</span>); </div><div class="line">    &#125;])</div><div class="line">    <span class="comment">//锚点格式化。。去掉#!</span></div><div class="line"></div><div class="line">    <span class="comment">//针对 路由规则(锚点值变化) 进行配置</span></div><div class="line">    app.config([<span class="string">"$rotoueProcider"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$rotoueProcider</span>)</span>&#123;</div><div class="line">        $rotoueProcider.when(<span class="string">"/home"</span>,&#123;</div><div class="line">            templateUrl:<span class="string">"./musice/home.html"</span></div><div class="line">        &#125;).when(<span class="string">"/my"</span>,&#123;</div><div class="line">            template:<span class="string">"&lt;h1&gt;哈哈哈哈&lt;/h1&gt;"</span>,</div><div class="line">            controller:<span class="string">"hmCtrl"</span></div><div class="line">            <span class="comment">//将请求回来的视图和名称叫做“myCtrl”的控制器关联起来</span></div><div class="line">        &#125;).when(<span class="string">"/"</span>,&#123;</div><div class="line">            redirectTo:<span class="string">"/home"</span></div><div class="line">            <span class="comment">//如果现在的URL地址上的路由是一个空路由，name就跳转到、home这个路由</span></div><div class="line">        &#125;).otherwise(&#123;</div><div class="line">            templateUrl:<span class="string">"./404.html"</span></div><div class="line">        &#125;)</div><div class="line">    &#125;]);</div><div class="line"></div><div class="line">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope</span>)</span>&#123;</div><div class="line">        $scope.name = <span class="string">"歌曲"</span></div><div class="line">    &#125;])</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></div></figure>
 <h2 id="8-路由参数-routeParams"><a href="#8-路由参数-routeParams" class="headerlink" title="8.路由参数($routeParams)"></a>8.路由参数($routeParams)</h2><ul>
 <li><p>路由的后面可以跟参数.</p>
 <ul>
-<li>可以跟Query String类型的参数.  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/my?name=jack&amp;age=18"</span>&gt;</span>我的音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">//仍然可以成功匹配 /my 这个路由规则.</div></pre></td></tr></table></div></figure>
+<li>可以跟Query String类型的参数.  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#/my?name=jack&amp;age=18"</span>&gt;</span>我的音乐<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">//仍然可以成功匹配 /my 这个路由规则.</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
@@ -559,7 +559,7 @@
 <ul>
 <li>当路由匹配成功以后,ng路由机制会去请求my.html资源回来放到ng-view中.</li>
 <li><p>并不会主动的将参数发给服务器.</p>
-<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$routeParams"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$routeParams</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log($routeParams);</div><div class="line">&#125;])</div></pre></td></tr></table></div></figure></li>
+<figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$routeParams"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$routeParams</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log($routeParams);</div><div class="line">&#125;])</div></pre></td></tr></table></div></figure></li>
 </ul>
 </li>
 </ul>
@@ -569,16 +569,16 @@
         
           <div class="license mdui-typo">
             <span>
-              Article License: 
+              本文许可协议：
               
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
               
             </span>
             <br />
-            <span>Article Permalink: <a href="http://yoursite.com/2017/09/21/AngularJS中的路由/">http://yoursite.com/2017/09/21/AngularJS中的路由/</a></span>
+            <span>本文永久链接：<a href="http://yoursite.com/2017/09/21/AngularJS中的路由/">http://yoursite.com/2017/09/21/AngularJS中的路由/</a></span>
             
               <br />
-              <span>Article Markdown: <a href="http://yoursite.com/2017/09/21/AngularJS中的路由/AngularJS中的路由.md">http://yoursite.com/2017/09/21/AngularJS中的路由/AngularJS中的路由.md</a></span>
+              <span>本文Markdown：<a href="http://yoursite.com/2017/09/21/AngularJS中的路由/AngularJS中的路由.md">http://yoursite.com/2017/09/21/AngularJS中的路由/AngularJS中的路由.md</a></span>
             
           </div>
         
@@ -637,7 +637,7 @@
     <div class="next mdui-ripple mdui-color-theme mdui-valign">
       <a href="/2017/09/21/云音乐案例(利用锚点值)/" class="content no-text-decoration mdui-text-right">
         <div>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">Older Post</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
@@ -664,9 +664,9 @@
 </main>
 
 <div id="outdated" style="z-index: 9999;">
-  <h6>Your browser is out-of-date!</h6>
-  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
-  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+  <h6>你的浏览器一直过气辣！</h6>
+  <p>赶紧升级浏览器来访问本站吧！<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">现在就去</a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="关闭">&times;</a></p>
 </div>
 
 
@@ -771,7 +771,7 @@
       counter: false,
       dynamicEl: [{
         "src": img_src,
-        'subHtml': "<span author>John Zeng</span> • Public<div descr>" + img_alt + "</div>"
+        'subHtml': "<span author>John Zeng</span> • 公开<div descr>" + img_alt + "</div>"
       }],
     });
   }

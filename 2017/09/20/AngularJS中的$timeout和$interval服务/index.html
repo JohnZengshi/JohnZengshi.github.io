@@ -34,7 +34,7 @@
   
     <meta name="theme-color" content="
   
-  #CDDC39
+  #E91E63
   
 
 ">
@@ -95,7 +95,7 @@
   
 
   
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 
@@ -103,7 +103,7 @@
   
     
   
-    <body class="mdui-appbar-with-toolbar mdui-theme-primary-lime mdui-theme-accent-deep-purple
+    <body class="mdui-appbar-with-toolbar mdui-theme-primary-pink mdui-theme-accent-red
     
     
       mdui-drawer-body-left
@@ -136,7 +136,7 @@
             <i class="mdui-icon material-icons">&#xe8b6;</i>
           </div>
           <div class="text">
-            Search something...
+            搜索什么...
           </div>
         </div>
       
@@ -186,7 +186,7 @@
       <li class="mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
         <div class="mdui-list-item-content">
-          Index
+          首页
         </div>
       </li>
     </a>
@@ -198,7 +198,7 @@
       <li class="mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
         <div class="mdui-list-item-content">
-          Archives
+          归档
           <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
         </div>
       </li>
@@ -211,21 +211,21 @@
       <div class="mdui-collapse-item ">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-          <div class="mdui-list-item-content">Categories</div>
+          <div class="mdui-list-item-content">分类</div>
           <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
         </div>
         <div class="mdui-collapse-item-body mdui-list">
-          
-            <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
-              Angular
-              <div style="flex-grow: 1;"></div>
-              <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
-            </a>
           
             <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
               网站搭建
               <div style="flex-grow: 1;"></div>
               <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+            </a>
+          
+            <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Angular
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
             </a>
           
             <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
@@ -313,7 +313,7 @@
       <div class="mdui-collapse-item ">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-          <div class="mdui-list-item-content">Tags</div>
+          <div class="mdui-list-item-content">标签</div>
           <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
         </div>
         <div class="mdui-collapse-item-body mdui-list">
@@ -396,7 +396,7 @@
     <div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-        <div class="mdui-list-item-content">Years</div>
+        <div class="mdui-list-item-content">年份</div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
@@ -474,7 +474,7 @@
       <div class="post-title mdui-text-truncate">AngularJS中的$timeout和$interval服务</div>
       <div class="post-actions mdui-valign">
         <div>
-          <span>Posted: </span>
+          <span>编写时间：</span>
           <span style="float: right">Sep 20, 2017</span>
           
         </div>
@@ -491,15 +491,15 @@
     <div class="post-adjust">
       <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
         <div class="warning">
-          This article was last modified
+          这篇文章最后修改于
           <span id="content-warning"></span>
-          days ago.
-          The content of this post may be outdated!
+          天之前。
+          本页内容可能已经过时！
         </div>
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_42.png"/>
+            <img src="/img/random/picHD_30.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -511,7 +511,7 @@
 <li>参数1：回调</li>
 <li>参数2：时间</li>
 <li><p>停止($timeout服务自带的方法stop())</p>
-<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">ng-click</span>=<span class="string">"stop()"</span>&gt;</span>&#123;&#123;name&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</span></div><div class="line"><span class="javascript">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$timeout"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$timeout</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $scope.name = <span class="string">"jack"</span>;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> id = $timeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            $scope.name = <span class="string">"rose"</span></span></div><div class="line"><span class="undefined">        &#125;,2000);</span></div><div class="line"><span class="javascript">        $scope.stop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="undefined">            $timeout.cancel(id);</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    &#125;])</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></div></figure>
+<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span> <span class="attr">ng-click</span>=<span class="string">"stop()"</span>&gt;</span>&#123;&#123;name&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</span></div><div class="line"><span class="javascript">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$timeout"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$timeout</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $scope.name = <span class="string">"jack"</span>;</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> id = $timeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            $scope.name = <span class="string">"rose"</span></span></div><div class="line"><span class="undefined">        &#125;,2000);</span></div><div class="line"><span class="javascript">        $scope.stop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="undefined">            $timeout.cancel(id);</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    &#125;])</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
@@ -520,7 +520,7 @@
 <li>参数1: 回调</li>
 <li>参数2: 间隔时间</li>
 <li><p>停止($interval服务自带的方法stop())</p>
-<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;now|date:"yyyy-MM-dd HH:MM:ss"&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">ng-click</span>=<span class="string">"stop()"</span>&gt;</span>停止<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</span></div><div class="line"><span class="javascript">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$interval"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$interval</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $scope.now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> id = $interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            $scope.now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></div><div class="line"><span class="undefined">        &#125;,1000);</span></div><div class="line"><span class="javascript">        $scope.stop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="undefined">            $interval.cancel(id);</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    &#125;])</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></div></figure>
+<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"hmApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"hmCtrl"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;now|date:"yyyy-MM-dd HH:MM:ss"&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">ng-click</span>=<span class="string">"stop()"</span>&gt;</span>停止<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript">    <span class="keyword">var</span> app = angular.module(<span class="string">"hmApp"</span>,[]);</span></div><div class="line"><span class="javascript">    app.controller(<span class="string">"hmCtrl"</span>,[<span class="string">"$scope"</span>,<span class="string">"$interval"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">$scope,$interval</span>)</span>&#123;</span></div><div class="line"><span class="javascript">        $scope.now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></div><div class="line"><span class="javascript">        <span class="keyword">var</span> id = $interval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="javascript">            $scope.now = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></div><div class="line"><span class="undefined">        &#125;,1000);</span></div><div class="line"><span class="javascript">        $scope.stop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></div><div class="line"><span class="undefined">            $interval.cancel(id);</span></div><div class="line"><span class="undefined">        &#125;</span></div><div class="line"><span class="undefined">    &#125;])</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
@@ -531,16 +531,16 @@
         
           <div class="license mdui-typo">
             <span>
-              Article License: 
+              本文许可协议：
               
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
               
             </span>
             <br />
-            <span>Article Permalink: <a href="http://yoursite.com/2017/09/20/AngularJS中的$timeout和$interval服务/">http://yoursite.com/2017/09/20/AngularJS中的$timeout和$interval服务/</a></span>
+            <span>本文永久链接：<a href="http://yoursite.com/2017/09/20/AngularJS中的$timeout和$interval服务/">http://yoursite.com/2017/09/20/AngularJS中的$timeout和$interval服务/</a></span>
             
               <br />
-              <span>Article Markdown: <a href="http://yoursite.com/2017/09/20/AngularJS中的$timeout和$interval服务/AngularJS中的$timeout和$interval服务.md">http://yoursite.com/2017/09/20/AngularJS中的$timeout和$interval服务/AngularJS中的$timeout和$interval服务.md</a></span>
+              <span>本文Markdown：<a href="http://yoursite.com/2017/09/20/AngularJS中的$timeout和$interval服务/AngularJS中的$timeout和$interval服务.md">http://yoursite.com/2017/09/20/AngularJS中的$timeout和$interval服务/AngularJS中的$timeout和$interval服务.md</a></span>
             
           </div>
         
@@ -585,7 +585,7 @@
       <a href="/2017/09/20/AngularJS中的$filter服务/" class="content no-text-decoration mdui-text-left">
         <div>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">Newer Post</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
           AngularJS中的$filter服务
@@ -598,7 +598,7 @@
     <div class="next mdui-ripple mdui-color-theme mdui-valign">
       <a href="/2017/09/20/AngularJS中的ng-switch指令/" class="content no-text-decoration mdui-text-right">
         <div>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">Older Post</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
@@ -625,9 +625,9 @@
 </main>
 
 <div id="outdated" style="z-index: 9999;">
-  <h6>Your browser is out-of-date!</h6>
-  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
-  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+  <h6>你的浏览器一直过气辣！</h6>
+  <p>赶紧升级浏览器来访问本站吧！<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">现在就去</a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="关闭">&times;</a></p>
 </div>
 
 
@@ -732,7 +732,7 @@
       counter: false,
       dynamicEl: [{
         "src": img_src,
-        'subHtml': "<span author>John Zeng</span> • Public<div descr>" + img_alt + "</div>"
+        'subHtml': "<span author>John Zeng</span> • 公开<div descr>" + img_alt + "</div>"
       }],
     });
   }

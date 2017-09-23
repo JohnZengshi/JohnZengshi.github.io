@@ -34,7 +34,7 @@
   
     <meta name="theme-color" content="
   
-  #2196F3
+  #CDDC39
   
 
 ">
@@ -95,7 +95,7 @@
   
 
   
-<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+</head>
 
 
 
@@ -103,7 +103,7 @@
   
     
   
-    <body class="mdui-appbar-with-toolbar mdui-theme-primary-blue mdui-theme-accent-teal
+    <body class="mdui-appbar-with-toolbar mdui-theme-primary-lime mdui-theme-accent-light-blue
     
     
       mdui-drawer-body-left
@@ -136,7 +136,7 @@
             <i class="mdui-icon material-icons">&#xe8b6;</i>
           </div>
           <div class="text">
-            Search something...
+            搜索什么...
           </div>
         </div>
       
@@ -186,7 +186,7 @@
       <li class="mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
         <div class="mdui-list-item-content">
-          Index
+          首页
         </div>
       </li>
     </a>
@@ -198,7 +198,7 @@
       <li class="mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
         <div class="mdui-list-item-content">
-          Archives
+          归档
           <span class="badge new mdui-color-theme-accent" data-badge-caption="">56</span>
         </div>
       </li>
@@ -211,21 +211,21 @@
       <div class="mdui-collapse-item ">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
-          <div class="mdui-list-item-content">Categories</div>
+          <div class="mdui-list-item-content">分类</div>
           <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
         </div>
         <div class="mdui-collapse-item-body mdui-list">
-          
-            <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
-              Angular
-              <div style="flex-grow: 1;"></div>
-              <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
-            </a>
           
             <a href="/categories/网站搭建/" class="mdui-list-item mdui-ripple" style="display: flex">
               网站搭建
               <div style="flex-grow: 1;"></div>
               <span class="badge new mdui-color-theme-accent" data-badge-caption="">6</span>
+            </a>
+          
+            <a href="/categories/Angular/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Angular
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">18</span>
             </a>
           
             <a href="/categories/Git/" class="mdui-list-item mdui-ripple" style="display: flex">
@@ -313,7 +313,7 @@
       <div class="mdui-collapse-item ">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
-          <div class="mdui-list-item-content">Tags</div>
+          <div class="mdui-list-item-content">标签</div>
           <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
         </div>
         <div class="mdui-collapse-item-body mdui-list">
@@ -396,7 +396,7 @@
     <div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-        <div class="mdui-list-item-content">Years</div>
+        <div class="mdui-list-item-content">年份</div>
         <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
       </div>
       <div class="mdui-collapse-item-body mdui-list">
@@ -474,7 +474,7 @@
       <div class="post-title mdui-text-truncate">AngularJS中的常见的过滤器</div>
       <div class="post-actions mdui-valign">
         <div>
-          <span>Posted: </span>
+          <span>编写时间：</span>
           <span style="float: right">Sep 19, 2017</span>
           
         </div>
@@ -491,15 +491,15 @@
     <div class="post-adjust">
       <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
         <div class="warning">
-          This article was last modified
+          这篇文章最后修改于
           <span id="content-warning"></span>
-          days ago.
-          The content of this post may be outdated!
+          天之前。
+          本页内容可能已经过时！
         </div>
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_24.png"/>
+            <img src="/img/random/picHD_40.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -510,19 +510,19 @@
 <ul>
 <li>指对数据进行过滤(处理)</li>
 <li>我们现在讲的过滤器,是用在视图中的.对原本要显示在视图中的数据进行过滤然后再显示.</li>
-<li>过滤器的使用:  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&#123;&#123;原本要显示的数据|过滤器名称:参数:参数&#125;&#125;</div></pre></td></tr></table></div></figure>
+<li>过滤器的使用:  <figure class="highlight js"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;原本要显示的数据|过滤器名称:参数:参数&#125;&#125;</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
 <li><p>currency 货币过滤器</p>
 <ul>
-<li>功能：对价格进行过滤<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&#123;&#123;pirce|currency&#125;&#125;   //默认在前面显示一个美刀符号.</div><div class="line">&#123;&#123;pirce|currency:"￥"&#125;&#125;  //自定义货币符号.</div><div class="line">&#123;&#123;pirce|currency:"￥":"2"&#125;&#125;  //自定义保留的小数的位数 四舍五入</div></pre></td></tr></table></div></figure>
+<li>功能：对价格进行过滤<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;pirce|currency&#125;&#125;   //默认在前面显示一个美刀符号.</div><div class="line">&#123;&#123;pirce|currency:"￥"&#125;&#125;  //自定义货币符号.</div><div class="line">&#123;&#123;pirce|currency:"￥":"2"&#125;&#125;  //自定义保留的小数的位数 四舍五入</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
 <li><p>date过滤器</p>
 <ul>
-<li>功能: 对日期进行过滤<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&#123;&#123;now|date&#125;&#125;   //默认的格式是美国佬的格式.</div><div class="line">&#123;&#123;now|date:"yyyy-MM-dd HH:mm:ss"&#125;&#125;   //自定义时间的格式</div><div class="line"></div><div class="line">y: year 年. </div><div class="line">M: 月份</div><div class="line">d: 几号.</div><div class="line">H: 24小时制的小时</div><div class="line">h: 12小时制的小时.</div><div class="line">m: 分钟</div><div class="line">s：秒.</div></pre></td></tr></table></div></figure>
+<li>功能: 对日期进行过滤<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;now|date&#125;&#125;   //默认的格式是美国佬的格式.</div><div class="line">&#123;&#123;now|date:"yyyy-MM-dd HH:mm:ss"&#125;&#125;   //自定义时间的格式</div><div class="line"></div><div class="line">y: year 年. </div><div class="line">M: 月份</div><div class="line">d: 几号.</div><div class="line">H: 24小时制的小时</div><div class="line">h: 12小时制的小时.</div><div class="line">m: 分钟</div><div class="line">s：秒.</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
@@ -532,35 +532,35 @@
 </li>
 <li><p>limitTo过滤器</p>
 <ul>
-<li>截取数组/字符串中指定的位数的元素  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&#123;&#123;arr|limitTO:n&#125;&#125;</div><div class="line">//n是1个正数的话，就显示前面的n个</div><div class="line">//n是1个负数的话，就显示后面的n个</div><div class="line"></div><div class="line">&#123;&#123;arr|limitTo:n:m&#125;&#125;</div><div class="line">//当n是正数，从n个开始往后显示m个</div><div class="line">//当n是负数，从n个开始往前显示m个</div></pre></td></tr></table></div></figure>
+<li>截取数组/字符串中指定的位数的元素  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;arr|limitTO:n&#125;&#125;</div><div class="line">//n是1个正数的话，就显示前面的n个</div><div class="line">//n是1个负数的话，就显示后面的n个</div><div class="line"></div><div class="line">&#123;&#123;arr|limitTo:n:m&#125;&#125;</div><div class="line">//当n是正数，从n个开始往后显示m个</div><div class="line">//当n是负数，从n个开始往前显示m个</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
 <li><p>number过滤器</p>
 <ul>
-<li>可以对数字进行指定的位数保留  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&#123;&#123;num|number:2&#125;&#125;</div><div class="line">//保留两位小数，四舍五入</div></pre></td></tr></table></div></figure>
+<li>可以对数字进行指定的位数保留  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;num|number:2&#125;&#125;</div><div class="line">//保留两位小数，四舍五入</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
 <li><p>json过滤器</p>
 <ul>
-<li>将一个对象转换为json字符串显示  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&#123;&#123;person|json&#125;&#125;</div><div class="line">//当我们显示1个对象的时候 如果没有调json过滤器ng会自动的帮助我们调这个过滤器.</div></pre></td></tr></table></div></figure>
+<li>将一个对象转换为json字符串显示  <figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;person|json&#125;&#125;</div><div class="line">//当我们显示1个对象的时候 如果没有调json过滤器ng会自动的帮助我们调这个过滤器.</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
 <li><p>orderBy过滤器</p>
 <ul>
 <li><p>对数组元素进行排序</p>
-<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&#123;&#123;stus|orderBy:"age"&#125;&#125;  //对数组中的对象以age属性排序，默认为升序。</div><div class="line"></div><div class="line">&#123;&#123;stus|orderBy:"age":"true"&#125;&#125;  //自定义降序，false升序</div></pre></td></tr></table></div></figure>
+<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;stus|orderBy:"age"&#125;&#125;  //对数组中的对象以age属性排序，默认为升序。</div><div class="line"></div><div class="line">&#123;&#123;stus|orderBy:"age":"true"&#125;&#125;  //自定义降序，false升序</div></pre></td></tr></table></div></figure>
 </li>
 <li><p>如果是一个基本数据类型数组</p>
-<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&#123;&#123;arr|orderBy&#125;&#125;  //默认升序</div><div class="line">&#123;&#123;arr|orderBy:null:true&#125;&#125;  //前面加个null可以指定降序</div></pre></td></tr></table></div></figure>
+<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;arr|orderBy&#125;&#125;  //默认升序</div><div class="line">&#123;&#123;arr|orderBy:null:true&#125;&#125;  //前面加个null可以指定降序</div></pre></td></tr></table></div></figure>
 </li>
 </ul>
 </li>
 <li><p>filter过滤器</p>
 <ul>
-<li>从数组中筛选符合条件的元素<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="code"><pre><div class="line">&#123;&#123;staus|filter:&#123;age:16,genger:"男"&#125;&#125;&#125;</div><div class="line">//从数组中指定筛选age-16， genger-男 的元素</div></pre></td></tr></table></div></figure></li>
+<li>从数组中筛选符合条件的元素<figure class="highlight html"><div class="mdui-table-fluid"><table class="mdui-table mdui-table-hoverable "><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;staus|filter:&#123;age:16,genger:"男"&#125;&#125;&#125;</div><div class="line">//从数组中指定筛选age-16， genger-男 的元素</div></pre></td></tr></table></div></figure></li>
 </ul>
 </li>
 </ul>
@@ -570,16 +570,16 @@
         
           <div class="license mdui-typo">
             <span>
-              Article License: 
+              本文许可协议：
               
                 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
               
             </span>
             <br />
-            <span>Article Permalink: <a href="http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/">http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/</a></span>
+            <span>本文永久链接：<a href="http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/">http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/</a></span>
             
               <br />
-              <span>Article Markdown: <a href="http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/AngularJS中常见的过滤器.md">http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/AngularJS中常见的过滤器.md</a></span>
+              <span>本文Markdown：<a href="http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/AngularJS中常见的过滤器.md">http://yoursite.com/2017/09/19/AngularJS中常见的过滤器/AngularJS中常见的过滤器.md</a></span>
             
           </div>
         
@@ -624,7 +624,7 @@
       <a href="/2017/09/19/AngularJS自定义过滤器/" class="content no-text-decoration mdui-text-left">
         <div>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">Newer Post</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
           自定义过滤器
@@ -637,7 +637,7 @@
     <div class="next mdui-ripple mdui-color-theme mdui-valign">
       <a href="/2017/09/19/AngularJS的使用步骤/" class="content no-text-decoration mdui-text-right">
         <div>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">Older Post</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
@@ -664,9 +664,9 @@
 </main>
 
 <div id="outdated" style="z-index: 9999;">
-  <h6>Your browser is out-of-date!</h6>
-  <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
-  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+  <h6>你的浏览器一直过气辣！</h6>
+  <p>赶紧升级浏览器来访问本站吧！<a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">现在就去</a></p>
+  <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="关闭">&times;</a></p>
 </div>
 
 
@@ -771,7 +771,7 @@
       counter: false,
       dynamicEl: [{
         "src": img_src,
-        'subHtml': "<span author>John Zeng</span> • Public<div descr>" + img_alt + "</div>"
+        'subHtml': "<span author>John Zeng</span> • 公开<div descr>" + img_alt + "</div>"
       }],
     });
   }
