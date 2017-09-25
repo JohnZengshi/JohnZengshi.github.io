@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html style="display: none;" >
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            Git的使用 | 
+        
+        John Zeng的个人播客
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="John Zeng">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="blog 博客,建站技巧">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/xiaoliang.png">
+    <link rel="icon" sizes="192x192" href="/img/xiaoliang.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="John Zeng的个人播客">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.en.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-cave-light.min.css?5MK/TK/zbpdHM7rmG+ehCw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #CAFFA0 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #CAFFA0 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #CAFFA0 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #D7FFCF;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Git的使用 | John Zeng的个人播客">
+    <meta property="og:image" content="http://yoursite.comimg/xiaoliang.png" />
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="建站技巧"> 
+
+    
+        <meta property="article:published_time" content="Wed Sep 20 2017 09:59:08 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Sep 11 2017 21:03:03 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Git的使用 | John Zeng的个人播客">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://yoursite.comimg/xiaoliang.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://yoursite.com" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2017/09/20/Git的使用/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2017/09/20/Git的使用/index.html",
+    "headline": "Git的使用",
+    "datePublished": "Wed Sep 20 2017 09:59:08 GMT+0800",
+    "dateModified": "Mon Sep 11 2017 21:03:03 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "John Zeng",
+        "image": {
+            "@type": "ImageObject",
+            "url": "img/xiaoliang.png"
+        },
+        "description": "我脾气很爆..很爆"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "John Zeng的个人播客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "img/xiaoliang.png"
+        }
+    },
+    "keywords": ",建站技巧blog 博客",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-创建github个人网站（静态网站）"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.创建github个人网站（静态网站）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-移除全局用户名"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.移除全局用户名</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-git-remote：保存服务器地址"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.git remote：保存服务器地址</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-设置文件不让git管理：隔离文件–-gt-项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中"><span class="post-toc-number">5.</span> <span class="post-toc-text">5.设置文件不让git管理：隔离文件–>项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-删除服务器中的文件"><span class="post-toc-number">6.</span> <span class="post-toc-text">6.删除服务器中的文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一种方式："><span class="post-toc-number">6.1.</span> <span class="post-toc-text">第一种方式：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二种方式："><span class="post-toc-number">6.2.</span> <span class="post-toc-text">第二种方式：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对一个文件的重命名操作，"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">对一个文件的重命名操作，</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-git-add-把在工作区对文件的操作告诉暂存区"><span class="post-toc-number">7.</span> <span class="post-toc-text">7.git add(把在工作区对文件的操作告诉暂存区)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-add"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">git add *</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-add-u-或者-git-add-–update"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">git add -u 或者 git add –update</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-add-A-或者-git-add-–all"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">git add -A  或者 git add –all</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-add-文件夹名称-可以把指定目录下面的所有子目录中的文件操作放到暂存区"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">git add 文件夹名称   可以把指定目录下面的所有子目录中的文件操作放到暂存区</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚"><span class="post-toc-number">8.</span> <span class="post-toc-text">8.多文件特殊操作(版本回滚)(可逆–>版本来回滚、随意滚)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-log-–oneline：每一次提交的-短-版本号，以及备注信息"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">git log –oneline：每一次提交的(短)版本号，以及备注信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-reflog-查看历史记录"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">git reflog 查看历史记录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#（了解）单文件特殊操作-☆☆☆不可逆☆☆☆"><span class="post-toc-number">8.4.</span> <span class="post-toc-text">（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-checkout-–-1-txt：-替换文件内容"><span class="post-toc-number">8.5.</span> <span class="post-toc-text">git checkout – 1.txt：(替换文件内容)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-reset-HEAD-–-1-txt：-不会替换文件内容"><span class="post-toc-number">8.6.</span> <span class="post-toc-text">git reset HEAD – 1.txt：(不会替换文件内容)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-tortoiseGit比较文件差异-单文件"><span class="post-toc-number">9.</span> <span class="post-toc-text">9.tortoiseGit比较文件差异(单文件)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分支操作相关指令"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">分支操作相关指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-branch"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">git branch</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-branch-分支名"><span class="post-toc-number">9.3.</span> <span class="post-toc-text">git branch 分支名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-checkout-分支名"><span class="post-toc-number">9.4.</span> <span class="post-toc-text">git checkout 分支名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-merge-m-备注信息"><span class="post-toc-number">9.5.</span> <span class="post-toc-text">git merge -m 备注信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-branch-d-分支名"><span class="post-toc-number">9.6.</span> <span class="post-toc-text">git branch -d 分支名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#无论是创建分支还是合并分支时刻警醒当前位于哪个位置"><span class="post-toc-number">9.7.</span> <span class="post-toc-text">无论是创建分支还是合并分支时刻警醒当前位于哪个位置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对于一个仓库，如果没有任何本地提交，git-branch-没有结果"><span class="post-toc-number">9.8.</span> <span class="post-toc-text">对于一个仓库，如果没有任何本地提交，git branch 没有结果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#不要在本地分支上push代码"><span class="post-toc-number">9.9.</span> <span class="post-toc-text">不要在本地分支上push代码</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 30 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Git的使用
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/xiaoliang.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>John Zeng</strong>
+        <span>Sep 20, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/建站技巧/">建站技巧</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Git的使用&url=http://yoursite.com/2017/09/20/Git的使用/index.html&pic=http://yoursite.comimg/xiaoliang.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Git的使用&url=http://yoursite.com/2017/09/20/Git的使用/index.html&via=John Zeng" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/09/20/Git的使用/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/09/20/Git的使用/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下"><a href="#1-☆☆☆对于一个项目来说，git-clone只能用一次，用于本地什么都没有的情况下" class="headerlink" title="1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下"></a>1.☆☆☆对于一个项目来说，git clone只能用一次，用于本地什么都没有的情况下</h2><ul>
+<li><p>1.刚进入公司，领导让你对某个项目进行二次开发（服务器仓库并不是空的）</p>
+<ul>
+<li>第一种方式：<ul>
+<li>git clone 服务器仓库地址 app</li>
+<li>cd app</li>
+<li>touch 1.txt</li>
+<li>git add .</li>
+<li>git commit -m 备注信息</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+<li>第二种方式：<ul>
+<li>mkdir app</li>
+<li>cd app</li>
+<li>git init</li>
+<li>git pull 服务器仓库地址 master   <code>a、将本地仓库和服务器仓库进行了关联 b、将服务器仓库中的代码下载到本地</code></li>
+<li>touch 3.txt</li>
+<li>git add .</li>
+<li>git commit -m 备注信息</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2.之后还需要更新代码</p>
+<ul>
+<li>只能：git pull 服务器仓库地址 master</li>
+</ul>
+</li>
+<li>3.之后需要往服务器中提交代码<ul>
+<li>只能：git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-创建github个人网站（静态网站）"><a href="#2-创建github个人网站（静态网站）" class="headerlink" title="2.创建github个人网站（静态网站）"></a>2.创建github个人网站（静态网站）</h2><ul>
+<li>能解析正常的静态页面：.html .js .css</li>
+<li>不能解析动态页面：.php  .jsp .asp .aspx</li>
+</ul>
+<ul>
+<li>添加一个仓库，仓库名字固定格式：github用户名.github.io</li>
+<li>往该仓库中提交文件，输入该仓库地址就可以看到这些文件了(默认显示index.html)<ul>
+<li>如果有README.md 也会自动加载README.md</li>
+<li>其他文件不会自动渲染，需要确定的文件名</li>
+<li>访问该网站必须使用https协议访问</li>
+</ul>
+</li>
+</ul>
+<p>html /css /js  /png</p>
+<ul>
+<li>index.php：动态的页面：由apache解析</li>
+<li>index.jsp：java开发的动态页面：tomcat/apache</li>
+<li>index.aspx/index.asp：c#/vb开发的动态页面：iis来解析</li>
+</ul>
+<h2 id="3-移除全局用户名"><a href="#3-移除全局用户名" class="headerlink" title="3.移除全局用户名"></a>3.移除全局用户名</h2><p>git config –global –unset user.name</p>
+<h2 id="4-git-remote：保存服务器地址"><a href="#4-git-remote：保存服务器地址" class="headerlink" title="4.git remote：保存服务器地址"></a>4.git remote：保存服务器地址</h2><ul>
+<li><p>保存服务器地址：git remote add 变量名 服务器地址</p>
+<ul>
+<li>举例：git remote add origin <a href="https://github.com/hahareg12345/hahareg12345.github.io.git" target="_blank" rel="external">https://github.com/hahareg12345/hahareg12345.github.io.git</a></li>
+</ul>
+</li>
+<li><p>删除服务器地址：git remote remove 变量名</p>
+</li>
+<li><p>变量重命名：git remote rename 旧变量名 新变量名</p>
+</li>
+<li><p>获取变量名保存的服务器地址：git remote get-url 变量名</p>
+<ul>
+<li>举例： git remote get-url origin</li>
+</ul>
+</li>
+<li>重新设置变量名保存的服务器地址：git remote set-url 变量名 服务器地址</li>
+</ul>
+<h2 id="5-设置文件不让git管理：隔离文件–-gt-项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中"><a href="#5-设置文件不让git管理：隔离文件–-gt-项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中" class="headerlink" title="5.设置文件不让git管理：隔离文件–&gt;项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中"></a>5.设置文件不让git管理：隔离文件–&gt;项目文件夹有很多文件，但是有一些文件不希望上传到代码服务器中</h2><ol>
+<li>在.git同级目录添加一个文件，叫 .gitignore<br> 创建这个文件名的时候，<pre><code>a：文件名：&quot;.gitignore.&quot;
+b、bash命令：touch .gitignore
+</code></pre></li>
+<li><p>打开.gitignore进行编辑，一行一行的添加不需要git管理的文件<br> 可以设置同类型的文件：<em>.js </em>.css<br> 也可以设置整个目录：</p>
+<pre><code>a/*--&gt;a目录下面的所有文件
+a/*.js--&gt;a目录下面的所有js文件
+</code></pre></li>
+<li><p>注意点：</p>
+<ul>
+<li>要隔离某个文件或者文件夹，一定要在它进入暂存区之前就隔离</li>
+<li>隔离的时候需要准备一个.gitignore文件，这个文件应该存放于仓库的根目录中(.git文件夹同级)</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-删除服务器中的文件"><a href="#6-删除服务器中的文件" class="headerlink" title="6.删除服务器中的文件"></a>6.删除服务器中的文件</h2><h3 id="第一种方式："><a href="#第一种方式：" class="headerlink" title="第一种方式："></a>第一种方式：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">右击删除/rm 文件名                   --&gt;物理删除</div><div class="line">git add 文件名                     --&gt;把删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把删除操作告诉服务器仓库</div></pre></td></tr></table></figure>
+<h3 id="第二种方式："><a href="#第二种方式：" class="headerlink" title="第二种方式："></a>第二种方式：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">git rm 文件名                     --&gt;删除文件，同时把该删除操作告诉暂存区</div><div class="line">git commit -m 提交                --&gt;把该删除操作告诉本地主仓库</div><div class="line">git push 远程服务器 master         --&gt;把该删除操作告诉服务器仓库</div></pre></td></tr></table></figure>
+<ul>
+<li><p>如果一个文件从没进入过暂存区，要想删除：rm</p>
+</li>
+<li><p>如果一个文件进入本地仓库，但是没有进入到服务器仓库,也就不需要执行git push</p>
+</li>
+<li><p>一个细节：如果某个文件没有进入到本地仓库，也没有进入服务器仓库<br>git rm 无法正常删除文件<br>git rm xxx -f 可以实现把文件删除</p>
+</li>
+</ul>
+<h3 id="对一个文件的重命名操作，"><a href="#对一个文件的重命名操作，" class="headerlink" title="对一个文件的重命名操作，"></a>对一个文件的重命名操作，</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">+ 1.txt--&gt;2.txt</div><div class="line">    - git status查看状态的的时候，发现1.txt被删除，2.txt新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为2.txt</div><div class="line"></div><div class="line">+ 删除了1.txt，新建了1.html</div><div class="line">    + git status查看状态的的时候，发现1.txt被删除，1.html新增了</div><div class="line">    + git add .</div><div class="line">        - (rename)1.txt重命名为1.html</div></pre></td></tr></table></figure>
+<h2 id="7-git-add-把在工作区对文件的操作告诉暂存区"><a href="#7-git-add-把在工作区对文件的操作告诉暂存区" class="headerlink" title="7.git add(把在工作区对文件的操作告诉暂存区)"></a>7.git add(把在工作区对文件的操作告诉暂存区)</h2><h3 id="git-add"><a href="#git-add" class="headerlink" title="git add *"></a>git add *</h3><ul>
+<li><p>默认为将修改的文件和新添加的文件添加到git系统的暂存区<br>☆注意☆：不包括删除</p>
+</li>
+<li><p>git add *.js 将修改了和新添加的以.js为后缀的文件添加到暂存区</p>
+</li>
+<li>git add *.txt 将修改了和新添加的以.txt为后缀的文件添加到暂存区</li>
+</ul>
+<h3 id="git-add-u-或者-git-add-–update"><a href="#git-add-u-或者-git-add-–update" class="headerlink" title="git add -u 或者 git add –update"></a>git add -u 或者 git add –update</h3><ul>
+<li>表示将(修改和删除的文件)的操作告诉暂存区<ul>
+<li>不能将新添加的文件告诉暂存区</li>
+</ul>
+</li>
+</ul>
+<h3 id="git-add-A-或者-git-add-–all"><a href="#git-add-A-或者-git-add-–all" class="headerlink" title="git add -A  或者 git add –all"></a>git add -A  或者 git add –all</h3><p>表示将所有的修改与删除和未跟踪的文件都告诉暂存区。<br>–&gt;新创建的文件<br>–&gt;修改的文件<br>–&gt;删除的文件</p>
+<h3 id="git-add-文件夹名称-可以把指定目录下面的所有子目录中的文件操作放到暂存区"><a href="#git-add-文件夹名称-可以把指定目录下面的所有子目录中的文件操作放到暂存区" class="headerlink" title="git add 文件夹名称   可以把指定目录下面的所有子目录中的文件操作放到暂存区"></a>git add 文件夹名称   可以把指定目录下面的所有子目录中的文件操作放到暂存区</h3><ul>
+<li>如果当前就是git仓库的根目录，就可以一次性把所有文件的状态放到暂存区</li>
+<li><p>如果当前不是git仓库的根目录，只能把该目录以及所有子目录中的文件操作放到暂存区</p>
+</li>
+<li><p>如果当前就是git仓库的根目录，要提交所有的文件，可以选择使用下面三种之一的方式</p>
+<ul>
+<li>git add .</li>
+</ul>
+<ul>
+<li>git add -A</li>
+<li>git add -u+git add *</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚"><a href="#8-多文件特殊操作-版本回滚-可逆–-gt-版本来回滚、随意滚" class="headerlink" title="8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)"></a>8.多文件特殊操作(版本回滚)(可逆–&gt;版本来回滚、随意滚)</h2><h3 id="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"><a href="#将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件" class="headerlink" title="将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件"></a>将某个版本的文件从本地主仓库中恢复，取出来的文件替换工作目录的文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">git reset --hard 提交的版本号(每一次提交都会有一个黄色的唯一标识，该标识就是版本号)</div><div class="line">    - git <span class="built_in">log</span> 获取到很长的版本号，也可以通过git <span class="built_in">log</span> --oneline获取到短的版本号</div><div class="line">    - 绝大多数情况下，还可以使用git reflog也会提示版本号</div></pre></td></tr></table></figure>
+<h3 id="git-log-–oneline：每一次提交的-短-版本号，以及备注信息"><a href="#git-log-–oneline：每一次提交的-短-版本号，以及备注信息" class="headerlink" title="git log –oneline：每一次提交的(短)版本号，以及备注信息"></a>git log –oneline：每一次提交的(短)版本号，以及备注信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">git <span class="built_in">log</span>的简便方法</div></pre></td></tr></table></figure>
+<h3 id="git-reflog-查看历史记录"><a href="#git-reflog-查看历史记录" class="headerlink" title="git reflog 查看历史记录"></a>git reflog 查看历史记录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">这些历史记录包括：每一次提交的信息；以及每一次版本回滚的操作；分支切换操作</div></pre></td></tr></table></figure>
+<h3 id="（了解）单文件特殊操作-☆☆☆不可逆☆☆☆"><a href="#（了解）单文件特殊操作-☆☆☆不可逆☆☆☆" class="headerlink" title="（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)"></a>（了解）单文件特殊操作(☆☆☆不可逆☆☆☆)</h3><h3 id="git-checkout-–-1-txt：-替换文件内容"><a href="#git-checkout-–-1-txt：-替换文件内容" class="headerlink" title="git checkout – 1.txt：(替换文件内容)"></a>git checkout – 1.txt：(替换文件内容)</h3><ul>
+<li>将暂存区中的文件取出并替换工作目录的文件<ul>
+<li>误删了一个文件，通过该命令，从仓库中把文件恢复(ps：前提是之前该文件已经进入过仓库了)</li>
+<li>对于某个文件来说，之前已经提交到仓库了，这些又随便写了一些内容，发现这些内容不是自己想要的，就可以通过该操作把仓库中的原内容取出来</li>
+</ul>
+</li>
+</ul>
+<h3 id="git-reset-HEAD-–-1-txt：-不会替换文件内容"><a href="#git-reset-HEAD-–-1-txt：-不会替换文件内容" class="headerlink" title="git reset HEAD – 1.txt：(不会替换文件内容)"></a>git reset HEAD – 1.txt：(不会替换文件内容)</h3><p>将某个操作告诉暂存区，后来发现这是一次误操作，通过这个命令反悔</p>
+<h2 id="9-tortoiseGit比较文件差异-单文件"><a href="#9-tortoiseGit比较文件差异-单文件" class="headerlink" title="9.tortoiseGit比较文件差异(单文件)"></a>9.tortoiseGit比较文件差异(单文件)</h2><ul>
+<li>1、通过对某个文件右击，依次选择tortoiseGit–&gt;diff<br>  –&gt;将当前工作区的代码跟仓库中最新的代码进行比较</li>
+<li><p>2、通过对某个文件右击，依次选择tortoiseGit–&gt;diff with previous version<br>  –&gt;将当前工作区的代码根仓库中最新版本的前一个版本的代码进行比较</p>
+</li>
+<li><p>3、如果希望把某个文件跟之前很早的版本进行代码比较，应该：<br>  –&gt;右击该文件，依次选择：tortoiseGit–&gt;show log</p>
+<pre><code>--&gt;选择要比较的某个版本，右击选择菜单：compare with working tree
+</code></pre></li>
+<li><p>4、tortoiseGit图标</p>
+<ul>
+<li>一个新创建的文件没有图标</li>
+<li>已经添加到暂存区的文件具有”+”</li>
+<li>已经commit 的文件具有 “√:</li>
+<li>已经修改过的文件：红色的!</li>
+<li>冲突的文件：黄色的三角形</li>
+</ul>
+</li>
+</ul>
+<h3 id="分支操作相关指令"><a href="#分支操作相关指令" class="headerlink" title="分支操作相关指令"></a>分支操作相关指令</h3><h3 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h3><p>查看当前拥有的所有分支(带*前缀的是当前的分支)</p>
+<h3 id="git-branch-分支名"><a href="#git-branch-分支名" class="headerlink" title="git branch 分支名"></a>git branch 分支名</h3><p>在当前分支下创建新分支<br>    –&gt;新分支会继承所有的当前分支到目前为止的所有代码</p>
+<h3 id="git-checkout-分支名"><a href="#git-checkout-分支名" class="headerlink" title="git checkout 分支名"></a>git checkout 分支名</h3><p>切换到指定分支下面去</p>
+<h3 id="git-merge-m-备注信息"><a href="#git-merge-m-备注信息" class="headerlink" title="git merge -m 备注信息"></a>git merge -m 备注信息</h3><p>将指定分支合并到当前分支下</p>
+<h3 id="git-branch-d-分支名"><a href="#git-branch-d-分支名" class="headerlink" title="git branch -d 分支名"></a>git branch -d 分支名</h3><p>删除指定的分支</p>
+<h3 id="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"><a href="#无论是创建分支还是合并分支时刻警醒当前位于哪个位置" class="headerlink" title="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"></a>无论是创建分支还是合并分支时刻警醒当前位于哪个位置</h3><h3 id="对于一个仓库，如果没有任何本地提交，git-branch-没有结果"><a href="#对于一个仓库，如果没有任何本地提交，git-branch-没有结果" class="headerlink" title="对于一个仓库，如果没有任何本地提交，git branch 没有结果"></a>对于一个仓库，如果没有任何本地提交，git branch 没有结果</h3><h3 id="不要在本地分支上push代码"><a href="#不要在本地分支上push代码" class="headerlink" title="不要在本地分支上push代码"></a>不要在本地分支上push代码</h3>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/09/20/关于javascript的数据类型/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/09/20/jQuery源码分析（02）--整体架构/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/xiaoliang.png" alt="John Zeng's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        youremail@email.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/09/">September 2017<span class="sidebar_archives-count">56</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>John Zeng的个人播客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
