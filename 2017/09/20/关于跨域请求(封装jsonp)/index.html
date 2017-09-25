@@ -243,7 +243,7 @@
 
     
         <meta property="article:published_time" content="Wed Sep 20 2017 21:46:08 GMT+0800" />
-        <meta property="article:modified_time" content="Fri Sep 22 2017 14:17:10 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Sep 25 2017 22:22:41 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
@@ -270,7 +270,7 @@
     "mainEntityOfPage": "http://yoursite.com/2017/09/20/关于跨域请求(封装jsonp)/index.html",
     "headline": "关于跨域请求(封装jsonp)",
     "datePublished": "Wed Sep 20 2017 21:46:08 GMT+0800",
-    "dateModified": "Fri Sep 22 2017 14:17:10 GMT+0800",
+    "dateModified": "Mon Sep 25 2017 22:22:41 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "John Zeng",
@@ -478,20 +478,23 @@
         <blockquote>
 <h2 id="跨域请求"><a href="#跨域请求" class="headerlink" title="跨域请求"></a>跨域请求</h2></blockquote>
 <ul>
+<li><p>什么是跨域请求？：浏览器从某个域名下的资源访问另一个域名下的资源，可能是协议，域名，端口号不同</p>
+</li>
 <li><p>在A域以ajax请求另外域的资源.是不被允许的.ajax只能请求本域的资源.无法发起跨域请求.</p>
 <ul>
 <li>解决方案：<figure class="highlight html"><table><tr><td class="code"><pre><div class="line">方向代理</div><div class="line">服务器设置</div><div class="line">jsonp</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
+<li><p>jsonp：</p>
+<ul>
 <li><p>关于script标签</p>
 <ul>
 <li>引入外部的js文件.script标签的src属性:将外部的js文件引入,并且将其中的代码执行.</li>
 <li>script标签的src属性,可以请求任意类型的文件.</li>
 <li>script标签的src属性天然支持跨域.<ul>
 <li>CDN: 内容分发网络.</li>
-<li>libs:<pre><code>xxx  xx x xx x x x x x x x
-</code></pre></li>
+<li>libs:<br>  xxx  xx x xx x x x x x x x</li>
 </ul>
 </li>
 </ul>
@@ -523,6 +526,14 @@
 </li>
 <li><p>jsonp只支持get</p>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>加相应消息头部</p>
+  <figure class="highlight html"><table><tr><td class="code"><pre><div class="line">header("Access-Control-Allow-Origin:http://xx.com")</div></pre></td></tr></table></figure>
+<ul>
+<li>设定允许来至于那个域名下的页面访问当前页面</li>
 </ul>
 </li>
 </ul>
@@ -672,7 +683,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/AJAX/">AJAX<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Angular/">Angular<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JSON/">JSON<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/RequireJS/">RequireJS<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Requirejs/">Requirejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/cookie/">cookie<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/jQuery/">jQuery<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/jQuery源码分析/">jQuery源码分析<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/关于ES5规范/">关于ES5规范<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/开发/">开发<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/开发技巧/">开发技巧<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/网站搭建/">网站搭建<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/AJAX/">AJAX<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Angular/">Angular<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JSON/">JSON<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/RequireJS/">RequireJS<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Requirejs/">Requirejs<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/cookie/">cookie<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/jQuery/">jQuery<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/jQuery源码分析/">jQuery源码分析<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/关于ES5规范/">关于ES5规范<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/开发技巧/">开发技巧<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/网站搭建/">网站搭建<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
