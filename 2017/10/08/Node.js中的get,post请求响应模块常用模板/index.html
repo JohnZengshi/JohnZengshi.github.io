@@ -37,7 +37,7 @@
     
     <title>
         
-            归档: 2017 | 
+            Node.js中的get,post请求响应模板常用模块 | 
         
         John Zeng的个人播客
     </title>
@@ -98,6 +98,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-cave-light.min.css?5MK/TK/zbpdHM7rmG+ehCw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -233,15 +236,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017 | John Zeng的个人播客">
+    <meta property="og:title" content="Node.js中的get,post请求响应模板常用模块 | John Zeng的个人播客">
     <meta property="og:image" content="http://yoursite.comimg/xiaoliang.png" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="Sun Oct 08 2017 17:39:18 GMT+0800" />
+        <meta property="article:modified_time" content="Sun Oct 08 2017 17:55:39 GMT+0800" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="归档: 2017 | John Zeng的个人播客">
+    <meta name="twitter:title" content="Node.js中的get,post请求响应模板常用模块 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://yoursite.comimg/xiaoliang.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -249,13 +255,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2017/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/10/08/Node.js中的get,post请求响应模块常用模板/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2017/10/08/Node.js中的get,post请求响应模块常用模板/index.html",
+    "headline": "Node.js中的get,post请求响应模板常用模块",
+    "datePublished": "Sun Oct 08 2017 17:39:18 GMT+0800",
+    "dateModified": "Sun Oct 08 2017 17:55:39 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "John Zeng",
+        "image": {
+            "@type": "ImageObject",
+            "url": "img/xiaoliang.png"
+        },
+        "description": "我脾气很爆..很爆"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "John Zeng的个人播客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "img/xiaoliang.png"
+        }
+    },
+    "keywords": "blog 博客",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,661 +325,198 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Node-js中的get请求："><span class="post-toc-number">1.</span> <span class="post-toc-text">Node.js中的get请求：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Node-js中的post请求："><span class="post-toc-number">2.</span> <span class="post-toc-text">Node.js中的post请求：</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 30 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/08/Node.js中的get,post请求响应模块常用模板/">Node.js中的get,post请求响应模板常用模块</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/08/Node.js中的get,post请求响应模块常用模板/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Oct 08, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Node-js/">Node.js</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/08/Node.js的基础模板/">Node.js的基础模板</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/08/Node.js的基础模板/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Oct 08, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Node-js/">Node.js</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/10/07/前端里面模块化的演变过程/">前端里面模块化的演变过程</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/10/07/前端里面模块化的演变过程/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Oct 07, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/开发技巧/">开发技巧</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/28/Array.prototype.sort()/">Array.prototype.sort()</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/28/Array.prototype.sort()/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 28, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/javascript/">javascript</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/25/网站性能优化的方法/">网站性能优化方法</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/25/网站性能优化的方法/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 25, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/网站搭建/">网站搭建</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/21/AngularJS中的路由/">AngularJS中的路由</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/21/AngularJS中的路由/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 21, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Angular/">Angular</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/21/云音乐案例(利用锚点值)/">云音乐案例业务逻辑(锚点值)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/21/云音乐案例(利用锚点值)/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 21, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/开发技巧/">开发技巧</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/21/AngularJS中的运行块(run)/">AngularJS中的运行块(run)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/21/AngularJS中的运行块(run)/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 21, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Angular/">Angular</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/21/AngularJS中的配置快(config)/">AngularJS中的配置块(config)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/21/AngularJS中的配置快(config)/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 21, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Angular/">Angular</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/21/AngularJS中配置跨域白名单/">AngularJS中配置跨域白名单</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/21/AngularJS中配置跨域白名单/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 21, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Angular/">Angular</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="page-number" href="/archives/2017/page/3/">3</a><a class="page-number" href="/archives/2017/page/7/">7</a><a class="extend next" rel="next" href="/archives/2017/page/2/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 30 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Node.js中的get,post请求响应模板常用模块
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/xiaoliang.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>John Zeng</strong>
+        <span>Oct 08, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Node.js中的get,post请求响应模板常用模块&url=http://yoursite.com/2017/10/08/Node.js中的get,post请求响应模块常用模板/index.html&pic=http://yoursite.comimg/xiaoliang.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=John Zeng的个人播客&title=Node.js中的get,post请求响应模板常用模块&summary=&pics=http://yoursite.comimg/xiaoliang.png&url=http://yoursite.com/2017/10/08/Node.js中的get,post请求响应模块常用模板/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<h3 id="Node-js中的get请求："><a href="#Node-js中的get请求：" class="headerlink" title="Node.js中的get请求："></a>Node.js中的get请求：</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"></div><div class="line"><span class="comment">//1.导入http模块(包)，导入url模块</span></div><div class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</div><div class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">'url'</span>)</div><div class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">'querystring'</span>)</div><div class="line"></div><div class="line"><span class="comment">//2.创建服务</span></div><div class="line"><span class="keyword">const</span> server = http.createServer() </div><div class="line"></div><div class="line"><span class="comment">//3.请求，处理，响应</span></div><div class="line">server.on(<span class="string">'request'</span>,(req,res)=&gt;&#123;</div><div class="line">    <span class="keyword">const</span> urlString = req.url</div><div class="line">    <span class="keyword">if</span>(!urlString.includes(<span class="string">'ico'</span>))&#123;</div><div class="line">        <span class="comment">//3.1 调用url模块的parse把urlString转成url对象</span></div><div class="line">        <span class="comment">//如果第二个参数是true,内部会调用querystring.parse方法</span></div><div class="line">        <span class="comment">//urlString == /login?username=zhangsan&amp;pwd=123</span></div><div class="line">        <span class="keyword">const</span> urlObj = url.parse(urlString)</div><div class="line"></div><div class="line">        <span class="comment">//3.2 urlObj中可以通过pathname获取到路径，根据路径进行不同处理</span></div><div class="line">        <span class="built_in">console</span>.log(urlObj)</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"=========================="</span>)</div><div class="line"></div><div class="line">        <span class="comment">//3.3 把urlObj中query键值对的字符串，转成js对象，为了后面获取值的时候方便</span></div><div class="line">        <span class="keyword">const</span> params = querystring.parse(urlObj.query)</div><div class="line">        <span class="built_in">console</span>.log(params.pwd)</div><div class="line">    &#125;</div><div class="line">    res.end(<span class="string">"OK"</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//4.开启web服务</span></div><div class="line">server.listen(<span class="number">8899</span>,<span class="string">'127.0.0.1'</span>,err=&gt;&#123;</div><div class="line">    <span class="keyword">if</span>(err)&#123;</div><div class="line">        <span class="built_in">console</span>.log(err)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"start OK!"</span>)</div></pre></td></tr></table></figure>
+<h3 id="Node-js中的post请求："><a href="#Node-js中的post请求：" class="headerlink" title="Node.js中的post请求："></a>Node.js中的post请求：</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"></div><div class="line"><span class="comment">//1.导入http模块(包)，导入url模块</span></div><div class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</div><div class="line"><span class="keyword">const</span> querystring = <span class="built_in">require</span>(<span class="string">'querystring'</span>)</div><div class="line"></div><div class="line"><span class="comment">//2.创建服务</span></div><div class="line"><span class="keyword">const</span> server = http.createServer() </div><div class="line"></div><div class="line"><span class="comment">//3.请求，处理，响应</span></div><div class="line">server.on(<span class="string">'request'</span>,(req,res)=&gt;&#123;</div><div class="line">    <span class="comment">//console.log(req.url)</span></div><div class="line"></div><div class="line">    <span class="comment">//3.1 通过req.url获取到路径</span></div><div class="line"></div><div class="line">    <span class="comment">//3.2 获取参数,req.xxx获取不到</span></div><div class="line">    <span class="comment">/**</span></div><div class="line"><span class="comment">     * 举例:假设，我现在客户端，需要给服务器传递2M的数据，而我们带宽只有1M</span></div><div class="line"><span class="comment">     * 数据这个时候，需要分两次传输过去，这个时候在后台，就会触发两次data事件，一次传递1M</span></div><div class="line"><span class="comment">     */</span></div><div class="line">    <span class="keyword">let</span> body = <span class="string">''</span></div><div class="line">    req.on(<span class="string">'data'</span>,(chunk)=&gt;&#123;</div><div class="line">        body+=chunk</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    <span class="comment">//这是事件是当浏览器把所有的数据都传递完毕之后，就会触发，所以在这个地方进行参数的处理，比较严谨</span></div><div class="line">    req.on(<span class="string">'end'</span>,()=&gt;&#123;</div><div class="line">        <span class="comment">//把 username=laowang&amp;pwd=laowang 转成js对象</span></div><div class="line">        <span class="keyword">const</span> params = querystring.parse(body)</div><div class="line">        <span class="built_in">console</span>.log(params)</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">    res.end(<span class="string">"OK"</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//4.开启web服务</span></div><div class="line">server.listen(<span class="number">8899</span>,<span class="string">'127.0.0.1'</span>,err=&gt;&#123;</div><div class="line">    <span class="keyword">if</span>(err)&#123;</div><div class="line">        <span class="built_in">console</span>.log(err)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"start OK!"</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></blockquote>
+
+        
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/10/08/Node.js的基础模板/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -1251,6 +824,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -1263,6 +840,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
