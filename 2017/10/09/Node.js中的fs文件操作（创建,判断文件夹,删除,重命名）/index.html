@@ -37,7 +37,7 @@
     
     <title>
         
-            Node.js中的fs文件操作 | 
+            Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）.md | 
         
         John Zeng的个人播客
     </title>
@@ -236,18 +236,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Node.js中的fs文件操作 | John Zeng的个人播客">
+    <meta property="og:title" content="Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）.md | John Zeng的个人播客">
     <meta property="og:image" content="http://yoursite.comimg/xiaoliang.png" />
     <meta property="og:description" content="">
     
 
     
-        <meta property="article:published_time" content="Sun Oct 08 2017 22:09:28 GMT+0800" />
-        <meta property="article:modified_time" content="Sun Oct 08 2017 22:50:54 GMT+0800" />
+        <meta property="article:published_time" content="Mon Oct 09 2017 12:12:25 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Oct 09 2017 12:18:28 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Node.js中的fs文件操作 | John Zeng的个人播客">
+    <meta name="twitter:title" content="Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）.md | John Zeng的个人播客">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://yoursite.comimg/xiaoliang.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -255,7 +255,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2017/10/08/Node.js中的fs文件操作/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/10/09/Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -267,10 +267,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2017/10/08/Node.js中的fs文件操作/index.html",
-    "headline": "Node.js中的fs文件操作",
-    "datePublished": "Sun Oct 08 2017 22:09:28 GMT+0800",
-    "dateModified": "Sun Oct 08 2017 22:50:54 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2017/10/09/Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）/index.html",
+    "headline": "Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）.md",
+    "datePublished": "Mon Oct 09 2017 12:12:25 GMT+0800",
+    "dateModified": "Mon Oct 09 2017 12:18:28 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "John Zeng",
@@ -354,7 +354,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#fs操作"><span class="post-toc-number">1.</span> <span class="post-toc-text">fs操作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#fs读取服务器上面的文件（编码）"><span class="post-toc-number">2.</span> <span class="post-toc-text">fs读取服务器上面的文件（编码）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用fs读取文件的两种方式"><span class="post-toc-number">3.</span> <span class="post-toc-text">使用fs读取文件的两种方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#fs如何操作文件夹-amp-文件【了解】"><span class="post-toc-number">4.</span> <span class="post-toc-text">fs如何操作文件夹&文件【了解】</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#具体实现："><span class="post-toc-number">5.</span> <span class="post-toc-text">具体实现：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件读写的时候，编码问题"><span class="post-toc-number">6.</span> <span class="post-toc-text">文件读写的时候，编码问题</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-创建"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.创建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-判断文件夹是否存在-exists-不管可以判断文件夹还可以判断文件是否存在"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.判断文件夹是否存在  exists 不管可以判断文件夹还可以判断文件是否存在</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-重命名-rename-即可重命名文件夹也可重命名文件"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.重命名 rename 即可重命名文件夹也可重命名文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-删除"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.删除</span></a></li></ol>
     </ul>
     
 
@@ -386,7 +386,7 @@
         
     
             <p class="article-headline-p">
-                Node.js中的fs文件操作
+                Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）.md
             </p>
         </div>
 
@@ -405,7 +405,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>John Zeng</strong>
-        <span>Oct 08, 2017</span>
+        <span>Oct 09, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -436,7 +436,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Node.js中的fs文件操作&url=http://yoursite.com/2017/10/08/Node.js中的fs文件操作/index.html&pic=http://yoursite.comimg/xiaoliang.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）.md&url=http://yoursite.com/2017/10/09/Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）/index.html&pic=http://yoursite.comimg/xiaoliang.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -457,7 +457,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=John Zeng的个人播客&title=Node.js中的fs文件操作&summary=&pics=http://yoursite.comimg/xiaoliang.png&url=http://yoursite.com/2017/10/08/Node.js中的fs文件操作/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=John Zeng的个人播客&title=Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）.md&summary=&pics=http://yoursite.comimg/xiaoliang.png&url=http://yoursite.com/2017/10/09/Node.js中的fs文件操作（创建,判断文件夹,删除,重命名）/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -475,78 +475,16 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <blockquote>
-<h3 id="fs操作"><a href="#fs操作" class="headerlink" title="fs操作"></a>fs操作</h3><ul>
-<li>1、用户只需要知道我们的url地址，然后按住回车就像获取到结果，我们必须在后台把完整的页面返回给浏览器展示，而服务器软件(node,apache)，必须去服务器硬盘的某个文件夹下面读取对应的文件内容，返回给浏览器</li>
-<li>2、当用户上传一个东西之后(文件)，需要通过文件操作的方式，把文件保存到服务器的硬盘上</li>
-</ul>
-<h3 id="fs读取服务器上面的文件（编码）"><a href="#fs读取服务器上面的文件（编码）" class="headerlink" title="fs读取服务器上面的文件（编码）"></a>fs读取服务器上面的文件（编码）</h3></blockquote>
-<ul>
-<li>1.开启web服务</li>
-<li><p>2.监听浏览器的请求，使用fs&amp;path模块去读取文件</p>
-<ul>
-<li><p>path:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">path.join(__dirname,<span class="string">"index.html"</span>)</div><div class="line"><span class="comment">//__dirname在global模块，代表运行的js文件所在的文件夹的路径</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>fs:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">fs.readFile(<span class="string">'/etc/passwd'</span>,(err,data)=&gt;&#123;</div><div class="line">    <span class="keyword">if</span>(err)<span class="keyword">throw</span> err;</div><div class="line">    <span class="built_in">console</span>.log(data);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>3.通过res,把读取到的内容，返回给浏览器呈现</p>
-</li>
-</ul>
+        <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</div></pre></td></tr></table></figure>
 <blockquote>
-<h3 id="使用fs读取文件的两种方式"><a href="#使用fs读取文件的两种方式" class="headerlink" title="使用fs读取文件的两种方式"></a>使用fs读取文件的两种方式</h3></blockquote>
-<ul>
-<li><p>异步：</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">fs.readFile(路径，回调函数)</div></pre></td></tr></table></figure>
-</li>
-<li><p>同步：</p>
-  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">fs.readFileSync(路径)</div></pre></td></tr></table></figure>
+<h3 id="1-创建"><a href="#1-创建" class="headerlink" title="1.创建"></a>1.创建</h3><ul>
+<li>文件夹必须我们自己创建<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">fs.mkdir(path.join(__dirname,<span class="string">'abc'</span>),(err)=&gt;&#123;</div><div class="line">    <span class="keyword">if</span>(err)&#123;</div><div class="line">        <span class="built_in">console</span>.log(err)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"create success"</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<blockquote>
-<h3 id="fs如何操作文件夹-amp-文件【了解】"><a href="#fs如何操作文件夹-amp-文件【了解】" class="headerlink" title="fs如何操作文件夹&amp;文件【了解】"></a>fs如何操作文件夹&amp;文件【了解】</h3><ul>
-<li>文件夹<ul>
-<li>mkdir 创建</li>
-<li>rename 重命名</li>
-<li>exists 是否存在</li>
-<li>rmdir 删</li>
-</ul>
-</li>
-<li>文件<ul>
-<li>writeFile 覆盖写入</li>
-<li>appendFile 追加写入</li>
-<li>rename 重命名</li>
-<li>exists 是否存在</li>
-<li>watchFile 监控</li>
-<li>unlink 删除</li>
-</ul>
-</li>
-</ul>
-<h3 id="具体实现："><a href="#具体实现：" class="headerlink" title="具体实现："></a>具体实现：</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"><span class="comment">//导包</span></div><div class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</div><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"></div><div class="line"><span class="comment">//创建服务</span></div><div class="line"><span class="keyword">const</span> server = http.createServer()</div><div class="line"></div><div class="line"><span class="comment">//请求，处理，响应</span></div><div class="line">server.on(<span class="string">'request'</span>,(req,res)=&gt;&#123;</div><div class="line">    <span class="comment">// index.html</span></div><div class="line">    <span class="keyword">if</span>(req.url.includes(<span class="string">'index'</span>))&#123;</div><div class="line">        <span class="comment">//index.html的路径</span></div><div class="line">        <span class="keyword">const</span> indexPath = path.join(__dirname,<span class="string">'index.html'</span>)</div><div class="line"></div><div class="line">        <span class="comment">//使用fs去读</span></div><div class="line">        fs.readFile(indexPath,(err,data)=&gt;&#123;</div><div class="line">            <span class="keyword">if</span>(err)&#123;</div><div class="line">                <span class="built_in">console</span>.log(err)</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            res.setHeader(<span class="string">"Content-Type"</span>,<span class="string">"text/html;charset=utf-8"</span>)</div><div class="line">            res.end(data)</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//开启web服务</span></div><div class="line">server.listen(<span class="number">8899</span>,<span class="string">'127.0.0.1'</span>,(err)=&gt;&#123;</div><div class="line">    <span class="keyword">if</span>(err)&#123;</div><div class="line">        <span class="built_in">console</span>.log(err)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"start OK"</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h3 id="文件读写的时候，编码问题"><a href="#文件读写的时候，编码问题" class="headerlink" title="文件读写的时候，编码问题"></a>文件读写的时候，编码问题</h3><ul>
-<li>1、把iconv-lite下载到本地项目中<ul>
-<li>package.json</li>
-<li>npm install iconv-lite –save</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<ul>
-<li><p>2、导包</p>
-<ul>
-<li>var iconv = require(‘iconv-lite’)</li>
-</ul>
-</li>
-<li><p>3、使用</p>
-<ul>
-<li>iconv.decode(文件的二进制,’编码字符串’)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="meta">'use strict'</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</div><div class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</div><div class="line"></div><div class="line"><span class="comment">//导入第三方包</span></div><div class="line"><span class="keyword">var</span> iconv = <span class="built_in">require</span>(<span class="string">'iconv-lite'</span>)</div><div class="line"></div><div class="line"><span class="comment">//异步的方式去读取</span></div><div class="line">fs.readFile(path.join(__dirname,<span class="string">'test.txt'</span>),(err,data)=&gt;&#123;</div><div class="line">    <span class="keyword">const</span> str = iconv.decode(data,<span class="string">'GBK'</span>)</div><div class="line">    <span class="built_in">console</span>.log(str)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// console.log("111222333")</span></div><div class="line"></div><div class="line"><span class="comment">//同步的方式去读取</span></div><div class="line"><span class="comment">// const contents = fs.readFileSync(path.join(__dirname,'test.txt'))</span></div><div class="line"><span class="comment">// console.log(contents.toString())</span></div></pre></td></tr></table></figure>
+<h3 id="2-判断文件夹是否存在-exists-不管可以判断文件夹还可以判断文件是否存在"><a href="#2-判断文件夹是否存在-exists-不管可以判断文件夹还可以判断文件是否存在" class="headerlink" title="2.判断文件夹是否存在  exists 不管可以判断文件夹还可以判断文件是否存在"></a>2.判断文件夹是否存在  exists 不管可以判断文件夹还可以判断文件是否存在</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">fs.exists(path.join(__dirname,<span class="string">'abc'</span>),(exists)=&gt;&#123;</div><div class="line">    <span class="keyword">if</span>(!exists)&#123;不存在</div><div class="line">        fs.mkdir(path.join(__dirname,<span class="string">'abc'</span>),(err)=&gt;&#123;</div><div class="line">            <span class="keyword">if</span>(err)&#123;</div><div class="line">                <span class="built_in">console</span>.log(err)</div><div class="line">            &#125;</div><div class="line">        </div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"create success"</span>)</div><div class="line">        &#125;)</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"文件夹已经存在..."</span>)</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="3-重命名-rename-即可重命名文件夹也可重命名文件"><a href="#3-重命名-rename-即可重命名文件夹也可重命名文件" class="headerlink" title="3.重命名 rename 即可重命名文件夹也可重命名文件"></a>3.重命名 rename 即可重命名文件夹也可重命名文件</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">fs.exists(path.join(__dirname,<span class="string">'abc'</span>),(exists)=&gt;&#123;</div><div class="line">     <span class="keyword">if</span>(exists)&#123;存在</div><div class="line">         fs.rename(path.join(__dirname,<span class="string">'abc'</span>),path.join(__dirname,<span class="string">'cba'</span>),(err)=&gt;&#123;</div><div class="line">             <span class="keyword">if</span>(err)&#123;</div><div class="line">                 <span class="built_in">console</span>.log(err)</div><div class="line">             &#125;</div><div class="line"></div><div class="line">             <span class="built_in">console</span>.log(<span class="string">"rename OK"</span>)</div><div class="line">         &#125;)</div><div class="line">     &#125;<span class="keyword">else</span>&#123;</div><div class="line">         <span class="built_in">console</span>.log(<span class="string">"文件夹不存在"</span>)</div><div class="line">     &#125;</div><div class="line"> &#125;)</div></pre></td></tr></table></figure>
+<h3 id="4-删除"><a href="#4-删除" class="headerlink" title="4.删除"></a>4.删除</h3><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">fs.exists(path.join(__dirname,<span class="string">'cba'</span>),(exists)=&gt;&#123;</div><div class="line">     <span class="keyword">if</span>(exists)&#123;存在</div><div class="line">         fs.rmdir(path.join(__dirname,<span class="string">'cba'</span>),(err)=&gt;&#123;</div><div class="line">             <span class="keyword">if</span>(err)&#123;</div><div class="line">                 <span class="built_in">console</span>.log(err)</div><div class="line">             &#125;</div><div class="line"></div><div class="line">             <span class="built_in">console</span>.log(<span class="string">"remove OK"</span>)</div><div class="line">         &#125;)</div><div class="line">     &#125;<span class="keyword">else</span>&#123;</div><div class="line">         <span class="built_in">console</span>.log(<span class="string">"文件夹不存在"</span>)</div><div class="line">     &#125;</div><div class="line"> &#125;)</div></pre></td></tr></table></figure></blockquote>
+
         
     
 
@@ -572,7 +510,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/10/08/Node.js中的get,post请求响应模块常用模板/" id="post_nav-older" class="next-content">
+        <a href="/2017/10/08/Node.js中的fs文件操作（读写）/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -664,7 +602,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/10/">October 2017<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">September 2017<span class="sidebar_archives-count">58</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/10/">October 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">September 2017<span class="sidebar_archives-count">58</span></a>
             </ul>
         </li>
         
@@ -682,7 +620,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/AJAX/">AJAX<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Angular/">Angular<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JSON/">JSON<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node-js/">Node.js<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/RequireJS/">RequireJS<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/cookie/">cookie<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/jQuery/">jQuery<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/jQuery源码分析/">jQuery源码分析<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/关于ES5规范/">关于ES5规范<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/开发技巧/">开发技巧<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/网站搭建/">网站搭建<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/AJAX/">AJAX<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Angular/">Angular<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JSON/">JSON<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node-js/">Node.js<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/RequireJS/">RequireJS<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/cookie/">cookie<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/jQuery/">jQuery<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/jQuery源码分析/">jQuery源码分析<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/javascript/">javascript<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/关于ES5规范/">关于ES5规范<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/开发技巧/">开发技巧<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/网站搭建/">网站搭建<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -696,7 +634,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">62</span>
+                <span class="sidebar-badge">63</span>
             </a>
         </li>
         
