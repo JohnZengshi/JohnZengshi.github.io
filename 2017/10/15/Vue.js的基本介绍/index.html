@@ -37,7 +37,7 @@
     
     <title>
         
-            归档: 2017/9 | 
+            Vue的基本介绍及基本指令 | 
         
         John Zeng的个人播客
     </title>
@@ -98,6 +98,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-cave-light.min.css?5MK/TK/zbpdHM7rmG+ehCw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -233,15 +236,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/9 | John Zeng的个人播客">
+    <meta property="og:title" content="Vue的基本介绍及基本指令 | John Zeng的个人播客">
     <meta property="og:image" content="http://yoursite.comimg/xiaoliang.png" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="Sun Oct 15 2017 18:47:32 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Oct 16 2017 10:05:56 GMT+0800" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="归档: 2017/9 | John Zeng的个人播客">
+    <meta name="twitter:title" content="Vue的基本介绍及基本指令 | John Zeng的个人播客">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://yoursite.comimg/xiaoliang.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -249,13 +255,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2017/09/page/3/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/10/15/Vue.js的基本介绍/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2017/10/15/Vue.js的基本介绍/index.html",
+    "headline": "Vue的基本介绍及基本指令",
+    "datePublished": "Sun Oct 15 2017 18:47:32 GMT+0800",
+    "dateModified": "Mon Oct 16 2017 10:05:56 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "John Zeng",
+        "image": {
+            "@type": "ImageObject",
+            "url": "img/xiaoliang.png"
+        },
+        "description": "我脾气很爆..很爆"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "John Zeng的个人播客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "img/xiaoliang.png"
+        }
+    },
+    "keywords": "blog 博客",
+    "description": "",
+}
+</script>
 
 
     
@@ -289,657 +325,342 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue的基本知识点"><span class="post-toc-number">1.</span> <span class="post-toc-text">Vue的基本知识点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue基本概念介绍"><span class="post-toc-number">2.</span> <span class="post-toc-text">Vue基本概念介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue中体现MVVM"><span class="post-toc-number">3.</span> <span class="post-toc-text">Vue中体现MVVM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#指令"><span class="post-toc-number">4.</span> <span class="post-toc-text">指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组件"><span class="post-toc-number">5.</span> <span class="post-toc-text">组件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#过滤器"><span class="post-toc-number">6.</span> <span class="post-toc-text">过滤器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#路由："><span class="post-toc-number">7.</span> <span class="post-toc-text">路由：</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 30 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/jQuery源码分析（01）--设计理念/">jQuery源码分析(01)--设计理念</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/jQuery源码分析（01）--设计理念/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/jQuery源码分析/">jQuery源码分析</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/Require JS的笔记/">RequireJS 是一个基于原生js实现的模块化解决方案</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/Require JS的笔记/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/RequireJS/">RequireJS</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/--第一次用Hexo+Github-搭建博客/">第一次用Hexo+Github 搭建博客</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/--第一次用Hexo+Github-搭建博客/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/网站搭建/">网站搭建</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/对象的序列化和反序列化/">对象的序列化和反序列化</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/对象的序列化和反序列化/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JSON/">JSON</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/关于javascript的数据类型/">关于javascript的数据类型</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/关于javascript的数据类型/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/javascript/">javascript</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/Git的使用/">Git的使用</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/Git的使用/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Git/">Git</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/jQuery源码分析（02）--整体架构/">jQuery源码分析(02)--整体架构</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/jQuery源码分析（02）--整体架构/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/jQuery源码分析/">jQuery源码分析</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/Require JS的使用/">RequireJS的使用</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/Require JS的使用/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/RequireJS/">RequireJS</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/什么时候使用shim/">什么时候使用shim</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/什么时候使用shim/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/RequireJS/">RequireJS</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--8dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/09/20/requirejs中使用arttemplate模板引擎/">requirejs中使用arttemplate模板引擎</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/09/20/requirejs中使用arttemplate模板引擎/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/xiaoliang.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>Sep 20, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/RequireJS/">RequireJS</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/archives/2017/09/page/2/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/archives/2017/09/">1</a><a class="page-number" href="/archives/2017/09/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/2017/09/page/4/">4</a><a class="page-number" href="/archives/2017/09/page/5/">5</a><a class="page-number" href="/archives/2017/09/page/6/">6</a><a class="extend next" rel="next" href="/archives/2017/09/page/4/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 30 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Vue的基本介绍及基本指令
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/xiaoliang.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>John Zeng</strong>
+        <span>Oct 15, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Vue的基本介绍及基本指令&url=http://yoursite.com/2017/10/15/Vue.js的基本介绍/index.html&pic=http://yoursite.comimg/xiaoliang.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=John Zeng的个人播客&title=Vue的基本介绍及基本指令&summary=&pics=http://yoursite.comimg/xiaoliang.png&url=http://yoursite.com/2017/10/15/Vue.js的基本介绍/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="Vue的基本知识点"><a href="#Vue的基本知识点" class="headerlink" title="Vue的基本知识点"></a>Vue的基本知识点</h3><ul>
+<li>指令</li>
+<li>组件</li>
+<li>过滤器</li>
+<li>路由</li>
+<li>网络请求</li>
+</ul>
+<h3 id="Vue基本概念介绍"><a href="#Vue基本概念介绍" class="headerlink" title="Vue基本概念介绍"></a>Vue基本概念介绍</h3><ul>
+<li><p>渐进式</p>
+<ul>
+<li>javascript框架</li>
+</ul>
+</li>
+<li><p>特点：易用，灵活，高效</p>
+</li>
+<li><p>开发PC端：网站和后台管理系统</p>
+</li>
+<li><p>开发移动端 WebApp 原生App</p>
+</li>
+</ul>
+<h3 id="Vue中体现MVVM"><a href="#Vue中体现MVVM" class="headerlink" title="Vue中体现MVVM"></a>Vue中体现MVVM</h3><ul>
+<li><p>MVVM</p>
+<ul>
+<li>M:model 模型，提供数据</li>
+<li>VM: view-model 相当于控制器 负责调度</li>
+<li>V:view 负责呈现</li>
+</ul>
+</li>
+<li><p>好处:低耦合 可重用性</p>
+</li>
+<li><p>Vue中体现MVVM</p>
+<ul>
+<li>View : 写在id=app的div中</li>
+<li>View-Model : Vue实例，Vue实例中必须要有一个el属性(告诉Vue解析哪一块内容)</li>
+<li>Model:提供数据(来自服务器)</li>
+</ul>
+</li>
+</ul>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ul>
+<li>目的：减少对dom的操作，让我们程序员只关注业务逻辑，在我们框架中，框架建议我们少操作dom，但是如果以后需要操作dom，还是可以操作的<ul>
+<li>插值表达式</li>
+<li>v-text/v-html</li>
+<li>v-on<ul>
+<li>在写v-on的时候，如果没有参数可以不用写’()’</li>
+</ul>
+</li>
+<li>v-bind<ul>
+<li>为了不让我们在页面中的内容写死</li>
+<li>v-bind可以减写为”:”</li>
+</ul>
+</li>
+<li>v-model<ul>
+<li>双向数据绑定<ul>
+<li>模型 –》 视图</li>
+<li>视图 –》 模型</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>v-if/v-show<ul>
+<li>当要显示或是隐藏某个元素的时候，用:v-if<ul>
+<li>当值是true创建并且显示出来</li>
+<li>false 不会创建</li>
+</ul>
+</li>
+<li>如果需要频繁的显示隐藏用：v-show<ul>
+<li>当值是true创建并且显示出来</li>
+<li>false 创建不现实出来</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><ul>
+<li>把一些相应的代码，比如：渲染视图，数据请求，样式处理等等这些代码，写在一个单独的文件中，形成了一个单独的功能，这个文件就可以称之为组件。</li>
+<li>好处：<ul>
+<li>可以简化id=app div中的代码</li>
+<li>可以达到复用的复用</li>
+</ul>
+</li>
+<li>x 组件的五种写法【掌握最后一种，看懂前四种】<ul>
+<li>1、先定义、再注册、再使用</li>
+<li>2、定义和注册一步到位，再使用</li>
+<li>3、简化模版的写法1 使用template自定义标签</li>
+<li>4、简化模版的写法2</li>
+<li>5、单文件组件(.vue结尾的文件)<br>vue-loader</li>
+</ul>
+</li>
+<li>注意点:<ul>
+<li>在函数的定义中，我们的data必须是一个函数，并且必须返回一个对象</li>
+</ul>
+</li>
+</ul>
+<h3 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h3><ul>
+<li><p>作用：对服务器返回的数据进行过滤</p>
+</li>
+<li><p>分两大类</p>
+<ul>
+<li>私有过滤器：写在组件内部的</li>
+<li>全局过滤器：全局的过滤器写在全局里面</li>
+</ul>
+</li>
+<li><p>注意点：</p>
+<ul>
+<li>1、调用过滤器的时候，原始数据 | 过滤器</li>
+<li>2、其中原始数据会作为过滤器函数的第一个参数</li>
+<li>3、不管是私有过滤器还是全局过滤器，调用方式都是一样的</li>
+<li>4、对于组件来说，私有过滤器的优先级要高于全局过滤器</li>
+</ul>
+</li>
+</ul>
+<h3 id="路由："><a href="#路由：" class="headerlink" title="路由："></a>路由：</h3><ul>
+<li><p>作用：</p>
+<ul>
+<li>前端：单页面应用(SPA),当触发了不同的链接，展示不同的内容(组件)</li>
+<li>后台：分门别类的处理浏览器请求</li>
+</ul>
+</li>
+<li><p>Angular</p>
+<ul>
+<li>html: ng-view</li>
+<li>js:处理路由</li>
+</ul>
+</li>
+<li><p>Vue</p>
+<ul>
+<li>html:router-view </li>
+<li>router-link</li>
+<li>js：<ul>
+<li>1、组件定义好</li>
+<li>2、创建路由对象，设置路由规则</li>
+<li>3、把路由对象注入到根实例，让整个应用拥有路由的功能</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/10/15/Vue.js中的组件定义/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/10/10/Express 基于 Node.js 平台，快速、开放、极简的 web 开发框架/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -1247,6 +968,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -1259,6 +984,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
