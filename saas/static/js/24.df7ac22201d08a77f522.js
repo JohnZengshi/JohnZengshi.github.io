@@ -1,1 +1,0 @@
-webpackJsonp([24,25],{3232:function(e,n,t){var r=t(1)(null,t(3677),null,null);e.exports=r.exports},3677:function(e,n){e.exports={render:function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",{staticClass:"leaguer-container"},[t("router-view")],1)},staticRenderFns:[]}}});
