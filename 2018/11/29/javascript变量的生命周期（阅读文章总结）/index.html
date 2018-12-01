@@ -43,7 +43,7 @@
     
     <title>
         
-            归档: 2018 | 
+            javascript变量的生命周期:为什么let不被提升 | 
         
         John Zeng 的个人博客
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="个人博客">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Javascript">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -81,6 +81,9 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/tomorrow-night.min.css?QlnGZk/a4+d8XbwtXBDPiA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
             
         
 
@@ -217,7 +220,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="John Zeng 的个人博客">
-    <meta name="msapplication-starturl" content="https://johnzengshi.github.io/archives/2018/">
+    <meta name="msapplication-starturl" content="https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="John Zeng 的个人博客">
@@ -232,13 +235,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://johnzengshi.github.io/archives/2018/">
+    <meta property="og:url" content="https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2018 | John Zeng 的个人博客">
+    <meta property="og:title" content="javascript变量的生命周期:为什么let不被提升 | John Zeng 的个人博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="个人博客">
-    
+    <meta property="og:article:tag" content="Javascript"> 
 
+    
+        <meta property="article:published_time" content="Thu Nov 29 2018 14:50:27 GMT+0800">
+        <meta property="article:modified_time" content="Sat Dec 01 2018 14:38:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -246,13 +252,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://johnzengshi.github.io/archives/2018/index.html" />
+        <link rel="canonical" href="https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/index.html",
+    "headline": "javascript变量的生命周期:为什么let不被提升",
+    "datePublished": "Thu Nov 29 2018 14:50:27 GMT+0800",
+    "dateModified": "Sat Dec 01 2018 14:38:43 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "John Zeng",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "John Zeng 的个人博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Javascript",
+    "description": "个人博客",
+}
+</script>
 
 
     
@@ -286,399 +322,309 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#var的变量提升"><span class="post-toc-number">1.</span> <span class="post-toc-text">var的变量提升</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#底层：变量的生命周期"><span class="post-toc-number">2.</span> <span class="post-toc-text">底层：变量的生命周期</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#var-变量的生命周期"><span class="post-toc-number">3.</span> <span class="post-toc-text">var 变量的生命周期</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数声明的生命周期"><span class="post-toc-number">4.</span> <span class="post-toc-text">函数声明的生命周期</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#let-变量的生命周期"><span class="post-toc-number">5.</span> <span class="post-toc-text">let 变量的生命周期</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/12/01/XMLHttpRequest对象深入了解/">XMLHttpRequest对象深入了解</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/12/01/XMLHttpRequest对象深入了解/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>12月 01, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Ajax与Comet/">Ajax与Comet</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/11/29/javascript变量的生命周期（阅读文章总结）/">javascript变量的生命周期:为什么let不被提升</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            原文链接：
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/11/29/javascript变量的生命周期（阅读文章总结）/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>11月 29, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Javascript/">Javascript</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/27/Vue开发插件devtools/">devtools</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/27/Vue开发插件devtools/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>7月 27, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/开发工具/">开发工具</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/26/Object.create()和new object()和{}的区别/">Object.create()和new object()和{}的区别</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/26/Object.create()和new object()和{}的区别/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>7月 26, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/Javascript/">Javascript</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/25/--第一次用Hexo+Github-搭建博客/">第一次用Hexo+Github 搭建博客</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/25/--第一次用Hexo+Github-搭建博客/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>7月 25, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/博客搭建/">博客搭建</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/07/25/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/07/25/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="John Zeng's avatar">
-            </div>
-            <div>
-                <strong>John Zeng</strong>
-                <span>7月 25, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                javascript变量的生命周期:为什么let不被提升
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>John Zeng</strong>
+        <span>11月 29, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Javascript/">Javascript</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=javascript变量的生命周期:为什么let不被提升&url=https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/index.html&pic=https://johnzengshi.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=javascript变量的生命周期:为什么let不被提升&url=https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/index.html&via=John Zeng" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=John Zeng 的个人博客&title=javascript变量的生命周期:为什么let不被提升&summary=个人博客&pics=https://johnzengshi.github.io/img/favicon.png&url=https://johnzengshi.github.io/2018/11/29/javascript变量的生命周期（阅读文章总结）/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>原文链接：<a href="https://dmitripavlutin.com/variables-lifecycle-and-why-let-is-not-hoisted/" target="_blank" rel="noopener">https://dmitripavlutin.com/variables-lifecycle-and-why-let-is-not-hoisted/</a></p>
+<blockquote>
+<p>一般的，<strong><em>变量声明var</em></strong>和<strong><em>函数声明function fun() {…}</em></strong>，都会发生变量提升，即把变量和函数的定义移到作用域的顶部。</p>
+</blockquote>
+<blockquote>
+<p>但是let不会被提升，（有提升，但是无效，在定义之前不能使用）</p>
+</blockquote>
+<ol>
+<li><h4 id="var的变量提升"><a href="#var的变量提升" class="headerlink" title="var的变量提升"></a>var的变量提升</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(num); <span class="comment">// =&gt; nudefined</span></span><br><span class="line"><span class="keyword">var</span> num;</span><br><span class="line">num = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num); <span class="comment">// =&gt; 10</span></span><br></pre></td></tr></table></figure>
+<p>变量在声明之前被访问，会被认定为<strong>undefined</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(fun); <span class="comment">// =&gt; function fun() &#123;....&#125;</span></span><br><span class="line">fun(); <span class="comment">// =&gt; 123</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">123</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>函数在声明之前被调用，可以执行，因为末尾定义的函数被提升到作用域顶部了。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(fun()); <span class="comment">//fun is not a function</span></span><br><span class="line"><span class="keyword">var</span> fun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">123</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>上面的这种属于变量的声明，fun在声明之前被访问了。</p>
+</li>
+<li><h4 id="底层：变量的生命周期"><a href="#底层：变量的生命周期" class="headerlink" title="底层：变量的生命周期"></a>底层：变量的生命周期</h4><blockquote>
+<p>当引擎访问变量的时候，生命周期包括以下几个阶段：</p>
+</blockquote>
+<ol>
+<li>声明阶段：在作用域当中注册一个变量。</li>
+<li>初始化阶段：分配内存，给作用域中的变量创建绑定，变量会自动初始化为undefined。</li>
+<li>赋值阶段：给已经初始化的变量赋值。</li>
+</ol>
+<blockquote>
+<p>通过声明阶段但是没有达到初始化阶段的变量处于未定义状态。</p>
+<p>通过初始化阶段但是没有达到赋值阶段的变量处于undefined状态。</p>
+</blockquote>
+<p>​        <img src="/2018/11/29/javascript变量的生命周期（阅读文章总结）/变量的生命周期.png" title="变量的生命周期"></p>
+</li>
+<li><h4 id="var-变量的生命周期"><a href="#var-变量的生命周期" class="headerlink" title="var 变量的生命周期"></a>var 变量的生命周期</h4><img src="/2018/11/29/javascript变量的生命周期（阅读文章总结）/var变量的生命周期.png" title="var变量的生命周期">
+<blockquote>
+<p>引擎处理var的过程</p>
+</blockquote>
+<ol>
+<li>javascript引擎遇到作用域里面的所有<strong><em>var</em></strong>声明的变量或函数。都会让她们在其他任何语句执行之前，通过变量的<strong><em>声明阶段和初始化阶段（初始化undefined）</em></strong>。</li>
+<li>在赋值语句（赋值阶段）之前，这些变量的值都为undefined并且都可以访问。</li>
+<li>严格来说，提升的概念是在函数作用域的顶部声明和初始化变量。并且在声明阶段和初始化阶段之间是没有间隙的。</li>
+</ol>
+</li>
+<li><h4 id="函数声明的生命周期"><a href="#函数声明的生命周期" class="headerlink" title="函数声明的生命周期"></a>函数声明的生命周期</h4><img src="/2018/11/29/javascript变量的生命周期（阅读文章总结）/函数声明的生命周期.png" title="函数声明的生命周期">    
+<blockquote>
+<p>引擎处理function fun() {…}的过程</p>
+</blockquote>
+<ol>
+<li>javascript引擎遇到作用域里面所有的<strong><em>function fun() {…}</em></strong>声明的函数，都会让它们在其他语句执行之前通过<strong><em>声明，初始化，赋值阶段</em></strong>。</li>
+<li>三个阶段之间是没有间隙的。</li>
+</ol>
+</li>
+<li><h4 id="let-变量的生命周期"><a href="#let-变量的生命周期" class="headerlink" title="let 变量的生命周期"></a>let 变量的生命周期</h4><img src="/2018/11/29/javascript变量的生命周期（阅读文章总结）/let变量的生命周期.png" title="let变量的生命周期">    
+<blockquote>
+<p>let变量的处理方式和var不同，最主要的区别就是<strong>声明阶段</strong>和<strong>初始化阶段</strong>被分开了</p>
+</blockquote>
+<ol>
+<li>javascript引擎遇到作用域里面所有的<strong><em>let</em></strong> 语句，所声明的变量或者函数就会在其他语句执行之前通过<strong><em>声明阶段</em></strong>。在作用域中注册它的名字。</li>
+<li>接着javascript引擎便一行一行的解析语句。</li>
+<li>当解析到<strong><em>let variable</em></strong>语句的时候，引擎便会让变量通过<strong><em>初始化阶段</em></strong>，变量从未定义变成undefined。</li>
+<li>当解析到<strong><em>variable = ‘value’</em></strong>语句的时候，引擎便会让变量通过<strong><em>赋值阶段</em></strong>，变量从undefined变成有值。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(num) <span class="comment">// =&gt; Throws ReferenceError</span></span><br><span class="line"><span class="keyword">let</span> num;</span><br><span class="line"><span class="built_in">console</span>.log(num) <span class="comment">// =&gt; nudefined</span></span><br><span class="line">num = <span class="number">5</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num) <span class="comment">// =&gt; 5</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>const</strong>和<strong>class</strong>类型和let有相同的生命周期，只是const和class只能<strong>赋值一次</strong>。</p>
+</blockquote>
+</li>
+</ol>
+<p>​    </p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/12/01/XMLHttpRequest对象深入了解/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/07/27/Vue开发插件devtools/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -1008,6 +954,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
     
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
 
 
 
@@ -1020,6 +970,11 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
         
     
     
